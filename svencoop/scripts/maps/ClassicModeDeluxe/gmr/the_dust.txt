@@ -1,3 +1,0 @@
-v_grenade
-p_grenade
-w_grenade

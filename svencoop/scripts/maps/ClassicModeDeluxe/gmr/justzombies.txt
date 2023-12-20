@@ -1,3 +1,0 @@
-p_pipe_wrench
-v_pipe_wrench
-w_pipe_wrench
