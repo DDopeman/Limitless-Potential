@@ -22,7 +22,6 @@ namespace ClassicModeDeluxe {
 		while( !f.EOFReached() )
 		{
 			f.ReadLine(line);
-			line.Trim(); // required for linux (strips \r)
 			string model = "models/" + line + ".mdl";		
 			blacklist[model] = true;
 		}
@@ -278,33 +277,45 @@ namespace ClassicModeDeluxe {
 		classicItems["item_longjump"] = "longjump";
 		classicItems["item_suit"] = "suit";
 		
+		op4_weapons["weapon_9mmAR"] = true;
+		op4_weapons["weapon_9mmhandgun"] = true;
+		op4_weapons["weapon_357"] = true;
+		op4_weapons["weapon_medkit"] = true;
+		op4_weapons["weapon_shotgun"] = true;
+		op4_weapons["weapon_crossbow"] = true;
+		op4_weapons["weapon_rpg"] = true;
+		op4_weapons["weapon_egon"] = true;
+		op4_weapons["weapon_handgrenade"] = true;
+		op4_weapons["weapon_satchel"] = true;
+		op4_weapons["weapon_tripmine"] = true;
+		op4_weapons["weapon_snark"] = true;
+		op4_weapons["weapon_displacer"] = true;
+		op4_weapons["weapon_eagle"] = true;
+		op4_weapons["weapon_sniperrifle"] = true;
+		op4_weapons["weapon_sporelauncher"] = true;
+		op4_weapons["weapon_m249"] = true;
+		op4_weapons["weapon_pipewrench"] = true;
+		op4_weapons["weapon_crowbar"] = true;
+		op4_weapons["weapon_minigun"] = true;
+		op4_weapons["weapon_uzi"] = true;
+		op4_weapons["weapon_gauss"] = true;
 		if (mapType == MAP_OPPOSING_FORCE) {
 			modelReplacements["models/p_crowbar.mdl"] = "models/opfor/p_knife.mdl";
 		}
 		
-		weapon_names["weapon_9mmAR"] = true;
-		weapon_names["weapon_9mmhandgun"] = true;
-		weapon_names["weapon_357"] = true;
-		weapon_names["weapon_medkit"] = true;
-		weapon_names["weapon_shotgun"] = true;
-		weapon_names["weapon_crossbow"] = true;
-		weapon_names["weapon_rpg"] = true;
-		weapon_names["weapon_egon"] = true;
-		weapon_names["weapon_handgrenade"] = true;
-		weapon_names["weapon_satchel"] = true;
-		weapon_names["weapon_tripmine"] = true;
-		weapon_names["weapon_snark"] = true;
-		weapon_names["weapon_displacer"] = true;
-		weapon_names["weapon_eagle"] = true;
-		weapon_names["weapon_sniperrifle"] = true;
-		weapon_names["weapon_sporelauncher"] = true;
-		weapon_names["weapon_m249"] = true;
-		weapon_names["weapon_pipewrench"] = true;
-		weapon_names["weapon_crowbar"] = true;
-		weapon_names["weapon_minigun"] = true;
-		weapon_names["weapon_uzi"] = true;
-		weapon_names["weapon_gauss"] = true;
-		weapon_names["weapon_shockrifle"] = true;
+		bshift_weapons["weapon_9mmAR"] = true;
+		bshift_weapons["weapon_9mmhandgun"] = true;
+		bshift_weapons["weapon_357"] = true;
+		bshift_weapons["weapon_crowbar"] = true;
+		bshift_weapons["weapon_medkit"] = true;
+		bshift_weapons["weapon_shotgun"] = true;
+		bshift_weapons["weapon_crossbow"] = true;
+		bshift_weapons["weapon_rpg"] = true;
+		bshift_weapons["weapon_egon"] = true;
+		bshift_weapons["weapon_handgrenade"] = true;
+		bshift_weapons["weapon_satchel"] = true;
+		bshift_weapons["weapon_tripmine"] = true;
+		bshift_weapons["weapon_snark"] = true;
 		
 		// sven's opfor zombie has a broken head hitbox
 		op4_force_replace["models/opfor/zombie_soldier.mdl"] = replacementModelPath + "zombie_soldier.mdl";
@@ -429,7 +440,7 @@ namespace ClassicModeDeluxe {
 		autoReplacements["models/hlclassic/w_weaponbox.mdl"] = "models/w_weaponbox.mdl";
 		autoReplacements["models/hlclassic/zombie.mdl"] = "models/zombie.mdl";
 		
-		autoReplacementMonsters["monster_alien_grunt"] = true;
+		autoReplacementMonsters["monster_agrunt"] = true;
 		autoReplacementMonsters["monster_apache"] = true;
 		autoReplacementMonsters["monster_barnacle"] = true;
 		autoReplacementMonsters["monster_barney"] = true;
@@ -449,9 +460,6 @@ namespace ClassicModeDeluxe {
 		autoReplacementMonsters["monster_sitting_scientist"] = true;
 		autoReplacementMonsters["monster_tentacle"] = true;
 		autoReplacementMonsters["monster_zombie"] = true;
-		autoReplacementMonsters["monster_snark"] = true;
-		autoReplacementMonsters["monster_satchel"] = true;
-		autoReplacementMonsters["monster_handgrenade"] = true;
 
 		array<string> keys = modelReplacements.getKeys();
 		for (uint i = 0; i < keys.size(); i++)
@@ -471,11 +479,14 @@ namespace ClassicModeDeluxe {
 		
 		if (mapType != MAP_HALF_LIFE)
 		{
+			dictionary weps = op4_weapons;
 			string subfolder;
 			if (mapType == MAP_BLUE_SHIFT)
 			{
 				subfolder = "bshift/";
+				weps = bshift_weapons;
 				force_replace = bshift_force_replace;
+				
 				g_Game.PrecacheModel("models/" + cm_folder + "/bshift/v_satchel_radio.mdl");
 			}
 			if (mapType == MAP_OPPOSING_FORCE)
@@ -485,7 +496,7 @@ namespace ClassicModeDeluxe {
 				g_Game.PrecacheModel("models/" + cm_folder + "/op4/v_satchel_radio.mdl");
 			}
 				
-			keys = weapon_names.getKeys();
+			keys = weps.getKeys();
 			for (uint i = 0; i < keys.size(); i++)
 			{				
 				string defaultModelName;
@@ -512,15 +523,10 @@ namespace ClassicModeDeluxe {
 		g_Game.PrecacheModel("models/blkop_apache.mdl");
 		g_Game.PrecacheModel("models/w_shock.mdl");
 		
-		// precache weapon sound replacements for player weapons and monsters
-		PrecacheSound(replacementSoundPath + "desert_eagle_reload.wav");
-		PrecacheSound(replacementSoundPath + "saw_reload.wav");
-		PrecacheSound(replacementSoundPath + "saw_reload2.wav");
+		// precache weapon sound replacements for monsters
 		PrecacheSound(replacementSoundPath + "sniper_fire.wav");
 		PrecacheSound(replacementSoundPath + "sniper_bolt1.wav");
-		PrecacheSound(replacementSoundPath + "sniper_bolt2.wav");
 		PrecacheSound(replacementSoundPath + "sniper_reload_first_seq.wav");
-		PrecacheSound(replacementSoundPath + "sniper_reload_second_seq.wav");
 		PrecacheSound(replacementSoundPath + "uzi_fire_both1.wav");
 		PrecacheSound(replacementSoundPath + "uzi_fire_both2.wav");
 		PrecacheSound("hlclassic/hgrunt/gr_mgun1.wav");

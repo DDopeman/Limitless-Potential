@@ -5,7 +5,6 @@
 // add voting
 // LD models for custom maps that were made for 4.x and later (from LD Pack)
 // allow mappers to copy-paste a gmr file into "gmr" without editing it
-// crash on mechanized2 because it uses GMR for satchels but not for the radio
 
 // Impossible replacements:
 // Player uzi shoot sound
@@ -27,7 +26,7 @@ namespace ClassicModeDeluxe {
 	// Note: When changing this, remember to also change:
 	//    sounds/cm_v?/weapons.txt
 	//    sprites/cm_v?/weapon_9mmar.txt
-	//    models/cm_v?/v_m40a1.mdl					(reload+shoot sounds)
+	//    models/cm_v?/v_m40a1.mdl					(reload sounds)
 	//    models/cm_v?/v_desert_eagle.mdl			(reload sounds)
 	//    models/cm_v?/v_saw.mdl					(reload sounds)
 	//    models/cm_v?/op4/v_m40a1.mdl				(reload sounds)
@@ -57,8 +56,9 @@ namespace ClassicModeDeluxe {
 	dictionary blacklist; // models that shouldn't be replaced because GMR is already replacing them
 	dictionary soundReplacements; // monsters that should have their sounds replaced
 	
-	// weapon names used for forced replacements in themed maps (op4/bshift/etc.)
-	dictionary weapon_names;
+	// themed weapons for specific maps
+	dictionary op4_weapons;
+	dictionary bshift_weapons;
 	
 	// force model replacements for these
 	dictionary force_replace;
@@ -93,13 +93,12 @@ namespace ClassicModeDeluxe {
 		// classic_maps.txt or ignore_maps.txt.
 		g_ClassicMode.SetShouldRestartOnChange(true);
 		
-		// always enable so that it can be turned on early for the next map, if it will be a classic map
-		g_ClassicMode.EnableMapSupport();
-		
 		if (isClassicMap)
 		{
 			g_Hooks.RegisterHook( Hooks::Game::EntityCreated, @EntityCreated );
 			g_Hooks.RegisterHook( Hooks::Player::PlayerTakeDamage, @PlayerTakeDamage );
+			
+			g_ClassicMode.EnableMapSupport();
 		
 			array<ItemMapping@> itemMappings = { 
 				ItemMapping( "weapon_m16", "weapon_9mmAR" ),
@@ -133,20 +132,6 @@ namespace ClassicModeDeluxe {
 		lastWeapons.resize(33);
 		satchels.resize(33);
 		MonitorPlayerWeapons();
-	}
-	
-	void MapChange(CBaseEntity@ caller, CBaseEntity@ activator, USE_TYPE useType, float value)
-	{
-		bool nextIsClassic = caller.pev.rendermode != 0;
-		
-		// prevent a restart during the intermission
-		g_ClassicMode.SetShouldRestartOnChange(false);
-		
-		if (nextIsClassic != g_ClassicMode.IsEnabled())
-		{
-			g_ClassicMode.ResetState();
-			g_ClassicMode.SetEnabled(nextIsClassic);
-		}
 	}
 	
 	string GetReplacementWeaponModel(string model, string subfolder)
@@ -413,9 +398,15 @@ namespace ClassicModeDeluxe {
 		// This isn't needed if the custom model was set on the entity, but there's no way to know if it was
 		// from that or from GMR, so I need to always re-apply custom models if the map uses GMR.
 		
-		bool shouldForceThemedWeapon = mapType != MAP_HALF_LIFE 
-			&& wep.pev.classname != "weapon_hornetgun"
-			&& wep.pev.classname != "weapon_grapple";
+		bool shouldForceThemedWeapon = false;
+		if (mapType != MAP_HALF_LIFE)
+		{
+			dictionary weps = op4_weapons;
+			if (mapType == MAP_BLUE_SHIFT)
+				weps = bshift_weapons;
+			
+			shouldForceThemedWeapon = weps.exists(cname);
+		}
 		
 		bool shouldSwap = false;
 		if (shouldForceThemedWeapon)
@@ -557,28 +548,19 @@ namespace ClassicModeDeluxe {
 		entvars_t@ pevInflictor = info.pInflictor !is null ? info.pInflictor.pev : null;
 		entvars_t@ pevAttacker = info.pAttacker !is null ? info.pAttacker.pev : null;
 		
-		if (plr is null or pevAttacker is null) {
-			return HOOK_CONTINUE;
-		}
-		
-		if (info.pAttacker !is null and plr.IRelationship(info.pAttacker) <= R_NO) {
-			//println("IGNORE " + info.pAttacker.pev.classname);
-			return HOOK_CONTINUE; // don't take damage from other players or ally monsters
-		}
-		
-		CBaseEntity@ owner = g_EntityFuncs.Instance(info.pInflictor.pev.owner);
-		if (info.pInflictor !is null and owner !is null) {
-			// checking if both the inflictor and owner are friendly because:
-			// - enemy projectiles can be friendly or neutral (grenade)
-			// - enemy owner can be friendly or neutral (monstermaker)
+		if (info.pInflictor !is null and plr !is null) {
+			if (plr.IRelationship(info.pInflictor) <= R_NO) {
+				return HOOK_CONTINUE; // don't take damage from other players or ally monsters
+			}
 			
-			//println("HANDLE " + pevInflictor.classname + " " + owner.pev.classname);
-			
-			if (plr.IRelationship(info.pInflictor) <= R_NO and plr.IRelationship(owner) <= R_NO) {
-				//println("IGNORE " + info.pInflictor.pev.classname + " " + owner.pev.classname);
-				return HOOK_CONTINUE; // don't take damage from things another player/friendly owns (e.g. hornets)
+			if (!info.pInflictor.IsPlayer()) {
+				CBaseEntity@ owner = g_EntityFuncs.Instance(info.pInflictor.pev.owner);
+				if (plr.IRelationship(owner) <= R_NO) {
+					return HOOK_CONTINUE; // don't take damage from things another player owns (e.g. hornets)
+				}
 			}
 		}
+			
 		
 		HalfLifeTakeDamage(plr, pevInflictor, pevAttacker, info.flDamage, info.bitsDamageType);
 		info.flDamage = 0; // bypass sven's damage logic
