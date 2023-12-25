@@ -1,0 +1,228 @@
+// In this file you can modify the sound the textures give
+// when the player walks on them
+//
+// NOTE: only the first 12 characters of the texture name are used
+// NOTE: a maximum of 512 textures may be tagged in this file
+//
+//  'C' concrete (analog of empty record; default)
+//  'M' metal
+//  'G' grate
+//  'V' ventillation
+//  'D' dirt
+//  'T' tile
+//  'S' slosh liquid
+//  'W' wood
+//  'P' computer
+//  'Y' glass
+//  'N' snow
+
+S _DirtWater01
+S _Lava01
+S _ToxWater02
+S _Water01
+S _Water02
+S _Waterfall01
+S ToxWater01
+
+G Door30
+G Fence01
+G Fence02
+G Grate01
+G Grate02
+G Grate03
+G Grate04
+G Grate05
+G MetalFloor01
+G MetalFloor02
+G Tension01
+G Tension02
+
+M BorderMet01
+M BorderMet02
+M BorderMet03
+M BorderMet04
+M BorderMet05
+M Connector01
+M Connector02
+M Container01f
+M Container01s
+M Container02f
+M Container02s
+M Container03f
+M Container03s
+M Crate03
+M Door03
+M Door04
+M Door05
+M Door11
+M Door12
+M Door15
+M Door16
+M Door21a
+M Door21b
+M Door22a
+M Door22b
+M Door23a
+M Door23b
+M Door24a
+M Door25
+M Door26
+M FireDoor01
+M Ladder01
+M Ladder02
+M Lock01
+M Metal01
+M Metal02
+M Metal03
+M Metal04
+M Metal05
+M Metal06
+M Metal07
+M Metal08
+M Metal09
+M Metal10
+M Metal11
+M Metal12
+M Metal13
+M MetalGate01
+M MetalGate02
+M MetalGate03
+M MetalGate05
+M MetalGate06
+M MetalGate07
+M MetalGate08
+M MetalWall01
+M MetalWall03
+M MetalWall04
+M MetalWall05
+M _MineSign01
+M Motor01b
+M Motor01f
+M Pipe01
+M Pipe02
+M Pipe03
+M Pipe04
+M _PipeSign1
+M Rail01
+M _Switch01
+M _Switch02
+M Switch05
+M _Switch06
+M _Switch07
+M _Switch11
+M Toolbox01
+M _Vent01
+M Wheel02
+
+P Lamp01
+P Lamp02
+P Lamp03
+P Lamp04
+P Lamp05
+P Lamp05a
+P Lamp06
+P Lamp07
+P Lamp08
+P Lamp09
+P Lamp10
+P Lamp11
+P Lamp12
+P _Computer01
+P Computer01sd
+P Computer02
+P _Computer03
+P Computer03sd
+P _Computer04
+P Computer04sd
+P _Computer05
+P Computer05sd
+P _Computer06
+P _Computer07
+P _Computer08
+P _Computer09
+P _Computer10
+P Computer08sd
+P Computer09sd
+P _Monitor01
+P _Monitor02
+P _Monitor03
+P _Monitor04
+P _Monitor05
+P _Monitor07
+P Monitor06
+P BevMach01
+P BevMach02
+P KeyPad01
+P KeyPad03
+P KeyPad04
+P Microwave01
+P _Switch08
+P Switch08s
+P _Switch10
+
+D Books02
+D Carpet01
+D Fabric01
+D Fabric02
+D Fabric03
+D Fabric04
+D Food01
+D Garbage02
+D Grass01
+D Grass02
+D Grass03
+D Gravel02
+D Rock02
+D Sand01
+D SandBags01
+D SandBags02
+
+W Box01
+W Box02
+W Box03
+W Crate01
+W Crate02
+W Crate04
+W Door02
+W Door06
+W Door07
+W Door19
+W Door20
+W Door27
+W Door28
+W Picture01
+W TileRoof01
+W TileFloor08
+W Wood01
+W Wood02
+W Wood03
+W Wood04
+
+Y Glass01
+Y Glass02
+Y Ice01
+Y KeyPad02
+Y Reflect
+Y Window01
+Y Window02
+
+T BorderRub01
+T _Conv01
+T Crate05
+T Rubber01
+T TileFloor01
+T TileFloor02
+T TileFloor03
+T TileFloor05
+T TileFloor06
+T TileFloor07
+T TileFloor09
+T TileFloor10
+T Wheel01
+T Wire01
+
+V Grate06
+V VentWall01
+V VentWall02
+
+N Snow01
