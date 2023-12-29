@@ -1,0 +1,18 @@
+
+// medical
+HEV_DEAD0 kezaeiv/singularity/player/death
+HEV_DEAD1 kezaeiv/singularity/player/(p85) death
+HEV_DEAD2 kezaeiv/singularity/player/(p90) death
+HEV_DEAD3 kezaeiv/singularity/player/(p95) death
+HEV_DEAD4 kezaeiv/singularity/player/(p105) death
+HEV_DEAD5 kezaeiv/singularity/player/(p110) death
+HEV_DEAD6 kezaeiv/singularity/player/(p115) death
+
+
+//KEZAEIV's NEW SENTENCES
+KZ_AN01 buzwarn,  warning, lol power in sector kilo 
+KZ_ADSTF_AN01 buzwarn,  warning, dimensional energy distortion detected 
+
+
+
+

@@ -1,0 +1,44 @@
+
+// medical
+HEV_DEAD0 oghs/cs/a!
+HEV_DEAD1 oghs/cs/(p85) a!
+HEV_DEAD2 oghs/cs/(p115) a!
+HEV_DEAD3 oghs/cs/crit
+HEV_DEAD4 oghs/cs/(p85) crit
+HEV_DEAD5 oghs/cs/(p115) crit
+HEV_DEAD6 oghs/cs/csm
+HEV_DEAD7 oghs/cs/(p85) csm
+HEV_DEAD8 oghs/cs/(p115) csm
+HEV_DEAD9 oghs/cs/cum
+HEV_DEAD10 oghs/cs/(p85) cum
+HEV_DEAD11 oghs/cs/(p115) cum
+HEV_DEAD12 oghs/cs/dross
+HEV_DEAD13 oghs/cs/(p85) dross
+HEV_DEAD14 oghs/cs/(p115) dross
+HEV_DEAD15 oghs/cs/fart
+HEV_DEAD16 oghs/cs/(p85) fart
+HEV_DEAD17 oghs/cs/(p115) fart
+HEV_DEAD18 oghs/cs/gay
+HEV_DEAD19 oghs/cs/(p85) gay
+HEV_DEAD20 oghs/cs/(p115) gay
+HEV_DEAD21 oghs/cs/headshot
+HEV_DEAD22 oghs/cs/(p85) headshot
+HEV_DEAD23 oghs/cs/(p115) headshot
+HEV_DEAD24 oghs/cs/huegh
+HEV_DEAD25 oghs/cs/(p85) huegh
+HEV_DEAD26 oghs/cs/(p115) huegh
+HEV_DEAD27 oghs/cs/pipe
+HEV_DEAD28 oghs/cs/(p85) pipe
+HEV_DEAD29 oghs/cs/(p115) pipe
+HEV_DEAD30 oghs/cs/pui
+HEV_DEAD31 oghs/cs/(p85) pui
+HEV_DEAD32 oghs/cs/(p115) pui
+HEV_DEAD33 oghs/cs/tom2
+HEV_DEAD34 oghs/cs/(p85) tom2
+HEV_DEAD35 oghs/cs/(p115) tom2
+HEV_DEAD36 oghs/cs/wrong
+HEV_DEAD37 oghs/cs/(p85) wrong
+HEV_DEAD38 oghs/cs/(p115) wrong
+HEV_DEAD39 oghs/cs/zzz
+HEV_DEAD40 oghs/cs/(p85) zzz
+HEV_DEAD41 oghs/cs/(p115) zzz
