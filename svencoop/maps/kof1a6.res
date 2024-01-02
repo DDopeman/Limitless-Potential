@@ -16,6 +16,7 @@ models/mikk/kezaeiv/babygargf.mdl
 models/mikk/kezaeiv/barnabushev.mdl
 models/mikk/kezaeiv/barneyhev.mdl
 models/mikk/kezaeiv/bgman.mdl
+models/mikk/kezaeiv/blkop_apache.mdl
 models/mikk/kezaeiv/bullsquid.mdl
 models/mikk/kezaeiv/chubby.mdl
 models/mikk/kezaeiv/chumtoad.mdl
