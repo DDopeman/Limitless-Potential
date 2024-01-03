@@ -32,8 +32,8 @@ models/oghs/cm/npc/scientist.mdl
 models/oghs/cm/npc/scientist2.mdl
 models/oghs/cm/npc/scigun.mdl
 models/oghs/cm/npc/Tor.mdl
-sound/epone/music/dearenemy.mp3
-sound/epone/music/littlelight.mp3
+sound/EpOne/music/dearenemy.mp3
+sound/EpOne/music/littlelight.mp3
 sound/oghs/cs/a!.wav
 sound/oghs/cs/crit.wav
 sound/oghs/cs/csm.wav
