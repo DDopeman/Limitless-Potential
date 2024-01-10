@@ -1,0 +1,9 @@
+// p904
+
+6	// number of sprites
+weapon			640 shl/weapons/640shl1	0	0	170	45
+weapon_s		640 shl/weapons/640shl2	0	0	170	45
+ammo			640 shl/weapons/640shl3	0	0	24	24
+ammo2			640	640hud7		48	60	24	24
+crosshair		640 shl/weapons/640shl4	0	0	24	24
+autoaim			640 shl/weapons/640shl4	0	0	24	24

@@ -1,0 +1,3 @@
+"models/v_medkit.mdl" "models/echoes/v_medkit.mdl"
+"models/v_crowbar.mdl" "models/echoes/v_crowbar.mdl"
+"models/common/lambda.mdl" "models/kezaeiv/icons/mk_logo_white.mdl"

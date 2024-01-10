@@ -1,0 +1,1648 @@
+////////////////////////////////////////////////////////////////////////////////////////
+// HALF-LIFE SPEECH SYSTEM SENTENCES. DO NOT MODIFY THIS FILE! Max of 1023 sentences. //
+////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////
+// AZURE SHEEP SENTENCES CHANGES ADDED //
+//            2001/8/25                //
+/////////////////////////////////////////
+
+// NULL SENTENCE
+AL_NULL common/null
+
+// AZURE SHEEP VARIOUS
+AZS_FARWAR1 ambience/(v30) distantmortar1 distantmortar3 distantmortar2 mgun_burst3 mgun_burst2 distantmortar2
+AZS_FARWAR2 ambience/(v15) mgun_burst1 mgun_burst3 mgun_burst3
+
+// BARNIEL (Female barniel) uses the sound files barniel for now
+BA_HEY azuresheep/kate/becarefull
+
+BN_VAR0 azuresheep/barniel/hevno
+BN_VAR1 azuresheep/barniel/seeya
+
+// Barniel is triggered to not follow player
+BN_NOFOLLOW0 azuresheep/barniel/seelater
+
+// Barniel is going to use a retina scanner
+BN_RETINA0 azuresheep/barniel/yessir
+
+BN_HISTOP1 azuresheep/barniel/humm, waitin
+BN_SLEEP1 azuresheep/barniel/bn_die1
+
+// If you use Barniel before the disaster
+BN_POK0 azuresheep/barniel/bn_post
+
+// Hello Barniel sentences before the disaster
+BN_PHELLO0 azuresheep/barniel/hi
+
+// Idle Barniel sentences before the disaster
+BN_PIDLE0 azuresheep/barniel/badfeeling
+BN_PIDLE1 azuresheep/barniel/movietv
+
+// Question Barniel sentences before the disaster
+BN_PQUEST0 azuresheep/barniel/thinking
+BN_PQUEST0 azuresheep/barniel/whatsgoingon
+
+BN_OK0 azuresheep/barniel/teamup1
+BN_OK1 azuresheep/barniel/teamup2
+
+BN_WAIT0 azuresheep/barniel/waitin
+
+BN_HELLO0 azuresheep/barniel/hi
+
+BN_QUESTION0 azuresheep/barniel/drinktopside
+BN_QUESTION1 azuresheep/barniel/rightway
+BN_QUESTION2 azuresheep/barniel/thinking
+BN_QUESTION3 azuresheep/barniel/slimything
+BN_QUESTION4 azuresheep/barniel/whatsgoingon
+
+BN_ANSWER0 azuresheep/barniel/yessir
+BN_ANSWER1 azuresheep/barniel/dontagree
+BN_ANSWER2 azuresheep/barniel/humm
+BN_ANSWER3 azuresheep/barniel/nosir
+BN_ANSWER4 azuresheep/barniel/dontknow
+BN_ANSWER5 azuresheep/barniel/bequiet
+
+// player is staring at barniel
+BN_STARE0 azuresheep/barniel/yessir
+BN_STARE1 azuresheep/barniel/aimforhead
+BN_STARE2 azuresheep/barniel/badfeeling
+
+BN_IDLE0 azuresheep/barniel/movietv
+BN_IDLE1 azuresheep/barniel/badfeeling
+BN_IDLE2 azuresheep/barniel/aimforhead
+
+BN_ATTACK0 azuresheep/barniel/diegreenthing
+BN_ATTACK1 azuresheep/barniel/aimforhead
+BN_ATTACK2 azuresheep/barniel/bn_attack1
+BN_ATTACK3 azuresheep/barniel/openfire
+
+BN_HEAR0 azuresheep/barniel/hearsomething
+BN_HEAR1 azuresheep/barniel/somethingmoves
+BN_HEAR2 azuresheep/barniel/badfeeling
+
+BN_SMELL0 azuresheep/barniel/somethingmoves
+
+BN_CUREA azuresheep/barniel/youneedmedic
+BN_CUREB azuresheep/barniel/youneedmedic
+BN_CUREC azuresheep/barniel/youneedmedic
+
+BN_SCARED0 azuresheep/barniel/bn_whatyou
+BN_SCARED1 azuresheep/barniel/bn_dontdothat
+
+BN_WOUND0 azuresheep/barniel/imhit
+BN_WOUND1 azuresheep/barniel/hitbad
+BN_MORTAL0 azuresheep/barniel/hitbad
+
+//If you shoot barniel:
+BN_SHOT0 azuresheep/barniel/bn_carefull
+BN_SHOT1 azuresheep/barniel/bn_dontdothat
+BN_SHOT2 azuresheep/barniel/bn_becarefull
+BN_SHOT3 azuresheep/barniel/bn_whatyou
+BN_SHOT4 azuresheep/barniel/bn_friends
+
+//When barniel's really pissed at you:
+BN_MAD0 azuresheep/barniel/bn_stepoff
+BN_MAD1 azuresheep/barniel/bn_iwish
+BN_MAD2 azuresheep/barniel/bn_uwish
+BN_MAD3 azuresheep/barniel/bn_somuch
+BN_MAD4 azuresheep/barniel/bn_endline
+BN_MAD5 azuresheep/barniel/bn_dontmake
+BN_MAD6 azuresheep/barniel/bn_tomb
+
+//When barniel's killed something
+BN_KILL0 azuresheep/barniel/bn_gotone
+BN_KILL1 azuresheep/barniel/bn_another
+BN_KILL2 azuresheep/barniel/bn_onelessh
+BN_KILL3 azuresheep/barniel/bn_seethat
+BN_KILL4 azuresheep/barniel/bn_close
+BN_KILL5 azuresheep/barniel/bn_firepl
+BN_KILL6 azuresheep/barniel/bn_bring
+
+// if barniel can't follow you
+BN_STOP0 azuresheep/barniel/stop1
+
+
+// HUMAN TERRORIST
+
+TR_GREN0 common/null
+
+// Player Alert
+TR_ALERT0 hgrunt/gr_pain3
+
+// Monster Alert
+TR_MONST0 hgrunt/gr_pain3
+
+// Take cover
+TR_COVER0 common/null
+
+// Throw grenade
+TR_THROW0 common/null
+
+// Taunt
+TR_TAUNT0 hgrunt/gr_loadtalk
+TR_TAUNT1 hgrunt/gr_pain1
+TR_TAUNT2 hgrunt/gr_pain2
+
+// Charge
+TR_CHARGE0 hgrunt/gr_loadtalk
+
+// Idle
+TR_IDLE0 common/null
+
+TR_QUEST0 common/null
+TR_ANSWER0 common/null
+TR_CLEAR0 common/null
+TR_CHECK0 common/null
+
+
+// WORKER (Construction worker) - uses the same files as the scientist
+
+// various
+WK_VAR0 scientist/noopen
+
+WK_OK0 scientist/fine
+WK_OK1 scientist/hopeyouknow
+WK_OK2 scientist/leadtheway
+WK_OK3 scientist/alright
+
+WK_WAIT0 scientist/illwaithere
+WK_WAIT1 scientist/slowingyou
+WK_WAIT2 scientist/istay
+
+// fail to follow player any more
+WK_STOP0 scientist/stop1
+WK_STOP1 scientist/stop4
+
+// player is staring at gus
+WK_STARE0 scientist/yees
+WK_STARE1 scientist/areyouthink
+WK_STARE2 scientist/noidea
+
+WK_HELLO0 scientist/hellothere
+WK_HELLO1 scientist/hello
+WK_HELLO2 scientist/hello2
+
+WK_ANSWER0 scientist/notsure
+WK_ANSWER1 scientist/notcertain
+WK_ANSWER2 scientist/perhaps
+WK_ANSWER3 scientist/yes
+WK_ANSWER4 scientist/ibelieveso
+WK_ANSWER5 scientist/right
+WK_ANSWER6 scientist/ridiculous
+WK_ANSWER7 scientist/shutup
+WK_ANSWER8 scientist/shutup2
+
+WK_QUESTION0 scientist/everseen
+WK_QUESTION1 scientist/evergetout
+WK_QUESTION2 scientist/rightwayout
+WK_QUESTION3 scientist/hearsomething
+WK_QUESTION4 scientist/doyousmell
+
+WK_IDLE0 scientist/ipredictedthis
+WK_IDLE1 scientist/howinteresting
+WK_IDLE2 scientist/whoresponsible
+WK_IDLE3 scientist/lambdalab
+WK_IDLE4 scientist/ihearsomething
+
+WK_NOGO scientist/dontgothere
+
+WK_MONST0 scientist/seeheadcrab
+WK_MONST1 scientist/importantspecies
+
+WK_HEAR0 scientist/ihearsomething
+WK_HEAR1 scientist/didyouhear
+WK_HEAR2 scientist/whatissound
+
+WK_SMELL0 scientist/somethingfoul
+WK_SMELL1 scientist/odorfromyou
+WK_SMELL2 scientist/peculiarodor
+WK_SMELL3 scientist/stench
+
+WK_WOUND0 scientist/iwounded
+WK_WOUND1 scientist/iwounded2
+
+WK_MORTAL0 scientist/iwoundedbad
+WK_MORTAL1 scientist/iwounded2
+
+WK_CUREA scientist/youlookbad
+WK_CUREB scientist/youwounded
+WK_CUREC scientist/youneedmedic
+
+WK_HEAL0 scientist/youlookbad
+WK_HEAL1 scientist/youwounded
+WK_HEAL2 scientist/youneedmedic
+
+WK_PLFEAR0 scientist/madness
+WK_PLFEAR1 scientist/noplease
+
+WK_FEAR0 scientist/nooo
+WK_FEAR1 scientist/startle2
+WK_FEAR2 scientist/dontwantdie
+WK_FEAR3 scientist/startle6
+
+WK_SCREAM0 scientist/sci_fear1
+WK_SCREAM1 scientist/sci_fear2
+WK_SCREAM2 scientist/sci_fear3
+WK_SCREAM3 scientist/sci_fear4
+
+WK_SCARED0 scientist/whatyoudoing
+WK_SCARED1 scientist/stopattacking
+WK_SCARED2 scientist/youinsane
+
+// azuresheep/gordon
+GO_SURPRISE0 azuresheep/gordon/go_pain2
+
+GO_OK0 azuresheep/gordon/teamup1
+GO_OK1 azuresheep/gordon/dobettertogether
+GO_OK2 azuresheep/gordon/gladtolendhand
+
+GO_WAIT0 azuresheep/gordon/slowingyoudown
+GO_WAIT1 azuresheep/gordon/seeya
+GO_WAIT2 azuresheep/gordon/standguard
+
+GO_HELLO0 azuresheep/gordon/hellonicesuit
+
+GO_QUESTION0 azuresheep/gordon/gladof38
+GO_QUESTION1 azuresheep/gordon/getanyworse
+GO_QUESTION2 azuresheep/gordon/aintscared
+GO_QUESTION3 azuresheep/gordon/youhearthat
+GO_QUESTION4 azuresheep/gordon/somethingmoves
+
+GO_ANSWER0 azuresheep/gordon/noway
+GO_ANSWER1 azuresheep/gordon/soundsright
+GO_ANSWER2 azuresheep/gordon/yougotit
+GO_ANSWER3 azuresheep/gordon/dontbet
+
+// player is staring at azuresheep/gordon
+GO_STARE0 azuresheep/gordon/yup
+
+GO_IDLE0 azuresheep/gordon/bigmess
+GO_IDLE1 azuresheep/gordon/luckwillturn
+GO_IDLE2 azuresheep/gordon/targetpractice
+GO_IDLE3 azuresheep/gordon/ambush
+
+GO_ATTACK0 azuresheep/gordon/diebloodsucker
+GO_ATTACK1 azuresheep/gordon/aimforhead
+GO_ATTACK2 azuresheep/gordon/standback
+
+GO_HEAR0 azuresheep/gordon/hearsomething
+GO_HEAR1 azuresheep/gordon/hearsomething2
+
+GO_SMELL0 azuresheep/gordon/somethingdied
+GO_SMELL1 azuresheep/gordon/stench
+
+GO_CUREA azuresheep/gordon/checkwounds
+GO_CUREB azuresheep/gordon/youneedmedic
+
+GO_SCARED0 azuresheep/gordon/donthurtem
+GO_SCARED1 azuresheep/gordon/leavealone
+
+GO_WOUND0 azuresheep/gordon/imhit
+GO_WOUND1 azuresheep/gordon/hitbad
+GO_MORTAL0 azuresheep/gordon/imdead
+
+//If you use azuresheep/gordon before the disaster
+//(used in Azure Sheep when not allowed to use a monster)
+GO_POK0 common/null
+GO_POK1 common/null
+GO_POK2 common/null
+GO_POK3 common/null
+
+//If you shoot azuresheep/gordon:
+GO_SHOT0 azuresheep/gordon/go_whoathere
+GO_SHOT1 azuresheep/gordon/go_dotoyou
+GO_SHOT2 azuresheep/gordon/go_watchit
+GO_SHOT3 azuresheep/gordon/go_whatyou
+GO_SHOT4 azuresheep/gordon/go_friends
+GO_SHOT5 azuresheep/gordon/go_watchit
+
+//When azuresheep/gordon's really pissed at you:
+GO_MAD0 azuresheep/gordon/go_stepoff
+GO_MAD1 azuresheep/gordon/go_iwish
+GO_MAD2 azuresheep/gordon/go_uwish
+GO_MAD3 azuresheep/gordon/go_somuch
+GO_MAD4 azuresheep/gordon/go_endline
+GO_MAD5 azuresheep/gordon/go_dontmake
+GO_MAD6 azuresheep/gordon/go_tomb
+
+//When azuresheep/gordon's killed something
+GO_KILL0 azuresheep/gordon/go_gotone
+GO_KILL1 azuresheep/gordon/go_another
+GO_KILL2 azuresheep/gordon/go_buttugly
+GO_KILL3 azuresheep/gordon/go_seethat
+GO_KILL4 azuresheep/gordon/go_close
+GO_KILL5 azuresheep/gordon/go_firepl
+GO_KILL6 azuresheep/gordon/go_bring
+
+// if azuresheep/gordon can't follow you
+GO_STOP0 azuresheep/gordon/stop1
+GO_STOP1 azuresheep/gordon/stop2
+
+
+// KATE
+
+// Scripted kate trouble
+KA_SCRIPT0 azuresheep/kate/whatgoingon2
+KA_SCRIPT1 azuresheep/kate/somethingmove
+KA_SCRIPT2 azuresheep/kate/ka_attack1
+KA_SCRIPT3 azuresheep/kate/youwish
+
+// When Kate is arrested
+KA_ARRESTED0 common/null
+
+// When Kate is going to use a elevator
+KA_PLAT0 azuresheep/kate/correctway
+
+// When Kate is going to use a retina scanner
+KA_RETINA0 azuresheep/kate/yesbarn
+
+// When Kate doesn't want to go into water
+KA_NOWATER0 azuresheep/kate/waithere2
+
+// When Kate must wait for player
+KA_WAIT0 azuresheep/kate/seeyoulater
+
+// Kate misc sentences
+KA_VAR0 azuresheep/kate/ka_attack1
+KA_VAR1 azuresheep/kate/iamkate
+KA_VAR2 azuresheep/kate/freebarney
+KA_VAR3 azuresheep/kate/seelater
+KA_VAR4 azuresheep/kate/hevno
+KA_VAR5 azuresheep/kate/resquedatlast
+KA_VAR6 azuresheep/kate/staypost
+KA_VAR7 azuresheep/kate/welcome
+
+// Kate ok to teamup
+KA_OK0 azuresheep/kate/teamup1
+KA_OK1 azuresheep/kate/teamup2
+
+// When Kate is told to wait
+KA_WAIT0 azuresheep/kate/waithere
+
+KA_HELLO0 azuresheep/kate/hi
+
+KA_QUESTION0 azuresheep/kate/bigeye
+KA_QUESTION1 azuresheep/kate/thinking
+KA_QUESTION2 azuresheep/kate/whatgoingon
+KA_QUESTION3 azuresheep/kate/correctway
+KA_QUESTION4 azuresheep/kate/badfelling
+KA_QUESTION5 azuresheep/kate/cupoftie
+
+KA_ANSWER0 azuresheep/kate/bequiet
+KA_ANSWER1 azuresheep/kate/dontagree
+KA_ANSWER2 azuresheep/kate/dontknow
+KA_ANSWER3 azuresheep/kate/notatall
+KA_ANSWER4 azuresheep/kate/hoyes
+
+// player is staring at kate
+KA_STARE0 azuresheep/kate/badfelling
+KA_STARE1 azuresheep/kate/dinnerend
+KA_STARE2 azuresheep/kate/thinking
+KA_STARE3 azuresheep/kate/yesbarn
+KA_STARE4 azuresheep/kate/hi
+KA_STARE5 azuresheep/kate/whatgoingon
+
+KA_IDLE0 azuresheep/kate/bigeye
+KA_IDLE1 azuresheep/kate/cupoftie
+KA_IDLE2 azuresheep/kate/hummm
+KA_IDLE3 azuresheep/kate/badfelling
+
+KA_ATTACK0 azuresheep/kate/dieslimy
+KA_ATTACK1 azuresheep/kate/openfire
+KA_ATTACK2 azuresheep/kate/ka_attack1
+KA_ATTACK3 azuresheep/kate/aimforhead
+
+KA_HEAR0 azuresheep/kate/hearsomething
+KA_HEAR1 azuresheep/kate/somethingmove
+KA_HEAR3 azuresheep/kate/badfelling
+
+KA_SMELL0 azuresheep/kate/somethingmove
+
+KA_CUREA azuresheep/kate/youneedmedic
+KA_CUREB azuresheep/kate/youneedmedic
+KA_CUREC azuresheep/kate/youneedmedic
+
+KA_SCARED0 azuresheep/kate/whatyoudoing
+
+KA_WOUND0 azuresheep/kate/hitbad
+KA_MORTAL0 azuresheep/kate/hitbad2
+
+//If you use Kate before the disaster
+//(used in Azure Sheep when not allowed to use a monster)
+KA_POK0 common/null
+KA_POK1 common/null
+KA_POK2 common/null
+KA_POK3 common/null
+
+//If you shoot kate:
+KA_SHOT0 azuresheep/kate/becarefull
+KA_SHOT1 azuresheep/kate/dontdothat
+KA_SHOT2 azuresheep/kate/dontdothis
+KA_SHOT3 azuresheep/kate/friendslikeyou
+KA_SHOT4 azuresheep/kate/muchmore
+
+//When kate's really pissed at you:
+KA_MAD0 azuresheep/kate/didntwantthis
+KA_MAD1 azuresheep/kate/dontwantlive
+KA_MAD2 azuresheep/kate/stepoff
+KA_MAD3 azuresheep/kate/youaredead
+KA_MAD4 azuresheep/kate/youwish
+
+//When kate's killed something
+KA_KILL0 azuresheep/kate/anotherdown
+KA_KILL1 azuresheep/kate/didseeshot
+KA_KILL2 azuresheep/kate/gotanother
+KA_KILL3 azuresheep/kate/gotone
+KA_KILL4 azuresheep/kate/oneless
+KA_KILL5 azuresheep/kate/close
+KA_KILL6 azuresheep/kate/bringitone
+
+// if kate can't follow you
+KA_STOP0 azuresheep/kate/stop1
+
+// kate health suit saying
+KA_HEALTHST1 weapons/kmedkit_sayhealth
+KA_HEALTHST2 fvox/fuzz fuzz, health_kate
+KA_HEALTH1 fvox/one
+KA_HEALTH2 fvox/two
+KA_HEALTH3 fvox/three
+KA_HEALTH4 fvox/four
+KA_HEALTH5 fvox/five
+KA_HEALTH6 fvox/six
+KA_HEALTH7 fvox/seven
+KA_HEALTH8 fvox/eight
+KA_HEALTH9 fvox/nine
+KA_HEALTH10 fvox/ten
+KA_HEALTH11 fvox/eleven
+KA_HEALTH12 fvox/twelve
+KA_HEALTH13 fvox/thirteen
+KA_HEALTH14 fvox/fourteen
+KA_HEALTH15 fvox/fifteen
+KA_HEALTH16 fvox/sixteen
+KA_HEALTH17 fvox/seventeen
+KA_HEALTH18 fvox/eighteen
+KA_HEALTH19 fvox/nineteen
+KA_HEALTH20 fvox/twenty
+KA_HEALTH30 fvox/thirty
+KA_HEALTH40 fvox/fourty
+KA_HEALTH50 fvox/fifty
+KA_HEALTH60 fvox/sixty
+KA_HEALTH70 fvox/seventy
+KA_HEALTH80 fvox/eighty
+KA_HEALTH90 fvox/ninety
+KA_HEALTH00 fvox/onehundred
+KA_HEALTHED fvox/percent
+
+// HUMAN GRUNTS
+
+// Azure sheep new ones
+HG_VAR01 hgrunt/clik you! no! move! clik
+HG_VAR02 hgrunt/clik target secure sir clik
+HG_VAR03 hgrunt/gr_mgun1, gr_mgun1, gr_mgun2, gr_mgun1
+HG_VAR04 hgrunt/gr_pain4
+
+HG_GREN0 hgrunt/clik(p120) grenade! clik
+HG_GREN1 hgrunt/(t30) clik take!(e75) cover!(s5) clik
+HG_GREN2 hgrunt/clik clik oh! shit! clik
+HG_GREN3 hgrunt/(p110 t40) clik(p120) get!(e78) down!(t30) clik
+HG_GREN4 hgrunt/clik(p110) (t40) of!(e75) god! clik(p110)
+HG_GREN5 hgrunt/clik no! clik
+HG_GREN6 hgrunt/clik move! clik(p120)
+
+// Player Alert
+// Azure Sheep some changed sentences because of using the azuresheep/gordon or Freeman word
+HG_ALERT0 hgrunt/(t30) squad!, we!(e80) got!(e80) guard!(t20 p105), clik(p110)
+HG_ALERT1 hgrunt/clik(p110) target! clik
+HG_ALERT2 hgrunt/clik movement! clik
+HG_ALERT3 hgrunt/(t40) shit!(t20), (t50) we! got! hostiles!(p120 t0) clik
+HG_ALERT4 hgrunt/(t20) clik(p110) squad!, get!(e80) guard!, clik(p110) clik
+HG_ALERT5 hgrunt/(t20) clik squad!, neutralize!(e90) guard! clik
+HG_ALERT6 hgrunt/(t30) clik clik move!(e75) in! clik(p120)
+
+// Monster Alert
+HG_MONST0 hgrunt/clik(p110) (t50) bogies!(t0), my! sector!(t0) clik
+HG_MONST1 hgrunt/clik(p110) (t40) clik(p120) we!(e75) got! bogies! clik
+HG_MONST2 hgrunt/clik clik (t30) alien!(e85) alert! clik
+HG_MONST3 hgrunt/clik clik (t30) alien!(e85) movement!(t0) clik(p120)
+
+// Take cover
+HG_COVER0 hgrunt/clik (t30) take! cover!(t0) clik
+HG_COVER1 hgrunt/clik (t45) (e75) I!(e80) need!(e80) suppressing!(t20) fire!(t10) clik
+HG_COVER2 hgrunt/clik (t45) we! need! backup!(t10) clik
+HG_COVER3 hgrunt/clik(p120) (t40) two!(e75) hot!(e80) here! clik
+HG_COVER4 hgrunt/clik(p110) (t30) fall!(e80) out! clik clik
+HG_COVER5 hgrunt/clik(p120) (t20) clear! this! area! clik
+HG_COVER6 hgrunt/clik (t40) god! damn! clik
+HG_COVER7 hgrunt/clik (t40) cover!(e75) fire! clik
+
+// Throw grenade
+HG_THROW0 hgrunt/clik(p120) (t40) fire!(e90) in!(e90) the!(e60) hole!(e100) clik
+HG_THROW1 hgrunt/clik (t30) take!(e75) this!(e100 t0) clik
+HG_THROW2 hgrunt/clik (t35) fire in the(e50) hole clik(p120)
+HG_THROW3 hgrunt/clik(p110) (t35 e80) squad, stay down clik
+
+// Taunt
+HG_TAUNT0 hgrunt/clik (t30 e75) uhh, we got heavy fire here clik
+HG_TAUNT1 hgrunt/clik(p120) (t40) roger, hold position clik
+HG_TAUNT2 hgrunt/clik (t40) we!(e80) will!(e75) kick!(e80) your!(e75) ass! clik
+HG_TAUNT3 hgrunt/clik (t40) mister, you(e75) are going down clik
+HG_TAUNT4 hgrunt/clik(p120) (t40) you got nothing clik
+HG_TAUNT5 hgrunt/clik(p110) (t40) request! backup! clik(p120) clik
+
+// Charge
+HG_CHARGE0 hgrunt/clik (t40) go! recon! clik(p120)
+HG_CHARGE1 hgrunt/clik(p110) (t40) move!(e75) in! clik
+HG_CHARGE2 hgrunt/clik go! clik(p120)
+HG_CHARGE3 hgrunt/clik lets! go! clik(p120)
+
+// Idle
+HG_IDLE0 hgrunt/gr_idle1
+HG_IDLE1 hgrunt/gr_idle2
+HG_IDLE2 hgrunt/gr_idle3
+
+// Azure Sheep some changed sentences because of using the azuresheep/gordon or Freeman word
+HG_QUEST0 hgrunt/clik (t25) stay(e80) alert people clik(p120)
+HG_QUEST1 hgrunt/clik (t30) radio(e75) check, over clik(p120)
+HG_QUEST2 hgrunt/clik (t20) maintain lookout clik(p120)
+HG_QUEST3 hgrunt/clik(p110) (t30) squad, quiet(e75) down clik(p120)
+HG_QUEST4 hgrunt/clik(p120) (t30) hold position, clik
+HG_QUEST5 hgrunt/clik(p120) (t30) sweep(e80) that sector, clik(p120) clik(p120)
+HG_QUEST6 hgrunt/clik(p120) (t30) uhh, go tango sweep formation clik(p120) clik(p120)
+HG_QUEST7 hgrunt/clik(p120) (t30) echo(e75) mission is go clik(p120) clik(p120)
+HG_QUEST8 hgrunt/clik(p110) (t30) fire(e75) team, weapons(e75) check ok clik(p120) clik
+HG_QUEST9 hgrunt/clik(p110) (t30) fire(e75) team, objective foxtrot niner clik(p120)
+HG_QUEST10 hgrunt/clik (t30) ok(e75) mission, zero(e75) niner clik
+HG_QUEST11 hgrunt/clik (t30) squad, stay(e80) alert(e80) four guard, over clik
+
+HG_ANSWER0 hgrunt/clik(p110) (t20) uhh roger(e75) that, clik(p120) clik
+HG_ANSWER1 hgrunt/clik(p120) (t10) yessir clik
+HG_ANSWER2 hgrunt/clik(p120) (t30) affirmative, sir clik
+HG_ANSWER3 hgrunt/clik (t30) negative clik(p120) clik
+HG_ANSWER4 hgrunt/clik(p105) (t30) roger clik
+HG_ANSWER5 hgrunt/clik(p105) (t30) ok control clik
+HG_ANSWER6 hgrunt/clik(p105) (t30) that(e75) is, uhh, affirmative clik
+
+HG_CLEAR0 hgrunt/clik(p130) (t30) all(e75) clear sir, clik
+HG_CLEAR1 hgrunt/clik (t30) bravo(e75) post, clear clik(p120)
+HG_CLEAR2 hgrunt/clik(p110) (t30) delta(e75) team, clear clik(p120)
+HG_CLEAR3 hgrunt/clik(p110) (t40) no sign hostiles sir, over clik(p120)
+HG_CLEAR4 hgrunt/clik (t30) no(e80) sign objective sir, over clik(p120)
+HG_CLEAR5 hgrunt/clik (t30) no(e75) movement this level clik(p120)
+HG_CLEAR6 hgrunt/clik(p120) (t28) sir, sector secure, over clik(p120) clik(p120)
+HG_CLEAR7 hgrunt/clik(p120) (t30) command(e75) post, team in position, over clik
+HG_CLEAR8 hgrunt/clik (t30) recon, in(e75) position, all quiet clik(p120)
+HG_CLEAR9 hgrunt/clik(p110) (t30) lookout(e90) post, all quiet, over clik(p110)
+HG_CLEAR10 hgrunt/clik (t40) sir, I(e80) here(e75) something clik
+HG_CLEAR11 hgrunt/clik(p120) (t30) sir, uhh, zero movement, over clik
+HG_CLEAR12 hgrunt/clik (t30) area secure sir, over clik(p120)
+
+HG_CHECK0 hgrunt/clik (t30) ok, check(e75) in clik
+HG_CHECK1 hgrunt/clik(p110) (t30) squad, are(e80) hostiles clear clik(p120)
+HG_CHECK2 hgrunt/clik (t30) check(e80) in people clik
+HG_CHECK3 hgrunt/clik (t30) lookout, check(e75) in clik(p110)
+HG_CHECK4 hgrunt/clik (t30) recon(e90) team, check(e80) in clik
+HG_CHECK5 hgrunt/clik(p130) (t30) movement check, over clik
+HG_CHECK6 hgrunt/clik (t30) check your zone, over, clik
+HG_CHECK7 hgrunt/clik (t30) everything(e85) ok(e75) there, clik(p130)
+
+//narrative
+
+HG_SNOOP1A hgrunt/c2a2_hg_chat1a
+HG_SNOOP2A hgrunt/c2a2_hg_chat2a
+HG_SNOOP3A hgrunt/c2a2_hg_chat3a
+HG_SNOOP4A hgrunt/c2a2_hg_chat4a
+HG_SNOOP5A hgrunt/c2a2_hg_chat5a
+
+HG_DRAG1A hgrunt/c2a3_hg_1drag
+HG_DRAG2A hgrunt/c2a3_hg_2drag
+HG_DRAG3A hgrunt/c2a3_hg_3drag
+HG_DRAG4A hgrunt/c2a3_hg_4drag
+HG_DRAG5A hgrunt/c2a3_hg_5drag
+HG_DRAG6A hgrunt/c2a3_hg_laugh
+
+HG_SUCKS hgrunt/hg_sucks
+HG_CIVVIES hgrunt/hg_civvies
+
+// BASE COMPUTER (some removed because they not needed)
+
+// countdown
+
+CTR0 zero
+CTR1 one second
+CTR2 two
+CTR3 three seconds
+CTR4 four
+CTR5 five seconds remaining
+CTR6 six
+CTR7 seven
+CTR8 eight
+CTR9 nine
+CTR10 ten seconds remaining
+CTR11 eleven
+CTR12 twelve
+CTR13 thirteen
+CTR14 fourteen
+CTR15 fifteen seconds remaining
+CTR16 sixteen
+CTR17 seventeen
+CTR18 eighteen
+CTR19 nineteen
+CTR20 twenty seconds remaining
+
+// doors, general
+NA0 access denied
+NA1 access is denied
+NA2 unauthorized access
+NA3 illegal access
+NA4 this door is locked
+NA5 unauthorized access
+NA6 entry forbidden
+NA7 entry not permitted
+NA8 no unauthorized personnel
+NA9 you do not have access to this facility
+NA10 (p102) sorry, you may not enter
+NA11 (p102) sorry, this door is locked
+NA12 (p102) please, move away from this area
+NA13 (p102) please, move away from door
+NA14 (p103) you will not get in
+NA15 (p103) entry is not an option
+NA16 (p104) will we do this all day
+NA17 (p104) move on immediately
+NA18 (p105) no, no, and no(p80)
+EA0 access granted
+EA1 access permitted
+EA2 entry granted
+EA3 entry permitted
+EA4 access authorized
+EA5 entry is permitted
+EA6 access authorized
+EA7 access to facility, granted
+EA8 access granted
+
+// doors, security lockout
+ND0 security lock is engaged
+ND1 secure area, no entry
+ND2 security lockout, no entry
+ND3 secure door, no entry
+ND4 security system in force
+ND5 security system armed, no entry
+ND6 door is secured
+ND7 illegal access, move away
+ED0 security lock disengaged
+ED1 security clear, proceed
+ED2 security lockout, released
+ED3 secure override accepted
+ED4 security access acknowledged
+ED5 security system disengaged
+ED6 door security disengaged
+
+// blast doors
+NF0 emergency blast door activated
+NF1 emergency blast shield activated
+NF3 the blast containment shield is down
+EF0 emergency blast door, open
+EF1 emergency blast shield, deactivated
+EF3 blast containment shield is, open
+
+// fire door
+NFIRE0 fire containment door is down
+EFIRE0 fire containment door, open
+
+// chemical door
+NCHEM0 chemical leak containment door activated
+ECHEM0 chemical leak containment door, open
+
+// radiation door
+NRAD0 radiation containment door activated
+ERAD0 radiation containment door, open
+
+// generic containment door
+NCON0 emergency containment door engaged
+ECON0 emergency containment door disengaged
+
+// broken locked door
+NG0 sorry, this door is inoperative
+NG1 sorry, door out of service
+NG2 door damage detected, please call service personnel
+
+// maintenance door
+NH0 no access, maintenance area
+NH1 no personnel permitted in maintenance area
+EH0 maintenance area access granted
+EH1 maintenance area door open
+
+// turrets, defensive systems
+
+T0 extreme hazard, defense system is armed in this zone
+T1 hazard area, defense system activated
+T2 danger, turret perimeter defense system armed
+T3 extreme hazard, nearest defense system engaged
+T4 danger, base defense turret system may power up
+T5 danger, automatic defense system activated
+
+// warnings
+
+WE0 warning, high voltage cable
+WE1 warning, high power cable
+WE2 warning, electric shock hazard
+WE3 warning, severe electric shock hazard
+
+// danger
+
+DR0 danger, radiation leak detected
+DR1 danger, radiation hazard detected
+DR2 danger, high radiation level detected
+DR3 danger, severe radiation hazard, evacuate area immediately
+DR4 danger, safety violation, extreme radiation level detected
+
+DC0 danger, chemical leak, area now a high health hazard
+DC1 danger, chemical coolant leak, health hazard zone
+DC2 danger, chemical containment breach, all personnel evacuate this area
+DC3 danger, supercooled chemical leak
+DC4 danger, supercooled helium leak
+
+DB0 danger, liquid biohazard leak in immediate area
+DB1 danger, coolant leak, severe biohazard now in this area
+DB2 danger, liquid biohazard released, evacuate area
+DB3 danger, biohazard detected in immediate area
+
+// training room
+
+TR_A three, two, one, deeoo(p110)
+TR_B deeoo(p110) (p102 t20) target system deactivated
+
+
+// HEV Suit
+
+// powerup
+
+HEV_AAx fvox/bell, HEV_logon, powerarmor_on, atmospherics_on,vitalsigns_on, automedic_on, weaponselect_on, munitionview_on, communications_on, safe_day
+HEV_A0 fvox/bell, HEV_logon
+
+HEV_A1 fvox/blip blip(p130) powermove_on
+HEV_A2 fvox/blip blip powerarmor_on
+HEV_A3 fvox/blip blip(p130) atmospherics_on
+HEV_A4 fvox/blip blip vitalsigns_on boop, boop, boop
+HEV_A5 fvox/blip blip(p130) munitionview_on
+HEV_A6 fvox/blip blip communications_on
+HEV_A7 fvox/blip blip(p70) weaponselect_on
+HEV_A8 fvox/blip blip(p70) automedic_on
+HEV_A9 fvox/fuzz power_level_is onehundred percent
+HEV_A10 fvox/safe_day, bell
+
+// medical
+// Azure Sheep some added sentences
+HEV_DEAD0 fvox/beep beep, beep beep, beep, beep, flatline
+HEV_DEAD1 fvox/beep beep, beep beep, beep, flatline
+HEV_NHEVDEAD0 player/heartbeat1
+
+HEV_MED0 fvox/(p140) boop, boop, boop, (p100) innsuficient_medical
+HEV_MED1 fvox/(p140) boop, boop, boop, (p100) automedic_on
+HEV_MED2 fvox/(p140) boop, boop, boop, (p100) administering_medical
+
+HEV_HEAL0 fvox/(p140) boop, boop, boop, (p100) wound_sterilized, blip(p130 v50), blip(p130 v40), hiss, morphine_shot
+HEV_HEAL1 fvox/(p140) boop, boop, boop, (p100) torniquette_applied, bleeding_stopped
+HEV_HEAL2 fvox/(p140) boop, boop, boop, (p100) bleeding_stopped
+HEV_HEAL3 fvox/(p140) boop, boop, boop, (p100) blood_plasma
+HEV_HEAL4 fvox/(p140) boop, boop, boop, (p100) hiss, antitoxin_shot
+HEV_HEAL5 fvox/(p140) boop, boop, boop, (p100) hiss, antidote_shot
+HEV_HEAL6 fvox/(p140) boop, boop, boop, (p100) hiss, wound_sterilized
+HEV_HEAL7 fvox/(p140) boop, boop, boop, (p100) hiss, morphine_shot
+HEV_HEAL8 fvox/(p140) boop, boop, boop, (p100) medical_repaired
+
+HEV_DMG0 fvox/(p160) boop, boop, boop, (p100) minor_lacerations
+HEV_DMG1 fvox/(p160) boop, boop, boop, (p100) major_lacerations
+HEV_DMG2 fvox/(p160) boop, boop, boop, (p100) internal_bleeding
+HEV_DMG3 fvox/(p160) boop, boop, boop, (p100) blood_toxins
+HEV_DMG4 fvox/(p160) boop, boop, boop, (p100) minor_fracture
+HEV_DMG5 fvox/(p160) boop, boop, boop, (p100) major_fracture
+HEV_DMG6 fvox/(p160) boop, boop, boop, (p100) blood_loss
+HEV_DMG7 fvox/(p140) boop, boop, boop, (p100) seek_medic
+
+HEV_HLTH0 fvox/(p120) beep, beep, (p100) health_dropping
+HEV_HLTH1 fvox/(p120) beep, beep, (p100) health_dropping2
+HEV_HLTH2 fvox/(p120) beep, beep, beep, (p100) health_critical
+HEV_HLTH3 fvox/(p120) beep, beep, beep, (p100) near_death
+HEV_HLTH4 fvox/(p140) beep, beep, (p100) health_dropping2, evacuate_area
+HEV_HLTH5 fvox/(p140) beep, beep, beep, (p100) health_critical, evacuate_area
+HEV_HLTH6 fvox/(p140) beep, beep, beep, (p100) near_death, evacuate_area immediately
+
+HEV_SHOCK fvox/(p120) beep, beep, (p100) warning, shock_damage
+HEV_FIRE fvox/(p120) beep, beep, (p100) warning, heat_damage
+
+// items
+HEV_AIM_ON fvox/blip targetting_system activated
+HEV_AIM_OFF fvox/blip targetting_system deactivated
+HEV_BATTERY fvox/blip get_battery acquired
+HEV_MEDKIT fvox/blip get_medkit(v80)
+
+HEV_PISTOL fvox/blip get_pistol acquired
+HEV_SHOTGUN fvox/blip get_shotgun
+HEV_GRENADE fvox/blip get_grenade acquired
+HEV_ASSAULT fvox/blip get_assault acquired
+HEV_44PISTOL fvox/blip get_44pistol acquired
+HEV_RPG fvox/blip get_rpg acquired
+HEV_SATCHEL fvox/blip get_satchel acquired
+HEV_TRIPMINE fvox/blip get_tripmine acquired
+HEV_HORNET fvox/blip get_alien_wpn
+HEV_SQUEEK fvox/blip get_alien_wpn
+HEV_EGON fvox/blip get_egon acquired
+HEV_GAUSS fvox/blip get_gauss acquired
+HEV_XBOW fvox/blip get_crossbow acquired
+
+HEV_9MM fvox/blip get_9mmclip acquired
+HEV_44AMMO fvox/blip get_44ammo acquired
+HEV_BUCKSHOT fvox/blip get_buckshot acquired
+HEV_BOLTS fvox/blip get_bolts acquired
+HEV_RPGAMMO fvox/blip get_rpgammo acquired
+HEV_AGRENADE fvox/blip get_assaultgren acquired
+HEV_EGONPOWER fvox/blip get_egonpower acquired
+
+// time
+
+//HEV_C1t fvox/bell time_is_now one AM
+//HEV_C13t fvox/bell time_is_now one PM
+
+// power levels
+
+HEV_D00 fvox/fuzz fuzz(p130), power_restored
+HEV_D01 fvox/fuzz fuzz(p80), hev_shutdown
+
+HEV_0P fvox/fuzz fuzz, power_below five percent
+HEV_1P fvox/fuzz fuzz, power_restored(e30), ten percent
+HEV_2P fvox/fuzz fuzz, power_restored(e30), fifteen percent
+HEV_3P fvox/fuzz fuzz, power_restored(e30), twenty percent
+HEV_4P fvox/fuzz fuzz, power_restored(e30), twenty five percent
+HEV_5P fvox/fuzz fuzz, power_restored(e30), thirty percent
+HEV_6P fvox/fuzz fuzz, power_restored(e30), thirty five percent
+HEV_7P fvox/fuzz fuzz, power_restored(e30), fourty percent
+HEV_8P fvox/fuzz fuzz, power_restored(e30), fourty five percent
+HEV_9P fvox/fuzz fuzz, power_restored(e30), fifty percent
+HEV_10P fvox/fuzz fuzz, power_restored(e30), fifty five percent
+HEV_11P fvox/fuzz fuzz, power_restored(e30), sixty percent
+HEV_12P fvox/fuzz fuzz, power_restored(e30), sixty five percent
+HEV_13P fvox/fuzz fuzz, power_restored(e30), seventy percent
+HEV_14P fvox/fuzz fuzz, power_restored(e30), seventy five percent
+HEV_15P fvox/fuzz fuzz, power_restored(e30), eighty percent
+HEV_16P fvox/fuzz fuzz, power_restored(e30), eighty five percent
+HEV_17P fvox/fuzz fuzz, power_restored(e30), ninety percent
+HEV_18P fvox/fuzz fuzz, power_restored(e30), ninety five percent
+HEV_19P fvox/fuzz fuzz, power_level_is onehundred percent
+
+// weapon/ammo
+
+HEV_AMO0 fvox/blip ammo_depleted
+
+// suit
+
+HEV_V0 fvox/blip, voice_on
+HEV_V1 fvox/blip, voice_off
+
+HEV_E0 fvox/buzz buzz, armor_gone
+HEV_E1 fvox/buzz, armor_gone
+HEV_E2 fvox/buzz, hev_critical_fail
+HEV_E3 fvox/buzz, hev_general_fail
+HEV_E4 fvox/buzz, hev_damage
+HEV_E5 fvox/buzz, powermove_overload
+
+// time remaining countdown
+
+//HEV_F10t fvox/bell time_remaining ten seconds
+//HEV_F15t fvox/bell time_remaining fifteen seconds
+//HEV_F20t fvox/bell time_remaining twenty seconds
+//HEV_F30t fvox/bell time_remaining thirty seconds
+
+// detections
+
+HEV_DET0 fvox/blip blip blip, biohazard_detected
+HEV_DET1 fvox/blip blip blip, chemical_detected
+HEV_DET2 fvox/blip blip blip, radiation_detected
+HEV_DET3 fvox/blip blip blip, bio_reading
+HEV_DET4 fvox/blip blip blip, antitoxin_shot(e50), onehundred percent
+HEV_DET5 fvox/blip blip blip, antitoxin_shot(e25) radiation_detected(e50), onehundred percent
+
+//HEV_GR0r fvox/range twenty meters(t60)
+//HEV_GR1r fvox/range nineteen meters
+//HEV_GR2r fvox/range eighteen meters
+
+
+// BARNEY
+
+// Azure sheep new ones
+BA_HISTOP1 barney/dontguess, illwait
+BA_SLEEP1 barney/ba_die3
+BA_GOON1 azuresheep/barney/goon
+
+// If you use Barney before the disaster
+BA_POK0 barney/ba_post
+BA_POK1 barney/ba_duty
+BA_POK2 barney/ba_raincheck
+BA_POK3 barney/ba_later
+
+// Hello Barney sentences before the disaster
+BA_PHELLO0 barney/hayfella
+BA_PHELLO1 barney/hellonicesuit
+BA_PHELLO2 barney/howyoudoing
+
+// Idle Barney sentences before the disaster
+BA_PIDLE0 barney/ba_later
+BA_PIDLE1 barney/badarea
+BA_PIDLE2 barney/bigplace
+BA_PIDLE3 barney/coldone
+BA_PIDLE4 barney/stench
+
+// Idle Barney sentences before the disaster
+BA_PQUEST0 barney/ba_later
+BA_PQUEST1 barney/ba_raincheck
+BA_PQUEST2 barney/somethingstinky
+BA_PQUEST3 barney/thinking
+
+BA_OK0 azuresheep/kate/teamup1
+BA_OK1 azuresheep/kate/teamup2
+BA_OK2 azuresheep/kate/teamup1
+BA_OK3 azuresheep/kate/teamup2
+BA_OK4 azuresheep/kate/teamup1
+BA_OK5 azuresheep/kate/teamup2
+BA_OK6 azuresheep/kate/teamup1
+
+BA_WAIT0 azuresheep/kate/waithere
+BA_WAIT1 azuresheep/kate/waithere
+BA_WAIT2 azuresheep/kate/waithere
+BA_WAIT3 azuresheep/kate/waithere
+BA_WAIT4 azuresheep/kate/waithere
+BA_WAIT5 azuresheep/kate/waithere
+
+// Azure Sheep some changed or removed sentences because of using the azuresheep/gordon or Freeman word
+BA_HELLO0 azuresheep/kate/hi
+BA_HELLO1 azuresheep/kate/hi
+BA_HELLO2 azuresheep/kate/hi
+BA_HELLO3 azuresheep/kate/hi
+BA_HELLO4 azuresheep/kate/hi
+
+BA_QUESTION0 azuresheep/kate/bigeye
+BA_QUESTION1 azuresheep/kate/thinking
+BA_QUESTION2 azuresheep/kate/whatgoingon
+BA_QUESTION3 azuresheep/kate/correctway
+BA_QUESTION4 azuresheep/kate/cupoftie
+BA_QUESTION5 azuresheep/kate/thinking
+BA_QUESTION6 azuresheep/kate/whatgoingon
+BA_QUESTION7 azuresheep/kate/correctway
+BA_QUESTION8 azuresheep/kate/badfelling
+BA_QUESTION9 azuresheep/kate/bigeye
+BA_QUESTION10 azuresheep/kate/thinking
+BA_QUESTION11 azuresheep/kate/badfelling
+BA_QUESTION12 azuresheep/kate/cupoftie
+BA_QUESTION13 azuresheep/kate/thinking
+BA_QUESTION14 azuresheep/kate/bigeye
+
+BA_ANSWER0 azuresheep/kate/dontagree
+BA_ANSWER1 azuresheep/kate/bequiet
+BA_ANSWER2 azuresheep/kate/dontknow
+BA_ANSWER3 azuresheep/kate/notatall
+BA_ANSWER4 azuresheep/kate/hoyes
+BA_ANSWER5 azuresheep/kate/bequiet
+BA_ANSWER6 azuresheep/kate/dontagree
+BA_ANSWER7 azuresheep/kate/dontknow
+BA_ANSWER8 azuresheep/kate/notatall
+BA_ANSWER9 azuresheep/kate/hoyes
+BA_ANSWER10 azuresheep/kate/bequiet
+BA_ANSWER11 azuresheep/kate/dontagree
+BA_ANSWER12 azuresheep/kate/notatall
+BA_ANSWER13 azuresheep/kate/hoyes
+BA_ANSWER14 azuresheep/kate/dontknow
+BA_ANSWER15 azuresheep/kate/bequiet
+BA_ANSWER16 azuresheep/kate/dontagree
+BA_ANSWER17 azuresheep/kate/dontknow
+BA_ANSWER18 azuresheep/kate/notatall
+BA_ANSWER19 azuresheep/kate/hoyes
+BA_ANSWER20 azuresheep/kate/notatall
+BA_ANSWER21 azuresheep/kate/dontknow
+
+// player is staring at barney
+BA_STARE0 azuresheep/kate/yesbarn
+BA_STARE1 azuresheep/kate/whatgoingon
+BA_STARE2 azuresheep/kate/dinnerend
+BA_STARE3 azuresheep/kate/thinking
+
+BA_IDLE0 azuresheep/kate/bigeye
+BA_IDLE1 azuresheep/kate/badfelling
+BA_IDLE2 azuresheep/kate/cupoftie
+BA_IDLE3 azuresheep/kate/hummm
+BA_IDLE4 azuresheep/kate/badfelling
+BA_IDLE5 azuresheep/kate/bigeye
+BA_IDLE6 azuresheep/kate/cupoftie
+BA_IDLE7 azuresheep/kate/badfelling
+BA_IDLE8 azuresheep/kate/bigeye
+BA_IDLE9 azuresheep/kate/cupoftie
+BA_IDLE10 azuresheep/kate/hummm
+
+// Azure Sheep some changed or removed sentences because of using the azuresheep/gordon or Freeman word
+BA_ATTACK0 azuresheep/kate/dieslimy
+BA_ATTACK1 azuresheep/kate/openfire
+BA_ATTACK2 azuresheep/kate/ka_attack1
+BA_ATTACK3 azuresheep/kate/aimforhead
+
+BA_HEAR0 azuresheep/kate/hearsomething
+BA_HEAR1 azuresheep/kate/hearsomething
+BA_HEAR2 azuresheep/kate/hearsomething
+BA_HEAR3 azuresheep/kate/hearsomething
+
+BA_SMELL0 azuresheep/kate/somethingmove
+BA_SMELL1 azuresheep/kate/somethingmove
+BA_SMELL2 azuresheep/kate/somethingmove
+
+BA_CUREA azuresheep/kate/youneedmedic
+BA_CUREB azuresheep/kate/youneedmedic
+BA_CUREC azuresheep/kate/youneedmedic
+
+BA_SCARED0 azuresheep/kate/whatyoudoing
+BA_SCARED1 azuresheep/kate/whatyoudoing
+
+BA_WOUND0 azuresheep/kate/hitbad
+BA_WOUND1 azuresheep/kate/hitbad
+BA_MORTAL0 azuresheep/kate/hitbad2
+
+//If you shoot Barney:
+// Azure Sheep some changed or removed sentences because of using the azuresheep/gordon or Freeman word
+BA_SHOT0 azuresheep/kate/becarefull
+BA_SHOT1 azuresheep/kate/dontdothat
+BA_SHOT2 azuresheep/kate/dontdothis
+BA_SHOT3 azuresheep/kate/friendslikeyou
+BA_SHOT4 azuresheep/kate/muchmore
+
+
+//When Barney's really pissed at you:
+BA_MAD0 azuresheep/kate/didntwantthis
+BA_MAD1 azuresheep/kate/dontwantlive
+BA_MAD2 azuresheep/kate/didntwantthis
+BA_MAD3 azuresheep/kate/youaredead
+BA_MAD4 azuresheep/kate/stepoff
+BA_MAD5 azuresheep/kate/youaredead
+BA_MAD6 azuresheep/kate/youwish
+
+//When Barney's killed something
+BA_KILL0 azuresheep/kate/anotherdown
+BA_KILL1 azuresheep/kate/didseeshot
+BA_KILL2 azuresheep/kate/gotanother
+BA_KILL3 azuresheep/kate/gotone
+BA_KILL4 azuresheep/kate/oneless
+BA_KILL5 azuresheep/kate/close
+BA_KILL6 azuresheep/kate/bringitone
+
+
+//If you use Barney in Hazard Course
+BA_HAZ_OK0 holo/tr_ba_use
+
+//If you unuse Barney in Hazard Course
+BA_HAZ_WAIT0 holo/tr_ba_unuse
+
+//Barney in Hazard Course
+BA_LIGHTSON holo/tr_ba_lightson
+
+// if barney can't follow you
+BA_STOP0 azuresheep/kate/stop1
+BA_STOP1 azuresheep/kate/stop1
+
+//scripted_sentences
+
+//c1a0 scripts
+BA_LATE barney/c1a0_ba_late
+BA_HEADDOWN barney/c1a0_ba_headdown
+BA_DESK barney/c1a0_ba_desk
+BA_BUTTON barney/c1a0_ba_button
+BA_HEVNO barney/c1a0_ba_hevno
+BA_HEVYES barney/c1a0_ba_hevyes
+
+//c1a1 scripts
+BA_GLAD barney/c1a1_ba_glad
+
+//c1a2 scripts
+BA_BULLSQUID barney/c1a2_ba_bullsquid
+BA_ZOMBIE2 barney/c1a2_ba_2zomb
+BA_ZOMBIE4 barney/c1a2_ba_4zomb
+BA_CLIMB barney/c1a2_ba_climb
+BA_SLEW barney/c1a2_ba_slew
+BA_SURFACE barney/c1a2_ba_surface
+BA_TOPSIDE barney/c1a2_ba_top
+
+//c1a4 scripts
+BA_WHISPER barney/c1a4_ba_wisp
+BA_TENTACLE barney/c1a4_ba_octo1
+
+//c2a1 scripts
+BA_HUB1A barney/c2a1_ba_hub1a
+BA_HUB2A barney/c2a1_ba_hub2a
+BA_AGAIN barney/c2a1_ba_again
+
+//c2a2 scripts
+
+BA_LAUNCH barney/c2a2_ba_launch
+
+//c2a3 scripts
+
+BA_ASSN barney/c2a3_ba_assn
+
+//c2a4 scripts
+BA_LONGNITE barney/c2a4_ba_longnite
+BA_STERIL barney/c2a4_ba_steril
+BA_TEACH barney/c2a4_ba_teach
+
+BA_ARG1A barney/c2a4_ba_arg1a
+BA_ARG2A barney/c2a4_ba_arg3a
+BA_ARG3A barney/c2a4_ba_arg5a
+
+BA_TAU1A barney/c2a4_ba_1tau
+BA_TAU3A barney/c2a4_ba_3tau
+BA_TAU5A barney/c2a4_ba_5tau
+
+BA_ALIVE barney/c2a4_ba_alive
+
+//c2a5 scripts
+BA_LETMEOUT barney/c2a5_ba_letout
+BA_RPG barney/c2a5_ba_rpg
+BA_HELPME barney/c2a5_ba_helpme
+BA_SNIPED barney/c2a5_ba_sniped
+
+//c3a2 scripts
+BA_SURVEY2A barney/c3a2_ba_2surv
+BA_SURVEY4A barney/c3a2_ba_4surv
+BA_SURVEY6A barney/c3a2_ba_6surv
+BA_SURVEY8A barney/c3a2_ba_8surv
+BA_PORTSTAY barney/c3a2_ba_stay
+
+
+// gus
+
+// Azure Sheep new ones
+SC_VAR0 scientist/whoareyou
+SC_VAR1 scientist/wareh
+
+SC_OK0 scientist/excellentteam
+SC_OK1 scientist/fellowscientist
+SC_OK2 scientist/fine
+SC_OK3 scientist/hopeyouknow
+SC_OK4 scientist/leadtheway
+SC_OK5 scientist/letsgo
+SC_OK6 scientist/yesletsgo
+SC_OK7 scientist/yes3
+SC_OK8 scientist/alright
+
+SC_WAIT0 scientist/beenaburden
+SC_WAIT1 scientist/slowingyou
+SC_WAIT2 scientist/reconsider
+SC_WAIT3 scientist/whyleavehere
+SC_WAIT4 scientist/illwaithere
+SC_WAIT5 scientist/istay
+SC_WAIT6 scientist/illwait
+
+// fail to follow player any more
+// Azure Sheep some changed or removed sentences because of using the azuresheep/gordon or Freeman word
+SC_STOP0 scientist/stop1
+SC_STOP1 scientist/stop2
+SC_STOP2 scientist/stop4
+
+// player is staring at scientist
+SC_STARE0 scientist/yees
+SC_STARE1 scientist/areyouthink
+SC_STARE2 scientist/noidea
+
+// Azure Sheep some changed or removed sentences because of using the azuresheep/gordon or Freeman word
+SC_HELLO0 scientist/hellothere
+SC_HELLO1 scientist/greetings2
+SC_HELLO2 scientist/hello
+SC_HELLO3 scientist/goodtoseeyou
+SC_HELLO4 scientist/newhevsuit
+SC_HELLO5 scientist/hellofromlab
+SC_HELLO6 scientist/goodtoseeyou
+
+SC_ANSWER0 scientist/notsure
+SC_ANSWER1 scientist/notcertain
+SC_ANSWER2 scientist/perhaps
+SC_ANSWER3 scientist/whocansay
+SC_ANSWER4 scientist/inconclusive
+SC_ANSWER5 scientist/theoretically
+SC_ANSWER6 scientist/whyaskme
+SC_ANSWER7 scientist/lowervoice
+SC_ANSWER8 scientist/ofcourse
+SC_ANSWER9 scientist/absolutely
+SC_ANSWER10 scientist/yes
+SC_ANSWER11 scientist/ibelieveso
+SC_ANSWER12 scientist/right
+SC_ANSWER13 scientist/imsure
+SC_ANSWER14 scientist/positively
+SC_ANSWER15 scientist/nodoubt
+SC_ANSWER16 scientist/yees
+SC_ANSWER17 scientist/ofcoursenot
+SC_ANSWER18 scientist/absolutelynot
+SC_ANSWER19 scientist/noo
+SC_ANSWER20 scientist/idontthinkso
+SC_ANSWER21 scientist/completelywrong
+SC_ANSWER22 scientist/cantbeserious
+SC_ANSWER23 scientist/dontknow
+SC_ANSWER24 scientist/ridiculous
+SC_ANSWER25 scientist/shutup
+SC_ANSWER26 scientist/noguess
+SC_ANSWER27 scientist/stopasking
+SC_ANSWER28 scientist/justasked
+SC_ANSWER29 scientist/repeat
+
+SC_QUESTION0 scientist/everseen
+SC_QUESTION1 scientist/needsleep
+SC_QUESTION2 scientist/areyouthink
+SC_QUESTION3 scientist/evergetout
+SC_QUESTION4 scientist/rightwayout
+SC_QUESTION5 scientist/cantbeworse
+SC_QUESTION6 scientist/rescueus
+SC_QUESTION7 scientist/fascinating
+SC_QUESTION8 scientist/stimulating
+SC_QUESTION9 scientist/luckwillchange
+SC_QUESTION10 scientist/hearsomething
+SC_QUESTION11 scientist/doyousmell
+SC_QUESTION12 scientist/uselessphd
+SC_QUESTION13 scientist/waithere
+SC_QUESTION14 scientist/survival
+SC_QUESTION15 scientist/headcrab
+SC_QUESTION16 scientist/goodpaper
+SC_QUESTION17 scientist/catchone
+SC_QUESTION18 scientist/dinner
+SC_QUESTION19 scientist/alientrick
+SC_QUESTION20 scientist/alienappeal
+SC_QUESTION21 scientist/rumorclean
+SC_QUESTION22 scientist/nothostile
+SC_QUESTION23 scientist/announcer
+SC_QUESTION24 scientist/smellburn
+SC_QUESTION25 scientist/noidea
+SC_QUESTION26 scientist/whatnext
+
+SC_IDLE0 scientist/ipredictedthis
+SC_IDLE1 scientist/containfail
+SC_IDLE2 scientist/chaostheory
+SC_IDLE3 scientist/howinteresting
+SC_IDLE4 scientist/neverseen
+SC_IDLE5 scientist/peculiarmarks
+SC_IDLE6 scientist/whoresponsible
+SC_IDLE7 scientist/nogrant
+SC_IDLE8 scientist/bloodsample
+SC_IDLE9 scientist/administrator
+SC_IDLE10 scientist/improbable
+SC_IDLE11 scientist/organicmatter
+SC_IDLE12 scientist/lambdalab
+SC_IDLE13 scientist/ihearsomething
+
+SC_NOGO scientist/dontgothere
+
+SC_MONST0 scientist/seeheadcrab
+SC_MONST1 scientist/importantspecies
+
+SC_HEAR0 scientist/ihearsomething
+SC_HEAR1 scientist/didyouhear
+SC_HEAR2 scientist/whatissound
+
+SC_SMELL0 scientist/somethingfoul
+SC_SMELL1 scientist/odorfromyou
+SC_SMELL2 scientist/peculiarodor
+SC_SMELL3 scientist/stench
+
+SC_WOUND0 scientist/iwounded
+SC_WOUND1 scientist/iwounded2
+
+SC_MORTAL0 scientist/iwoundedbad
+SC_MORTAL1 scientist/iwounded2
+
+SC_CUREA scientist/youlookbad
+SC_CUREB scientist/youwounded
+SC_CUREC scientist/youneedmedic
+
+SC_HEAL0 scientist/heal1
+SC_HEAL1 scientist/heal2
+SC_HEAL2 scientist/youneedmedic, letstrythis
+SC_HEAL3 scientist/youlookbad, holdstill
+SC_HEAL4 scientist/youwounded, letstrythis
+SC_HEAL5 scientist/heal3
+SC_HEAL6 scientist/heal4
+SC_HEAL7 scientist/heal5
+
+SC_PLFEAR0 scientist/whatyoudoing
+SC_PLFEAR1 scientist/canttakemore
+SC_PLFEAR2 scientist/madness
+SC_PLFEAR3 scientist/noplease
+SC_PLFEAR4 scientist/getoutofhere
+SC_PLFEAR5 scientist/sorryimleaving
+
+SC_FEAR0 scientist/nooo
+SC_FEAR1 scientist/startle2
+SC_FEAR2 scientist/startle1 nooo
+SC_FEAR3 scientist/dontwantdie
+SC_FEAR4 scientist/getoutalive
+SC_FEAR5 scientist/startle3
+SC_FEAR6 scientist/startle4
+SC_FEAR7 scientist/startle5
+SC_FEAR8 scientist/startle6
+SC_FEAR9 scientist/startle7
+SC_FEAR10 scientist/startle8
+SC_FEAR11 scientist/startle9
+SC_FEAR12 scientist/startle1
+
+SC_SCREAM0 scientist/sci_fear1
+SC_SCREAM1 scientist/sci_fear2
+SC_SCREAM2 scientist/sci_fear3
+SC_SCREAM3 scientist/sci_fear4
+SC_SCREAM4 scientist/sci_fear5
+SC_SCREAM5 scientist/sci_fear6
+SC_SCREAM6 scientist/sci_fear7
+SC_SCREAM7 scientist/sci_fear8
+SC_SCREAM8 scientist/sci_fear9
+SC_SCREAM9 scientist/sci_fear10
+SC_SCREAM10 scientist/sci_fear11
+SC_SCREAM11 scientist/sci_fear12
+SC_SCREAM12 scientist/sci_fear13
+SC_SCREAM13 scientist/sci_fear14
+SC_SCREAM14 scientist/sci_fear15
+
+SC_SCARED0 scientist/whatyoudoing
+SC_SCARED1 scientist/stopattacking
+SC_SCARED2 scientist/youinsane
+
+// predisaster scientist
+// Azure Sheep some changed or removed sentences because of using the azuresheep/gordon or Freeman word
+// Azure Sheep Gus/Worker uses this sequences also
+SC_PHELLO0 scientist/goodtoseeyou
+SC_PHELLO1 scientist/greetings2
+SC_PHELLO2 scientist/greetings
+SC_PHELLO3 scientist/hello
+SC_PHELLO4 scientist/hellothere
+
+// Azure Sheep Gus/Worker uses this sequences also, so removed the tech talk sequences
+SC_PQUEST0 scientist/donuteater
+SC_PQUEST1 scientist/seencup
+SC_PQUEST2 scientist/hungryyet
+
+// Azure Sheep Gus/Worker uses this sequences also, so removed the tech talk sequences
+SC_PIDLE0 scientist/asexpected
+SC_PIDLE1 scientist/thatsodd
+
+//If you use Scientists before the disaster
+// Azure Sheep some changed or removed sentences because of using the azuresheep/gordon or Freeman word
+// Azure Sheep Gus/Worker uses this sequences also
+SC_POK0 scientist/sci_alone2
+SC_POK1 scientist/stop4
+
+//If you use Scientists in Hazard Course
+SC_HAZ_OK0 holo/tr_sci_use
+
+//If you unuse Scientists in Hazard Course
+SC_HAZ_WAIT0 holo/tr_sci_unuse
+
+//Scientists in Hazard Course
+SC_GOODWORK holo/tr_sci_goodwork
+SC_HARDLYNOTICE holo/tr_sci_hardlynoticed
+SC_NEXTSTATION holo/tr_sci_nextstation
+
+//narrative audio
+
+SC_1MUMBLE scientist/c1a0_sci_mumble
+
+SC_DISA scientist/c1a0_sci_disa
+SC_DIS1A scientist/c1a0_sci_dis1a
+SC_DIS1B scientist/c1a0_sci_dis1b
+SC_DIS1C scientist/c1a0_sci_dis1c
+SC_DIS1D scientist/c1a0_sci_dis1d
+
+SC_DIS2A scientist/c1a0_sci_dis2a
+SC_DIS3A scientist/c1a0_sci_dis3a
+SC_DIS4A scientist/c1a0_sci_dis4a
+SC_DIS5A scientist/c1a0_sci_dis5a
+SC_DIS6A scientist/c1a0_sci_dis6a
+SC_DIS7A scientist/c1a0_sci_dis7a
+SC_DIS8A scientist/c1a0_sci_dis8a
+SC_DIS9A scientist/c1a0_sci_dis9a
+SC_DIS10A scientist/c1a0_sci_dis10a
+SC_DIS11A scientist/c1a0_sci_dis11a
+SC_DIS12A scientist/c1a0_sci_dis12a
+SC_DIS13A scientist/c1a0_sci_dis13a
+SC_DIS14A scientist/c1a0_sci_dis14a
+SC_DIS15A scientist/c1a0_sci_dis15a
+SC_DIS16A scientist/c1a0_sci_dis16a
+SC_DIS17A scientist/c1a0_sci_dis17a
+
+SC_GETAWAY scientist/c1a0_sci_getaway
+SC_GMORN scientist/c1a0_sci_gm
+SC_BIGDAY scientist/c1a0_sci_bigday
+SC_SAMPLE scientist/c1a0_sci_samp
+SC_NOTTHAT scientist/c1a0_sci_desk
+
+SC_LOCK1A scientist/c1a0_sci_lock1a
+SC_LOCK2A scientist/c1a0_sci_lock2a
+SC_LOCK3A scientist/c1a0_sci_lock3a
+SC_LOCK4A scientist/c1a0_sci_lock4a
+SC_LOCK5A scientist/c1a0_sci_lock5a
+SC_LOCK6A scientist/c1a0_sci_lock6a
+SC_LOCK7A scientist/c1a0_sci_lock7a
+SC_LOCK8A scientist/c1a0_sci_lock8a
+SC_LOCK9A scientist/c1a0_sci_lock9a
+
+SC_CRIT1A scientist/c1a0_sci_crit1a
+SC_CRIT2A scientist/c1a0_sci_crit2a
+SC_CRIT3A scientist/c1a0_sci_crit3a
+
+SC_CTRL1A scientist/c1a0_sci_ctrl1a
+SC_CTRL2A scientist/c1a0_sci_ctrl2a
+SC_CTRL3A scientist/c1a0_sci_ctrl3a
+SC_CTRL4A scientist/c1a0_sci_ctrl4a
+
+SC_CONSOLE1A scientist/c1a1_sci_1scan
+SC_CONSOLE2A scientist/c1a1_sci_2scan
+SC_CONSOLE3A scientist/c1a1_sci_3scan
+SC_CONSOLE4A scientist/c1a1_sci_4scan
+SC_CONSOLE5A scientist/c1a1_sci_5scan
+SC_CONSOLERPT scientist/c1a1_sci_scanrpt
+
+//c1a2scripts
+
+SC_ZOMBIE1A scientist/c1a2_sci_1zomb
+SC_ZOMBIE3A scientist/c1a2_sci_3zomb
+SC_ZOMBIE5A scientist/c1a2_sci_5zomb
+SC_ZOMBIE6A scientist/c1a2_sci_6zomb
+
+SC_DANGLING scientist/c1a2_sci_dangling
+SC_DARKROOM scientist/c1a2_sci_darkroom
+SC_ELEVATOR scientist/c1a2_sci_elevator
+SC_LOUNGE scientist/c1a2_sci_lounge
+SC_TRANSMISSION scientist/c1a2_sci_transm
+
+//c1a3 scripts
+SC_1MAN scientist/c1a3_sci_1man
+SC_ATLAST scientist/c1a3_sci_atlast
+SC_RESCUED scientist/c1a3_sci_rescued
+SC_SILO1A scientist/c1a3_sci_silo1a
+SC_SILO2A scientist/c1a3_sci_silo2a
+SC_TEAM scientist/c1a3_sci_team
+SC_THANKGOD scientist/c1a3_sci_thankgod
+
+//c1a4 scripts
+SC_TRAINEND scientist/c1a4_sci_trainend
+SC_ROCKET scientist/c1a4_sci_rocket
+SC_BLIND scientist/c1a4_sci_blind
+SC_POWEROFF scientist/c1a4_sci_pwroff
+SC_POWERON scientist/c1a4_sci_pwr
+SC_GENER scientist/c1a4_sci_gener
+SC_TRUST scientist/c1a4_sci_trust
+SC_TENT scientist/c1a4_sci_tent
+
+//c2a3 scripts
+SC_ICKY scientist/c2a3_sci_icky
+SC_TRACK scientist/c2a3_sci_track
+
+//c2a4 scripts
+SC_ARG1A scientist/c2a4_sci_arg2a
+SC_ARG2A scientist/c2a4_sci_arg4a
+
+SC_TAU2A scientist/c2a4_sci_2tau
+SC_TAU4A scientist/c2a4_sci_4tau
+
+SC_1PSURG scientist/c2a4_sci_scanner
+SC_2PSURG scientist/c2a4_sci_sugicaloff
+SC_3PSURG scientist/c2a4_sci_surgury
+SC_ALLDIE scientist/c2a4_sci_alldie
+SC_LETOUT scientist/c2a4_sci_letout
+
+//c2a5 scripts
+SC_BOOBIE scientist/c2a5_sci_boobie
+SC_LEBUZ scientist/c2a5_sci_lebuz
+
+//c3a2 scripts
+
+SC_STRAWS scientist/c3a2_sci_straws
+SC_GLUON2A scientist/c3a2_sci_2glu
+SC_FLOOD scientist/c3a2_sci_flood
+SC_LINGER scientist/c3a2_sci_linger
+SC_SURVEY1A scientist/c3a2_sci_1surv
+SC_SURVEY3A scientist/c3a2_sci_3surv
+SC_SURVEY5A scientist/c3a2_sci_5surv
+SC_SURVEY7A scientist/c3a2_sci_7surv
+SC_LJUMP scientist/c3a2_sci_ljump
+SC_UPHERE scientist/c3a2_sci_uphere
+SC_PORTAL scientist/c3a2_sci_portal
+SC_PORTOPEN scientist/c3a2_sci_portopen
+SC_POSITION scientist/c3a2_sci_position
+SC_FOREVER scientist/c3a2_sci_forever
+SC_NOTYET scientist/c3a2_sci_notyet
+SC_FOOL scientist/c3a2_sci_fool
+
+//miscellaneous useful scripts
+SC_LETYOUIN scientist/letyouin
+SC_OVERHERE scientist/overhere
+
+
+// distant war zone
+FAR_WAR0 ambience/(v50) distantmortar1
+FAR_WAR1 ambience/(v60) distantmortar2
+FAR_WAR2 ambience/(v50) distantmortar3
+FAR_WAR3 ambience/(v15) biggun3
+FAR_WAR4 ambience/(v20) rifle2
+FAR_WAR5 ambience/(v10 p120) jetflyby1
+FAR_WAR6 ambience/(v10) mgun_burst4
+FAR_WAR7 ambience/(v30) distantmortar1 distantmortar3 distantmortar2
+FAR_WAR8 ambience/(v10) biggun2 biggun2 biggun2
+FAR_WAR9 ambience/(v15) mgun_burst1
+FAR_WAR10 ambience/(v20) biggun1 rifle2
+FAR_WAR11 ambience/(v60) distantmortar1 distantmortar1, distantmortar2, distantmortar1
+FAR_WAR12 ambience/(v30) distantmortar2, distantmortar2 distantmortar2 distantmortar2, distantmortar3 distantmortar1
+FAR_WAR13 ambience/(v10) mgun_burst2
+FAR_WAR14 ambience/(v15) mgun_burst3 mgun_burst3
+FAR_WAR15 ambience/(v10) rifle1 rifle1
+FAR_WAR16 ambience/(v10) biggun2, biggun2 biggun2
+
+// near war zone
+NEAR_WAR0 ambience/(v60) mgun_burst3 mgun_burst3 mgun_burst3(v50)
+NEAR_WAR1 ambience/(v60) rifle1 rifle2 rifle2 rifle1 rifle1
+NEAR_WAR2 ambience/(v60) alienflyby1
+NEAR_WAR3 ambience/(v60) biggun3 biggun3 biggun3
+NEAR_WAR4 ambience/(v60) mgun_burst4 mgun_burst3 rifle1 mgun_burst4
+NEAR_WAR5 ambience/(v60) jetflyby1
+NEAR_WAR6 ambience/(v60) mgun_burst4 mgun_burst3
+NEAR_WAR7 ambience/distantmortar1 distantmortar3 distantmortar2
+NEAR_WAR8 ambience/(v60) biggun2 biggun2 biggun2 biggun2(v30)
+NEAR_WAR9 ambience/(v60) mgun_burst1 mgun_burst1 rifle2 mgun_burst3
+NEAR_WAR10 agrunt/(v40) ag_fire1 ag_fire2 ag_fire2 ag_fire1
+NEAR_WAR11 ambience/distantmortar1 distantmortar1, distantmortar2
+NEAR_WAR12 ambience/(v60) mgun_burst2 mgun_burst2 mgun_burst3 mgun_burst2
+
+
+
+// alien slave
+SLV_IDLE0 aslave/slv_word1 slv_word2
+SLV_IDLE1 aslave/slv_word2 slv_word3(p95)
+SLV_IDLE2 aslave/slv_word3 slv_word4
+SLV_IDLE3 aslave/slv_word4 slv_word5 slv_word5(p90)
+SLV_IDLE4 aslave/slv_word2(p110) slv_word6 slv_word7 slv_word3
+SLV_IDLE5 aslave/slv_word6 slv_word7 slv_word2
+SLV_IDLE6 aslave/slv_word7 slv_word8 slv_word3
+SLV_IDLE7 aslave/slv_word8 slv_word1 slv_word8 slv_word8(p95)
+SLV_IDLE8 aslave/slv_word1(p115) slv_word6
+SLV_IDLE9 aslave/slv_word3 slv_word3(p90)
+SLV_IDLE10 aslave/slv_word7(p85)
+
+SLV_ALERT0 aslave/(p105) slv_alert1 slv_word2
+SLV_ALERT1 aslave/(p105) slv_word8 slv_word8 slv_word8 slv_word5
+SLV_ALERT2 aslave/(p105) slv_alert4 slv_word4 slv_alert3
+SLV_ALERT3 aslave/(p108) slv_alert1 slv_word5
+SLV_ALERT4 aslave/(p108) slv_word5(p110) slv_word8 slv_word8
+SLV_ALERT5 aslave/(p108) slv_alert4 slv_word7 slv_alert1
+
+//HOLOGRAM
+
+HOLO_3JUMPS holo/tr_holo_3jumps
+HOLO_BREAKBOX holo/tr_holo_breakbox
+HOLO_BREATH holo/tr_holo_breath
+HOLO_BUTTON holo/tr_holo_button
+HOLO_CHARGER holo/tr_holo_charger
+HOLO_COMMENCING holo/tr_holo_commencing
+HOLO_CONGRATS holo/tr_holo_congrats
+HOLO_DONE holo/tr_holo_done
+HOLO_DROWN holo/tr_holo_drown
+HOLO_DUCK holo/tr_holo_duck
+HOLO_FALLSHORT holo/tr_holo_fallshort
+HOLO_FANTASTIC holo/tr_holo_fantastic
+HOLO_FLASHLIGHT holo/tr_holo_flashlight
+HOLO_GREATWORK holo/tr_holo_greatwork
+HOLO_GRENADE holo/tr_holo_grenade
+HOLO_HITALL holo/tr_holo_hitall
+HOLO_INJURY holo/tr_holo_injury
+HOLO_INTRO holo/tr_holo_intro
+HOLO_JDUCK holo/tr_holo_jduck
+HOLO_JUMP holo/tr_holo_jump
+HOLO_JUMPDOWN holo/tr_holo_jumpdown
+HOLO_JUMPGAP holo/tr_holo_jumpgap
+HOLO_KEEPTRYING holo/tr_holo_keeptrying
+HOLO_LADDER holo/tr_holo_ladder
+HOLO_LEADGUARD holo/tr_holo_leadguard
+HOLO_LIGHTOFF holo/tr_holo_lightoff
+HOLO_LONGJUMP holo/tr_holo_longjump
+HOLO_MEDKIT holo/tr_holo_medkit
+HOLO_MOVE holo/tr_holo_move
+HOLO_NICEJOB holo/tr_holo_nicejob
+HOLO_PIPEDUCK holo/tr_holo_pipeduck
+HOLO_PULLBOX holo/tr_holo_pullbox
+HOLO_PUSHBOX holo/tr_holo_pushbox
+HOLO_RADIATION holo/tr_holo_radiation
+HOLO_RETRY holo/tr_holo_retry
+HOLO_RUNSTART holo/tr_holo_runstart
+HOLO_SPINBRIDGE holo/tr_holo_spinbridge
+HOLO_STARTLIFT holo/tr_holo_startlift
+HOLO_STEAM holo/tr_holo_steam
+HOLO_TARGET holo/tr_holo_target
+HOLO_TRYAGAIN holo/tr_holo_tryagain
+HOLO_USETRAIN holo/tr_holo_usetrain
+
+
+//GMAN
+
+//c1a0 narrative
+GM_1MUMBLE gman/gman_mumble1
+GM_2MUMBLE gman/gman_mumble2
+GM_3MUMBLE gman/gman_mumble3
+GM_4MUMBLE gman/gman_mumble4
+GM_5MUMBLE gman/gman_mumble5
+GM_6MUMBLE gman/gman_mumble6

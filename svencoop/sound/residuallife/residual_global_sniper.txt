@@ -1,0 +1,1 @@
+"weapons/sniper_fire.wav" "residuallife/weapons/sniper_fire.wav"

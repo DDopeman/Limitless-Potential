@@ -1,0 +1,8 @@
+// plasma gun
+// Note: When sprites are done, in their own files, change *everything* to file / coords settings
+
+4	// number of sprites
+weapon			640 shl/weapons/640shl1	0	90	170	45
+weapon_s		640 shl/weapons/640shl2	0	90	170	45
+ammo			640 shl/weapons/640shl3	0	24	24	24
+crosshair		640 shl/weapons/640shl4			0	48	24	24

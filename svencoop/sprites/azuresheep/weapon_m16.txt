@@ -1,0 +1,9 @@
+// M41a
+
+6	// number of sprites
+weapon			640 azuresheep/640hudas1	0	135	170	45
+weapon_s		640 azuresheep/640hudas4	0	135	170	45
+ammo				640		640hud7		144	60	24	24
+ammo2				640		640hud7		48	60	24	24
+crosshair			640		crosshairs	0	48	24	24
+autoaim				640		crosshairs	48	72	24	24

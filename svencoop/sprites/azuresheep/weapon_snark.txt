@@ -1,0 +1,6 @@
+// Toad
+
+3
+weapon			640 azuresheep/640hudas3	0	135	170	45
+weapon_s		640 azuresheep/640hudas6	0	135	170	45
+ammo			640 azuresheep/640hudas7	96	96	24	24

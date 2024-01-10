@@ -1,0 +1,7 @@
+"common/bodysplat.wav" "echoes/common/bodysplat.ogg"
+"common/npc_step1.wav" "echoes/common/npc_step1.ogg"
+"common/npc_step2.wav" "echoes/common/npc_step2.ogg"
+"common/npc_step3.wav" "echoes/common/npc_step3.ogg"
+"common/npc_step4.wav" "echoes/common/npc_step4.ogg"
+"items/flashlight1.wav" "echoes/items/flashlight1.ogg"
+"player/sprayer.wav" "echoes/player/sprayer.ogg"

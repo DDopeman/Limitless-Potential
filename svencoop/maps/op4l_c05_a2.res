@@ -35,6 +35,8 @@ models/oghs/cm/npc/Tor.mdl
 sound/ambience/liftmuzak.wav
 sound/epone/music/blast_pit3.mp3
 sound/oghs/cs/a!.wav
+sound/oghs/cs/bell.wav
+sound/oghs/cs/boing.wav
 sound/oghs/cs/crit.wav
 sound/oghs/cs/csm.wav
 sound/oghs/cs/cum.wav
@@ -45,6 +47,8 @@ sound/oghs/cs/headshot.wav
 sound/oghs/cs/huegh.wav
 sound/oghs/cs/pipe.wav
 sound/oghs/cs/pui.wav
+sound/oghs/cs/slip.wav
 sound/oghs/cs/tom2.wav
 sound/oghs/cs/wrong.wav
 sound/oghs/cs/zzz.wav
+sound/oghs/cs03/badbone.wav
