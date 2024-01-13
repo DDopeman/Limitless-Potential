@@ -63,9 +63,9 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
-sound/ambience/Contra.wav
-sound/ambience/Mario.wav
-sound/ambience/SonicBroken.wav
+sound/ambience/contra.wav
+sound/ambience/mario.wav
+sound/ambience/sonicbroken.wav
 sound/oghs/cs/a!.wav
 sound/oghs/cs/crit.wav
 sound/oghs/cs/csm.wav
@@ -80,3 +80,13 @@ sound/oghs/cs/pui.wav
 sound/oghs/cs/tom2.wav
 sound/oghs/cs/wrong.wav
 sound/oghs/cs/zzz.wav
+sound/weapons/alien_holster.wav
+sound/weapons/fidget_2.wav
+sound/weapons/fidget_3.wav
+sound/weapons/fidget_4.wav
+sound/weapons/spas12_foley.wav
+sound/weapons/splauncher_draw.wav
+sound/weapons/splauncher_idle.wav
+sound/weapons/weapon_catch.wav
+sound/weapons/weapon_draw.wav
+sound/weapons/weapon_holster.wav
