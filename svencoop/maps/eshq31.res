@@ -11,7 +11,7 @@ gfx/env/eshq_fireve_up.tga
 models/bigspiggot.mdl
 models/cubemath/chars/d6.mdl
 models/cubemath/chars/percent.mdl
-models/kezaeiv/icons/mk_logo_blue.mdl
+models/kezaeiv/icons/mk_logo_orange.mdl
 models/oghs/cm/npc/agrunt.mdl
 models/oghs/cm/npc/agruntf.mdl
 models/oghs/cm/npc/apache.mdl
@@ -70,14 +70,14 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
-sound/ambience/AirTube1.wav
+sound/ambience/airtube1.wav
 sound/ambience/clank1.wav
 sound/ambience/electramb1.wav
 sound/ambience/electramb2.wav
 sound/ambience/generator4.wav
 sound/ambience/ring1.wav
 sound/ambience/ring2.wav
-sound/ambience/TunnelAmbient1.wav
+sound/ambience/tunnelambient1.wav
 sound/ambience/warn4.wav
 sound/ambience/waterfall4.wav
 sound/ambience/wind3.wav

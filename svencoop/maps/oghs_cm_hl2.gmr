@@ -41,6 +41,8 @@
 "models/opfor/hgrunt_medic.mdl" "models/oghs/cm/npc/hgrunt_medic.mdl"
 "models/opfor/hgrunt_opfor.mdl" "models/oghs/cm/npc/hgrunt_opfor.mdl"
 "models/opfor/hgrunt_torch.mdl" "models/oghs/cm/npc/hgrunt_torch.mdl"
+"models/zombie_soldier.mdl" "models/oghs/cm/npc/zombie_soldier.mdl"
+
 "models/p_2uzis.mdl" "models/oghs/cm/wep/p_2uzis.mdl"
 "models/p_2uzis_gold.mdl" "models/oghs/cm/wep/p_2uzis_gold.mdl"
 "models/p_bgrap.mdl" "models/oghs/cm/wep/p_bgrap.mdl"

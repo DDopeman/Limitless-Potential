@@ -218,7 +218,7 @@ class weapon_ofm249 : ScriptBasePlayerWeaponEntity, WeaponUtils
     if (self.m_iClip <= 0 && m_pPlayer.m_rgAmmo(self.m_iPrimaryAmmoType) <= 0)
       m_pPlayer.SetSuitUpdate('!HEV_AMO0', false, 0);
 
-    self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.067;
+    self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.055;
     self.m_flTimeWeaponIdle = WeaponTimeBase() + 0.2;
 
     if (g_M249Knockback.GetBool())
@@ -228,7 +228,7 @@ class weapon_ofm249 : ScriptBasePlayerWeaponEntity, WeaponUtils
       const Vector vecVelocity = m_pPlayer.pev.velocity;
       const float flZVel = m_pPlayer.pev.velocity.z;
 
-      Vector vecInvPushDir = g_Engine.v_forward * 17.0;
+      Vector vecInvPushDir = g_Engine.v_forward * 15.0;
       float flNewZVel = g_EngineFuncs.CVarGetFloat('sv_maxspeed');
 
       if (vecInvPushDir.z >= 10.0)
