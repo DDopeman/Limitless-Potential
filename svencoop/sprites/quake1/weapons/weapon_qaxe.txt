@@ -1,0 +1,9 @@
+10
+weapon			320 quake1/hudcb	0	0	128	40
+weapon_s		320 quake1/hudcb	0	0	128	40
+crosshair		320 quake1/crosshairs	48	24	24	24
+autoaim			320 quake1/crosshairs	72	72	24	24
+weapon			640 quake1/hudcb	0	0	128	40
+weapon_s		640 quake1/hudcb	0	0	128	40
+crosshair		640 quake1/crosshairs	48	24	24	24
+autoaim			640 quake1/crosshairs	72	72	24	24
