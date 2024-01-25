@@ -1,0 +1,4 @@
+// This type of message is kinda limited of chars so try to shorter it all you can
+"english" "Presiona la tecla $key$ para activar"
+"spanish" "Presiona la tecla $key$ para activar"
+"portuguese" "Presiona la tecla $key$ para activar"

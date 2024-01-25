@@ -1,0 +1,15 @@
+mapname: sc_toysoldiers
+created by: RaptorSKA
+
+Backstory:
+The kids went on vacation.. but they left they left the bedroom door locked.. meaning the tan forces have had time to plan an attack on our
+positions and outposts! we have lost all of our locations in the battlefield. The Tan Republic has wiped the floor, and has also taken over
+the Grey Nation and Blue Nation locations. This has sparked an all out war between all factions, we must capture back our outposts!
+
+Objectives:
+
+OBJ 1: Secure the attic
+OBJ 2: Secure the cupboard
+OBJ 3: Secure Barbie HQ
+OBJ 4: Push through the Wildwest and capture back the green outpost
+OBJ 5: Recapture the window ledge

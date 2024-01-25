@@ -1,0 +1,64 @@
+// HL Weapons
+#include "lp_weapons/weapon_hl9mmhandgun"
+#include "lp_weapons/weapon_hl357"
+// OF Weapons
+#include "lp_weapons/weapon_ofsniperrifle"
+#include "lp_weapons/weapon_ofshockrifle"
+#include "lp_weapons/weapon_ofm249"
+#include "lp_weapons/weapon_ofeagle"
+// MISC
+#include "lp_weapons/ammo_buckshot2"
+#include "lp_weapons/weapon_asniper"
+#include "lp_weapons/weapon_tar21"
+
+array<ItemMapping@> g_ItemMappings = {
+	ItemMapping( "weapon_m249", "weapon_ofm249" ),
+	ItemMapping( "weapon_saw", "weapon_ofm249" ),
+	ItemMapping( "weapon_9mmhandgun", "weapon_hl9mmhandgun" ),
+	ItemMapping( "weapon_glock", "weapon_hl9mmhandgun" ),
+	ItemMapping( "weapon_357", "weapon_hl357" ),
+	ItemMapping( "weapon_eagle", "weapon_ofeagle" ),
+	ItemMapping( "weapon_sniperrifle", "weapon_ofsniperrifle" ),
+	ItemMapping( "weapon_m16", "weapon_9mmAR" )
+};
+
+bool ShouldRestartIfClassicModeChangesOn( const string& in szMapName )
+{
+	return  szMapName != "-sp_campaign_portal" &&
+			szMapName != "hl_c00" &&
+			szMapName != "of_c00" &&
+			szMapName != "hl_c01_a2" &&
+			szMapName != "hl_c18" &&
+			szMapName != "of0a0" &&
+			szMapName != "campaign_vote_v1" &&
+			szMapName != "dynamic_mapvote_v3";
+}
+
+void ClassicModeMapInit()
+{
+	RegisterLowShotgunAmmo();
+	RegisterOFShock();
+	RegisterOFSniper();
+	RegisterOFM249();
+	RegisterHLPYTHON();
+	RegisterTar21();
+	OF_EAGLE::Register();
+	RegisterHL9mmhandgun();
+	AUTOSNIPER::Register();
+	g_ClassicMode.SetItemMappings( @g_ItemMappings );
+	g_ClassicMode.ForceItemRemap( true );
+	
+	
+	//We want classic mode voting to be enabled here
+	g_ClassicMode.EnableMapSupport();
+	
+	if( !ShouldRestartIfClassicModeChangesOn( g_Engine.mapname ) )
+	{
+		g_ClassicMode.SetShouldRestartOnChange( false );
+	}
+	
+	// Precache things
+	g_Game.PrecacheModel("models/w_shotbox.mdl");
+	g_SoundSystem.PrecacheSound("items/9mmclip1.wav");
+}
+

@@ -1,0 +1,3 @@
+"english" "Un punto de control ha sido activado."
+"spanish" "Un punto de control ha sido activado."
+"portuguese" "Un punto de control ha sido activado."

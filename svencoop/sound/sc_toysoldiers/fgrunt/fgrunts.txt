@@ -1,0 +1,136 @@
+// FRIENDLY GRUNTS
+"!FG_POK0" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_POK1" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_POK2" "sc_toysoldiers/fgrunt/corporal_01.wav"
+"!FG_POK3" "sc_toysoldiers/fgrunt/corporal_01.wav"
+
+// QUESTION
+"!FG_QUESTION0" "sc_toysoldiers/fgrunt/seensquad"
+"!FG_QUESTION1" "sc_toysoldiers/fgrunt/current"
+"!FG_QUESTION2" "sc_toysoldiers/fgrunt/current"
+"!FG_QUESTION3" "sc_toysoldiers/fgrunt/chicken"
+"!FG_QUESTION4" "sc_toysoldiers/fgrunt/charge"
+"!FG_QUESTION5" "sc_toysoldiers/fgrunt/bfeeling"
+
+"!FG_QUEST0" "sc_toysoldiers/fgrunt/current"
+"!FG_QUEST1" "sc_toysoldiers/fgrunt/bfeeling"
+
+"!FG_ANSWER0" "sc_toysoldiers/fgrunt/current"
+"!FG_ANSWER1" "sc_toysoldiers/fgrunt/bfeeling"
+"!FG_ANSWER2" "sc_toysoldiers/fgrunt/bfeeling"
+
+"!FG_GREN0" "sc_toysoldiers/fgrunt/incoming"
+"!FG_GREN1" "sc_toysoldiers/fgrunt/grenade"
+
+"!FG_ALERT0" "sc_toysoldiers/fgrunt/down"
+"!FG_ALERT1" "sc_toysoldiers/fgrunt/bogies"
+"!FG_ALERT2" "sc_toysoldiers/fgrunt/hostiles"
+"!FG_ALERT3" "sc_toysoldiers/fgrunt/hostiles"
+
+"!FG_MONSTER0" "sc_toysoldiers/fgrunt/hostiles"
+"!FG_MONSTER1" "sc_toysoldiers/fgrunt/down"
+
+"!FG_COVER0" "sc_toysoldiers/fgrunt/clear"
+"!FG_COVER1" "sc_toysoldiers/fgrunt/cover"
+"!FG_COVER2" "sc_toysoldiers/fgrunt/staydown"
+
+"!FG_CLEAR0" "sc_toysoldiers/fgrunt/clear"
+"!FG_CLEAR1" "sc_toysoldiers/fgrunt/area"
+
+"!FG_THROW0" "sc_toysoldiers/fgrunt/fire"
+"!FG_THROW1" "sc_toysoldiers/fgrunt/grenade"
+
+"!FG_CHARGE0" "sc_toysoldiers/fgrunt/go"
+"!FG_CHARGE1" "sc_toysoldiers/fgrunt/getsome"
+"!FG_CHARGE2" "sc_toysoldiers/fgrunt/move"
+
+"!FG_TAUNT0" "sc_toysoldiers/fgrunt/mister"
+"!FG_TAUNT1" "sc_toysoldiers/fgrunt/nothing"
+"!FG_TAUNT2" "sc_toysoldiers/fgrunt/getsome"
+"!FG_TAUNT3" "sc_toysoldiers/fgrunt/corners"
+"!FG_TAUNT4" "sc_toysoldiers/fgrunt/oneshot"
+"!FG_TAUNT5" "sc_toysoldiers/fgrunt/backup"
+
+"!FG_OK0" "sc_toysoldiers/fgrunt/sir_01"
+"!FG_OK1" "sc_toysoldiers/fgrunt/sir_01"
+"!FG_OK2" "sc_toysoldiers/fgrunt/sir_01"
+"!FG_OK3" "sc_toysoldiers/fgrunt/siryessir"
+"!FG_OK4" "sc_toysoldiers/fgrunt/siryessir"
+"!FG_OK5" "sc_toysoldiers/fgrunt/siryessir"
+"!FG_OK6" "sc_toysoldiers/fgrunt/command"
+"!FG_OK7" "sc_toysoldiers/fgrunt/command"
+"!FG_OK8" "sc_toysoldiers/fgrunt/command"
+"!FG_OK9" "sc_toysoldiers/fgrunt/siryessir"
+
+"!FG_SCARED0" "sc_toysoldiers/fgrunt/hearsome"
+"!FG_SCARED1" "sc_toysoldiers/fgrunt/hear"
+
+"!FG_KILL0" "sc_toysoldiers/fgrunt/oneshot"
+"!FG_KILL1" "sc_toysoldiers/fgrunt/wantsome"
+"!FG_KILL2" "sc_toysoldiers/fgrunt/wantsome"
+"!FG_KILL3" "sc_toysoldiers/fgrunt/getsome"
+"!FG_KILL4" "sc_toysoldiers/fgrunt/getsome"
+"!FG_KILL5" "sc_toysoldiers/fgrunt/talking"
+"!FG_KILL6" "sc_toysoldiers/fgrunt/talking"
+"!FG_KILL7" "sc_toysoldiers/fgrunt/tag"
+"!FG_KILL8" "sc_toysoldiers/fgrunt/tag"
+"!FG_KILL9" "sc_toysoldiers/fgrunt/take"
+
+"!FG_SHOT0" "sc_toysoldiers/fgrunt/watchit"
+"!FG_SHOT1" "sc_toysoldiers/fgrunt/watchit"
+"!FG_SHOT2" "sc_toysoldiers/fgrunt/watchfire"
+"!FG_SHOT3" "sc_toysoldiers/fgrunt/watchfire"
+"!FG_SHOT4" "sc_toysoldiers/fgrunt/watchit"
+
+"!FG_CHECK0" "sc_toysoldiers/fgrunt/check"
+"!FG_CHECK1" "sc_toysoldiers/fgrunt/zone"
+
+"!FG_IDLE0" "sc_toysoldiers/fgrunt/mission"
+"!FG_IDLE1" "sc_toysoldiers/fgrunt/mission"
+"!FG_IDLE2" "sc_toysoldiers/fgrunt/lost"
+"!FG_IDLE3" "sc_toysoldiers/fgrunt/lost"
+"!FG_IDLE4" "sc_toysoldiers/fgrunt/checkrecon"
+"!FG_IDLE5" "sc_toysoldiers/fgrunt/checkrecon"
+"!FG_IDLE6" "sc_toysoldiers/fgrunt/fubar"
+"!FG_IDLE7" "sc_toysoldiers/fgrunt/fubar"
+"!FG_IDLE8" "sc_toysoldiers/fgrunt/guard"
+"!FG_IDLE9" "sc_toysoldiers/fgrunt/guard"
+"!FG_IDLE10" "sc_toysoldiers/fgrunt/babysitting"
+"!FG_IDLE11" "sc_toysoldiers/fgrunt/babysitting"
+"!FG_IDLE12" "sc_toysoldiers/fgrunt/babysitting"
+
+"!FG_ATTACK0" "sc_toysoldiers/fgrunt/flank"
+"!FG_ATTACK1" "sc_toysoldiers/fgrunt/flank"
+"!FG_ATTACK2" "sc_toysoldiers/fgrunt/wantsome"
+"!FG_ATTACK3" "sc_toysoldiers/fgrunt/wantsome"
+"!FG_ATTACK4" "sc_toysoldiers/fgrunt/recon"
+"!FG_ATTACK5" "sc_toysoldiers/fgrunt/recon"
+"!FG_ATTACK6" "sc_toysoldiers/fgrunt/freaks"
+"!FG_ATTACK7" "sc_toysoldiers/fgrunt/freaks"
+"!FG_ATTACK8" "sc_toysoldiers/fgrunt/rapidfire"
+"!FG_ATTACK9" "sc_toysoldiers/fgrunt/rapidfire"
+"!FG_ATTACK10" "sc_toysoldiers/fgrunt/suppressing"
+"!FG_ATTACK11" "sc_toysoldiers/fgrunt/suppressing"
+
+"!FG_MAD0" "sc_toysoldiers/fgrunt/ass"
+"!FG_MAD1" "sc_toysoldiers/fgrunt/mister"
+
+"!FG_HELLO0" "sc_toysoldiers/fgrunt/sir_01"
+"!FG_HELLO1" "sc_toysoldiers/fgrunt/sir_01"
+"!FG_HELLO2" "sc_toysoldiers/fgrunt/sir_01"
+
+"!FG_WOUND0" "sc_toysoldiers/fgrunt/imhit"
+"!FG_WOUND1" "sc_toysoldiers/fgrunt/fwound"
+"!FG_WOUND2" "sc_toysoldiers/fgrunt/imhit"
+
+"!FG_MORTAL0" "sc_toysoldiers/fgrunt/hitbad"
+"!FG_MORTAL1" "sc_toysoldiers/fgrunt/critical"
+"!FG_MORTAL2" "sc_toysoldiers/fgrunt/hitbad"
+
+"!FG_CURE0" "sc_toysoldiers/fgrunt/needmedic"
+"!FG_CURE1" "sc_toysoldiers/fgrunt/needmedic"
+"!FG_CURE2" "sc_toysoldiers/fgrunt/hurt"
+"!FG_CURE3" "sc_toysoldiers/fgrunt/hurt"
+
+"!FG_MAKEIT" "sc_toysoldiers/fgrunt/makeit"
+

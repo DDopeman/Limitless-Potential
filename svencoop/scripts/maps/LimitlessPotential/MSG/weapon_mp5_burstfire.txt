@@ -1,0 +1,3 @@
+"english" "Modo de disparo en rafagas"
+"spanish" "Modo de disparo en rafagas"
+"portuguese" "Modo de disparo en rafagas"

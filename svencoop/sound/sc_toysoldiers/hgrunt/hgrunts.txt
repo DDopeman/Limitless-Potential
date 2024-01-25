@@ -1,0 +1,108 @@
+// HUMAN GRUNTS
+"!HG_GREN0" "sc_toysoldiers/hgrunt/incoming.wav"
+"!HG_GREN1" "sc_toysoldiers/hgrunt/grenade.wav"
+"!HG_GREN2" "sc_toysoldiers/hgrunt/down.wav"
+"!HG_GREN3" "sc_toysoldiers/hgrunt/takecover.wav"
+"!HG_GREN4" "sc_toysoldiers/hgrunt/down.wav"
+"!HG_GREN5" "sc_toysoldiers/hgrunt/incoming.wav"
+"!HG_GREN6" "sc_toysoldiers/hgrunt/retreat.wav"
+
+// Pain
+"hgrunt/gr_pain1.wav" "sc_toysoldiers/hgrunt/pain1.wav"
+"hgrunt/gr_pain2.wav" "sc_toysoldiers/hgrunt/pain2.wav"
+"hgrunt/gr_pain3.wav" "sc_toysoldiers/hgrunt/pain3.wav"
+"hgrunt/gr_pain4.wav" "sc_toysoldiers/hgrunt/pain4.wav"
+"hgrunt/gr_pain5.wav" "sc_toysoldiers/hgrunt/pain5.wav"
+
+// Death
+"hgrunt/gr_die1.wav" "sc_toysoldiers/hgrunt/death1.wav"
+"hgrunt/gr_die2.wav" "sc_toysoldiers/hgrunt/death2.wav"
+"hgrunt/gr_die3.wav" "sc_toysoldiers/hgrunt/death3.wav"
+
+// Player Alert
+"!HG_ALERT0" "sc_toysoldiers/hgrunt/alert.wav"
+"!HG_ALERT1" "sc_toysoldiers/hgrunt/down.wav"
+"!HG_ALERT2" "sc_toysoldiers/hgrunt/bogies.wav"
+"!HG_ALERT3" "sc_toysoldiers/hgrunt/hostiles.wav"
+"!HG_ALERT4" "sc_toysoldiers/hgrunt/alert.wav"
+"!HG_ALERT5" "sc_toysoldiers/hgrunt/of6a1_fg02.wav"
+"!HG_ALERT6" "sc_toysoldiers/hgrunt/wantsome.wav"
+
+// Take cover
+"!HG_COVER0" "sc_toysoldiers/hgrunt/stayalert.wav"
+"!HG_COVER1" "sc_toysoldiers/hgrunt/staydown.wav"
+"!HG_COVER2" "sc_toysoldiers/hgrunt/cover.wav"
+"!HG_COVER3" "sc_toysoldiers/hgrunt/down.wav" 
+"!HG_COVER4" "sc_toysoldiers/hgrunt/retreat.wav"
+"!HG_COVER5" "sc_toysoldiers/hgrunt/staydown.wav" 
+"!HG_COVER6" "sc_toysoldiers/hgrunt/cover.wav" 
+"!HG_COVER7" "sc_toysoldiers/hgrunt/down.wav" 
+
+// Throw grenade
+"!HG_THROW0" "sc_toysoldiers/hgrunt/fire.wav" 
+"!HG_THROW1" "sc_toysoldiers/hgrunt/grenade.wav" 
+"!HG_THROW2" "sc_toysoldiers/hgrunt/down.wav" 
+"!HG_THROW3" "sc_toysoldiers/hgrunt/take.wav" 
+
+// Taunt
+"!HG_TAUNT0" "sc_toysoldiers/hgrunt/mister.wav" 
+"!HG_TAUNT1" "sc_toysoldiers/hgrunt/nothing.wav"
+"!HG_TAUNT2" "sc_toysoldiers/hgrunt/oneshot.wav" 
+"!HG_TAUNT3" "sc_toysoldiers/hgrunt/getsome.wav"
+"!HG_TAUNT4" "sc_toysoldiers/hgrunt/corners.wav"
+"!HG_TAUNT5" "sc_toysoldiers/hgrunt/backup.wav"
+
+// Charge
+"!HG_CHARGE0" "sc_toysoldiers/hgrunt/go.wav"
+"!HG_CHARGE1" "sc_toysoldiers/hgrunt/move.wav" 
+"!HG_CHARGE2" "sc_toysoldiers/hgrunt/moveup.wav"
+"!HG_CHARGE3" "sc_toysoldiers/hgrunt/go.wav" 
+
+// Idle
+"!HG_IDLE0" "sc_toysoldiers/hgrunt/charge.wav"
+"!HG_IDLE1" "sc_toysoldiers/hgrunt/current.wav"
+"!HG_IDLE2" "sc_toysoldiers/hgrunt/mission.wav"
+
+"!HG_QUEST0" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST1" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST2" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST3" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST4" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST5" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST6" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST7" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST8" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST9" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST10" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST11" "sc_toysoldiers/hgrunt/_comma.wav"
+
+"!HG_ANSWER0" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER1" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER2" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER3" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER4" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER5" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER6" "sc_toysoldiers/hgrunt/_comma.wav"
+
+"!HG_CLEAR0" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR1" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR2" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR3" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR4" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR5" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR6" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR7" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR8" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR9" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR10" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR11" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR12" "sc_toysoldiers/hgrunt/_comma.wav"
+
+"!HG_CHECK0" "sc_toysoldiers/hgrunt/allclear.wav"
+"!HG_CHECK1" "sc_toysoldiers/hgrunt/area.wav"
+"!HG_CHECK2" "sc_toysoldiers/hgrunt/check.wav"
+"!HG_CHECK3" "sc_toysoldiers/hgrunt/zone.wav"
+"!HG_CHECK4" ""sc_toysoldiers/hgrunt/checkrecon.wav"
+"!HG_CHECK5" "sc_toysoldiers/hgrunt/nohostiles.wav"
+"!HG_CHECK6" "sc_toysoldiers/hgrunt/nomovement.wav"
+"!HG_CHECK7" "sc_toysoldiers/hgrunt/allclear.wav"

@@ -1,0 +1,3 @@
+"english" "Un punto de control ha sido activado por $name$"
+"spanish" "Un punto de control ha sido activado por $name$"
+"portuguese" "Un punto de control ha sido activado por $name$"
