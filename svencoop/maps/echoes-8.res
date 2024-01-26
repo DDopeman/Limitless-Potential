@@ -42,6 +42,7 @@ models/echoes/zombie_construction.mdl
 models/echoes/zombie_soldier.mdl
 models/echoes/zombie_soldier2.mdl
 models/echoes/zombie_soldier3.mdl
+models/kezaeiv/icons/mk_logo_white.mdl
 sound/echoes/agamemnon/ag_comeon0.ogg
 sound/echoes/agamemnon/ag_comeon1.ogg
 sound/echoes/agamemnon/ag_comeon10.ogg

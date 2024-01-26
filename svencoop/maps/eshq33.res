@@ -12,7 +12,7 @@ models/bath.mdl
 models/bed2.mdl
 models/cubemath/chars/d6.mdl
 models/cubemath/chars/percent.mdl
-models/kezaeiv/icons/mk_logo_blue.mdl
+models/kezaeiv/icons/mk_logo_orange.mdl
 models/kitchensink.mdl
 models/oghs/cm/npc/agrunt.mdl
 models/oghs/cm/npc/agruntf.mdl
@@ -42,6 +42,7 @@ models/oghs/cm/npc/scientist.mdl
 models/oghs/cm/npc/scientist2.mdl
 models/oghs/cm/npc/scigun.mdl
 models/oghs/cm/npc/Tor.mdl
+models/oghs/cm/npc/zombie_soldier.mdl
 models/oghs/cm/wep/p_2uzis.mdl
 models/oghs/cm/wep/p_2uzis_gold.mdl
 models/oghs/cm/wep/p_bgrap.mdl

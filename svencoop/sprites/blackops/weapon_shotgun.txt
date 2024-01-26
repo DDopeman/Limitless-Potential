@@ -1,0 +1,6 @@
+5
+weapon				640		blackops/640hud1	0	180	170	45
+weapon_s			640		blackops/640hud4	0	180	170	45
+ammo				640		blackops/640hud7	72	72	24	24
+crosshair			640		blackops/crosshairs	48	24	24	24
+autoaim				640		blackops/crosshairs	72	72	24	24

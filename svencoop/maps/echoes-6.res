@@ -29,6 +29,7 @@ models/echoes/zombie_barney2.mdl
 models/echoes/zombie_burnt.mdl
 models/echoes/zombie_construction.mdl
 models/echoes/zombie_scientist.mdl
+models/kezaeiv/icons/mk_logo_white.mdl
 sound/echoes/agamemnon/ag_damn.ogg
 sound/echoes/agamemnon/ag_headroll.ogg
 sound/echoes/agamemnon/ag_meet0.ogg

@@ -1,0 +1,63 @@
+// HEV Suit
+
+// powerup
+
+HEV_AAx player/pcv_vest
+HEV_A0 player/pcv_vest
+
+
+// medical
+HEV_DEAD0 oghs/cs06/(p115) pui
+HEV_DEAD1 oghs/cs06/(p115) badbone
+HEV_DEAD2 scientist/sci_pain4
+HEV_DEAD3 oghs/cs06/gay
+HEV_DEAD4 oghs/cs06/(p85) headshot
+HEV_DEAD5 oghs/cs06/(p85) tom2
+HEV_DEAD6 oghs/cs06/(p115) tom2
+HEV_DEAD7 oghs/cs06/bell
+HEV_DEAD8 oghs/cs06/(p115) boing
+HEV_DEAD9 oghs/cs06/(p115) bell
+HEV_DEAD10 oghs/cs06/crit
+HEV_DEAD11 oghs/cs06/(p85) pipe
+HEV_DEAD12 oghs/cs06/(p85) a!
+HEV_DEAD13 oghs/cs06/(p115) cum
+HEV_DEAD14 oghs/cs06/slip
+HEV_DEAD15 oghs/cs06/(p85) wrong
+HEV_DEAD16 oghs/cs06/headshot
+HEV_DEAD17 oghs/cs06/cs06m
+HEV_DEAD18 oghs/cs06/(p85) gay
+HEV_DEAD19 oghs/cs06/(p85) cs06m
+HEV_DEAD20 oghs/cs06/dross
+HEV_DEAD21 oghs/cs06/(p85) badbone
+HEV_DEAD22 oghs/cs06/(p115) slip
+HEV_DEAD23 oghs/cs06/(p85) slip
+HEV_DEAD24 oghs/cs06/(p85) zzz
+HEV_DEAD25 oghs/cs06/cum
+HEV_DEAD26 oghs/cs06/(p115) crit
+HEV_DEAD27 oghs/cs06/(p85) fart
+HEV_DEAD28 oghs/cs06/(p115) headshot
+HEV_DEAD29 oghs/cs06/(p115) gay
+HEV_DEAD30 oghs/cs06/wrong
+HEV_DEAD31 oghs/cs06/(p115) wrong
+HEV_DEAD32 oghs/cs06/(p115) pipe
+HEV_DEAD33 scientist/(p115) sci_pain4
+HEV_DEAD34 oghs/cs06/(p115) fart
+HEV_DEAD35 oghs/cs06/(p115) dross
+HEV_DEAD36 oghs/cs06/a!
+HEV_DEAD37 oghs/cs06/(p85) bell
+HEV_DEAD38 oghs/cs06/(p85) dross
+HEV_DEAD39 oghs/cs06/(p85) pui
+HEV_DEAD40 oghs/cs06/badbone
+HEV_DEAD41 oghs/cs06/(p115) zzz
+HEV_DEAD42 oghs/cs06/(p85) crit
+HEV_DEAD43 oghs/cs06/pipe
+HEV_DEAD44 oghs/cs06/zzz
+HEV_DEAD45 scientist/(p85) sci_pain4
+HEV_DEAD46 oghs/cs06/fart
+HEV_DEAD47 oghs/cs06/tom2
+HEV_DEAD48 oghs/cs06/pui
+HEV_DEAD49 oghs/cs06/(p85) cum
+HEV_DEAD50 oghs/cs06/(p115) a!
+HEV_DEAD51 oghs/cs06/(p115) cs06m
+HEV_DEAD52 oghs/cs06/(p85) boing
+HEV_DEAD53 oghs/cs06/boing

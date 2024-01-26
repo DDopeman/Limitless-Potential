@@ -1,0 +1,53 @@
+## do not touch
+
+## Items and player
+
+"items/suitchargeok1.wav" "rngremake/items/item_respawn.ogg"
+"items/gunpickup2.wav" "rngremake/items/pick_weapon.ogg"
+"items/9mmclip1.wav" "rngremake/items/ammo_pistol.ogg"
+"items/9mmclip2.wav" "rngremake/items/ammo_pistol.ogg"
+
+## Fists
+
+"weapons/pwrench_big_hit1.wav" "rngremake/weapons/kick_hitwall.ogg"
+"weapons/pwrench_big_hit2.wav" "rngremake/weapons/kick_hitwall.ogg"
+"weapons/pwrench_big_hitbod1.wav" "rngremake/weapons/kick_hitbody.ogg"
+"weapons/pwrench_big_hitbod2.wav" "rngremake/weapons/kick_hitbody.ogg"
+"weapons/pwrench_big_miss.wav" "rngremake/weapons/kick_swing.ogg"
+
+"weapons/pwrench_hit1.wav" "rngremake/weapons/fist_hitwall.ogg"
+"weapons/pwrench_hit2.wav" "rngremake/weapons/fist_hitwall.ogg"
+"weapons/pwrench_hitbod1.wav" "rngremake/weapons/fist_hitbody.ogg"
+"weapons/pwrench_hitbod2.wav" "rngremake/weapons/fist_hitbody.ogg"
+"weapons/pwrench_hitbod3.wav" "rngremake/weapons/fist_hitbody.ogg"
+"weapons/pwrench_miss1.wav" "rngremake/weapons/fist_swing.ogg"
+"weapons/pwrench_miss2.wav" "rngremake/weapons/fist_swing.ogg"
+
+
+## Trooper
+
+"shocktrooper/shock_trooper_attack.wav" "rngremake/npc/trooper/troop_attack.ogg"
+"shocktrooper/shock_trooper_die1.wav" "rngremake/npc/trooper/troop_death.ogg"
+"shocktrooper/shock_trooper_die2.wav" "rngremake/npc/trooper/troop_death2.ogg"
+"shocktrooper/shock_trooper_die3.wav" "rngremake/npc/trooper/troop_death3.ogg"
+"shocktrooper/shock_trooper_die4.wav" "rngremake/npc/trooper/troop_death3.ogg"
+"shocktrooper/shock_trooper_pain1.wav" "rngremake/npc/trooper/troop_pain.ogg"
+"shocktrooper/shock_trooper_pain2.wav" "rngremake/npc/trooper/troop_pain.ogg"
+"shocktrooper/shock_trooper_pain3.wav" "rngremake/npc/trooper/troop_pain.ogg"
+"shocktrooper/shock_trooper_pain4.wav" "rngremake/npc/trooper/troop_pain2.ogg"
+"shocktrooper/shock_trooper_pain5.wav" "rngremake/npc/trooper/troop_pain2.ogg"
+
+"!ST_GREN0" "rngremake/npc/trooper/troop_speak.ogg"
+"!ST_ALERT0" "rngremake/npc/trooper/troop_attack.ogg"
+"!ST_ALERT1" "rngremake/npc/trooper/troop_idle3.ogg"
+"!ST_ALERT2" "rngremake/npc/trooper/troop_speak4.ogg"
+"!ST_MONST0" "rngremake/npc/trooper/troop_speak5.ogg"
+"!ST_COVER0" "rngremake/npc/trooper/troop_speak6.ogg"
+"!ST_THROW0" "rngremake/npc/trooper/troop_speak.ogg"
+"!ST_TAUNT0" "rngremake/npc/trooper/troop_speak3.ogg"
+"!ST_CHARGE0" "rngremake/npc/trooper/troop_speak.ogg"
+"!ST_IDLE0" "rngremake/npc/trooper/troop_idle.ogg"
+"!ST_QUEST0" "rngremake/npc/trooper/troop_speak5.ogg"
+"!ST_ANSWER0" "rngremake/npc/trooper/troop_speak.ogg"
+"!ST_CLEAR0" "rngremake/npc/trooper/troop_idle2.ogg"
+"!ST_CHECK0" "rngremake/npc/trooper/troop_speak2.ogg"

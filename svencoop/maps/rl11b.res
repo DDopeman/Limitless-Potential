@@ -1,12 +1,6 @@
 // Created with resguy v9 (September 2018)
 // https://github.com/wootguy/resguy
 
-models/player/cl_scientist1/cl_scientist1.mdl
-models/player/cl_scientist2/cl_scientist2.mdl
-models/player/cl_scientist3/cl_scientist3.mdl
-models/player/cl_scientist4/cl_scientist4.mdl
-models/player/cl_scientist5/cl_scientist5.mdl
-models/player/cl_scientist6/cl_scientist6.mdl
 models/residuallife/baby_icky.mdl
 models/residuallife/hassassin.mdl
 models/residuallife/icky.mdl
@@ -18,6 +12,21 @@ models/residuallife/skeleton2_.mdl
 models/residuallife/w_bloodly_9mmAR.mdl
 models/residuallife/xenocrab.mdl
 rl_.wad
+sound/oghs/cs06/a!.wav
+sound/oghs/cs06/badbone.wav
+sound/oghs/cs06/bell.wav
+sound/oghs/cs06/boing.wav
+sound/oghs/cs06/cum.wav
+sound/oghs/cs06/dross.wav
+sound/oghs/cs06/fart.wav
+sound/oghs/cs06/gay.wav
+sound/oghs/cs06/headshot.wav
+sound/oghs/cs06/pipe.wav
+sound/oghs/cs06/pui.wav
+sound/oghs/cs06/slip.wav
+sound/oghs/cs06/tom2.wav
+sound/oghs/cs06/wrong.wav
+sound/oghs/cs06/zzz.wav
 sound/residuallife/barney/ba_late.wav
 sound/residuallife/barney/ba_security2_desk0.wav
 sound/residuallife/barney/s02ba_hello.wav

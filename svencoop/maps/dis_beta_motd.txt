@@ -1,0 +1,122 @@
+
+-- Disintegration of Time --
+
+First Beta
+
+Designed for 1-4 players, thus can be completed co-op or solo
+
+Map plays similar to Deluge and IO.
+
+-- Beta 1 bugs (and features) --
+
+- I ran into limits (nuff said).
+Couple of areas and secrets are pretty much unfinished,
+unless they consist of previously done mapping,
+thus might be way easier than they ever were planned to be.
+
+Ran into allocblock before i wanted to implement the many additional rooms and ideas i planned.
+Or technically i didnt run into any limit, but rooms started to bug out horribly
+with missing faces which made zero sense regarding i wasnt hitting any limit.
+
+I resulted in splitting the map into 2 parts, but for now i left that second part off,
+because it was still in heavy alpha state.
+
+- The map uses weapon_custom by w00tguy, it is really cool except might be unstable.
+If the map decides to crash out of random, this is most likely the reason.
+I havent had chance for map specific weapon scripts yet.
+Weapons are mostly pretty hastily done and sure not final
+
+- After this map started to take longer and longer (Started this near end of 2017).
+Many serious ideas inavoidably started to end up in trashbin,
+and lots of goofy shit and dry humor started to sneak in this beta.
+
+- That "golden middle road" regarding Sven Co-op and combat gameplay,
+is next to impossible to achieve. Map might be too 'easy', or too 'hard',
+anywho unbalanced it continues to be for now. Didnt name this beta just for shits lol
+
+- Some sound, model and sprite replacement lacking, and odd content naming.
+
+- Only one monster type has custom sounds
+
+
+-- Mandatory "plot" --
+
+Presence of time has diminished in this certain part of this apocalyptic realm.
+History and future have fused together, obliterating existence and knowledge of present time.
+Ancient and modern technology and architecture stack upon eachother.
+
+When it comes to you, its hard to be a scavenger for goods in this confusing ridiculous environment.
+However out of odd coincidence, you accompany the most unlikely and ludicrous dream-team
+from different timelines to kick some ass.
+
+You begin to notice that some type of interdimensional breach has occurred aswell.
+Familiar species of creatures, and vengeful enemies from all the moons you have done your contracts in
+have started to show around, only this time more stronger and lustier.
+
+
+-- Credits (Might be incomplete) --
+
+All mappers of the original areas which are referenced,
+are gonna be credited in the map itself in a special way. (Find the secrets sssh)
+
+RNG - The map, modelhacks, and some models, sounds and soundmixes, special textures and drawings,
+burnouts, "music".
+
+w00tguy - weapon_custom script and troubleshooting
+
+Garompa - Big Sven Co-op community NPC pack where some monsters are edited from. (rmk_rng, rmk_medic and rmk_doc)
+
+DGF - Original portal model, and the beakmask occasionally appearing the map once again.
+
+Testing: Streamfox, MirroR, Zode, Colt, sprt, Trempler, Sence, w00tguy, Windawz, greenchocolate
+and some invited, and uninvited quests.
+
+- Many textures are from textures.com.
+Some textures used all the way in deluge and IO aswell are from Condition Zero originally.
+Textures by PillipK might also been used.
+
+- Weapon sounds are mostly mixed out of public domain sounds and new They Hunger content.
+Except the voice which is used in punch and kick, which i never exactly knew where they were from
+when they were edited in Deluge.
+
+So apparently the original source of these are:
+Richard Waugh (Wesker, Resident Evil 4), Jim Ward (Krauser, RE4 aswell).
+I recall originally taking them from ZDoom mod Diaz: Last Hours of Purity by wildweasel.
+Guess these are properly credited now, how shortsighted of me lol.
+
+Ambient sounds are just remixed half-life ambience, sort of temporary solution for this version.
+
+Shocktrooper sounds are snatched from some wild animal videos i cannot recall anymore,
+mostly some hyena videos, so i do not take credit of them.
+(And no, i did not steal them from Bloodbourne).
+
+- 'Pistol 18' is Glock from Counter-Strike Source
+
+- SMG is mangled Thompson from They Hunger Co-op, not most optimized creation with the V_ model being 8000 polygons.
+
+- Textures of gib modelling, and otherwise 'gory' textures are microscope images from a candle and a peanut.
+Some are actual guts screencapped from some Gordon Ramsay's F-word episode of hunting a wild boar.
+Thought id mightaswell clarify this properly lol.
+
+- Not really sure who made the original skybox yet
+
+Of course again, credits to original mappers of areas i decided to ripoff remake on this map,
+(Or rather base the whole map idea to that lol). Some areas preceed my whole friggin mapping period many years.
+
+
+-- Useless Trivia --
+
+- The map also includes areas cut from IO and Deluge.
+Some mapping straight out of UNI2 included aswell, not much on big role in this version though.
+
+- The 'Remake logos' originate from long-dead Deathmatch Classic project for Sven,
+meant as team deathmatch logos. They are drawn out of murals from couple of DMC textures,
+with some slight modifications.
+
+- Compile time: Around 5 minutes
+
+- Character names are coincidential (no shit), and mostly cheaply derived from
+Half-life and Sven Co-op
+
+- Picture on Gordon's shirt is the logo
+of my 'dark ambient' project Garden of Myxini

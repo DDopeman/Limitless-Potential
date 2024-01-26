@@ -1,0 +1,112 @@
+// Half-Life Texture Types.  Modify this file only if texture names are changed!
+//  'M' metal, 'V' ventilation, 'D' dirt, 'S' slosh liquid
+//  'T' tile, 'G' grate, 'W' wood, 'P' computer, 'Y' glass
+//  'F' flesh, 'O' snow. (Concrete is the default)
+// NOTE: only the first 12 characters of the texture name are used
+// NOTE: a maximum of 2048 textures may be tagged in this file
+
+//V VENT
+//D DIRT
+//G GRATE
+//M METAL
+//S SLOSH
+//T TILE
+//W WOOD
+//P COMP
+//Y GLASS
+//F FLESH
+//O SNOW
+
+//================
+// con3_master.wad
+//================
+C access
+
+W con_crate01
+W con_crate02
+W con_crate03
+W nightmarewood01
+W nightmarewood02
+W nightmarewood03
+W nightmarewood05
+W nightdoor1
+W sub01
+W sub04
+W wood1
+W wood2
+W wood01
+W wood02
+W wood04
+W woodburn
+W WOODTEXTURE_
+W dr_bar_wall
+W doclogo33
+W minesha
+W conexplo
+
+M car01
+M car02
+M car03
+M car04
+M car05
+M car06
+M car07
+M car08
+M car09
+M car10
+M car11
+M car12
+M creep_barrel
+M creep_rust
+M door01
+M METALTEXTURE
+M metal_bord07
+M ric02
+M ric03
+M ric04
+M ric05
+M ric06
+M ric07
+M ric08
+M ric09
+M rigc01
+M subrust
+M {trainwheels
+M {trainwheels1
+
+F blood
+
+T tile01
+T sub11
+T cas04
+T cas05
+T cas06
+
+// concrete is default
+//wall08
+//wall09
+//wall10
+
+O snow
+O snowall
+O snowflakes
+
+T cas14blue
+T cas14green
+T cas14purple
+T cas14red
+T cas14yellow
+T nightroof
+
+Y con_light02
+Y dr_light56
+Y dr_light56red
+Y dr_lightred
+Y icecube2
+Y icecube2b
+Y icer
+Y icewindow01
+Y icewindow02
+Y p_ice3
+
+//==============

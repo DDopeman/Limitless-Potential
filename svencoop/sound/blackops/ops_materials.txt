@@ -1,0 +1,156 @@
+// BlackOPS texture types
+
+
+// CONCRETE 'default', VENTILATION 'V', DIRT 'D', 'M' METAL, 'P' ELECTRICS
+// 'S' SLOSH LIQUID, 'G' GRATE, 'T' CARPET, 'W' WOOD, 'Y' GLAS
+
+// 'V' VENTILATION
+
+V DUCT_WALL03
+V _dv_vent
+
+// 'D' DIRT
+	
+D dv_dsrtflr01a
+D dv_gras01a
+D dv_grvl2
+D dv_grvl3
+D dv_track02a
+D dv_track02b
+D dv_track02c
+D po_subtrash
+D tdk9_dirt01
+
+// 'M' METAL
+
+M dv_barrlexpl
+M dv_barrlgen
+M dv_barrltp
+M dv_barrlmtltop
+M dv_barrlmtlside
+M dv_car01hood
+M dv_car01roof
+M dv_crate04a
+M dv_crate12b
+M dv_crate13b
+M dv_crate14b
+M dv_door14b
+M dv_door1
+M dv_mfloor01a
+M dv_mtl_wall_07a
+M dv_mtlbeam1
+M dv_mtlflr01a
+M dv_mtl03a
+M dv_outboxtp
+M dv_rust01
+M dv_rust02a
+M dv_rustmtl2
+M dv_sewer02a
+M dv_trash05a
+M dv_trash05b
+M dv_trash06b
+M po_substrfrnt
+M po_substrtop
+M po_subflrrlbr
+M po_rustmetalred
+M STEEL
+
+// 'P' ELECTRICS
+
+P dv_barlgtbr
+P dv_chtwnsign1
+P dv_girl
+P dv_oldbarsign
+P _dv_btn01b
+P _dv_btn02
+P _dv_com02b
+P _dv_tvanim
+P _dvcomops
+P bs_elev_ctrl
+P dv_bar
+P dv_btn01a
+P dv_chtwn14a
+P dv_chtwn26a
+P dv_com_poke
+P dv_com_thw
+P dv_com03a
+P dv_com04a
+P dv_comsurvlnc1
+P dv_comsurvlnc2
+P dv_comsurvlnc3
+P dv_ctrlpan01a
+P dv_ctrlpan01b
+P dv_ctrlwll01a
+P dv_fstfdrst02a
+P dv_fstfdrst02b
+P dv_fuseb_ft
+P dv_light01a
+P dv_light01b
+P dv_light01c
+P dv_light02a
+P dv_light02b
+P dv_light03a
+P dv_lightneon
+P dv_lightneonb
+P dv_phonebox
+P dv_signhtlgen
+P dv_speaker
+P dv_stereo01a
+P dv_stereo01b
+P dv_sub_vnd
+P dv_tv01a
+P dv_tv02a
+P dv_tvdod
+P dv_vend01a
+P dv_vend02a
+P hl_gen87
+P tdk8_server28
+P tdk8_server29
+P TNNL_LGT1
+P TNNL_LGT3
+P TNNL_LGT4
+P GYMLIGHT
+P FIFTS_LGHT06
+P FIFTIES_LGT2
+
+
+// 'S' SLOSH LIQUID
+
+S dv_fluid01a
+S scrollwtrpo
+S po_watergrndrt
+
+// 'G' GRATE
+
+G dv_grtstp
+G dv_subent01a
+G dv_hqflr01b
+
+G GRATE4A
+
+
+// 'T' CARPET
+
+T dv_carpet04a
+T dv_carpet04b
+T dv_carpet05a
+T dv_carpetred
+T dv_carpetlog
+T dv_jailstuff02a
+
+// 'W' WOOD
+
+W dv_crate01a
+W dv_crate02a
+W dv_crate03a
+W dv_crate06a
+W dv_crate06b
+
+// 'Y' GLAS
+
+Y GLASS_BRIGHT
+Y GLASS_DARK
+Y GLASS_MED
+Y GLASSGREEEN
+Y GLASSGREEEN
+ 

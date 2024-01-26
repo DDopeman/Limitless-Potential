@@ -1,0 +1,61 @@
+
+IO
+
+Version 1
+
+First Chapter
+
+Somewhere in 22th century an important laboratory in the moon Io has gone all messed up and stupid, and its your job once again to "fix" things no matter the international or intergalactic impact it has.
+
+Info:
+
+- Complete remake, or reimagining of Iron IO Shocksiege
+
+- Recommended only for 1-4 players
+
+- Can be played alone
+
+- Server operators: Disable XP mod, buymenu or any gameplay altering plugin for this map,
+otherwise stuff will most likely break horribly.
+
+
+Some issues in V1:
+
+- Inavoidably odd balance sometimes, named this version 1 for many reasons
+
+- Performance and optimization issues.
+If your Sven slows down as it is, then your gonna have even heavier crap pouring down
+on performance with this most likely.
+
+- Other guns than Fiveseven might fail to trigger one-shot breakables and shootable buttons,
+atleast with the first try.
+This is probably some weird issue in the scripts i have no idea of.
+
+- Sound replacements for some monsters are not working, this is a game issue but i keep the sounds in anyway
+
+- Ending is sort of crappy, too tired to keep revamping it for figuring out something new for now
+
+- Zombies are mute for now
+
+
+Credits (might be half-assed)
+
+RNG - The map, "music" loops, sound mixing and splicing, texture edits and special/drawn textures, model hacks and sprite edits, Gasmask/Beakmask man voices (some old fucking drunk footage)
+
+Streamfox - Additional Mapping, testing and ideas
+
+KernCore - Original CS weapon scripts
+
+Testing - Streamfox, MirroR, sprt, Trempler, Geckon, Zodemon, Reniah
+
+DGF - Plaguemask and gasmask from Deluge
+
+Sence - Old computer model
+
+Most gunmodels are from some CSS to CS 1.6 conversion and knife is from Day of defeat.
+Glock model is originally by bullet_head as far as i know,
+this was actually somehow included in Sven 4.7 or other version as a gun for barney lool.
+
+Most sounds are heavily mixed and edited from various videos, game mods and such through the times its impossible to credit things accurately,
+so i dont claim them solely as my own doings, except maybe some sounds i did from my field recordings.
+

@@ -1,0 +1,246 @@
+=======================================================
+Conundrum 3
+a Sven-Coop Experience By DocRock
+=======================================================
+
+Version: January 2023
+
+QUICK SUMMARY:
+--------------
+Conundrum 3 SVEN CO-OP Campaign:
+17 bsps, 45 substantial submaps, custom textures, custom models, custom sounds, 
+6-player support with 4-level difficulty adjustment that can also be manually set in each bsp.
+This campaign represents more than 2.5 years of work by DocRock and qUiCkSiLvEr.
+
+More information about this Campaign including reviews, screen shots, ratings, and comments are available at:
+https://gamebanana.com/mods/424924
+The ModDB database: https://www.moddb.com/mods/conundrum-3
+
+Release date:        January, 2023
+
+Author:              DocRock
+Author email:        docrock10@hotmail.com
+                     quicksilver@qsextreme.com
+
+Twitch:              https://www.twitch.tv/docrock_creations
+Twitter:             https://twitter.com/DocRock_Maps
+
+=======================================================
+LEVEL DESCRIPTION:
+
+--->NOTE:  START THE CAMPAIGN BY RUNNING CON3_HUBA <---
+
+While solving puzzles and fighting legions of monsters,
+explore Egyptian ruins, snowy mountains, buried tunnels, deep mines and volcanic caverns 
+in this third installment of Conundrum by DocRock
+
+There are some 35 unique areas to experience as you play this incredible and challenging campaign.
+
+The overall goal is to find and collect the six relics in six perilous zones. The first two to find are blood and stones.
+
+The adventure starts in Con3_Huba where you can see samples of the different environments and start the campaign, or you and friends
+can vote to jump to any one of the 16 key Maps where you can also choose from 4 different levels of difficulty.
+
+Things start with a simple challenge where you have to push an ornate box to a matching decal on the ground followed by a couple of sections where you have multiple boxes that have to be placed for gates to open so you can progress, all while trying to stay alive as various monsters let you know they don't like you and your friends invading their space!
+
+Map sections after that get more difficult but there are only a few boxes to move, rather you have to be agile and nimble with tricky platforming (jumping and landing and moving) in breathtaking sheer cliff landscapes.
+
+On most of the map sections, falling is a bad thing so you need to be good at crawling, jumping, long-jumping and always aware of what is going on around you.
+
+If you lose control and push a box off the edge where you can't get to it then the map will reset, too bad and try again!
+Map sections like this are only in the beginning, later maps are focused on survival and it's important to have team members that can heal you if need be.
+
+There are 3 interlude maps where you can see the relics you've collected, take a deep breath and then move on to find the remaining relics.
+
+At the end, you will have a final battle to test your skills, be patient. You will deal with many kills including the big boss.
+
+Note: In a number of places the monsters will fight each other.
+      This is by design and not an accident.
+      We found that playing on an active scene where all the bad guys aren't just shooting at the players made game play much more interesting.
+
+=======================================================
+KNOWN PROBLEMS:
+
+>>> Sven-Coop has a known problem with pushable entities. <<<
+
+If you have problems while pushing the boxes on this campaign you might see these symptoms:
+
+1. boxes don't want to push or are very slow
+2. your player perspective rubber-bands as you push things
+
+This problem is caused by the video sync between the game and your monitor refresh rate.
+
+You can fix this by setting "GL_VSYNC 1" in your game console or
+go to your GAME OPTIONS > VIDEO > and check "WAIT FOR VERTICAL SYNC"
+
+This should fix the problem for you for the most part.
+
+Also, if for any reason you get stuck and can't figure out (at that moment) what to do you can always votemap con3_huba 
+and then jump back to the map to restart it or come back at a later time when you've had a chance to think about things and talk with other players.
+
+Servers may also have an empty map running where someone left it so do the same thing to get things started again where you want it.
+
+=======================================================
+Difficulty Notes:
+
+One other note about Gameplay Difficulty Selections.  The maps vary in difficulty.
+Some maps are more focused on platforming and jumping then on just killing reams of monsters.
+
+Choosing a more difficult level only adds monsters and might make the existing ones harder to kill.
+Things were done this way because with 3 or 4 players all shooting and healing each other, things would otherwise be much too easy.
+
+Then again, one or two experienced players can run through the maps on the "Difficult" setting as a challenge.
+
+The maps are set up so one player automatically selects "Easy", Two players get "Medium" three players get "Hard" and 4 players get "Difficult".
+
+This can be easily changed at the Selection Kiosks, but once any player breaks the start barrier and you hear the suit zipper start sound,
+the difficulty selection is locked at that point even if more players join.
+
+=======================================================
+SPECIAL NOTE FOR SERVER OPERATORS
+This campaign is set up so you only need to add Con3_HubA to your mapcycles and votemaps.
+All of the other maps are accessible through that start map.
+
+=======================================================
+CONSTRUCTION:
+
+editor used:         Svencraft build 8832
+utilities used:      Zoner's Half-Life Compilation Tools -- Custom build for Sven Co-op
+                     Paintshop
+                     Wally
+                     Half-Life Model Viewer
+                     Goldwave
+                     Milkshape
+
+compile machine:     Windows 10 Shuttle R8
+                     Intel(R) Core(TM) i7-7700K 4.20 Ghz 
+                     64.0 GB RAM Quadro GeForce 
+
+total compile time:  6 Hours and 15 Minutes for all 17 maps
+
+wadincluded in maps: con3_master.wad
+
+=======================================================
+
+-------- LEVEL DESIGN --------
+DocRock	           qUiCkSiLvEr
+
+---------- CONCEPT -----------
+DocRock
+
+-------- MAP EDITORS ---------
+DocRock	           qUiCkSiLvEr
+
+------ MODELS ------
+converted by qUiCkSiLvEr:
+Egyptian Mummy 3D by Mimoun KECHE
+Dagon monsters originally by Gearbox, version released by the Cthulhu Half-Life mod
+lavadog monsters converted from Natural Selection
+several custom skins for stock monsters to fit the environment
+
+-------- SOUNDS --------
+Olivier Giradot
+Northern 87
+deleted-user
+Sinatra314
+Mattias Michael Lahoud
+Swiftoid
+Alan McKinney
+Leszeck Szary
+Mark 1985
+Julias Galla
+Martin Kinrus, Ignacio Arfeli
+Lowshape
+TT
+Optimuss, Dok & Martin
+InspectorJ
+Morpheous Project
+(c)Taira Komori
+Halloween Tx Labs
+qUiCkSiLvEr
+
+-------- SKY BOXES --------
+Anachronism     JPolito
+Crashsite       Valve
+Embassy         unknown
+StormClouds     Serhat Ondes
+Tornsky         Valve
+Train           Valve
+
+-------- TEXTURES --------
+DiscountKiller
+qUiCkSiLvEr
+Erupting Volcano unknown
+
+-------- BETA TESTERS --------
+babykitkat      DocRock
+DiscountKiller  qUiCkSiLvEr
+Grimlock        dArK
+PastaSquid      AberrantQueen
+Sparks
+
+=====================================================================================
+
+-------- Other Credits --------
+Egyptian Mummy 3D by Mimoun KECHE https://www.turbosquid.com/3d-models/egyptian-mummy-3d-1434214 
+mesh and textures converted and updated by qUiCkSiLvEr with bones and animations from the sven-coop zombie model.
+
+although I started with the dagon model from the Cthulhu Half-Life mod | Released 2006, credit for the Dagon in that mod was given as originally from Gearbox.
+https://www.moddb.com/mods/cthulhu/addons/cthulhu-reanimations-pack-v1
+several size and animation variations were made from this model by qUiCkSiLvEr for DocRock's incredible Conundrum 3 Sven Coop mod.
+
+the volcano gif - no specific author credit was given for this.
+https://scitechdaily.com/images/Big-Volcanic-Eruption.gif
+article: Volcanic Winter: Ever-Present Threat of Catastrophic Supervolcano Eruptions Revealed By CURTIN UNIVERSITY SEPTEMBER 4, 2021
+sized and converted to a Sven-Coop sprite by qUiCkSiLvEr for DocRock's incredible Conundrum 3 Sven Coop mod.
+
+lavadog monster original mesh by the HL1 Natural Selection team
+this was an alien_level2 monster from the original HL1 version of Natural Selection that qUiCkSiLvEr originally converted and retexturized as a lava monster for DocRock's great map "Vicious" released back on Feb 22, 2003
+
+-------- Special Note --------
+on Con3_10 there is a hidden button that will enable snow on part of the map (just for fun).
+
+Thanks!
+-------
+Thank you for downloading and playing these maps, I hope you enjoy playing them as much as I did creating them.
+DocRock
+
+=======================================================
+SPECIAL THANKS
+
+To my babykitkat, my lover, my sweetheart, my wife.  I love you!!  My #1 fan, thanks baby
+for playtesting and helping me with these awesome maps!  I DEDICATE THIS TO YOU!
+
+To DocRock: thank you Doc for letting me be a part of this effort. Between the two of us there are (literally) thousands of hours of editing and playtesting and brainstorming and bug fixing and it's been an incredible experience, you're the very best bro, CHEERS!
+qUiCkSiLvEr
+
+P.S. (and never, never again say NO RUSH!, promise me!)
+
+to Grimlock, Special Thanks for your input and assistance Grim!
+
+=======================================================
+COPYRIGHT STUFF
+
+Conundrum 3 Campaign Maps and Content Copyright January 30, 2023 by DocRock
+con3-huba.bsp, con3-hubb.bsp, con3-hubc.bsp, con3-hubd.bsp, con3-hube.bsp
+con3-1.bsp, con3-2.bsp, con3-3.bsp, con3-4.bsp, con3-5.bsp, con3-6.bsp, 
+con3-7.bsp, con3-8.bsp, con3-9.bsp, con3-10.bsp, con3-11.bsp and con3-12.bsp
+
+(excepting included content that has a prior copyright)
+
+Authors may NOT use content from Conundrum 3 to build other maps or campaigns (you are welcome to ask).
+
+You MUST NOT distribute this level UNLESS you INCLUDE THIS FILE WITH
+NO MODIFICATIONS. If you don't co-operate, then DON'T DISTRIBUTE IT
+IN ANY FORM.
+
+This LEVEL may be distributed ONLY over the Internet.
+
+You are NOT authorized to put this LEVEL on any CD or other digital media or distribute it in
+any way without my written permission.
+
+PLEASE PLEASE PLEASE email me with any comments about this map or any 
+of my other maps because I love feedback good or bad...and I will do my 
+best to answer any and all emails regarding my maps.
+=======================================================
+

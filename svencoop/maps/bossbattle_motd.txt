@@ -1,0 +1,26 @@
+==============================
+Bossbattle
+------------------------------
+Map by Streamfox
+Special thanks to w00tguy
+Music: Kula World Soundtrack - Bonus 3
+==============================
+
+HINT: 
+Press your "+use"(default 'E') key on the bomb to pick up and carry it around.
+Press "+use"('E') key again to throw it.
+
+Description:
+Defeat the Garg with a help of a fusebomb.
+
+Notes:
+*You have 15 lives.
+*When out of lives there's a vote for restarting the map or to change to the next level.
+*Red arrows will show which bomb spawning device is activated.
+*Once you spawned a bomb it will start counting down after a few seconds. Pick it up and throw it at the garg.
+*Keep a safe distance from the garg when you or someone is throwing the bomb, otherwise you gonna blow up and loose some lives.
+*Also if the bomb's counter is near 00, play safe and wait for the next opportunity.
+*Use your barnacle to navigate inside the arena.
+
+
+

@@ -1,0 +1,82 @@
+MOTD that is worth reading, sort of
+---------------------------
+
+Deluge (AKA Morass)
+
+Episode 1: Swamped Concrete Delicacy
+
+Beta Version 3
+
+Info
+------
+-Map is designed for 1-4 players, and it can be played alone
+-The map is walkthrough
+-The map has secrets
+-The map uses keycards
+-The map is non-linear
+-Shooter game
+
+
+Version 3 Changelog
+--------------------
+-Two new difficulty settings, now with actual gameplay alteration
+-New lives system, that is also present in each difficulty setting
+-New Soundtrack
+-Vote system hopefully fixed now
+-Hidden "Powerups"
+-Fixed soundreplacement bugs, that are my fault
+-Handful of sounds tweaked to be "better"
+-Many other things
+
+
+Known bugs (or features) in the 4.8 beta version.
+----------------
+-This version is like 99% on visleafs limit and i cant add anymore shit into it.
+This shows as teleport paths between lots of areas, boarded doors, sort of lack of detail and weird gameplay choices
+-Might still be little unbalanced when played alone
+-Weapons might sound really weird on the low-def pack, and otherwise
+-Lack of variety with NPC models for now, expect alot of clones. Lots of content is going to be later replaced with better ones
+-Kick might be underpowered in comparison of the fists, something i couldnt fix no matter what
+-Boss characters are sort of dumb
+-"Voice acting" doesnt work half the time
+
+
+Story
+------
+Swampy substances on concrete foundations
+
+Little more goofier storyline
+----------------
+This strange swampy substance spread everywhere, making everyone go insane and circling between realities in obscure manner.
+Nothing obviously made sense anymore and the swampy substance was forgotten as it is. Entirely new species appeared and
+none gave a flying turd of them. Your face is distorted from swampy vapors and your hands grow fungus as thought to yourself:
+"Am i still on earth, or some other planet? I dont know anymore, but fuck whatever"
+
+Your small gang of swamped and deteriorated people had a brilliant idea, to start figuring out
+what the hell is causing the swamped substances in first place, that was the most sane thought anyone had for long time.
+Armed with your makeshift weapons just in case. You then stumble into some odd looking scifi-ish area.
+Different colored doors, deadly traps, monsters, keycards. "Oh hold on" you say to yourself.
+
+*Imagine some Duke Nukem or b-movie one-liner here or something*
+
+
+Credits
+--------
+-Map by RNG
+-Additional mapping: Streamfox
+-Music, Sound mixing and Irrelevant NPC Yelling: RNG. Except Marv from Home Alone
+-Loading song is a "remix" of a song Don't Look Back by Soapaosin
+-Special textures and map screens: RNG
+-Models, modelhacks and conversions: RNG
+-Gasmask, beakmask model, rigging of carbine, cockroach and those eyes: D.G.F.
+-Fists of steel: Sence
+-Some weapon models are originally old CS and DOD skins: Credits to lots of modders who made them
+-Betatesting: Streamfox, MirroR, D.G.F., Poka, Colt, Trempler, Takashi, Sence, Sprt, Mr. D, Marci, Rusty, Jyuki, Dieter and some others
+
+
+Trivia
+----------------
+-The map was mainly inspired by the new Rise of the Triad, and replaying of whole bunch of Doom wads.
+-Was originally supposed to be released same time as Descen, the map having similar gameplay style
+-Build time: 6 months (Over half the time doing content, being lazy or mapping UNI 2 instead)
+-Compile time: 2 minutes

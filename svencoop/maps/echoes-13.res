@@ -42,6 +42,7 @@ models/echoes/v_squeak.mdl
 models/echoes/v_tripmine.mdl
 models/echoes/zombie.mdl
 models/echoes/zombie_barney2.mdl
+models/kezaeiv/icons/mk_logo_white.mdl
 sound/echoes/agamemnon/ag_damn.ogg
 sound/echoes/agamemnon/ag_headroll.ogg
 sound/echoes/agamemnon/ag_meet0.ogg
