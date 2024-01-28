@@ -255,3 +255,7 @@ fool scientist/c3a2_sci_fool.wav
 walter scientist/of4a1_sc01.wav
 hound houndeye/he_attack3.wav
 nade weapons/glauncher2.wav
+calla2 oghs/cs06/calla2.wav
+pizzatime oghs/cs06/pizzatime.wav
+bonk oghs/cs06/bonk.wav
+
