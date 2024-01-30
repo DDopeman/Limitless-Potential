@@ -61,10 +61,7 @@
 
 ##CLASSIC MODE
 
-"models/hlclassic/barney.mdl" "models/blackops/barney.mdl"
-"models/hlclassic/bullsquid.mdl" "models/blackops/bullsquid.mdl"
-"models/hlclassic/crossbow_bolt.mdl" "models/blackops/crossbow_bolt.mdl"
-"models/hlclassic/gman.mdl" "models/blackops/gman.mdl"
+"models/hlclassic/barney.mdl" "models/oghs/cm/npc/barney.mdl"
 "models/hlclassic/grenade.mdl" "models/blackops/grenade.mdl"
 "models/hlclassic/hassassin.mdl" "models/blackops/hassassin.mdl"
 "models/hlclassic/hgrunt.mdl" "models/blackops/hgrunt.mdl"
@@ -117,7 +114,6 @@
 "models/hlclassic/w_shotgun.mdl" "models/blackops/original/w_shotgun.mdl"
 "models/hlclassic/w_suit.mdl" "models/blackops/original/w_suit.mdl"
 
-"models/hlclassic/zombie.mdl" "models/blackops/zombie.mdl"
 
 
 ##Un-comment below to enable classic models with Classic Mode Deluxe (remember to comment replacements above):

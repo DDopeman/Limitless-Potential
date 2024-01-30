@@ -1,0 +1,6 @@
+5
+weapon				640		640hud2					0	45	170	45
+weapon_s			640		640hud5					0	45	170	45
+ammo				640		kezaeiv/kezammo			144	0	24	24
+ammo2				640		kezaeiv/kezammo			0	72	24	24
+crosshair			640		kezaeiv/kezcrosshairs	108	56	100	100

@@ -118,6 +118,7 @@ sound/oghs/cs06/correct.wav
 sound/oghs/cs06/crabrave.wav
 sound/oghs/cs06/crazy.wav
 sound/oghs/cs06/cries.wav
+sound/oghs/cs06/crit.wav
 sound/oghs/cs06/csm.wav
 sound/oghs/cs06/cum.wav
 sound/oghs/cs06/curb.wav

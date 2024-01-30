@@ -91,6 +91,7 @@ models/blackops/w_shotbox.mdl
 models/blackops/w_shotgun.mdl
 models/blackops/w_suit.mdl
 models/blackops/zombie.mdl
+models/oghs/cm/npc/barney.mdl
 sound/blackops/ambience/zippo.wav
 sound/blackops/ambience/zippo_close.wav
 sound/blackops/buttons/button2.wav
@@ -147,6 +148,8 @@ sound/oghs/cs06/a!.wav
 sound/oghs/cs06/badbone.wav
 sound/oghs/cs06/bell.wav
 sound/oghs/cs06/boing.wav
+sound/oghs/cs06/crit.wav
+sound/oghs/cs06/csm.wav
 sound/oghs/cs06/cum.wav
 sound/oghs/cs06/dross.wav
 sound/oghs/cs06/fart.wav

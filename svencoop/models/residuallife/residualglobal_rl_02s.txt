@@ -1,6 +1,7 @@
 
 "models/nihilanth.mdl" "models/residuallife/nihilanth.mdl"
 
+"models/residuallife/aworker.mdl" "models/oghs/cm/npc/islave.mdl"
 "models/agrunt.mdl" "models/oghs/cm/npc/agrunt.mdl"
 "models/agruntf.mdl" "models/oghs/cm/npc/agruntf.mdl"
 "models/apache.mdl" "models/oghs/cm/npc/apache.mdl"

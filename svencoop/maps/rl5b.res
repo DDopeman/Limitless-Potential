@@ -67,6 +67,7 @@ sound/oghs/cs06/a!.wav
 sound/oghs/cs06/badbone.wav
 sound/oghs/cs06/bell.wav
 sound/oghs/cs06/boing.wav
+sound/oghs/cs06/crit.wav
 sound/oghs/cs06/cum.wav
 sound/oghs/cs06/dross.wav
 sound/oghs/cs06/fart.wav

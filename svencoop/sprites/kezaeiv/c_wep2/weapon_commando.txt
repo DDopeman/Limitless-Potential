@@ -1,0 +1,8 @@
+7
+weapon				640		640hudsc2		0	0	170	45
+weapon_s			640		640hudsc2		0	46	170	45
+ammo				640		kezaeiv/kezammo		72	0	24	24
+ammo2				640		640hud7			48	60	24	24
+crosshair			640		kezaeiv/kezcrosshairs	262	2	52	52
+zoom				640		kezaeiv/kezcrosshairs	210	158	52	52
+autoaim				640		crosshairs		48	0	24	24

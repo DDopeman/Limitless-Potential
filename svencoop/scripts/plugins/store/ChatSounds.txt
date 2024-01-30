@@ -1,5 +1,6 @@
 wtf1 oghs/cs06/wtf1.wav
 wtf2 oghs/cs06/wtf2.wav
+crit oghs/cs06/crit.wav
 wtfboom oghs/cs06/wtfboom.wav
 xtremesex oghs/cs06/xtremesex.wav
 yay oghs/cs06/yay.wav

@@ -17,9 +17,9 @@ HEV_DEAD13 oghs/cs06/(p115) cum
 HEV_DEAD14 oghs/cs06/slip
 HEV_DEAD15 oghs/cs06/(p85) wrong
 HEV_DEAD16 oghs/cs06/headshot
-HEV_DEAD17 oghs/cs06/cs06m
+HEV_DEAD17 oghs/cs06/csm
 HEV_DEAD18 oghs/cs06/(p85) gay
-HEV_DEAD19 oghs/cs06/(p85) cs06m
+HEV_DEAD19 oghs/cs06/(p85) csm
 HEV_DEAD20 oghs/cs06/dross
 HEV_DEAD21 oghs/cs06/(p85) badbone
 HEV_DEAD22 oghs/cs06/(p115) slip
@@ -51,12 +51,6 @@ HEV_DEAD47 oghs/cs06/tom2
 HEV_DEAD48 oghs/cs06/pui
 HEV_DEAD49 oghs/cs06/(p85) cum
 HEV_DEAD50 oghs/cs06/(p115) a!
-HEV_DEAD51 oghs/cs06/(p115) cs06m
+HEV_DEAD51 oghs/cs06/(p115) csm
 HEV_DEAD52 oghs/cs06/(p85) boing
 HEV_DEAD53 oghs/cs06/boing
-
-
-
-
-
-
