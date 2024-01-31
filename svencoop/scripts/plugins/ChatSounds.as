@@ -37,7 +37,7 @@ CClientCommand _help( "cshelp", "Shows you the available commands", ClientComman
 CClientCommand _listsounds( "listsounds", "List all ChatSounds", ClientCommandCallback( g_ChatSounds.ClientCommand ) );
 CClientCommand _stop( "stop", "Stop current ChatSounds in playback", ClientCommandCallback( g_ChatSounds.ClientCommand ) );
 CClientCommand _volume( "csvolume", "Sets your volume at which your ChatSounds play <10-100> (def: 100)", ClientCommandCallback( g_ChatSounds.ClientCommand ) );
-CClientCommand _pitch( "cspitch", "Sets the pitch at which your ChatSounds play <60-140> (def: 100)", ClientCommandCallback( g_ChatSounds.ClientCommand ) );
+CClientCommand _pitch( "cspitch", "Sets the pitch at which your ChatSounds play <80-135> (def: 100)", ClientCommandCallback( g_ChatSounds.ClientCommand ) );
 CClientCommand _mute( "csmute", "Stop playing ChatSounds <on-off> (def: off)", ClientCommandCallback( g_ChatSounds.ClientCommand ) );
 CClientCommand _forcemute( "csforcemute", "Force mute on <target> (steamid or nickname)", ClientCommandCallback( g_ChatSounds.ClientCommand ), ConCommandFlag::AdminOnly );
 
@@ -268,7 +268,7 @@ final class CChatSounds
 		g_PlayerFuncs.ClientPrint( pPlayer, HUD_PRINTCONSOLE, "Type \".stop\" in console or chat to stop current ChatSounds in playback.\n" );
 		g_PlayerFuncs.ClientPrint( pPlayer, HUD_PRINTCONSOLE, "Type \".csmute\" or \".csmute <on-off>\", in console or chat to stop playing ChatSounds.\n" );
 		g_PlayerFuncs.ClientPrint( pPlayer, HUD_PRINTCONSOLE, "Type \".csvolume <10-100>\" (def: 100) in console or chat to sets your volume at which your ChatSounds play.\n" );
-		g_PlayerFuncs.ClientPrint( pPlayer, HUD_PRINTCONSOLE, "Type \".cspitch <25-255>\" (def: 100) in console or chat to sets your pitch at which your ChatSounds play.\n" );
+		g_PlayerFuncs.ClientPrint( pPlayer, HUD_PRINTCONSOLE, "Type \".cspitch <80-135>\" (def: 100) in console or chat to sets your pitch at which your ChatSounds play.\n" );
 		if( g_PlayerFuncs.AdminLevel( pPlayer ) >= ADMIN_YES )
 		{
 			g_PlayerFuncs.ClientPrint( pPlayer, HUD_PRINTCONSOLE, "Type \".csforcemute <target>\" or \".csforcemute <target> <on-off>\", in console or chat to force mute on target.\n" );
@@ -347,7 +347,7 @@ final class CChatSounds
 
 		if( atoui(args.Arg(1)) != pSounds.m_uiPitch )
 		{
-			pSounds.m_uiPitch = Math.clamp( 25, 255, atoui(args.Arg(1)) );
+			pSounds.m_uiPitch = Math.clamp( 80, 135, atoui(args.Arg(1)) );
 			g_PlayerFuncs.ClientPrint( pPlayer, bConsole ? HUD_PRINTCONSOLE : HUD_PRINTTALK, "[ChatSounds] Pitch set to: \"" + pSounds.m_uiPitch + "\"\n" );
 		}
 		else
