@@ -69,7 +69,7 @@ class weapon_ofeagle : ScriptBasePlayerWeaponEntity, WeaponUtils
 
     m_iShell = g_Game.PrecacheModel(SHELL_MDL);
 
-    g_SoundSystem.PrecacheSound('weapons/desert_eagle_fire.wav');
+    g_SoundSystem.PrecacheSound('kezaeiv/c_wep/de9/de_sh.wav');
     g_SoundSystem.PrecacheSound('hlclassic/weapons/desert_eagle_reload.wav'); // default viewmodel; sequence: 7, 8; frame: 1; event 5004
     g_SoundSystem.PrecacheSound('weapons/desert_eagle_sight.wav');
     g_SoundSystem.PrecacheSound('weapons/desert_eagle_sight2.wav');
@@ -198,7 +198,7 @@ class weapon_ofeagle : ScriptBasePlayerWeaponEntity, WeaponUtils
     GetDefaultShellInfo(ShellVelocity, ShellOrigin, 14.0, -10.0, 8.0);
     g_EntityFuncs.EjectBrass(ShellOrigin, ShellVelocity, m_pPlayer.pev.angles[1], m_iShell, TE_BOUNCE_SHELL);
 
-    g_SoundSystem.EmitSoundDyn(m_pPlayer.edict(), CHAN_WEAPON, 'weapons/desert_eagle_fire.wav', Math.RandomFloat(0.92, 1.0), ATTN_NORM, 0, 98 + Math.RandomLong(0, 3));
+    g_SoundSystem.EmitSoundDyn(m_pPlayer.edict(), CHAN_WEAPON, 'kezaeiv/c_wep/de9/de_sh.wav', Math.RandomFloat(0.92, 1.0), ATTN_NORM, 0, 98 + Math.RandomLong(0, 3));
 
     if (self.m_iClip <= 0 && m_pPlayer.m_rgAmmo(self.m_iPrimaryAmmoType) <= 0)
       m_pPlayer.SetSuitUpdate('!HEV_AMO0', false, 0);

@@ -1,0 +1,25 @@
+Jumpers
+By Nih
+
+At the beginning of the map, one player is selected to be the Point Man. He is marked by a purple glow. 
+The Point Man must jump from pad to pad, landing on the pads with red markers. 
+Each pad touched gives the players 1 point, and the goal of the map is to get as many points as possible without the Point Man dying.
+
+The other players, the Jumpers, must ensure that the Point Man stays alive. This is done by killing or distracting hostiles, and by grappling to the Point Man and healing him. There are no medkits or healthstations outside the spawn, so player healing is essential to his survival.
+
+ 
+Additional Info:
+
+- The Point Man receives 30 armor each time a pad is touched.
+
+- By jumping on both of the blue blocks within 60 seconds, the Point Man is able to activate a bonus. It can be activated multiple times.
+
+- When using a jump pad, follow the red arrow to ensure an optimal jump.
+
+- Batteries only respawn when a pad has been touched.
+
+- Boss monsters spawn every 4 points.
+
+- You can grapple on to spore plants.
+
+- Lag may occur if multiple boss monsters are left unkilled.

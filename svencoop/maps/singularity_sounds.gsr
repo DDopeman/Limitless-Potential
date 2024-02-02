@@ -6,6 +6,8 @@
 "weapons/hks3.wav" "kezaeiv/singularity/npc/igi2_g36_shot.wav"
 "weapons/de_shot1.wav" "kezaeiv/c_wep/de9/de_sh.wav"
 "weapons/desert_eagle_fire.wav" "kezaeiv/c_wep/de9/de_sh.wav"
+"weapons/hlclassic/de_shot1.wav" "kezaeiv/c_wep/de9/de_sh.wav"
+"weapons/hlclassic/desert_eagle_fire.wav" "kezaeiv/c_wep/de9/de_sh.wav"
 "weapons/glauncher.wav" "kezaeiv/singularity/npc/quake3_grenade_shot.wav"
 "weapons/glauncher2.wav" "kezaeiv/singularity/npc/quake3_grenade_shot.wav"
 "weapons/sbarrel1.wav" "kezaeiv/singularity/npc/dusk_shotgun_shot.wav"

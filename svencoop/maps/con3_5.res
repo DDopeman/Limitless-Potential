@@ -53,7 +53,6 @@ models/kezaeiv/custom_weapons/commando/p_commando.mdl
 models/kezaeiv/custom_weapons/commando/v_commando.mdl
 models/kezaeiv/custom_weapons/commando/w_commando.mdl
 models/kezaeiv/custom_weapons/dev/p_devastator.mdl
-models/kezaeiv/custom_weapons/dev/plasma_laser.mdl
 models/kezaeiv/custom_weapons/dev/prism.mdl
 models/kezaeiv/custom_weapons/dev/v_devastator.mdl
 models/kezaeiv/custom_weapons/dev/w_devastator.mdl
