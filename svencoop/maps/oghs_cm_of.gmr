@@ -74,7 +74,10 @@
 
 "models/blkop_apache.mdl" "models/oghs/soldier/blkop_apache.mdl"
 "models/cleansuit_scientist.mdl" "models/oghs/soldier/cleansuit_scientist.mdl"
-"models/crashed_osprey.mdl" "models/oghs/soldier/crashed_osprey.mdl"
+"models/crashed_osprey.mdl" "models/oghs/cm/npc/crashed_osprey.mdl"
+"models/osprey.mdl" "models/oghs/cm/npc/osprey.mdl"
+"models/osprey2.mdl" "models/oghs/cm/npc/osprey2.mdl"
+"models/ospreyf.mdl" "models/oghs/cm/npc/ospreyf.mdl"
 "models/gman.mdl" "models/opfor/gman.mdl"
 "models/gordon.mdl" "models/oghs/soldier/gordon.mdl"
 "models/houndeye_dead.mdl" "models/opfor/houndeye_dead.mdl"

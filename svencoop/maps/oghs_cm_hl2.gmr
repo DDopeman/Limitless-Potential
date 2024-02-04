@@ -42,6 +42,10 @@
 "models/opfor/hgrunt_opfor.mdl" "models/oghs/cm/npc/hgrunt_opfor.mdl"
 "models/opfor/hgrunt_torch.mdl" "models/oghs/cm/npc/hgrunt_torch.mdl"
 "models/zombie_soldier.mdl" "models/oghs/cm/npc/zombie_soldier.mdl"
+"models/crashed_osprey.mdl" "models/oghs/cm/npc/crashed_osprey.mdl"
+"models/osprey.mdl" "models/oghs/cm/npc/osprey.mdl"
+"models/osprey2.mdl" "models/oghs/cm/npc/osprey2.mdl"
+"models/ospreyf.mdl" "models/oghs/cm/npc/ospreyf.mdl"
 
 "models/p_2uzis.mdl" "models/oghs/cm/wep/p_2uzis.mdl"
 "models/p_2uzis_gold.mdl" "models/oghs/cm/wep/p_2uzis_gold.mdl"

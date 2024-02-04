@@ -122,6 +122,7 @@ models/kezaeiv/kz_npcs/singularity/islave.mdl
 models/kezaeiv/kz_npcs/singularity/islavef.mdl
 models/kezaeiv/kz_npcs/singularity/kingpin.mdl
 models/kezaeiv/kz_npcs/singularity/mass_tactical.mdl
+models/kezaeiv/kz_npcs/singularity/massn_ghost.mdl
 models/kezaeiv/kz_npcs/singularity/massnf.mdl
 models/kezaeiv/kz_npcs/singularity/massnf_kez.mdl
 models/kezaeiv/kz_npcs/singularity/osprey.mdl
@@ -129,6 +130,7 @@ models/kezaeiv/kz_npcs/singularity/ospreyf.mdl
 models/kezaeiv/kz_npcs/singularity/pit_red_predator.mdl
 models/kezaeiv/kz_npcs/singularity/robo_grunt.mdl
 models/kezaeiv/kz_npcs/singularity/robo_purple.mdl
+models/kezaeiv/kz_npcs/singularity/robo_red_leader.mdl
 models/kezaeiv/kz_npcs/singularity/sentry_red.mdl
 models/kezaeiv/kz_npcs/singularity/strooper_blu_prodigy.mdl
 models/kezaeiv/kz_npcs/singularity/strooper_red_violent.mdl
