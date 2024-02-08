@@ -12,6 +12,7 @@ models/oghs/cm/npc/agrunt.mdl
 models/oghs/cm/npc/agruntf.mdl
 models/oghs/cm/npc/apache.mdl
 models/oghs/cm/npc/apachef.mdl
+models/oghs/cm/npc/crashed_osprey.mdl
 models/oghs/cm/npc/hassassin.mdl
 models/oghs/cm/npc/hassassinf.mdl
 models/oghs/cm/npc/hgrunt.mdl
@@ -29,6 +30,9 @@ models/oghs/cm/npc/islave.mdl
 models/oghs/cm/npc/islavef.mdl
 models/oghs/cm/npc/massn.mdl
 models/oghs/cm/npc/massnf.mdl
+models/oghs/cm/npc/osprey.mdl
+models/oghs/cm/npc/osprey2.mdl
+models/oghs/cm/npc/ospreyf.mdl
 models/oghs/cm/npc/pit_drone.mdl
 models/oghs/cm/npc/rgrunt.mdl
 models/oghs/cm/npc/rgruntf.mdl

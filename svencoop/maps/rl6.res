@@ -2,6 +2,7 @@
 // https://github.com/wootguy/resguy
 
 models/kezaeiv/icons/mk_logo_white.mdl
+models/mikk/kezaeiv/blkop_apache.mdl
 models/oghs/cm/npc/agrunt.mdl
 models/oghs/cm/npc/agruntf.mdl
 models/oghs/cm/npc/apache.mdl
