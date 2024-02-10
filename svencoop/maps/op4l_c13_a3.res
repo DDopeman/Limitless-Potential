@@ -108,7 +108,7 @@ sound/oghs/cs06/bruh.wav
 sound/oghs/cs06/bruhmomento.wav
 sound/oghs/cs06/burro.wav
 sound/oghs/cs06/calla.wav
-sound/oghs/cs06/calla2b.wav
+sound/oghs/cs06/calla2c.wav
 sound/oghs/cs06/car.wav
 sound/oghs/cs06/carrot.wav
 sound/oghs/cs06/carson.wav

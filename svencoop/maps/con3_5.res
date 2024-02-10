@@ -399,6 +399,7 @@ sprites/kezaeiv/fx/laser_crshr_wht.spr
 sprites/kezaeiv/kezammo.spr
 sprites/kezaeiv/kezcrosshairs.spr
 sprites/kezaeiv/kezsniper.spr
+sprites/kezaeiv/prtl/kz_enter1.spr
 sprites/kezaeiv/prtl/kz_exit1.spr
 sprites/kezaeiv/xpl/zxlp_blue.spr
 sprites/kezaeiv/xpl/zxlp_crimson.spr
