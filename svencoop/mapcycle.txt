@@ -51,6 +51,7 @@ kof2a5
 kof2a6
 kof3a1
 kof3a2
+kof3a4
 eshq01
 eshq02
 eshq03
@@ -241,3 +242,6 @@ of_utbm_6
 of_utbm_7
 of_utbm_8
 of_utbm_9
+escape_series
+escape_series_1a
+escape_series_1b
