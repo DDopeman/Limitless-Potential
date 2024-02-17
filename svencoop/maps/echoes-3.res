@@ -136,3 +136,4 @@ sound/echoes/scientist/sneeze.ogg
 sound/echoes/scientist/thankgod.ogg
 sound/echoes/scientist/tramangry.ogg
 sound/echoes/scientist/tramcough.ogg
+sound/oghs/misc/cp02_03.mp3

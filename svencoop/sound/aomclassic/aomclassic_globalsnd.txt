@@ -1,0 +1,46 @@
+"items/flashlight1.wav" "aomclassic/items/flashlight1.wav"
+"items/flashlight2.wav" "aomclassic/items/flashlight1.wav"
+"items/smallmedkit1.wav" "aomclassic/items/smallmedkit1.wav"
+"items/smallmedkit2.wav" "aomclassic/items/smallmedkit1.wav"
+
+"fans/fan2.wav" "aomclassic/fans/fan2.wav"
+
+"buttons/button5.wav" "aomclassic/buttons/button5.wav"
+
+"hornet/ag_buzz1.wav" "aomclassic/monsters/face/ag_buzz1.wav"
+"hornet/ag_buzz2.wav" "aomclassic/monsters/face/ag_buzz1.wav"
+"hornet/ag_buzz3.wav" "aomclassic/monsters/face/ag_buzz1.wav"
+"hornet/ag_hornethit1.wav" "aomclassic/monsters/face/ag_hornethit1.wav"
+"hornet/ag_hornethit2.wav" "aomclassic/monsters/face/ag_hornethit2.wav"
+"hornet/ag_hornethit3.wav" "aomclassic/monsters/face/ag_hornethit3.wav"
+
+"doors/doormove4.wav" "aomclassic/doors/doormove4.wav"
+"doors/doormove5.wav" "aomclassic/doors/doormove5.wav"
+"doors/doormove6.wav" "aomclassic/doors/doormove6.wav"
+"doors/doormove9.wav" "aomclassic/doors/doormove9.wav"
+"doors/doorstop4.wav" "aomclassic/doors/doorstop4.wav"
+
+"common/npc_step1.wav" "scientist/_comma.wav"
+"common/npc_step2.wav" "scientist/_comma.wav"
+"common/npc_step3.wav" "scientist/_comma.wav"
+"common/npc_step4.wav" "scientist/_comma.wav"
+
+"debris/bustglass1.wav" "aomclassic/debris/bustglass1.wav"
+"debris/bustglass2.wav" "aomclassic/debris/bustglass2.wav"
+"debris/bustglass3.wav" "aomclassic/debris/bustglass3.wav"
+"debris/glass1.wav" "aomclassic/debris/glass1.wav"
+"debris/glass2.wav" "aomclassic/debris/glass2.wav"
+"debris/glass3.wav" "aomclassic/debris/glass3.wav"
+"debris/glass4.wav" "aomclassic/debris/glass4.wav"
+"debris/zap1.wav" "aomclassic/debris/zap1.wav"
+"debris/zap4.wav" "aomclassic/debris/zap4.wav"
+
+"plats/elevmove1.wav" "aomclassic/plats/elevmove1.wav"
+
+"weapons/explode1.wav" "aomclassic/weapons/explode1.wav"
+"weapons/explode2.wav" "aomclassic/weapons/explode1.wav"
+"weapons/explode3.wav" "aomclassic/weapons/explode1.wav"
+"weapons/explode4.wav" "aomclassic/weapons/explode1.wav"
+"weapons/explode5.wav" "aomclassic/weapons/explode1.wav"
+
+"items/suitchargeok1.wav" "scientist/_comma.wav"

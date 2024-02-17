@@ -86,7 +86,7 @@ class point_checkpoint : ScriptBaseAnimating
 		
 		g_Game.PrecacheModel( "sprites/exit1.spr" );
 		
-		g_SoundSystem.PrecacheSound( "../media/valve.mp3" );
+		g_SoundSystem.PrecacheSound( "../sound/oghs/misc/cp02_03.mp3" );
 		g_SoundSystem.PrecacheSound( "debris/beamstart7.wav" );
 		g_SoundSystem.PrecacheSound( "ambience/port_suckout1.wav" );
 		
@@ -206,7 +206,7 @@ class point_checkpoint : ScriptBaseAnimating
 		// Set activated
 		self.pev.frags = 1.0f;
 		
-		g_SoundSystem.EmitSound( self.edict(), CHAN_STATIC, "../media/valve.mp3", 1.0f, ATTN_NONE );
+		g_SoundSystem.EmitSound( self.edict(), CHAN_STATIC, "../sound/oghs/misc/cp02_03.mp3", 1.0f, ATTN_NONE );
 
 		self.pev.rendermode		= kRenderTransTexture;
 		self.pev.renderamt		= 255;

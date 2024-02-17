@@ -144,6 +144,7 @@ sound/echoes/weapons/cbar_miss1.ogg
 sound/echoes/weapons/dbarrel1.ogg
 sound/echoes/weapons/pl_gun3.ogg
 sound/echoes/weapons/sbarrel1.ogg
+sound/oghs/misc/cp02_03.mp3
 sprites/echoes/newfire2.spr
 sprites/echoes/newfire3.spr
 sprites/echoes/sunflare.spr

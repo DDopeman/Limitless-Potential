@@ -254,6 +254,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sound/scientist/noopen.wav
 sound/scientist/sci_alone2.wav
 sound/scientist/wareh.wav

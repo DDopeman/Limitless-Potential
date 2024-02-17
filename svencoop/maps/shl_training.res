@@ -32,6 +32,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sound/shl/dbarrel1.ogg
 sound/shl/hevbarney/hks1.ogg
 sound/shl/hevbarney/hks2.ogg

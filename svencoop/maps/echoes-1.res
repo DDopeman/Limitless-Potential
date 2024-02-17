@@ -143,4 +143,5 @@ sound/echoes/scientist/thankgod.ogg
 sound/echoes/scientist/tramangry.ogg
 sound/echoes/scientist/tramcough.ogg
 sound/echoes/voxlines/MAP3_INDOOR0.ogg
+sound/oghs/misc/cp02_03.mp3
 sprites/echoes/redglow.spr

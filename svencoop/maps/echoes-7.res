@@ -167,5 +167,6 @@ sound/echoes/weapons/cbar_hitbod2.ogg
 sound/echoes/weapons/cbar_hitbod3.ogg
 sound/echoes/weapons/cbar_miss1.ogg
 sound/echoes/weapons/explode3.ogg
+sound/oghs/misc/cp02_03.mp3
 sprites/echoes/newfire2.spr
 sprites/echoes/newfire3.spr

@@ -111,3 +111,4 @@ sound/oghs/cs/tom2.wav
 sound/oghs/cs/wrong.wav
 sound/oghs/cs/zzz.wav
 sound/oghs/cs03/badbone.wav
+sound/oghs/misc/cp02_03.mp3

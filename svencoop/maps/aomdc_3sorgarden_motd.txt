@@ -1,0 +1,19 @@
+Afraid of Monsters: Director's Cut
+by Andreas Rönnberg and James Marchant
+
+Converted for Sven Co-op by Zorbos
+Map ripents by Zorbos
+Angelscript plugins by Zorbos w/ help from w00tguy123. Weapon, ammo, and misc scripts by Zorbos, w/ help from JonnyBoy0719 and anggara_nothing Special thanks to JonnyBoy0719 for helping me with the Hammer.
+Lobby map by Zorbos
+"City" map by Zorbos
+
+All other content is the property of Andreas Rönnberg and James Marchant. I am not affiliated in any way with the development of this mod.
+
+Support the developers by playing the original AoMDC mod, which can be found at: http://www.moddb.com/mods/afraid-of-monsters-dc
+Also be sure to check out the original Afraid of Monsters (2005) at http://www.moddb.com/mods/afraid-of-monsters as well as Cry of Fear, which can be found on the Steam Store for free.
+
+Enjoy!
+
+- Zorbos
+
+Afraid of Monsters: Director's Cut © 2007 by Andreas Rönnberg and James Marchant. All rights reserved.

@@ -1,0 +1,8 @@
+"barnacle/bcl_alert1.wav" "aomdc/monsters/devourer/bcl_alert2.wav"
+"barnacle/bcl_bite3.wav" "aomdc/monsters/devourer/bcl_chew1.wav"
+"barnacle/bcl_chew1.wav" "aomdc/monsters/devourer/bcl_chew1.wav"
+"barnacle/bcl_chew2.wav" "aomdc/monsters/devourer/bcl_chew1.wav"
+"barnacle/bcl_chew3.wav" "aomdc/monsters/devourer/bcl_chew1.wav"
+"barnacle/bcl_die1.wav" "aomdc/monsters/devourer/bcl_die1.wav"
+"barnacle/bcl_die3.wav" "aomdc/monsters/devourer/bcl_die3.wav"
+"barnacle/bcl_tongue1.wav" "scientist/_comma.wav"

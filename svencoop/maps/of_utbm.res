@@ -109,6 +109,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sound/weapons/desert_eagle_clipin.wav
 sound/weapons/desert_eagle_clipout.wav
 sound/weapons/sniper_reload1.wav

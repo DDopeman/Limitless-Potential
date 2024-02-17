@@ -184,6 +184,7 @@ sound/echoes/weapons/cbar_hitbod3.ogg
 sound/echoes/weapons/cbar_miss1.ogg
 sound/echoes/weapons/reload2.ogg
 sound/echoes/weapons/reload3.ogg
+sound/oghs/misc/cp02_03.mp3
 sprites/echoes/muzzleflash.spr
 sprites/echoes/newfire1.spr
 sprites/echoes/newfire3.spr

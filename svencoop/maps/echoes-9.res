@@ -202,3 +202,4 @@ sound/echoes/weapons/cbar_hitbod2.ogg
 sound/echoes/weapons/cbar_hitbod3.ogg
 sound/echoes/weapons/cbar_miss1.ogg
 sound/echoes/weapons/mine_activate.ogg
+sound/oghs/misc/cp02_03.mp3

@@ -26,8 +26,8 @@ CClientCommand nightvision( "nightvision", "Toggles night vision on/off", @Toggl
 
 void MapInit()
 {
-	g_SoundSystem.PrecacheSound( "player/hud_nightvision.wav" );
-	g_SoundSystem.PrecacheSound( "items/flashlight2.wav" );
+	g_SoundSystem.PrecacheSound( "oghs/misc/night1.wav" );
+	g_SoundSystem.PrecacheSound( "oghs/misc/night2.wav" );
 }
 
 class PlayerNVData
@@ -53,7 +53,12 @@ void ToggleNV( const CCommand@ args )
 			data.nvColor = Vector(0, 150, 45);
 			g_PlayerNV[szSteamId] = data;
 			// g_PlayerFuncs.ScreenFade( pPlayer, NV_COLOR, 0.01, 0.5, iBrightness, FFADE_OUT | FFADE_STAYOUT);
-			g_SoundSystem.EmitSoundDyn( pPlayer.edict(), CHAN_WEAPON, "player/hud_nightvision.wav", 1.0, ATTN_NORM, 0, PITCH_NORM );
+			//g_SoundSystem.EmitSoundDyn( pPlayer.edict(), CHAN_WEAPON, "oghs/misc/night1.wav", 1.0, ATTN_NORM, 0, PITCH_NORM );
+			
+			NetworkMessage msg( MSG_ONE, NetworkMessages::SVC_STUFFTEXT, pPlayer.edict() );
+			msg.WriteString( ';spk "oghs/misc/night1.wav";' );
+			msg.End();
+		
 		}
 	}
 	
@@ -85,8 +90,12 @@ void removeNV( CBasePlayer@ pPlayer )
 	string szSteamId = g_EngineFuncs.GetPlayerAuthId( pPlayer.edict() );
 	
 	g_PlayerFuncs.ScreenFade( pPlayer, NV_COLOR, 0.01, 0.1, iBrightness, FFADE_IN);
-	g_SoundSystem.EmitSoundDyn( pPlayer.edict(), CHAN_WEAPON, "items/flashlight2.wav", 0.8, ATTN_NORM, 0, PITCH_NORM );
+	//g_SoundSystem.EmitSoundDyn( pPlayer.edict(), CHAN_WEAPON, "oghs/misc/night2.wav", 0.8, ATTN_NORM, 0, PITCH_NORM );
 	
+	NetworkMessage msg( MSG_ONE, NetworkMessages::SVC_STUFFTEXT, pPlayer.edict() );
+	msg.WriteString( ';spk "oghs/misc/night2.wav";' );
+	msg.End();
+			
 	if ( g_PlayerNV.exists(szSteamId) )
 		g_PlayerNV.delete(szSteamId);
 }

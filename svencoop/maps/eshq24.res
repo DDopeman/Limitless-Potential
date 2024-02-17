@@ -95,6 +95,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sound/plats/gravimover.wav
 sound/vox/ghost01.wav
 sound/vox/ghost02.wav

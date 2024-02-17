@@ -63,6 +63,7 @@ models/quake1/w_thunder.mdl
 models/quake1/w_thunder_ammo.mdl
 models/quake1/zombiegib.mdl
 q1_gfx.wad
+sound/oghs/misc/cp02_03.mp3
 sound/quake1/ambience/drip1.wav
 sound/quake1/ambience/swamp1.wav
 sound/quake1/ambience/swamp2.wav

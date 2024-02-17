@@ -101,6 +101,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sound/shl/2001.ogg
 sound/shl/B3_00002.ogg
 sound/shl/dinner.ogg

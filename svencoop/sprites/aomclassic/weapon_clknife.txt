@@ -1,0 +1,4 @@
+2
+weapon			640 aomclassic/clknife	0	0	170	45
+weapon_s		640 aomclassic/clknife	0	0	170	45
+

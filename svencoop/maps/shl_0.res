@@ -94,6 +94,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sound/shl/jazz.ogg
 sound/shl/scientist/shl2_sci_go.ogg
 sound/shl/scientist/shl2_sci_goingon.ogg

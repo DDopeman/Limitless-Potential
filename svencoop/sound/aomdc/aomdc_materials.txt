@@ -1,0 +1,115 @@
+//-----------------------------------------------------------
+//            Counter-Strike - mats.txt for TRD MOD
+//-----------------------------------------------------------
+//
+// This file has been copied from the above mod, becuase it has the most corect texture sounds
+// to the textures used in TRD.
+//
+// You can not modify this file or the sound the textures give
+// when the player walks on them, will be wrong, and there for TRD will be corupt.
+//
+// Location: X:\halflife\TRD\sound\materials.txt
+//
+// NOTE: only the first 12 characters of the texture name are used
+// NOTE: a maximum of 512 textures may be tagged in this file
+//
+//  'M' metal
+//  'V' ventillation
+//  'D' dirt
+//  'S' slosh liquid 
+//  'T' tile
+//  'G' grate (Concrete is the default)
+//  'W' wood
+//  'P' computer
+//  'Y' glass
+//  'N' snow
+//-----------------------------------------------------------
+// Valve's Textures
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+// Afraid_of_monstersDC TEXT
+//-----------------------------------------------------------
+
+M {po_rustygrt
+M {po_rusygrtsm
+M {r_sickfloorf
+M po_trashcantop
+M po_doormetal06
+M po_mudsewer
+M po_metlgreydia
+M po_subflrrlbr
+M po_metlalu
+M r_rulltrappa
+M r_metaretse
+M r_metaretse2
+M r_metaretse3
+M r_metaretse4
+M r_hissroof
+M r_hissfl
+
+V po_mtllrustyral
+V po_ventsdrust
+V cuskap1
+V po_walltinyel
+V TRK2_HOOD
+V trk3_hood
+V trk3_roof
+V TRK2_ROOF
+V swat_hood
+V swat_side1
+V trk4_hood
+V trk4_roof
+V po_mtltinwll
+
+D po_roofprtgr
+D po_sheet
+D ms_grass
+D cubrusha
+D po_grass
+D FORGRASS
+D forgrassflash
+D po_subtrash
+D tu_mossma
+D tu_lermas
+D tu_lerma
+D GENERIC48
+D tu_cliff2
+D tu_markl
+D cugenb
+D tu_barrma
+
+S r_elvatten
+
+T r_flhossa
+T r_hossa22fl
+T r_bloodgolv22
+T r_hotl2
+T r_flooryel
+T r_wood1
+T k2x_wood
+T r_hosstl
+T po_hardwdfloor
+T r_hosfloorbr
+T r_hosfloorgr
+T r_hoskakela
+T r_woodfl1
+
+G for_matta
+G r_matta1
+G r_matta2
+G r_matta3
+G r_matta4
+G sofa1
+G sofa2
+G sofa3
+G sofa4
+G for_matta2
+G po_orientrug
+G r_carpet3
+G r_carpet1
+
+W X_INFLOOR2
+
+Y po_glassdrkdrt
+
+N tk_mod-wood

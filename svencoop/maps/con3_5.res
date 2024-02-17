@@ -232,6 +232,7 @@ sound/kezaeiv/c_wep/misc/bounce/g_bounce5.wav
 sound/kezaeiv/c_wep/misc/bounce/grenade_hit1.wav
 sound/kezaeiv/c_wep/misc/bounce/grenade_hit2.wav
 sound/kezaeiv/c_wep/misc/bounce/grenade_hit3.wav
+sound/kezaeiv/c_wep/misc/enrg_hit.wav
 sound/kezaeiv/c_wep/misc/exp1.wav
 sound/kezaeiv/c_wep/misc/exp2.wav
 sound/kezaeiv/c_wep/misc/exp3.wav
@@ -252,7 +253,6 @@ sound/kezaeiv/c_wep/obs/plsm_nade.wav
 sound/kezaeiv/c_wep/par/p_fire.wav
 sound/kezaeiv/c_wep/par/p_rail2.wav
 sound/kezaeiv/c_wep/par/p_rcht.wav
-sound/kezaeiv/c_wep/purifier/charge.wav
 sound/kezaeiv/c_wep/rptr/r_focus_shot.wav
 sound/kezaeiv/c_wep/rptr/r_shot.wav
 sound/kezaeiv/c_wep/rptr/r_zoom.wav
@@ -288,6 +288,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sound/squeek/sqk_startled.wav
 sound/squeek/sqk_strugglefit1.wav
 sound/squeek/sqk_strugglefit2.wav

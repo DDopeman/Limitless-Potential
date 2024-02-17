@@ -1,0 +1,4 @@
+2
+weapon			640 aomdc/dcaxe	0	0	170	45
+weapon_s		640 aomdc/dcaxe	0	0	170	45
+

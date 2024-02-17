@@ -1,0 +1,1 @@
+"barnacle/bcl_alert2.wav" "aomclassic/monsters/devourer/bcl_alert2.wav"

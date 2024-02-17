@@ -139,6 +139,7 @@ sound/echoes/weapons/explode3.ogg
 sound/echoes/weapons/explode4.ogg
 sound/echoes/weapons/explode5.ogg
 sound/echoes/weapons/reload2.ogg
+sound/oghs/misc/cp02_03.mp3
 sprites/echoes/newfire2.spr
 sprites/echoes/newfire3.spr
 sprites/echoes/sunflare.spr
