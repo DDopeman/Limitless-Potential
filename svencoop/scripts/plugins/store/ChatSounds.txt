@@ -20,7 +20,7 @@ maxwell oghs/cs06/maxwell.wav
 aaah oghs/cs06/aaah.wav
 aha! oghs/cs06/aha!.wav
 gay2 oghs/cs06/gay2.wav
-judgement oghs/cs06/judgement.wav
+judgement oghs/cs06/judgement2.wav
 imgonna oghs/cs06/imgonna.wav
 laputa oghs/cs06/laputa.wav
 noasomen oghs/cs06/noasomen.wav

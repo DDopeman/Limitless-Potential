@@ -214,7 +214,7 @@ sound/oghs/cs06/irn.wav
 sound/oghs/cs06/itried.wav
 sound/oghs/cs06/jackiechan.wav
 sound/oghs/cs06/jajaja.wav
-sound/oghs/cs06/judgement.wav
+sound/oghs/cs06/judgement2.wav
 sound/oghs/cs06/juega.wav
 sound/oghs/cs06/jumpscare.wav
 sound/oghs/cs06/kaleun.wav
