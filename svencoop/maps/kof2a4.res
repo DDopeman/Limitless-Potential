@@ -140,6 +140,7 @@ sound/oghs/cs06/chad.wav
 sound/oghs/cs06/chipib.wav
 sound/oghs/cs06/chiste.wav
 sound/oghs/cs06/clr.wav
+sound/oghs/cs06/comemelculo.wav
 sound/oghs/cs06/corre.wav
 sound/oghs/cs06/correct.wav
 sound/oghs/cs06/crabrave.wav
@@ -160,6 +161,7 @@ sound/oghs/cs06/doorstuck.wav
 sound/oghs/cs06/double.wav
 sound/oghs/cs06/dross.wav
 sound/oghs/cs06/dross2.wav
+sound/oghs/cs06/dross3.wav
 sound/oghs/cs06/elcp.wav
 sound/oghs/cs06/endgame.wav
 sound/oghs/cs06/ending.wav
@@ -187,6 +189,7 @@ sound/oghs/cs06/gib.wav
 sound/oghs/cs06/gib2.wav
 sound/oghs/cs06/gnomob.wav
 sound/oghs/cs06/god.wav
+sound/oghs/cs06/goodending.wav
 sound/oghs/cs06/gracias.wav
 sound/oghs/cs06/gracias2.wav
 sound/oghs/cs06/granadab.wav
@@ -257,6 +260,7 @@ sound/oghs/cs06/no.wav
 sound/oghs/cs06/noaa.wav
 sound/oghs/cs06/noaab.wav
 sound/oghs/cs06/noasomen.wav
+sound/oghs/cs06/nodesinforme.wav
 sound/oghs/cs06/noice.wav
 sound/oghs/cs06/nonono.wav
 sound/oghs/cs06/nooo.wav
@@ -324,6 +328,7 @@ sound/oghs/cs06/spook2.wav
 sound/oghs/cs06/spookd.wav
 sound/oghs/cs06/stfu.wav
 sound/oghs/cs06/stfu2.wav
+sound/oghs/cs06/stfu3.wav
 sound/oghs/cs06/stupid.wav
 sound/oghs/cs06/sueltame.wav
 sound/oghs/cs06/suicide.wav
@@ -341,6 +346,7 @@ sound/oghs/cs06/thisdude.wav
 sound/oghs/cs06/tmr.wav
 sound/oghs/cs06/tom1.wav
 sound/oghs/cs06/tom2.wav
+sound/oghs/cs06/toma.wav
 sound/oghs/cs06/tooez.wav
 sound/oghs/cs06/tp.wav
 sound/oghs/cs06/train.wav
@@ -368,6 +374,7 @@ sound/oghs/cs06/weewee.wav
 sound/oghs/cs06/what.wav
 sound/oghs/cs06/whistle.wav
 sound/oghs/cs06/why.wav
+sound/oghs/cs06/win.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/wtf1.wav
 sound/oghs/cs06/wtf2.wav

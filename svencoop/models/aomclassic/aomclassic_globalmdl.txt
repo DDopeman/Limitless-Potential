@@ -7,6 +7,18 @@
 "models/w_357ammobox.mdl" "models/aomclassic/items/w_deagleclip.mdl"
 "models/common/lambda.mdl" "models/kezaeiv/icons/mk_logo_red.mdl"
 
+
+"models/hlclassic/w_medkit.mdl" "models/aomclassic/items/w_medkit.mdl"
+"models/hlclassic/w_battery.mdl "models/aomclassic/items/w_battery.mdl"
+"models/hlclassic/w_9mmclip.mdl" "models/aomclassic/items/w_berettaclip.mdl"
+"models/hlclassic/w_9mmarclip.mdl" "models/aomclassic/items/w_ak47clip.mdl"
+"models/hlclassic/w_357ammo.mdl" "models/aomclassic/items/w_deagleclip.mdl"
+"models/hlclassic/w_357ammobox.mdl" "models/aomclassic/items/w_deagleclip.mdl"
+"models/hlclassic/w_grenade.mdl" "models/aomclassic/weapons/grenade/w_clgrenade.mdl"
+"models/hlclassic/p_grenade.mdl" "models/aomclassic/weapons/grenade/p_clgrenade.mdl"
+
+
+
 "sprites/bigspit.spr" "sprites/aomclassic/bigspit.spr"
 "sprites/blood.spr" "sprites/aomclassic/blood.spr"
 "sprites/tinyspit.spr" "sprites/aomclassic/tinyspit.spr"

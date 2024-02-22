@@ -1,82 +1,45 @@
-/*
-	See our scripts reference or check the wiki for more information
-	https://github.com/Mikk155/Sven-Co-op/wiki/Entity-Utils-Spanish
-*/
 namespace UTILS
 {
-	bool InsideZone( CBaseEntity@ pInsider, CBaseEntity@ pCornerZone )
+
+	// UTILS::InsideZone( player to be inside, brush/hullsizes reference);
+	bool InsideZone(CBasePlayer@ pPlayer, CBaseEntity@ self)
 	{
 		bool blInside = true;
-		blInside = blInside && pInsider.pev.origin.x + pInsider.pev.maxs.x >= pCornerZone.pev.origin.x + pCornerZone.pev.mins.x;
-		blInside = blInside && pInsider.pev.origin.y + pInsider.pev.maxs.y >= pCornerZone.pev.origin.y + pCornerZone.pev.mins.y;
-		blInside = blInside && pInsider.pev.origin.z + pInsider.pev.maxs.z >= pCornerZone.pev.origin.z + pCornerZone.pev.mins.z;
-		blInside = blInside && pInsider.pev.origin.x + pInsider.pev.mins.x <= pCornerZone.pev.origin.x + pCornerZone.pev.maxs.x;
-		blInside = blInside && pInsider.pev.origin.y + pInsider.pev.mins.y <= pCornerZone.pev.origin.y + pCornerZone.pev.maxs.y;
-		blInside = blInside && pInsider.pev.origin.z + pInsider.pev.mins.z <= pCornerZone.pev.origin.z + pCornerZone.pev.maxs.z;
+		blInside = blInside && pPlayer.pev.origin.x + pPlayer.pev.maxs.x >= self.pev.origin.x + self.pev.mins.x;
+		blInside = blInside && pPlayer.pev.origin.y + pPlayer.pev.maxs.y >= self.pev.origin.y + self.pev.mins.y;
+		blInside = blInside && pPlayer.pev.origin.z + pPlayer.pev.maxs.z >= self.pev.origin.z + self.pev.mins.z;
+		blInside = blInside && pPlayer.pev.origin.x + pPlayer.pev.mins.x <= self.pev.origin.x + self.pev.maxs.x;
+		blInside = blInside && pPlayer.pev.origin.y + pPlayer.pev.mins.y <= self.pev.origin.y + self.pev.maxs.y;
+		blInside = blInside && pPlayer.pev.origin.z + pPlayer.pev.mins.z <= self.pev.origin.z + self.pev.maxs.z;
 
 		return blInside;
 	}
-
-	void SetSize( CBaseEntity@ pMaxMin )
+	
+	// UTILS::SetSize( self );
+	void SetSize( CBaseEntity@ self )
 	{
-		if( pMaxMin.GetClassname() == string(pMaxMin.pev.classname) && string( pMaxMin.pev.model )[0] == "*" && pMaxMin.IsBSPModel() )
+		if( self.GetClassname() == string(self.pev.classname) && string( self.pev.model )[0] == "*" && self.IsBSPModel() )
         {
-            g_EntityFuncs.SetModel( pMaxMin, pMaxMin.pev.model );
-            g_EntityFuncs.SetSize( pMaxMin.pev, pMaxMin.pev.mins, pMaxMin.pev.maxs );
+            g_EntityFuncs.SetModel( self, self.pev.model );
+            g_EntityFuncs.SetSize( self.pev, self.pev.mins, self.pev.maxs );
         }
 		else
 		{
-			g_EntityFuncs.SetSize( pMaxMin.pev, pMaxMin.pev.vuser1, pMaxMin.pev.vuser2 );		
+			g_EntityFuncs.SetSize( self.pev, self.pev.vuser1, self.pev.vuser2 );		
 		}
 	}
 
-    /*	Shows a MOTD message to the player -Code by Geigue	*/
-    void ShowMOTD(EHandle hPlayer, const string& in szTitle, const string& in szMessage)
-    {
-        if(!hPlayer){return;}
-        CBasePlayer@ pPlayer = cast<CBasePlayer@>( hPlayer.GetEntity() );
-        if(pPlayer is null){return;}
-        NetworkMessage title( MSG_ONE_UNRELIABLE, NetworkMessages::ServerName, pPlayer.edict() );
-        title.WriteString( szTitle );
-        title.End();
-        uint iChars = 0;
-        string szSplitMsg = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-        for( uint uChars = 0; uChars < szMessage.Length(); uChars++ )
-        {
-            szSplitMsg.SetCharAt( iChars, char( szMessage[ uChars ] ) );
-            iChars++;
-            if( iChars == 32 )
-            {
-                NetworkMessage message( MSG_ONE_UNRELIABLE, NetworkMessages::MOTD, pPlayer.edict() );
-                message.WriteByte( 0 );
-                message.WriteString( szSplitMsg );
-                message.End();
-                
-                iChars = 0;
-            }
-        }
-        // If we reached the end, send the last letters of the message
-        if( iChars > 0 )
-        {
-            szSplitMsg.Truncate( iChars );
-            NetworkMessage fix( MSG_ONE_UNRELIABLE, NetworkMessages::MOTD, pPlayer.edict() );
-            fix.WriteByte( 0 );
-            fix.WriteString( szSplitMsg );
-            fix.End();
-        }
-        NetworkMessage endMOTD( MSG_ONE_UNRELIABLE, NetworkMessages::MOTD, pPlayer.edict() );
-        endMOTD.WriteByte( 1 );
-        endMOTD.WriteString( "\n" );
-        endMOTD.End();
-        NetworkMessage restore( MSG_ONE_UNRELIABLE, NetworkMessages::ServerName, pPlayer.edict() );
-        restore.WriteString( g_EngineFuncs.CVarGetString( "hostname" ) );
-        restore.End();
-    }
-}
-// End of namespace
+} // End of namespace
 
 namespace MLAN
 {
+	/*
+	
+	call values. should be used as...
+	
+	class yourclassentity : ScriptBaseEntity, MLAN::MoreKeyValues
+
+	*/
     mixin class MoreKeyValues
     {
         private string_t message_spanish, message_portuguese, message_german, message_french, message_italian, message_esperanto;
@@ -114,7 +77,20 @@ namespace MLAN
 
             return true;
         }
+		
+		/*
+			Then add those keys to your bool KeyValues as...
+			
+			bool KeyValue( const string& in szKey, const string& in szValue )
+			{
+				SexKeyValues(szKey, szValue);
 
+				return true;
+				
+				if( your things )
+				else if( your things )
+			}
+		*/
         string_t ReadLanguages( int iLanguage )
         {
             dictionary Languages =
@@ -132,23 +108,23 @@ namespace MLAN
         }
     }
 
+	/*
+
+	call custom keyvalues from players. should be used as...
+	
+	for( player for )
+	
+		int iLanguage = MLAN::GetCKV(pPlayer, "$f_lenguage");
+		
+		then do your things and call the array as...
+		
+		g_PlayerFuncs.ClientPrint(pPlayer, HUD_PRINTCENTER, string(ReadLanguages(iLanguage))+"\n");
+
+	*/
+	
     int GetCKV(CBasePlayer@ pPlayer, string valuename)
     {
         CustomKeyvalues@ ckvSpawns = pPlayer.GetCustomKeyvalues();
         return int(ckvSpawns.GetKeyvalue(valuename).GetFloat());
     }
-
-    string Replace( string_t FullSentence, dictionary@ pArgs )
-    {
-        string str = string(FullSentence);
-        array<string> args = pArgs.getKeys();
-
-        for (uint i = 0; i < args.length(); i++)
-        {
-            str.Replace(args[i], string(pArgs[args[i]]));
-        }
-
-        return str;
-    }
-}
-// End of namespace
+} // End of namespace

@@ -289,3 +289,10 @@ alo2 oghs/cs06/alo2.wav
 nfl oghs/cs06/nfl.wav
 quitate oghs/cs06/quitate.wav
 dross2 oghs/cs06/dross2.wav
+stfu3 oghs/cs06/stfu3.wav	
+win oghs/cs06/win.wav
+nodesinforme oghs/cs06/nodesinforme.wav
+toma oghs/cs06/toma.wav
+dross3 oghs/cs06/dross3.wav
+goodending oghs/cs06/goodending.wav
+comemelculo oghs/cs06/comemelculo.wav

@@ -4,7 +4,7 @@ dictionary g_PlayerNV;
 const Vector NV_COLOR( 0, 150, 45 );
 const int g_iRadius = 150;
 const int iDecay = 1;
-const int iLife	= 2;
+const int iLife	= 3;
 const int iBrightness = 48;
 
 void PluginInit()
@@ -26,8 +26,11 @@ CClientCommand nightvision( "nightvision", "Toggles night vision on/off", @Toggl
 
 void MapInit()
 {
-	g_SoundSystem.PrecacheSound( "oghs/misc/night1.wav" );
-	g_SoundSystem.PrecacheSound( "oghs/misc/night2.wav" );
+	// g_SoundSystem.PrecacheSound( "oghs/misc/night1.wav" );
+	// g_SoundSystem.PrecacheSound( "oghs/misc/night2.wav" );
+	
+	g_Game.PrecacheGeneric( "sound/oghs/misc/night1.wav" );
+	g_Game.PrecacheGeneric( "sound/oghs/misc/night2.wav" );
 }
 
 class PlayerNVData

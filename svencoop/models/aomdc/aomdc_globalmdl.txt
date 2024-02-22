@@ -7,6 +7,14 @@
 "models/w_m40a1clip.mdl" "models/aomdc/items/w_revolverrounds.mdl"
 "models/common/lambda.mdl" "models/kezaeiv/icons/mk_logo_red.mdl"
 
+
+"models/hlclassic/w_medkit.mdl" "models/aomdc/items/w_medkit.mdl"
+"models/hlclassic/w_9mmclip.mdl" "models/aomdc/items/w_glockclip.mdl"
+"models/hlclassic/w_357ammo.mdl" "models/aomdc/items/w_deagleclip.mdl"
+"models/hlclassic/w_357ammobox.mdl" "models/aomdc/items/w_deagleclip.mdl"
+"models/hlclassic/w_weaponbox.mdl" "models/aomdc/items/w_mp5kclip.mdl"
+"models/hlclassic/w_9mmarclip.mdl" "models/aomclassic/items/w_ak47clip.mdl"
+
 "sprites/bigspit.spr" "sprites/aomdc/bigspit.spr"
 "sprites/tinyspit.spr" "sprites/aomdc/tinyspit.spr"
 "sprites/mommmaspit.spr" "sprites/aomdc/mommaspit.spr"
