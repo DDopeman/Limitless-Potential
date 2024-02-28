@@ -185,7 +185,6 @@ sound/kezaeiv/c_wep/com/cm_b1.wav
 sound/kezaeiv/c_wep/com/cm_g1.wav
 sound/kezaeiv/c_wep/com/cm_s1.wav
 sound/kezaeiv/c_wep/de9/de_sh.wav
-sound/kezaeiv/c_wep/destr/rail.wav
 sound/kezaeiv/c_wep/dev/dev_crack.wav
 sound/kezaeiv/c_wep/dev/dev_hit.wav
 sound/kezaeiv/c_wep/dev/dev_meltdown.wav
@@ -214,6 +213,7 @@ sound/kezaeiv/c_wep/frst/ghst1.wav
 sound/kezaeiv/c_wep/frst/silenced.wav
 sound/kezaeiv/c_wep/frst/ss2_nade.wav
 sound/kezaeiv/c_wep/hblst/hb_nova_hit.wav
+sound/kezaeiv/c_wep/hblst/hb_plsm.wav
 sound/kezaeiv/c_wep/hblst/hb_plsm_blast.wav
 sound/kezaeiv/c_wep/knf/k_1.wav
 sound/kezaeiv/c_wep/knf/k_2.wav
@@ -256,7 +256,6 @@ sound/kezaeiv/c_wep/rptr/r_shot.wav
 sound/kezaeiv/c_wep/rptr/r_zoom.wav
 sound/kezaeiv/music/oilrig.ogg
 sound/kezaeiv/music/vers-us.ogg
-sound/kezaeiv/null.wav
 sound/kezaeiv/singularity/npc/dusk_shotgun_shot.wav
 sound/kezaeiv/singularity/npc/dusk_super_shotgun_shot.wav
 sound/kezaeiv/singularity/npc/hgrunt_3shot.wav

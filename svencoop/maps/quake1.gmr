@@ -2,4 +2,8 @@
 "models/w_pmedkit.mdl" "models/quake1/w_medkit.mdl"
 "models/v_medkit.mdl" "models/quake1/v_medkit.mdl"
 "models/p_medkit.mdl" "models/quake1/p_medkit.mdl"
+"models/w_medkit.mdl" "models/hlclassic/quake1/w_medkit.mdl"
+"models/w_pmedkit.mdl" "models/hlclassic/quake1/w_medkit.mdl"
+"models/v_medkit.mdl" "models/hlclassic/quake1/v_medkit.mdl"
+"models/p_medkit.mdl" "models/hlclassic/quake1/p_medkit.mdl"
 "models/common/lambda.mdl" "models/kezaeiv/icons/mk_logo_red.mdl"
