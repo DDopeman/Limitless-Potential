@@ -31,8 +31,8 @@ models/oghs/cm/npc/hwgrunt.mdl
 models/oghs/cm/npc/hwgruntf.mdl
 models/oghs/cm/npc/islave.mdl
 models/oghs/cm/npc/islavef.mdl
-models/oghs/cm/npc/massn.mdl
-models/oghs/cm/npc/massnf.mdl
+models/oghs/cm/npc/massn2.mdl
+models/oghs/cm/npc/massnf2.mdl
 models/oghs/cm/npc/osprey.mdl
 models/oghs/cm/npc/osprey2.mdl
 models/oghs/cm/npc/ospreyf.mdl

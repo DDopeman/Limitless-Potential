@@ -7,6 +7,7 @@ gfx/env/blue22ft.tga
 gfx/env/blue22lf.tga
 gfx/env/blue22rt.tga
 gfx/env/blue22up.tga
+models/aomclassic/items/w_ak47clip.mdl
 models/aomdc/items/w_deagleclip.mdl
 models/aomdc/items/w_glockclip.mdl
 models/aomdc/items/w_medkit.mdl
@@ -30,6 +31,7 @@ models/aomdc/props/trash2.mdl
 models/aomdc/props/trash3.mdl
 models/aomdc/props/trash4.mdl
 models/aomdc/props/xen_trashcan.mdl
+models/kezaeiv/icons/mk_logo_red.mdl
 sound/aomdc/ambience/avem-short.wav
 sound/aomdc/ambience/broken_fan2.wav
 sound/aomdc/ambience/crickets.wav
