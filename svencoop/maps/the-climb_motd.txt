@@ -1,0 +1,45 @@
+TheClimb!!
+
+Make your way up the obstacle course, but be careful!
+If you fall you will have to start all over.
+
+Mapping: Joe^vi[.r!]
+	 <[L!2]>Black][ce[.r!]^iL-T
+
+Ideas:   Joe, Black][ce, Gramps, Jebus, and anyone else I forgot.
+
+Thanks to: Joe for not deleting this map when he got bored with it :-P
+
+
+
+--------------------------------------------------------------------------------
+
+Ported to Sven Co-op by Adam "Adambean" Reece.
+
+Originally a custom map for Team Fortress Classic.
+https://gamebanana.com/maps/161015
+
+Version 1.1 [2022-09-25]
+Get the latest version at http://scmapdb.com/map:the-climb
+
+Ported to Sven Co-op by Adam "Adambean" Reece
+
+Tips/notes:
+
+* There are no checkpoints! If you fall off you have to climb back up.
+* This is a pretty hard challenge, and will stress test your ability to manoeuvre in the GoldSrc/Svengine game engine. Expect your first attempt to take at least 1-2 hours. (Medium difficulty of the 3 maps.)
+* Some of the longer jumps later on will require the strafe jumping technique.
+* You may want (or ask the server owner) to enable Sven Co-op's Teleport plug-in so you can save your position by saying "/s", and restore it by saying "/p" when (not if) you fall.
+* If you do use "/p" while falling you will still fall after restoring, thus you will likely be killed. Wait until you stop falling first.
+* Fall damage is will hurt you badly. Please heal other players when they're hurt.
+* Press +use (usually "E") to instantly stop moving when you land on something.
+* Please be patient of players in front of you. This isn't a race, so don't try to push past causing others fall off.
+* Although this map may seem impossible throughout it HAS been tested to completion by 3 people. It's just hard.
+
+Differences from the original map:
+
+* Medkits added at the very start so should you fall (and not die) you can begin again with full health. (Probably pointless.)
+* The victory ball at the end will not slow you down like an anvil.
+* The "power field" at the inaccessible very very top does nothing.
+
+If you can beat this map (legitimately, no cheating, etc) you can call yourself pretty darn dexterous on this game engine. (You will also score 10 points for each completion.)

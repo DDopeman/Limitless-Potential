@@ -20,13 +20,11 @@ maxwell oghs/cs06/maxwell.wav
 aaah oghs/cs06/aaah.wav
 aha! oghs/cs06/aha!.wav
 gay2 oghs/cs06/gay2.wav
-judgement oghs/cs06/judgement2.wav
 imgonna oghs/cs06/imgonna.wav
 laputa oghs/cs06/laputa.wav
 noasomen oghs/cs06/noasomen.wav
 ola oghs/cs06/ola.wav
 tecagaste oghs/cs06/tecagaste.wav
-ursel oghs/cs06/ursel.wav
 tmr oghs/cs06/tmr.wav
 meahogo oghs/cs06/meahogob.wav
 gnomo oghs/cs06/gnomob.wav
@@ -35,7 +33,7 @@ asumare oghs/cs06/asumareb.wav
 armon oghs/cs06/armonb.wav
 ala oghs/cs06/alab.wav
 ahita oghs/cs06/ahitab.wav
-ab oghs/cs06/ab.wav
+a oghs/cs06/ab.wav
 qfeocp oghs/cs06/qfeocpb.wav
 pit2 oghs/cs06/pit2b.wav
 muchavida oghs/cs06/muchavidab.wav
@@ -55,14 +53,12 @@ uy oghs/cs06/uyb.wav
 chipi oghs/cs06/chipib.wav
 ayno oghs/cs06/aynob.wav
 calla2 oghs/cs06/calla2c.wav
-terror2 oghs/cs06/terror2b.wav
 masdespacio oghs/cs06/masdespacio.wav
 ahorasi oghs/cs06/ahorasi.wav
 gracias2 oghs/cs06/gracias2.wav
 shock oghs/cs06/shock.wav
 noaa oghs/cs06/noaa.wav
 mevoy oghs/cs06/mevoy.wav
-a oghs/cs06/a.wav
 crit oghs/cs06/crit.wav
 pizzatime oghs/cs06/pizzatime.wav
 bonk oghs/cs06/bonk.wav
@@ -82,7 +78,6 @@ watch oghs/cs06/watch.wav
 weewee oghs/cs06/weewee.wav
 wakeup oghs/cs06/wakeup.wav
 waiting oghs/cs06/waiting.wav
-wafn oghs/cs06/wafn.wav
 voya oghs/cs06/voya.wav
 vete oghs/cs06/vete.wav
 ven oghs/cs06/ven.wav
@@ -96,7 +91,6 @@ ty oghs/cs06/ty.wav
 tuvieja oghs/cs06/tuvieja.wav
 trololo oghs/cs06/trololo.wav
 triple oghs/cs06/triple.wav
-train oghs/cs06/train.wav
 tp oghs/cs06/tp.wav
 tooez oghs/cs06/tooez.wav
 tom2 oghs/cs06/tom2.wav
@@ -106,7 +100,6 @@ texto oghs/cs06/texto.wav
 tevoya oghs/cs06/tevoya.wav
 tevio oghs/cs06/tevio.wav
 terror oghs/cs06/terror.wav
-tension oghs/cs06/tension.wav
 tecrees oghs/cs06/tecrees.wav
 sus oghs/cs06/sus.wav
 surprise oghs/cs06/surprise.wav
@@ -126,7 +119,6 @@ slip oghs/cs06/slip.wav
 sisyphus oghs/cs06/sisyphus.wav
 sisepuede oghs/cs06/sisepuede.wav
 sick oghs/cs06/sick.wav
-showtime oghs/cs06/showtime.wav
 scream oghs/cs06/scream.wav
 sex oghs/cs06/sex.wav
 scaped oghs/cs06/scaped.wav
@@ -161,11 +153,10 @@ okletsgo oghs/cs06/okletsgo.wav
 ohno oghs/cs06/ohno.wav
 oh oghs/cs06/oh.wav
 nya oghs/cs06/nya.wav
-nuclearmission oghs/cs06/nuclearmission.wav
 nooo oghs/cs06/nooo.wav
 nonono oghs/cs06/nonono.wav
 noice oghs/cs06/noice.wav
-no oghs/cs06/no.wav
+noo oghs/cs06/no.wav
 mylife oghs/cs06/mylife.wav
 muted oghs/cs06/muted.wav
 mueromucho oghs/cs06/mueromucho.wav
@@ -202,7 +193,6 @@ interesante oghs/cs06/interesante.wav
 instinct oghs/cs06/instinct.wav
 impressive oghs/cs06/impressive.wav
 imbeciles oghs/cs06/imbeciles.wav
-iamthestorm oghs/cs06/iamthestorm.wav
 hype oghs/cs06/hype.wav
 humiliation oghs/cs06/humiliation.wav
 huh oghs/cs06/huh.wav
@@ -218,12 +208,10 @@ gta oghs/cs06/gta.wav
 green2 oghs/cs06/green2.wav
 gracias oghs/cs06/gracias.wav
 god oghs/cs06/god.wav
-gib2 oghs/cs06/gib2.wav
 gib oghs/cs06/gib.wav
 getpranked oghs/cs06/getpranked.wav
 gay oghs/cs06/gay.wav
 gasgasgas oghs/cs06/gasgasgas.wav
-gangsta oghs/cs06/gangsta.wav
 gameover oghs/cs06/gameover.wav
 fuckhim oghs/cs06/fuckhim.wav
 freebird oghs/cs06/freebird.wav
@@ -244,7 +232,6 @@ elcp oghs/cs06/elcp.wav
 dross oghs/cs06/dross.wav
 double oghs/cs06/double.wav
 doorstuck oghs/cs06/doorstuck.wav
-dontyou oghs/cs06/dontyou.wav
 dominating oghs/cs06/dominating.wav
 dies oghs/cs06/dies.wav
 denied oghs/cs06/denied.wav
@@ -290,7 +277,6 @@ nfl oghs/cs06/nfl.wav
 quitate oghs/cs06/quitate.wav
 dross2 oghs/cs06/dross2.wav
 stfu3 oghs/cs06/stfu3.wav
-win oghs/cs06/win.wav
 nodesinforme oghs/cs06/nodesinforme.wav
 toma oghs/cs06/toma.wav
 dross3 oghs/cs06/dross3.wav
@@ -305,7 +291,7 @@ uhoh oghs/cs06/uhoh.wav
 oops oghs/cs06/oops.wav
 uhh oghs/cs06/uhh.wav
 ahh oghs/cs06/ahh.wav
-no2 oghs/cs06/no2.wav
+no oghs/cs06/no2.wav
 si oghs/cs06/si.wav
 pucutu oghs/cs06/pucutu.wav
 hueh oghs/cs06/hueh.wav
@@ -318,7 +304,7 @@ better oghs/cs06/better.wav
 inc2 oghs/cs06/inc2.wav
 wtf3 oghs/cs06/wtf3.wav
 whoscoming oghs/cs06/whoscoming.wav
-vajguar oghs/cs06/vajguar.wav
+vajugar oghs/cs06/vajguar.wav
 samsung oghs/cs06/samsung.wav
 pootis oghs/cs06/pootis.wav
 mihuevo oghs/cs06/mihuevo.wav
@@ -332,9 +318,16 @@ nomeatrapas oghs/cs06/nomeatrapas.wav
 cagon oghs/cs06/cagon.wav
 heh oghs/cs06/heh.wav
 haha oghs/cs06/haha.wav
-niggers oghs/cs06/niggers.wav
-chinese oghs/cs06/chinese.wav
-stfu4 oghs/cs06/stfu4.wav
 duke1 oghs/cs06/duke1.wav
 duke2 oghs/cs06/duke2.wav
 yallege oghs/cs06/yallege.wav
+spook3 oghs/cs06/spook3.wav
+filha oghs/cs06/filha.wav
+tom3 oghs/cs06/tom3.wav
+mrwhite2 oghs/cs06/mrwhite2.wav
+mrwhite1 oghs/cs06/mrwhite1.wav
+barney oghs/cs06/barney.wav
+scream2 oghs/cs06/scream2.wav
+missioncompletada oghs/cs06/missioncompletada.wav
+omnom oghs/cs06/omnom.wav
+medic oghs/cs06/medic.wav

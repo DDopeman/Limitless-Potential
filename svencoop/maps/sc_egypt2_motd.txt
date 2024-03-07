@@ -1,0 +1,29 @@
+sc_egypt 2 by simbl
+
+Version: 1.0
+
+-----------------------------------
+
+Story:
+Kel'Rana has been defeated in your first egyptian adventure, but his troops,
+now without leadership by their overlord still roam the country. There's an especially
+nasty Stone Golem which needs to be gone.
+
+-----------------------------------
+
+Objectives:
+- Kill 'em all.
+- Make it out alive.
+
+-----------------------------------
+
+Hints:
+You can find many useful secrets and other goodies, so always keep an eye open:
+- 4 shortcuts
+- 6 secrets
+- 1 secret mini boss with powerful loot
+- 1 super secret bikini babe
+
+-----------------------------------
+
+Good luck and have fun!

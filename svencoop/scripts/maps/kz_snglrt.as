@@ -1,4 +1,5 @@
 #include "kezaeiv/weapon_custom/v9/weapon_custom"
+#include "kezaeiv/quake1/common"
 #include "kezaeiv/hl_weapons/weapons"
 #include "kezaeiv/hl_weapons/mappings"
 #include "HLSPClassicMode"
@@ -12,6 +13,7 @@ void MapInit()
 		RegisterClassicWeapons();
 		RegisterPointCheckPointEntity();
 		g_ItemMappings.insertAt(0, g_ClassicWeapons);
+		g_EngineFuncs.CVarSetFloat( "mp_classicmode", 1 );
 		
 		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep/weapon_balista.txt');
 		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep/weapon_devastator.txt');
@@ -26,6 +28,9 @@ void MapInit()
 		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep/weapon_freedom_machine.txt');
 		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep/weapon_raptor_sniper.txt');
 		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep/weapon_commando.txt');
+		
+		q1_InitCommon();
+		
 }
 
 void MapActivate()
