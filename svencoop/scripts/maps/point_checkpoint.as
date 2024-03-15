@@ -382,4 +382,6 @@ class point_checkpoint : ScriptBaseAnimating
 void RegisterPointCheckPointEntity()
 {
 	g_CustomEntityFuncs.RegisterCustomEntity( "point_checkpoint", "point_checkpoint" );
+	
+	g_Game.PrecacheOther( "point_checkpoint" );	
 }

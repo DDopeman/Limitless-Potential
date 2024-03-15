@@ -52,6 +52,7 @@ kof2a6
 kof3a1
 kof3a2
 kof3a4
+kof3a5
 eshq01
 eshq02
 eshq03
