@@ -80,6 +80,9 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
+sound/kezaeiv/music/asabovesobelow.ogg
+sound/kezaeiv/music/enlighteningtheworld.ogg
+sound/kezaeiv/music/freedom.ogg
 sound/kezaeiv/singularity/npc/csgo_deag_shot.wav
 sound/kezaeiv/singularity/npc/dusk_shotgun_shot.wav
 sound/kezaeiv/singularity/npc/exp1.wav

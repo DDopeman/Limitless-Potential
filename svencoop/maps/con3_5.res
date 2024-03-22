@@ -48,7 +48,6 @@ models/kezaeiv/clssc/wps/w_uzi.mdl
 models/kezaeiv/clssc/wps/w_uzi_clip.mdl
 models/kezaeiv/clssc/wps/w_uzi_gold.mdl
 models/kezaeiv/custom_weapons/ammo/amrclip.mdl
-models/kezaeiv/custom_weapons/ammo/anti_matter_shell.mdl
 models/kezaeiv/custom_weapons/ammo/nails.mdl
 models/kezaeiv/custom_weapons/ammo/plasma.mdl
 models/kezaeiv/custom_weapons/ammo/quad_nail.mdl
@@ -167,7 +166,6 @@ models/oghs/cm/wep/w_saw_clip.mdl
 sound/con3/bloodytom.wav
 sound/con3/cargo_door.wav
 sound/con3/fragments.wav
-sound/kezaeiv/c_wep/ammo/antimatter.wav
 sound/kezaeiv/c_wep/ammo/energy.wav
 sound/kezaeiv/c_wep/ammo/nails.wav
 sound/kezaeiv/c_wep/ammo/pku_ammo1.wav
@@ -251,9 +249,11 @@ sound/kezaeiv/c_wep/misc/samjump.wav
 sound/kezaeiv/c_wep/misc/suit.wav
 sound/kezaeiv/c_wep/misc/wearoff.wav
 sound/kezaeiv/c_wep/mprl/rkt_bounce.wav
+sound/kezaeiv/c_wep/mprl/rkt_hit.wav
 sound/kezaeiv/c_wep/mprl/rl_shoot.wav
 sound/kezaeiv/c_wep/mprl/rl_shoot2.wav
 sound/kezaeiv/c_wep/mprl/rl_shoot3.wav
+sound/kezaeiv/c_wep/mprl/rl_shoot4.wav
 sound/kezaeiv/c_wep/obs/burn1.wav
 sound/kezaeiv/c_wep/obs/burn2.wav
 sound/kezaeiv/c_wep/obs/flm1.wav
@@ -391,6 +391,7 @@ sound/weapons/weapon_holster.wav
 sprites/640tfcminigun.spr
 sprites/con3/red1.spr
 sprites/con3/skarispin.spr
+sprites/kezaeiv/c_wep2/ver02/weapon_obsidian.txt
 sprites/kezaeiv/c_wep2/weapon_amr.txt
 sprites/kezaeiv/c_wep2/weapon_balista.txt
 sprites/kezaeiv/c_wep2/weapon_commando.txt
@@ -400,7 +401,6 @@ sprites/kezaeiv/c_wep2/weapon_freedom_machine.txt
 sprites/kezaeiv/c_wep2/weapon_frostbite.txt
 sprites/kezaeiv/c_wep2/weapon_kez_partner.txt
 sprites/kezaeiv/c_wep2/weapon_mprl.txt
-sprites/kezaeiv/c_wep2/weapon_obsidian.txt
 sprites/kezaeiv/c_wep2/weapon_plasma_slayer.txt
 sprites/kezaeiv/c_wep2/weapon_raptor_sniper.txt
 sprites/kezaeiv/c_wep2/weapon_seeker.txt

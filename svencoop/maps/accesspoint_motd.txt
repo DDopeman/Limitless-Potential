@@ -1,0 +1,20 @@
+Map name:		Access Point
+
+Made by:		Dr. Orange
+
+Conversion by:		Mikk
+
+Script entities by:	Outerbeast
+
+Description:
+A Half-Life single player map set in a high security storage facility.
+
+Sources:
+Play the original maps/mod
+https://www.moddb.com/games/half-life/addons/access-point
+
+Anti-Rush entity
+https://github.com/Outerbeast/anti_rush
+
+Checkpoint Spawner
+https://github.com/Outerbeast/Entities-and-Gamemodes/blob/master/checkpoint_spawner.as

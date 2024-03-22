@@ -11,7 +11,7 @@
 #include "mikk/entities/item_airbubble"
 #include "mikk/entities/tram_ride_train"
 
-#include "residualpoint/game_save"
+#include "point_checkpoint"
 #include "residualpoint/trigger_once_mp"
 #include "residualpoint/weapon_teleporter"
 #include "residualpoint/monster_zombie_hev"
@@ -87,7 +87,7 @@ void MapInit()
 	if( IsSurvivalEnabled and blWeWantSurvival )
 	{
 		g_EngineFuncs.CVarSetFloat( "mp_survival_starton", 1 );
-		RegisterGameSave();
+		RegisterPointCheckPointEntity();
 	}
 	
 	// Just in case...
