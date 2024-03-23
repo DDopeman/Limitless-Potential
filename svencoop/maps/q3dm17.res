@@ -249,6 +249,7 @@ sound/kezaeiv/c_wep/par/p_rcht.wav
 sound/kezaeiv/c_wep/rptr/r_focus_shot.wav
 sound/kezaeiv/c_wep/rptr/r_shot.wav
 sound/kezaeiv/c_wep/rptr/r_zoom.wav
+sound/kezaeiv/music/quiet.ogg
 sound/kezaeiv/singularity/npc/dusk_shotgun_shot.wav
 sound/kezaeiv/singularity/npc/dusk_super_shotgun_shot.wav
 sound/kezaeiv/singularity/npc/hgrunt_3shot.wav

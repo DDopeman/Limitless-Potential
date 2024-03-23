@@ -21,7 +21,7 @@ class point_checkpoint : ScriptBaseAnimating
 	private float m_flDelayBetweenRevive 		= 0.2;
 	
 	// How much time before this checkpoint becomes active again, if SF_CHECKPOINT_REUSABLE is set
-	private float m_flDelayBeforeReactivation 	= 60; 	
+	private float m_flDelayBeforeReactivation 	= 90; 	
 	
 	// When we started a respawn
 	private float m_flRespawnStartTime;					

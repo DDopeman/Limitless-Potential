@@ -79,8 +79,8 @@ class weapon_hlmp5 : ScriptBasePlayerWeaponEntity
 		info.iMaxAmmo1 	= MP5_MAX_AMMO;
 		info.iMaxAmmo2 	= MP5_MAX_AMMO2;
 		info.iMaxClip 	= MP5_MAX_CLIP;
-		info.iSlot 		= 2;
-		info.iPosition 	= 4;
+		info.iSlot 		= 6;
+		info.iPosition 	= 5;
 		info.iFlags 	= 0;
 		info.iWeight 	= MP5_WEIGHT;
 
