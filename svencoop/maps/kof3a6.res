@@ -1,6 +1,7 @@
 // Created with resguy v9 (September 2018)
 // https://github.com/wootguy/resguy
 
+models/kezaeiv/icons/mk_logo_blue.mdl
 models/kezaeiv/icons/mk_logo_cyan.mdl
 models/kezaeiv/kz_npcs/singularity/pit_prpl_slasher.mdl
 models/kezaeiv/kz_npcs/singularity/strooper_red_violent.mdl
