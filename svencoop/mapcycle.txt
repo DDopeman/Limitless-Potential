@@ -53,6 +53,8 @@ kof3a1
 kof3a2
 kof3a4
 kof3a5
+kof3a6
+rv_c2ac1_v4
 eshq01
 eshq02
 eshq03
@@ -418,9 +420,10 @@ fi_c09_a1
 fi_c09_a2
 fi_c10_a1
 fi_c10_a2
-saba_office
 q3dm6_v2
+q3dm17
 ra_quad
 sc_egypt2
 stfu_and_climb
 the-climb
+accesspoint

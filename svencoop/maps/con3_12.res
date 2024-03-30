@@ -14,6 +14,7 @@ models/oghs/cm/npc/agrunt.mdl
 models/oghs/cm/npc/agruntf.mdl
 models/oghs/cm/npc/apache.mdl
 models/oghs/cm/npc/apachef.mdl
+models/oghs/cm/npc/crashed_osprey.mdl
 models/oghs/cm/npc/hassassin.mdl
 models/oghs/cm/npc/hassassinf.mdl
 models/oghs/cm/npc/hgrunt.mdl
@@ -29,15 +30,18 @@ models/oghs/cm/npc/hwgrunt.mdl
 models/oghs/cm/npc/hwgruntf.mdl
 models/oghs/cm/npc/islave.mdl
 models/oghs/cm/npc/islavef.mdl
-models/oghs/cm/npc/massn.mdl
-models/oghs/cm/npc/massnf.mdl
+models/oghs/cm/npc/massn2.mdl
+models/oghs/cm/npc/massnf2.mdl
+models/oghs/cm/npc/osprey.mdl
+models/oghs/cm/npc/osprey2.mdl
+models/oghs/cm/npc/ospreyf.mdl
 models/oghs/cm/npc/pit_drone.mdl
 models/oghs/cm/npc/rgrunt.mdl
 models/oghs/cm/npc/rgruntf.mdl
 models/oghs/cm/npc/scientist.mdl
 models/oghs/cm/npc/scientist2.mdl
 models/oghs/cm/npc/scigun.mdl
-models/oghs/cm/npc/Tor.mdl
+models/oghs/cm/npc/tor2.mdl
 models/oghs/cm/npc/zombie_soldier.mdl
 models/oghs/cm/wep/p_2uzis.mdl
 models/oghs/cm/wep/p_2uzis_gold.mdl
@@ -83,6 +87,8 @@ sound/oghs/cs06/a!.wav
 sound/oghs/cs06/badbone.wav
 sound/oghs/cs06/bell.wav
 sound/oghs/cs06/boing.wav
+sound/oghs/cs06/crit.wav
+sound/oghs/cs06/csm.wav
 sound/oghs/cs06/cum.wav
 sound/oghs/cs06/dross.wav
 sound/oghs/cs06/fart.wav
@@ -94,6 +100,7 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
 sprites/con3/fixflame.spr
 sprites/con3/redflare1.spr
 sprites/con3/sexysmoke.spr

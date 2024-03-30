@@ -23,8 +23,8 @@ enum eagle_e
 };
 
 // Weapon information
-const int MAX_CARRY    = 36;
-const int MAX_CLIP     = 7;
+const int MAX_CARRY    = 60;
+const int MAX_CLIP     = 10;
 const int DEFAULT_GIVE = MAX_CLIP;
 const int WEIGHT       = 15;
 

@@ -29,7 +29,7 @@ models/oghs/cm/npc/rgruntf.mdl
 models/oghs/cm/npc/scientist.mdl
 models/oghs/cm/npc/scientist2.mdl
 models/oghs/cm/npc/scigun.mdl
-models/oghs/cm/npc/Tor.mdl
+models/oghs/cm/npc/tor2.mdl
 models/oghs/cm/npc/zombie_soldier.mdl
 models/oghs/cm/wep/p_2uzis.mdl
 models/oghs/cm/wep/p_2uzis_gold.mdl

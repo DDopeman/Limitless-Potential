@@ -22,8 +22,8 @@ models/oghs/cm/npc/hwgrunt.mdl
 models/oghs/cm/npc/hwgruntf.mdl
 models/oghs/cm/npc/islave.mdl
 models/oghs/cm/npc/islavef.mdl
-models/oghs/cm/npc/massn.mdl
-models/oghs/cm/npc/massnf.mdl
+models/oghs/cm/npc/massn2.mdl
+models/oghs/cm/npc/massnf2.mdl
 models/oghs/cm/npc/osprey.mdl
 models/oghs/cm/npc/osprey2.mdl
 models/oghs/cm/npc/ospreyf.mdl
@@ -33,7 +33,7 @@ models/oghs/cm/npc/rgruntf.mdl
 models/oghs/cm/npc/scientist.mdl
 models/oghs/cm/npc/scientist2.mdl
 models/oghs/cm/npc/scigun.mdl
-models/oghs/cm/npc/tor.mdl
+models/oghs/cm/npc/tor2.mdl
 models/oghs/cm/npc/zombie_soldier.mdl
 models/oghs/cm/wep/p_2uzis.mdl
 models/oghs/cm/wep/p_2uzis_gold.mdl

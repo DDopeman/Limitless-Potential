@@ -17,7 +17,7 @@ enum shockrifle_e
 };
 
 // Weapon information
-const int MAX_CARRY = 25;
+const int MAX_CARRY = 20;
 const int DEFAULT_GIVE = MAX_CARRY;
 const int WEIGHT = 15;
 
@@ -276,11 +276,11 @@ class weapon_ofshockrifle : ScriptBasePlayerWeaponEntity, WeaponUtils
 
       if (g_ShockRifleFast.GetBool())
       {
-        m_flRechargeTime += 0.2;
+        m_flRechargeTime += 0.5;
       }
       else
       {
-        m_flRechargeTime += 0.4;
+        m_flRechargeTime += 1.2;
       }
     }
 
