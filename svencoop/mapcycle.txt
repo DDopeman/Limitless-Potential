@@ -54,6 +54,7 @@ kof3a2
 kof3a4
 kof3a5
 kof3a6
+kz_snglrt_perseveration_v01
 rv_c2ac1_v4
 eshq01
 eshq02
