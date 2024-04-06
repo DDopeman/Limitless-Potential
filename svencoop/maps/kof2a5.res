@@ -37,6 +37,8 @@ models/mikk/kezaeiv/massn.mdl
 models/mikk/kezaeiv/massnf.mdl
 models/mikk/kezaeiv/osprey.mdl
 models/mikk/kezaeiv/ospreyf.mdl
+models/mikk/kezaeiv/otis.mdl
+models/mikk/kezaeiv/otisf.mdl
 models/mikk/kezaeiv/p_minigunidle.mdl
 models/mikk/kezaeiv/p_minigunspin.mdl
 models/mikk/kezaeiv/pit_drone.mdl

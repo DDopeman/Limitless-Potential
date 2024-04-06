@@ -347,7 +347,6 @@ aomdc_3sorgarden
 aomdc_3sorgarden2
 aomdc_3training
 aomdc_4end
-rps_surface
 rp_c00
 rp_c00_lobby
 rp_c01
@@ -382,15 +381,6 @@ rp_c13_m2bc
 rp_c13_m3a
 rp_c13_m3b
 rp_c13_m4
-rp_c14
-rps_base
-rps_c00
-rps_c01
-rps_c02
-rps_final
-rps_rails
-rps_sewer
-rps_skyloop
 mduty1
 mduty2
 mduty3

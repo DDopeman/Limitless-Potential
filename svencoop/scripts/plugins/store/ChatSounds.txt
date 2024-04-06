@@ -330,7 +330,7 @@ soygod oghs/cs06/soygod.wav
 esakk oghs/cs06/esakk.wav
 cacaeres oghs/cs06/cacaeres.wav
 coleterage oghs/cs06/coleterage2.wav
-wtf4 oghs/cs06/wtf4.wav
+wtf oghs/cs06/wtf4.wav
 sadistic oghs/cs06/sadistic.wav
 kidding oghs/cs06/kidding.wav
 yes oghs/cs06/yes.wav
