@@ -2,7 +2,7 @@
 CScheduledFunction@ g_pNVThinkFunc = null;
 dictionary g_PlayerNV;
 const Vector NV_COLOR( 0, 150, 45 );
-const int g_iRadius = 150;
+const int g_iRadius = 90;
 const int iDecay = 1;
 const int iLife	= 3;
 const int iBrightness = 48;
@@ -92,7 +92,7 @@ void removeNV( CBasePlayer@ pPlayer )
 {
 	string szSteamId = g_EngineFuncs.GetPlayerAuthId( pPlayer.edict() );
 	
-	g_PlayerFuncs.ScreenFade( pPlayer, NV_COLOR, 0.01, 0.1, iBrightness, FFADE_IN);
+	//g_PlayerFuncs.ScreenFade( pPlayer, NV_COLOR, 0.01, 0.1, iBrightness, FFADE_IN);
 	//g_SoundSystem.EmitSoundDyn( pPlayer.edict(), CHAN_WEAPON, "oghs/misc/night2.wav", 0.8, ATTN_NORM, 0, PITCH_NORM );
 	
 	NetworkMessage msg( MSG_ONE, NetworkMessages::SVC_STUFFTEXT, pPlayer.edict() );

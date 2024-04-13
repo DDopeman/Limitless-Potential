@@ -23,8 +23,8 @@ enum eagle_e
 };
 
 // Weapon information
-const int MAX_CARRY    = 60;
-const int MAX_CLIP     = 10;
+const int MAX_CARRY    = 90;
+const int MAX_CLIP     = 12;
 const int DEFAULT_GIVE = MAX_CLIP;
 const int WEIGHT       = 15;
 
@@ -186,7 +186,7 @@ class weapon_ofeagle : ScriptBasePlayerWeaponEntity, WeaponUtils
 
     FireBulletsPlayer(1, vecSrc, vecAiming, Vector(flSpread, flSpread, flSpread), 8192.0, BULLET_PLAYER_EAGLE, 0);
 
-    self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + (m_bLaserActive ? 0.31 : 0.17);
+    self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + (m_bLaserActive ? 0.25 : 0.1);
 
     pev.effects |= EF_MUZZLEFLASH;
 

@@ -348,7 +348,6 @@ aomdc_3sorgarden
 aomdc_3sorgarden2
 aomdc_3training
 aomdc_4end
-rps_surface
 rp_c00
 rp_c00_lobby
 rp_c01
