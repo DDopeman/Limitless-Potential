@@ -109,6 +109,7 @@ models/kezaeiv/custom_weapons/seeker/v_seeker.mdl
 models/kezaeiv/custom_weapons/seeker/w_seeker.mdl
 models/kezaeiv/icons/mk_logo_blue.mdl
 models/kezaeiv/icons/mk_logo_crimson.mdl
+models/kezaeiv/kz_npcs/singularity/adriano_shadow.mdl
 models/kezaeiv/kz_npcs/singularity/agrunt.mdl
 models/kezaeiv/kz_npcs/singularity/agruntf.mdl
 models/kezaeiv/kz_npcs/singularity/apache.mdl
