@@ -41,11 +41,12 @@ models/kezaeiv/clssc/wps/w_uzi.mdl
 models/kezaeiv/clssc/wps/w_uzi_clip.mdl
 models/kezaeiv/clssc/wps/w_uzi_gold.mdl
 models/kezaeiv/custom_weapons/ammo/amrclip.mdl
+models/kezaeiv/custom_weapons/ammo/anthrax.mdl
 models/kezaeiv/custom_weapons/ammo/darkmatter.mdl
 models/kezaeiv/custom_weapons/ammo/erholungszelle.mdl
+models/kezaeiv/custom_weapons/ammo/freedomclip.mdl
 models/kezaeiv/custom_weapons/ammo/nails.mdl
 models/kezaeiv/custom_weapons/ammo/plasma.mdl
-models/kezaeiv/custom_weapons/ammo/quad_nail.mdl
 models/kezaeiv/custom_weapons/ammo/rockets.mdl
 models/kezaeiv/custom_weapons/ammo/sniper.mdl
 models/kezaeiv/custom_weapons/amr/p_amr.mdl
@@ -171,6 +172,7 @@ models/oghs/cm/wep/w_bgrap.mdl
 models/oghs/cm/wep/w_m40a1clip.mdl
 models/oghs/cm/wep/w_pipe_wrench.mdl
 models/oghs/cm/wep/w_saw_clip.mdl
+sound/kezaeiv/c_wep/ammo/bullets.wav
 sound/kezaeiv/c_wep/ammo/darkmatter.wav
 sound/kezaeiv/c_wep/ammo/energy.wav
 sound/kezaeiv/c_wep/ammo/health.wav
@@ -178,7 +180,6 @@ sound/kezaeiv/c_wep/ammo/nails.wav
 sound/kezaeiv/c_wep/ammo/pku_ammo1.wav
 sound/kezaeiv/c_wep/ammo/pku_ammo3.wav
 sound/kezaeiv/c_wep/ammo/plasma.wav
-sound/kezaeiv/c_wep/ammo/quadnail.wav
 sound/kezaeiv/c_wep/ammo/rockets.wav
 sound/kezaeiv/c_wep/ammo/sniper.wav
 sound/kezaeiv/c_wep/amr/igi_psgs1.wav
@@ -193,6 +194,7 @@ sound/kezaeiv/c_wep/com/cm_b1.wav
 sound/kezaeiv/c_wep/com/cm_g1.wav
 sound/kezaeiv/c_wep/com/cm_s1.wav
 sound/kezaeiv/c_wep/de9/de_sh.wav
+sound/kezaeiv/c_wep/destr/rail.wav
 sound/kezaeiv/c_wep/dev/dev_crack.wav
 sound/kezaeiv/c_wep/dev/dev_hit.wav
 sound/kezaeiv/c_wep/dev/dev_meltdown.wav
@@ -201,11 +203,9 @@ sound/kezaeiv/c_wep/dev/dev_rel2.wav
 sound/kezaeiv/c_wep/dev/dev_rel3.wav
 sound/kezaeiv/c_wep/dstngr/nail_hit_flesh.wav
 sound/kezaeiv/c_wep/dstngr/nail_hit_wall.wav
-sound/kezaeiv/c_wep/dstngr/spr_nail_hit.wav
 sound/kezaeiv/c_wep/dstngr/sting01.wav
 sound/kezaeiv/c_wep/dstngr/sting02.wav
 sound/kezaeiv/c_wep/dstngr/sting03.wav
-sound/kezaeiv/c_wep/dstngr/super_nail.wav
 sound/kezaeiv/c_wep/dstngr/tox_hlth01.wav
 sound/kezaeiv/c_wep/ehve/lightning.wav
 sound/kezaeiv/c_wep/ehve/roach_blast.wav
@@ -225,13 +225,11 @@ sound/kezaeiv/c_wep/frdm/srs_fire.wav
 sound/kezaeiv/c_wep/frst/ghst1.wav
 sound/kezaeiv/c_wep/frst/silenced.wav
 sound/kezaeiv/c_wep/frst/ss2_nade.wav
-sound/kezaeiv/c_wep/hblst/hb_nova.wav
 sound/kezaeiv/c_wep/hblst/hb_nova_hit.wav
 sound/kezaeiv/c_wep/hblst/hb_plsm.wav
 sound/kezaeiv/c_wep/hblst/hb_plsm_blast.wav
 sound/kezaeiv/c_wep/hblst/hb_plsm_chrg.wav
 sound/kezaeiv/c_wep/hblst/hb_plsm_nova_fly01.wav
-sound/kezaeiv/c_wep/hblst/hb_plsm_nova_fly02.wav
 sound/kezaeiv/c_wep/knf/k_1.wav
 sound/kezaeiv/c_wep/knf/k_2.wav
 sound/kezaeiv/c_wep/knf/k_chrg.wav
@@ -267,9 +265,7 @@ sound/kezaeiv/c_wep/obs/flm1.wav
 sound/kezaeiv/c_wep/obs/flm2.wav
 sound/kezaeiv/c_wep/obs/obs_sg.wav
 sound/kezaeiv/c_wep/obs/plsm_nade.wav
-sound/kezaeiv/c_wep/par/p_fire.wav
 sound/kezaeiv/c_wep/par/p_rail2.wav
-sound/kezaeiv/c_wep/par/p_rcht.wav
 sound/kezaeiv/c_wep/purifier/lg_fire_loop.wav
 sound/kezaeiv/c_wep/purifier/lg_fire_start.wav
 sound/kezaeiv/c_wep/purifier/lg_hit1.wav
@@ -430,7 +426,6 @@ sprites/kezaeiv/fx/kz_vcut_bl.spr
 sprites/kezaeiv/fx/laser_crshr.spr
 sprites/kezaeiv/fx/laser_crshr_cy.spr
 sprites/kezaeiv/fx/laser_crshr_grn.spr
-sprites/kezaeiv/fx/laser_crshr_prp.spr
 sprites/kezaeiv/fx/laser_crshr_wht.spr
 sprites/kezaeiv/kezammo.spr
 sprites/kezaeiv/kezcrosshairs.spr
@@ -440,7 +435,6 @@ sprites/kezaeiv/xpl/spore_exp_01_bl.spr
 sprites/kezaeiv/xpl/spore_exp_c_01_bl.spr
 sprites/kezaeiv/xpl/zxlp_blue.spr
 sprites/kezaeiv/xpl/zxlp_crimson.spr
-sprites/kezaeiv/xpl/zxlp_lila.spr
 sprites/kezaeiv/xpl/zxlp_purple.spr
 sprites/m41a_off.spr
 sprites/m41a_on.spr
