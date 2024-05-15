@@ -1,0 +1,7 @@
+6
+weapon				640 	kezaeiv/kweps			346	237	170	45
+weapon_s			640 	kezaeiv/kweps2			346	237	170	45
+ammo				640		kezaeiv/kezammo2			72	0	24	24
+ammo2				640		kezaeiv/kezammo2			144	0	24	24
+crosshair			640		kezaeiv/kezcrosshairs	158	2	52	52
+autoaim				640		crosshairs				24	72	24	24
