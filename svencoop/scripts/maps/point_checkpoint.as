@@ -84,14 +84,14 @@ class point_checkpoint : ScriptBaseAnimating
 		else
 			g_Game.PrecacheModel( self.pev.model );
 		
-		g_Game.PrecacheModel( "sprites/exit1.spr" );
+		g_Game.PrecacheModel( "sprites/kezaeiv/prtl/kz_exit1.spr" );
 		
 		g_SoundSystem.PrecacheSound( "../sound/oghs/misc/cp02_03.mp3" );
 		g_SoundSystem.PrecacheSound( "debris/beamstart7.wav" );
 		g_SoundSystem.PrecacheSound( "ambience/port_suckout1.wav" );
 		
 		if( string( self.pev.message ).IsEmpty() )
-			self.pev.message = "debris/beamstart4.wav";
+			self.pev.message = "kezaeiv/misc/teleport.wav";
 			
 		g_SoundSystem.PrecacheSound( self.pev.message );
 	}
@@ -201,7 +201,7 @@ class point_checkpoint : ScriptBaseAnimating
 			return;
 		
 		g_Game.AlertMessage( at_logged, "CHECKPOINT: \"%1\" activated Checkpoint\n", pOther.pev.netname );
-		g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "" + pOther.pev.netname + " just activated a Respawn-Point.\n" );
+		g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "" + pOther.pev.netname + " activated a Checkpoint. Respawning all dead players...\n" );
 		
 		// Set activated
 		self.pev.frags = 1.0f;
@@ -277,7 +277,7 @@ class point_checkpoint : ScriptBaseAnimating
 		
 		m_iNextPlayerToRevive = 1;
 		
-		@m_pSprite = g_EntityFuncs.CreateSprite( "sprites/exit1.spr", self.pev.origin, true, 10 );
+		@m_pSprite = g_EntityFuncs.CreateSprite( "sprites/kezaeiv/prtl/kz_exit1.spr", self.pev.origin, true, 10 );
 		m_pSprite.TurnOn();
 		m_pSprite.pev.rendermode = kRenderTransAdd;
 		m_pSprite.pev.renderamt = 128;

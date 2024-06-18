@@ -45,7 +45,7 @@ HookReturnCode PlayerPreThink( CBasePlayer@ pPlayer, uint& out uiFlags )
 
 
 		Vector velocity = pPlayer.pev.velocity;
-		velocity.z += sqrt(2.5 * 800 * 45.0f);
+		velocity.z += sqrt(2.5 * 625 * 45.0f);
 		pPlayer.pev.velocity = velocity;
 
 		pPlayer.pev.gaitsequence = 6;

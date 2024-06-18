@@ -1,0 +1,85 @@
+ 
+         ..:: kz_gigablockier_pub ::..
+
+
+Map Gigablockier_pub by Kreedz & SadPuppy!
+
+Adjust your console settings for volume!
+
+If you like this map please also check out
+
+the full version kz_gigablockier!
+
+
+---
+Special thanks to BunnyBamse,
+     Omilo & PsYxOpAt ^^
+---
+
+Greetz to Ezekiel, Wolfie, Moxx and Kreedz ^^
+
+
+
+____ README ____
+ 
+         ..:: kz_gigablockier_pub ::..
+
+
+Map Gigablockier_pub by Kreedz & SadPuppy!
+
+If you enjoy this map please also check out the
+
+full version kz_gigablockier!
+
+Adjust your console settings for volume!
+
+The super secret area on a2_blockrunner 
+contains 2 jump sections from Kreedz,
+intended for Gigablockier.
+
+These 2 sections are outtakes and
+will only appear on that map. It is the painful
+glass cube and torture high duck jump thingie..
+Both were originally placed just before the old
+end room on Gigablockier.
+
+---
+Special thanks to BunnyBamse,
+     Omilo & PsYxOpAt ^^
+---
+
+Greetz to Ezekiel, Wolfie, Moxx and Kreedz ^^
+
+
+=============================
+IF YOU HAVE A PROBLEM RUNNING THIS MAP
+=============================
+
+To run some large maps (like this one) you need to raise a
+setting num_edicts, which you can do in two ways. Either as
+a launch option setting or in the liblist.gam file. This also is
+for you as server owner.
+
+LAUNCH OPTION:
+Right click on steam icon and select LIBRARY.
+Right click on Counter-Strike in the list and select PROPERTIES.
+Click on "SET LAUNCH OPTIONS..."
+Type in    -num_edicts 4096   and press OK.
+
+OR LIBLIST.GAM FILE:
+Could be located in different locations, like
+/steamapps/common/half-life/modfolder/
+/steamapps/your_email/counter-strike/cstrike/
+
+Open it with notepad, and find the setting
+edicts      "1800"
+Change the 1800 to 4096, save and exit.
+If the setting isn't there, add it.
+
+
+---
+This will help you get rid of the errors:
+"Host_Error: CL_EntityNum: 1366 is an invalid number"
+"ED_Alloc No Free Edicts"
+---
+

@@ -1,3 +1,4 @@
+"oghs/misc/cp02_03.mp3" "kezaeiv/misc/cp_nod_reinf.mp3"
 "items/suitchargeok1.wav" "kezaeiv/c_wep/misc/item_respawn.wav"
 "items/9mmclip1.wav" "kezaeiv/c_wep/ammo/pku_ammo1.wav"
 "hlclassic/items/9mmclip1.wav" "kezaeiv/c_wep/ammo/pku_ammo1.wav"
@@ -21,6 +22,7 @@
 "weapons/explode4.wav" "kezaeiv/c_wep/misc/exp3.wav"
 "weapons/explode5.wav" "kezaeiv/c_wep/misc/exp5.wav"
 "barney/ba_attack2.wav" "kezaeiv/singularity/npc/starcraft_ghost_rifle.wav"
+"otis/ot_attack.wav" "kezaeiv/singularity/npc/csgo_deag_shot.wav"
 "shocktrooper/shock_fire.wav" "kezaeiv/singularity/npc/quake4_plasma_shot.wav"
 "hgrunt/gr_mgun1.wav" "kezaeiv/singularity/npc/hgrunt_3shot.wav"
 "hgrunt/gr_mgun2.wav" "kezaeiv/singularity/npc/hgrunt_3shot.wav"
@@ -58,4 +60,5 @@
 "hlclassic/weapons/g_bounce2.wav" "kezaeiv/c_wep/misc/bounce/g_bounce2.wav"
 "hlclassic/weapons/g_bounce3.wav" "kezaeiv/c_wep/misc/bounce/g_bounce3.wav"
 "hlclassic/weapons/g_bounce4.wav" "kezaeiv/c_wep/misc/bounce/g_bounce4.wav"
+"hlclassic/weapons/g_bounce5.wav" "kezaeiv/c_wep/misc/bounce/g_bounce5.wav"
 "hlclassic/weapons/g_bounce5.wav" "kezaeiv/c_wep/misc/bounce/g_bounce5.wav"
