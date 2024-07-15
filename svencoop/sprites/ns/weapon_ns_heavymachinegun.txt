@@ -1,0 +1,5 @@
+27
+weapon			640 ns/640mw2	0	45	170	45
+weapon_s		640 ns/640mw2-s	0	45	170	45
+ammo			640 ns/640hud7	0	96	24	24
+crosshair		640 ns/xhairmw1 0	160	40	40

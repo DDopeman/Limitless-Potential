@@ -201,7 +201,7 @@ class point_checkpoint : ScriptBaseAnimating
 			return;
 		
 		g_Game.AlertMessage( at_logged, "CHECKPOINT: \"%1\" activated Checkpoint\n", pOther.pev.netname );
-		g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "" + pOther.pev.netname + " activated a Checkpoint. Respawning all dead players...\n" );
+		g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "-[ " + pOther.pev.netname + " ]- activated a Checkpoint. Respawning all dead players...\n" );
 		
 		// Set activated
 		self.pev.frags = 1.0f;

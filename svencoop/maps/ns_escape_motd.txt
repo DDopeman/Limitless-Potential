@@ -1,0 +1,57 @@
+ns_escape
+
+A mining and research outpost on a far away planet has gone into lockdown.
+Aliens are on the loose and the quarantine self-destruction sequence has been initiated.
+The only method of escape is a broken shuttle found in the hangar bay.
+
+
+HOW TO PLAY
+
+Players must find two batteries to open the hangar door in the main lobby.
+Batteries can only be found in numbered rooms. 
+Once inside the hangar the shuttle will require repairing.
+The items required will also be in numbered rooms.
+
+Rooms are locked and require one of three methods to open.
+
+1. Find the keycard corresponding to that numbered room (number 5 keycard = number 5 door )
+2. EVO suit that allows you access the vents found outside, which lead you to the rooms.
+3. Find a toolbox, a one-time use item that opens any locked door.
+
+Breakable crates will drop random gear, red crates will drop even better gear.
+Each room has 2 red crates guaranteed.
+
+Additional info
+
+This map was highly inspired by They Hunger: Escape by JPolito/GeckonCZ
+This map was also inspired and a love letter to the mod Natural Selection.
+
+A heavy focus on replayability and Co op. 
+The map is designed to be incredibly difficult and punishing for not playing in a team.
+Communication is the key to success. 
+
+Six custom enemy types from NS with different behaviours/abilities 
+Six custom weapons ported over from NS
+3 difficulties, Rookie -> Veteran -> Legendary. 
+Difficulty automatically scales with players as well 
+
+
+
+Credits
+
+Acehigh - brushwork / designer / project lead 
+Meryilla - Monster Scripts / weapon scripts / models 
+Sparks - Airlocks / Entitys / advice
+Snowman - music
+Blib - music
+sv_boy - models 
+Outerbeast - Shuffle script 
+Gauna - animation fix 
+aurora - sprites / snow effect
+Filich - medkit hand model
+
+Sneaky Emλ - testing / script testing 
+Giegue - testing / script testing
+lawyeaz - bug debugger
+
+Unknown Worlds - art assets

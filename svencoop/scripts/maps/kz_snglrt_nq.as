@@ -17,26 +17,26 @@ void MapInit()
 		g_ClassicMode.ForceItemRemap( true );
 		RegisterAutoBhopping();
 		
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_amr.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_anvil.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_balista.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_commando.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_devastator.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_duality_stinger.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_ehve.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_freedom_machine.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_frostbite.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_hyper_blaster.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_kez_partner.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_mprl.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_obsidian.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_plasma_slayer.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_prodigy_launcher.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_purifier.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_raptor_sniper.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_seeker.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_survivor.txt');
-		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep3/weapon_shredder.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_amr.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_anvil.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_balista.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_commando.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_devastator.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_duality_stinger.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_ehve.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_freedom_machine.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_frostbite.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_hyper_blaster.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_kez_partner.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_mprl.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_obsidian.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_plasma_slayer.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_prodigy_launcher.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_purifier.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_raptor_sniper.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_seeker.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_survivor.txt');
+		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep4/weapon_shredder.txt');
 		
 }
 

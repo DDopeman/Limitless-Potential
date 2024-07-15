@@ -1,6 +1,7 @@
 // Created with resguy v9 (September 2018)
 // https://github.com/wootguy/resguy
 
+cs_bdog2.wad
 cstrike.wad
 events/cs16_flashx.txt
 gfx/env/morningdewbk.tga
@@ -167,6 +168,7 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
+sound/../sound/kezaeiv/cp/starcraft_terran_rescue.mp3
 sound/cs16/57/magin.wav
 sound/cs16/57/magout.wav
 sound/cs16/57/shoot.wav

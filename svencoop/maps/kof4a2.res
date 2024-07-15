@@ -88,7 +88,7 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
-sound/kezaeiv/misc/cp_nod_reinf.mp3
+sound/../sound/kezaeiv/misc/cp_nod_reinf.mp3
 sound/kezaeiv/misc/teleport.wav
 sound/kezaeiv/music/tangledearth.ogg
 sound/kezaeiv/singularity/npc/csgo_deag_shot.wav

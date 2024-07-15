@@ -1,0 +1,45 @@
+mapname: sc_tetris1
+sc_tetris series by A1win
+version: 1.2beta
+
+Optimal number of players: 3 to 5
+Average time required to finish: 2 to 3 hours
+
+Gravity is 700 which is 87.5% normal gravity.
+
+Background story:
+
+	Block goes down,
+	block goes left,
+	block goes right.
+	And there you are.
+
+FAQ:
+
+Q: Where do the pink blocks go when they disappear?
+A: They move to the fifth dimension.
+
+Q: The fifth dimension? Why not the fourth?
+A: The fourth dimension is reserved for the
+   disappearing bodies of dead npcs and players.
+
+NOTE:
+The violence in this map is imaginary.
+No-one really gets hurt.
+
+Please don't use +hook in this map even if HookMod
+was enabled on this server. HookMod is a cheat!
+
+Thanks to:
+
+- Alexey Pajitnov for the original blocks
+- JJ45 for the custom models
+- DiCola for the sky
+- Tuesday's Avenger for the Bigmomma model
+- [Swe]Sneaker for the skin of the Bigmomma
+- Jusupov for additional model editing
+
+Beta testers:
+Acid5, CaptainScarlet, Chorium, coLera, DiCola, eewo,
+Film11, JJ45, Jusupov, LentoMan, Lurid, Nih, Ohcanep,
+ProgramZeta, Puchi, Robootto, Solokiller, The_Oak, Yuicy

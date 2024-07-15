@@ -14,6 +14,7 @@
 "weapons/explode4.wav" "kezaeiv/singularity/npc/exp3.wav"
 "weapons/explode5.wav" "kezaeiv/singularity/npc/exp5.wav"
 "barney/ba_attack2.wav" "kezaeiv/singularity/npc/starcraft_ghost_rifle.wav"
+"otis/ot_attack.wav" "kezaeiv/singularity/npc/csgo_deag_shot.wav"
 "shocktrooper/shock_fire.wav" "kezaeiv/singularity/npc/quake4_plasma_shot.wav"
 "hgrunt/gr_mgun1.wav" "kezaeiv/singularity/npc/hgrunt_3shot.wav"
 "hgrunt/gr_mgun2.wav" "kezaeiv/singularity/npc/hgrunt_3shot.wav"
@@ -38,4 +39,4 @@
 "hlclassic/weapons/explode4.wav" "kezaeiv/singularity/npc/exp3.wav"
 "hlclassic/weapons/explode5.wav" "kezaeiv/singularity/npc/exp5.wav"
 
-"oghs/misc/cp02_03.mp3" "kezaeiv/misc/cp_nod_reinf.mp3"
+"../sound/oghs/misc/cp02_03.mp3" "../sound/kezaeiv/misc/cp_nod_reinf.mp3"
