@@ -184,7 +184,6 @@ models/oghs/cm/wep/p_bgrap.mdl
 models/oghs/cm/wep/p_pipe_wrench.mdl
 models/oghs/cm/wep/w_bgrap.mdl
 models/oghs/cm/wep/w_pipe_wrench.mdl
-sound/../sound/kezaeiv/misc/cp_nod_reinf.mp3
 sound/kezaeiv/c_wep/ammo/arrows.wav
 sound/kezaeiv/c_wep/ammo/bullets.wav
 sound/kezaeiv/c_wep/ammo/darkmatter.wav
@@ -308,6 +307,7 @@ sound/kezaeiv/c_wep/shrd/shrdr_1.wav
 sound/kezaeiv/c_wep/shrd/shrdr_2.wav
 sound/kezaeiv/c_wep/shrd/shrdr_shotty.wav
 sound/kezaeiv/c_wep/surv/pipe.wav
+sound/kezaeiv/misc/cp_nod_reinf.mp3
 sound/kezaeiv/misc/teleport.wav
 sound/kezaeiv/music/forwerwar2.ogg
 sound/kezaeiv/music/kc_trs/tenebrerossosangue01.ogg

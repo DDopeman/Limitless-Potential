@@ -39,4 +39,4 @@
 "hlclassic/weapons/explode4.wav" "kezaeiv/singularity/npc/exp3.wav"
 "hlclassic/weapons/explode5.wav" "kezaeiv/singularity/npc/exp5.wav"
 
-"../sound/oghs/misc/cp02_03.mp3" "../sound/kezaeiv/misc/cp_nod_reinf.mp3"
+"oghs/misc/cp02_03.mp3" "kezaeiv/misc/cp_nod_reinf.mp3"

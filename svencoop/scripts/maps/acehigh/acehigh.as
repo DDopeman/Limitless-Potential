@@ -15,6 +15,7 @@
 #include "CustomHUD"
 #include "player_sentry"
 
+
 enum GAMESTATE
 {
 	GAMESTATE_NEW = 0,
@@ -53,6 +54,8 @@ array<string> SPRITE_ITEMS = {
 
 void MapInit()
 {
+
+	
 	NS_SHOTGUN::Register();
 	NS_PISTOL::Register();
 	NS_KNIFE::Register();
@@ -200,7 +203,7 @@ void VoteResults( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE usetyp
 				szWinningVote = "Rookie Difficulty";
 				szDiffTgtNme = "rook";				
 				g_difficulty = DIFFICULTY_ROOK;
-				g_iTimer = 1200;
+				g_iTimer = 3600;
 				break;
 			}
 			case 1:
@@ -208,7 +211,7 @@ void VoteResults( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE usetyp
 				szWinningVote = "Veteran Difficulty";
 				szDiffTgtNme = "vet";
 				g_difficulty = DIFFICULTY_VET;
-				g_iTimer = 900;
+				g_iTimer = 3000;
 				break;
 			}
 			case 2:
@@ -216,7 +219,7 @@ void VoteResults( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE usetyp
 				szWinningVote = "Legendary Difficulty";
 				szDiffTgtNme = "leg";
 				g_difficulty = DIFFICULTY_LEG;
-				g_iTimer = 600;
+				g_iTimer = 3000;
 				break;
 			}
 			default:
@@ -224,7 +227,7 @@ void VoteResults( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE usetyp
 				szWinningVote = "Med Difficulty";
 				szDiffTgtNme = "vet";
 				g_difficulty = DIFFICULTY_VET;
-				g_iTimer = 900;
+				g_iTimer = 3000;
 				break;
 			}
 		}
