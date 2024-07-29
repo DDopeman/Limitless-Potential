@@ -2,9 +2,10 @@
 // https://github.com/wootguy/resguy
 
 models/kezaeiv/icons/mk_logo_cyan.mdl
-models/kezaeiv/kz_npcs/singularity/controller_suppressor.mdl
-models/kezaeiv/kz_npcs/singularity/islave_aggressive.mdl
-models/kezaeiv/kz_npcs/singularity/robo_red_leader.mdl
+models/kezaeiv/kz_npcs/snglrt2/controller_suppressor.mdl
+models/kezaeiv/kz_npcs/snglrt2/islave_aggressive.mdl
+models/kezaeiv/kz_npcs/snglrt2/robo_blck_dstryr.mdl
+models/kezaeiv/kz_npcs/snglrt2/robo_red_leader_v2.mdl
 models/mikk/kezaeiv/agrunt.mdl
 models/mikk/kezaeiv/agruntf.mdl
 models/mikk/kezaeiv/apache.mdl

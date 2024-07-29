@@ -3,11 +3,13 @@
 
 models/kezaeiv/icons/mk_logo_cyan.mdl
 models/kezaeiv/kz_npcs/singularity/houndeye_blue_fast.mdl
-models/kezaeiv/kz_npcs/singularity/massnf_kez.mdl
-models/kezaeiv/kz_npcs/singularity/robo_purple.mdl
-models/kezaeiv/kz_npcs/singularity/robo_red_leader.mdl
 models/kezaeiv/kz_npcs/singularity/strooper_red_violent.mdl
-models/kezaeiv/kz_npcs/singularity/strooper_vio_suppresor.mdl
+models/kezaeiv/kz_npcs/snglrt2/massnf_kez.mdl
+models/kezaeiv/kz_npcs/snglrt2/robo_blck_dstryr.mdl
+models/kezaeiv/kz_npcs/snglrt2/robo_purple.mdl
+models/kezaeiv/kz_npcs/snglrt2/robo_red_leader_v2.mdl
+models/kezaeiv/kz_npcs/snglrt2/strooper_red_violent.mdl
+models/kezaeiv/kz_npcs/snglrt2/strooper_vio_suppresor.mdl
 models/mikk/kezaeiv/agrunt.mdl
 models/mikk/kezaeiv/agruntf.mdl
 models/mikk/kezaeiv/apache.mdl

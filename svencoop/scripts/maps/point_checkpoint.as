@@ -87,7 +87,7 @@ class point_checkpoint : ScriptBaseAnimating
 		g_Game.PrecacheModel( "sprites/kezaeiv/prtl/kz_exit1.spr" );
 		
 		g_SoundSystem.PrecacheSound( "../sound/oghs/misc/cp02_03.mp3" );
-		g_SoundSystem.PrecacheSound( "debris/beamstart7.wav" );
+		g_SoundSystem.PrecacheSound( "kezaeiv/misc/teleport.wav" );
 		g_SoundSystem.PrecacheSound( "ambience/port_suckout1.wav" );
 		
 		if( string( self.pev.message ).IsEmpty() )
@@ -282,7 +282,7 @@ class point_checkpoint : ScriptBaseAnimating
 		m_pSprite.pev.rendermode = kRenderTransAdd;
 		m_pSprite.pev.renderamt = 128;
 	
-		g_SoundSystem.EmitSound( self.edict(), CHAN_STATIC, "debris/beamstart7.wav", 1.0f, ATTN_NORM );
+		g_SoundSystem.EmitSound( self.edict(), CHAN_STATIC, "kezaeiv/misc/teleport.wav", 1.0f, ATTN_NORM );
 		
 		SetThink( ThinkFunction( this.RespawnThink ) );
 		self.pev.nextthink = g_Engine.time + 0.1f;

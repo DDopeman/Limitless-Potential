@@ -56,7 +56,8 @@ kof3a5
 kof3a6
 kof4a1
 kof4a2
-rv_c2ac1_v4
+kof4a3
+rv_c2ac1_v6
 eshq01
 eshq02
 eshq03
@@ -457,3 +458,5 @@ hc2_c9
 hc2_s1
 hc2_s2
 hc2_s2a
+kz_tetris1
+ns_escape

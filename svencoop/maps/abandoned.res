@@ -46,7 +46,7 @@ models/kezaeiv/custom_weapons/ammo/erholungszelle.mdl
 models/kezaeiv/custom_weapons/ammo/freedomclip.mdl
 models/kezaeiv/custom_weapons/ammo/iron_shells_box.mdl
 models/kezaeiv/custom_weapons/ammo/nails.mdl
-models/kezaeiv/custom_weapons/ammo/plasma.mdl
+models/kezaeiv/custom_weapons/ammo/plasma2.mdl
 models/kezaeiv/custom_weapons/ammo/rockets.mdl
 models/kezaeiv/custom_weapons/ammo/sniper.mdl
 models/kezaeiv/custom_weapons/amr/p_amr.mdl
@@ -153,12 +153,12 @@ models/kezaeiv/kz_npcs/snglrt2/hgruntf.mdl
 models/kezaeiv/kz_npcs/snglrt2/houndeye_green.mdl
 models/kezaeiv/kz_npcs/snglrt2/hwgrunt.mdl
 models/kezaeiv/kz_npcs/snglrt2/hwgruntf.mdl
-models/kezaeiv/kz_npcs/snglrt2/islave.mdl
 models/kezaeiv/kz_npcs/snglrt2/islave_aggressive.mdl
+models/kezaeiv/kz_npcs/snglrt2/islave_v2.mdl
 models/kezaeiv/kz_npcs/snglrt2/islavef.mdl
 models/kezaeiv/kz_npcs/snglrt2/islaveslap.mdl
 models/kezaeiv/kz_npcs/snglrt2/kingpin.mdl
-models/kezaeiv/kz_npcs/snglrt2/massn_ghost.mdl
+models/kezaeiv/kz_npcs/snglrt2/massn_ghost2.mdl
 models/kezaeiv/kz_npcs/snglrt2/massn_kamikaze.mdl
 models/kezaeiv/kz_npcs/snglrt2/massn_tactical.mdl
 models/kezaeiv/kz_npcs/snglrt2/massnf.mdl
@@ -166,9 +166,10 @@ models/kezaeiv/kz_npcs/snglrt2/osprey.mdl
 models/kezaeiv/kz_npcs/snglrt2/ospreyf.mdl
 models/kezaeiv/kz_npcs/snglrt2/pit_drone_spike2.mdl
 models/kezaeiv/kz_npcs/snglrt2/pit_red_predator.mdl
+models/kezaeiv/kz_npcs/snglrt2/robo_blck_dstryr.mdl
 models/kezaeiv/kz_npcs/snglrt2/robo_grunt.mdl
 models/kezaeiv/kz_npcs/snglrt2/robo_purple.mdl
-models/kezaeiv/kz_npcs/snglrt2/robo_red_leader.mdl
+models/kezaeiv/kz_npcs/snglrt2/robo_red_leader_v2.mdl
 models/kezaeiv/kz_npcs/snglrt2/sentry_red.mdl
 models/kezaeiv/kz_npcs/snglrt2/strooper_blu_prodigy.mdl
 models/kezaeiv/kz_npcs/snglrt2/strooper_red_violent.mdl
