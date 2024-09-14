@@ -121,7 +121,6 @@ sound/chan_space/misc/ship_jets.wav
 sound/chan_space/p_loop.wav
 sound/chan_space/s_loop.wav
 sound/chan_space/tock.mp3
-sound/kezaeiv/misc/teleport.wav
 sound/ns/monsters/asay31.wav
 sound/ns/monsters/b_sentry/turret-1.wav
 sound/ns/monsters/b_sentry/turret-2.wav
@@ -225,7 +224,6 @@ sound/ns/weapons/sg/shotgun_draw.wav
 sound/ns/weapons/sg/shotgun_pump.wav
 sound/ns/weapons/sg/shotgun_reload.wav
 sound/ns/weapons/sg/shotgun_stock_release.wav
-sound/oghs/misc/cp02_03.mp3
 sprites/chan_space/ayumiglow2.spr
 sprites/chan_space/ballsmoke.spr
 sprites/chan_space/blueflare2.spr
@@ -292,7 +290,6 @@ sprites/chan_space/redflare2.spr
 sprites/chan_space/rjet1.spr
 sprites/chan_space/wdrip2.spr
 sprites/chan_space/xsmoke1.spr
-sprites/kezaeiv/prtl/kz_exit1.spr
 sprites/ns/640hud7.spr
 sprites/ns/640mw1-s.spr
 sprites/ns/640mw1.spr

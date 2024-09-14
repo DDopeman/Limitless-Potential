@@ -1,0 +1,348 @@
+//Generic
+"speech/grenade1.wav" "sc_toysoldiers/bcry.wav"
+"speech/saveme1.wav" "sc_toysoldiers/fgrunt/medic.wav"
+"speech/saveme2.wav" "sc_toysoldiers/fgrunt/medic.wav"
+"weapons/cbe/cbe_hit1.wav" "weapons/knife_hit_wall1.wav"
+"weapons/cbe/cbe_hit2.wav" "weapons/knife_hit_wall2.wav"
+"weapons/cbe/cbe_miss1.wav" "weapons/knife1.wav"
+"weapons/cbe/cbe_miss2.wav" "weapons/knife2.wav"
+"weapons/cbar_miss1.wav" "weapons/knife3.wav"
+"weapons/cbar_hitbod1.wav" "weapons/knife_hit_flesh1.wav"
+"weapons/cbar_hitbod2.wav" "weapons/knife_hit_flesh2.wav"
+"weapons/cbar_hitbod3.wav" "weapons/knife_hit_flesh1.wav"
+"weapons/cbar_hit1.wav" "weapons/knife_hit_wall1.wav"
+"weapons/cbar_hit2.wav" "weapons/knife_hit_wall2.wav"
+"apache/ap_rotor4.wav" "sc_toysoldiers/rotors.wav"
+
+"weapons/hks_hl1.wav" "ambience/mgun1.wav"
+"weapons/hks_hl2.wav" "ambience/mgun1.wav"
+"weapons/hks_hl3.wav" "ambience/mgun1.wav"
+
+"player/pl_step1.wav" "player/boots1.wav"
+"player/pl_step2.wav" "player/boots2.wav"
+"player/pl_step3.wav" "player/boots3.wav"
+"player/pl_step4.wav" "player/boots4.wav"
+"player/pl_step5.wav" "player/boots4.wav"
+"player/pl_step6.wav" "player/boots3.wav"
+"player/pl_step7.wav" "player/boots2.wav"
+"player/pl_step8.wav" "player/boots1.wav"
+
+
+//Garg
+"babygarg/gar_alert1.wav" "sc_toysoldiers/trooper/gar_alert1.wav"
+"babygarg/gar_alert2.wav" "sc_toysoldiers/trooper/gar_alert2.wav"
+"babygarg/gar_alert3.wav" "sc_toysoldiers/trooper/gar_alert3.wav"
+"babygarg/gar_attack1.wav" "sc_toysoldiers/trooper/gar_attack1.wav"
+"babygarg/gar_attack2.wav" "sc_toysoldiers/trooper/gar_attack2.wav"
+"babygarg/gar_attack3.wav" "sc_toysoldiers/trooper/gar_attack3.wav"
+"babygarg/gar_breathe1.wav" "sc_toysoldiers/trooper/gar_breathe1.wav"
+"babygarg/gar_breathe2.wav" "sc_toysoldiers/trooper/gar_breathe2.wav"
+"babygarg/gar_breathe3.wav" "sc_toysoldiers/trooper/gar_breathe3.wav"
+"babygarg/gar_pain1.wav" "sc_toysoldiers/trooper/gar_pain1.wav"
+"babygarg/gar_pain2.wav" "sc_toysoldiers/trooper/gar_pain2.wav"
+"babygarg/gar_pain3.wav" "sc_toysoldiers/trooper/gar_pain3.wav"
+"babygarg/gar_die1.wav" "sc_toysoldiers/trooper/gar_die1.wav"
+"babygarg/gar_die2.wav" "sc_toysoldiers/trooper/gar_die2.wav"
+"babygarg/gar_stomp1.wav" "sc_toysoldiers/trooper/gar_stomp1.wav"
+"babygarg/gar_step1.wav" "sc_toysoldiers/trooper/gar_step1.wav"
+"babygarg/gar_step2.wav" "sc_toysoldiers/trooper/gar_step2.wav"
+"babygarg/gar_idle1.wav" "sc_toysoldiers/trooper/gar_idle1.wav"
+"babygarg/gar_idle2.wav" "sc_toysoldiers/trooper/gar_idle2.wav"
+"babygarg/gar_idle3.wav" "sc_toysoldiers/trooper/gar_idle3.wav"
+"babygarg/gar_idle4.wav" "sc_toysoldiers/trooper/gar_idle4.wav"
+"babygarg/gar_idle5.wav" "sc_toysoldiers/trooper/gar_idle5.wav"
+
+
+
+
+// HUMAN GRUNTS
+"!HG_GREN0" "sc_toysoldiers/hgrunt/incoming.wav"
+"!HG_GREN1" "sc_toysoldiers/hgrunt/grenade.wav"
+"!HG_GREN2" "sc_toysoldiers/hgrunt/down.wav"
+"!HG_GREN3" "sc_toysoldiers/hgrunt/takecover.wav"
+"!HG_GREN4" "sc_toysoldiers/hgrunt/down.wav"
+"!HG_GREN5" "sc_toysoldiers/hgrunt/incoming.wav"
+"!HG_GREN6" "sc_toysoldiers/hgrunt/retreat.wav"
+
+// Pain
+"hgrunt/gr_pain1.wav" "sc_toysoldiers/hgrunt/pain1.wav"
+"hgrunt/gr_pain2.wav" "sc_toysoldiers/hgrunt/pain2.wav"
+"hgrunt/gr_pain3.wav" "sc_toysoldiers/hgrunt/pain3.wav"
+"hgrunt/gr_pain4.wav" "sc_toysoldiers/hgrunt/pain4.wav"
+"hgrunt/gr_pain5.wav" "sc_toysoldiers/hgrunt/pain5.wav"
+
+// Death
+"hgrunt/gr_die1.wav" "sc_toysoldiers/hgrunt/death1.wav"
+"hgrunt/gr_die2.wav" "sc_toysoldiers/hgrunt/death2.wav"
+"hgrunt/gr_die3.wav" "sc_toysoldiers/hgrunt/death3.wav"
+
+// Player Alert
+"!HG_ALERT0" "sc_toysoldiers/hgrunt/alert.wav"
+"!HG_ALERT1" "sc_toysoldiers/hgrunt/down.wav"
+"!HG_ALERT2" "sc_toysoldiers/hgrunt/bogies.wav"
+"!HG_ALERT3" "sc_toysoldiers/hgrunt/hostiles.wav"
+"!HG_ALERT4" "sc_toysoldiers/hgrunt/alert.wav"
+"!HG_ALERT5" "sc_toysoldiers/hgrunt/of6a1_fg02.wav"
+"!HG_ALERT6" "sc_toysoldiers/hgrunt/wantsome.wav"
+
+// Take cover
+"!HG_COVER0" "sc_toysoldiers/hgrunt/stayalert.wav"
+"!HG_COVER1" "sc_toysoldiers/hgrunt/staydown.wav"
+"!HG_COVER2" "sc_toysoldiers/hgrunt/cover.wav"
+"!HG_COVER3" "sc_toysoldiers/hgrunt/down.wav" 
+"!HG_COVER4" "sc_toysoldiers/hgrunt/retreat.wav"
+"!HG_COVER5" "sc_toysoldiers/hgrunt/staydown.wav" 
+"!HG_COVER6" "sc_toysoldiers/hgrunt/cover.wav" 
+"!HG_COVER7" "sc_toysoldiers/hgrunt/down.wav" 
+
+// Throw grenade
+"!HG_THROW0" "sc_toysoldiers/hgrunt/fire.wav" 
+"!HG_THROW1" "sc_toysoldiers/hgrunt/grenade.wav" 
+"!HG_THROW2" "sc_toysoldiers/hgrunt/down.wav" 
+"!HG_THROW3" "sc_toysoldiers/hgrunt/take.wav" 
+
+// Taunt
+"!HG_TAUNT0" "sc_toysoldiers/hgrunt/mister.wav" 
+"!HG_TAUNT1" "sc_toysoldiers/hgrunt/nothing.wav"
+"!HG_TAUNT2" "sc_toysoldiers/hgrunt/oneshot.wav" 
+"!HG_TAUNT3" "sc_toysoldiers/hgrunt/getsome.wav"
+"!HG_TAUNT4" "sc_toysoldiers/hgrunt/corners.wav"
+"!HG_TAUNT5" "sc_toysoldiers/hgrunt/backup.wav"
+
+// Charge
+"!HG_CHARGE0" "sc_toysoldiers/hgrunt/go.wav"
+"!HG_CHARGE1" "sc_toysoldiers/hgrunt/move.wav" 
+"!HG_CHARGE2" "sc_toysoldiers/hgrunt/moveup.wav"
+"!HG_CHARGE3" "sc_toysoldiers/hgrunt/go.wav" 
+
+// Idle
+"!HG_IDLE0" "sc_toysoldiers/hgrunt/charge.wav"
+"!HG_IDLE1" "sc_toysoldiers/hgrunt/current.wav"
+"!HG_IDLE2" "sc_toysoldiers/hgrunt/mission.wav"
+
+"!HG_QUEST0" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST1" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST2" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST3" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST4" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST5" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST6" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST7" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST8" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST9" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST10" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_QUEST11" "sc_toysoldiers/hgrunt/_comma.wav"
+
+"!HG_ANSWER0" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER1" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER2" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER3" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER4" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER5" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_ANSWER6" "sc_toysoldiers/hgrunt/_comma.wav"
+
+"!HG_CLEAR0" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR1" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR2" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR3" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR4" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR5" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR6" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR7" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR8" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR9" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR10" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR11" "sc_toysoldiers/hgrunt/_comma.wav"
+"!HG_CLEAR12" "sc_toysoldiers/hgrunt/_comma.wav"
+
+"!HG_CHECK0" "sc_toysoldiers/hgrunt/allclear.wav"
+"!HG_CHECK1" "sc_toysoldiers/hgrunt/area.wav"
+"!HG_CHECK2" "sc_toysoldiers/hgrunt/check.wav"
+"!HG_CHECK3" "sc_toysoldiers/hgrunt/zone.wav"
+"!HG_CHECK4" ""sc_toysoldiers/hgrunt/checkrecon.wav"
+"!HG_CHECK5" "sc_toysoldiers/hgrunt/nohostiles.wav"
+"!HG_CHECK6" "sc_toysoldiers/hgrunt/nomovement.wav"
+"!HG_CHECK7" "sc_toysoldiers/hgrunt/allclear.wav"
+
+// FGRUNTS
+
+// FRIENDLY GRUNTS
+"!FG_POK0" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_POK1" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_POK2" "sc_toysoldiers/fgrunt/corporal_01.wav"
+"!FG_POK3" "sc_toysoldiers/fgrunt/corporal_01.wav"
+
+// Pain
+"fgrunt/pain1.wav" "sc_toysoldiers/fgrunt/pain1.wav"
+"fgrunt/pain2.wav" "sc_toysoldiers/fgrunt/pain2.wav"
+"fgrunt/pain3.wav" "sc_toysoldiers/fgrunt/pain3.wav"
+"fgrunt/pain4.wav" "sc_toysoldiers/fgrunt/pain4.wav"
+"fgrunt/pain5.wav" "sc_toysoldiers/fgrunt/pain5.wav"
+"fgrunt/gr_pain1.wav" "sc_toysoldiers/fgrunt/pain1.wav"
+"fgrunt/gr_pain2.wav" "sc_toysoldiers/fgrunt/pain2.wav"
+"fgrunt/gr_pain3.wav" "sc_toysoldiers/fgrunt/pain3.wav"
+"fgrunt/gr_pain4.wav" "sc_toysoldiers/fgrunt/pain4.wav"
+"fgrunt/gr_pain5.wav" "sc_toysoldiers/fgrunt/pain5.wav"
+
+// Death
+"fgrunt/death1.wav" "sc_toysoldiers/fgrunt/death1.wav"
+"fgrunt/death2.wav" "sc_toysoldiers/fgrunt/death2.wav"
+"fgrunt/death3.wav" "sc_toysoldiers/fgrunt/death3.wav"
+"fgrunt/death4.wav" "sc_toysoldiers/fgrunt/death1.wav"
+"fgrunt/death5.wav" "sc_toysoldiers/fgrunt/death2.wav"
+"fgrunt/death6.wav" "sc_toysoldiers/fgrunt/death3.wav"
+
+// QUESTION
+"!FG_QUESTION0" "sc_toysoldiers/fgrunt/seensquad.wav"
+"!FG_QUESTION1" "sc_toysoldiers/fgrunt/current.wav"
+"!FG_QUESTION2" "sc_toysoldiers/fgrunt/current.wav"
+"!FG_QUESTION3" "sc_toysoldiers/fgrunt/chicken.wav"
+"!FG_QUESTION4" "sc_toysoldiers/fgrunt/charge.wav"
+"!FG_QUESTION5" "sc_toysoldiers/fgrunt/bfeeling.wav"
+
+"!FG_QUEST0" "sc_toysoldiers/fgrunt/current.wav"
+"!FG_QUEST1" "sc_toysoldiers/fgrunt/bfeeling.wav"
+
+"!FG_ANSWER0" "sc_toysoldiers/fgrunt/current.wav"
+"!FG_ANSWER1" "sc_toysoldiers/fgrunt/bfeeling.wav"
+"!FG_ANSWER2" "sc_toysoldiers/fgrunt/bfeeling.wav"
+
+"!FG_GREN0" "sc_toysoldiers/fgrunt/incoming.wav"
+"!FG_GREN1" "sc_toysoldiers/fgrunt/grenade.wav"
+
+"!FG_ALERT0" "sc_toysoldiers/fgrunt/down.wav"
+"!FG_ALERT1" "sc_toysoldiers/fgrunt/bogies.wav"
+"!FG_ALERT2" "sc_toysoldiers/fgrunt/hostiles.wav"
+"!FG_ALERT3" "sc_toysoldiers/fgrunt/hostiles.wav"
+
+"!FG_MONSTER0" "sc_toysoldiers/fgrunt/hostiles.wav"
+"!FG_MONSTER1" "sc_toysoldiers/fgrunt/down.wav"
+
+"!FG_COVER0" "sc_toysoldiers/fgrunt/clear.wav"
+"!FG_COVER1" "sc_toysoldiers/fgrunt/cover.wav"
+"!FG_COVER2" "sc_toysoldiers/fgrunt/staydown.wav"
+
+"!FG_CLEAR0" "sc_toysoldiers/fgrunt/clear.wav"
+"!FG_CLEAR1" "sc_toysoldiers/fgrunt/area.wav"
+
+"!FG_THROW0" "sc_toysoldiers/fgrunt/fire.wav"
+"!FG_THROW1" "sc_toysoldiers/fgrunt/grenade.wav"
+
+"!FG_CHARGE0" "sc_toysoldiers/fgrunt/go.wav"
+"!FG_CHARGE1" "sc_toysoldiers/fgrunt/getsome.wav"
+"!FG_CHARGE2" "sc_toysoldiers/fgrunt/move.wav"
+
+"!FG_TAUNT0" "sc_toysoldiers/fgrunt/mister.wav"
+"!FG_TAUNT1" "sc_toysoldiers/fgrunt/nothing.wav"
+"!FG_TAUNT2" "sc_toysoldiers/fgrunt/getsome.wav"
+"!FG_TAUNT3" "sc_toysoldiers/fgrunt/corners.wav"
+"!FG_TAUNT4" "sc_toysoldiers/fgrunt/oneshot.wav"
+"!FG_TAUNT5" "sc_toysoldiers/fgrunt/backup.wav"
+
+"!FG_OK0" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_OK1" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_OK2" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_OK3" "sc_toysoldiers/fgrunt/siryessir.wav"
+"!FG_OK4" "sc_toysoldiers/fgrunt/siryessir.wav"
+"!FG_OK5" "sc_toysoldiers/fgrunt/siryessir.wav"
+"!FG_OK6" "sc_toysoldiers/fgrunt/command.wav"
+"!FG_OK7" "sc_toysoldiers/fgrunt/command.wav"
+"!FG_OK8" "sc_toysoldiers/fgrunt/command.wav"
+"!FG_OK9" "sc_toysoldiers/fgrunt/siryessir.wav"
+
+"!FG_SCARED0" "sc_toysoldiers/fgrunt/hearsome.wav"
+"!FG_SCARED1" "sc_toysoldiers/fgrunt/hear.wav"
+
+"!FG_WAIT0" "sc_toysoldiers/fgrunt/orders.wav"
+"!FG_WAIT1" "sc_toysoldiers/fgrunt/orders.wav"
+"!FG_WAIT2" "sc_toysoldiers/fgrunt/secure.wav"
+"!FG_WAIT3" "sc_toysoldiers/fgrunt/secure.wav"
+
+
+"!FG_KILL0" "sc_toysoldiers/fgrunt/oneshot.wav"
+"!FG_KILL1" "sc_toysoldiers/fgrunt/wantsome.wav"
+"!FG_KILL2" "sc_toysoldiers/fgrunt/wantsome.wav"
+"!FG_KILL3" "sc_toysoldiers/fgrunt/getsome.wav"
+"!FG_KILL4" "sc_toysoldiers/fgrunt/getsome.wav"
+"!FG_KILL5" "sc_toysoldiers/fgrunt/talking.wav"
+"!FG_KILL6" "sc_toysoldiers/fgrunt/talking.wav"
+"!FG_KILL7" "sc_toysoldiers/fgrunt/tag.wav"
+"!FG_KILL8" "sc_toysoldiers/fgrunt/tag.wav"
+"!FG_KILL9" "sc_toysoldiers/fgrunt/take.wav"
+
+"!FG_SHOT0" "sc_toysoldiers/fgrunt/watchit.wav"
+"!FG_SHOT1" "sc_toysoldiers/fgrunt/watchit.wav"
+"!FG_SHOT2" "sc_toysoldiers/fgrunt/watchfire.wav"
+"!FG_SHOT3" "sc_toysoldiers/fgrunt/watchfire.wav"
+"!FG_SHOT4" "sc_toysoldiers/fgrunt/watchit.wav"
+"!FG_SHOT5" "sc_toysoldiers/fgrunt/watchit.wav"
+
+"!FG_CHECK0" "sc_toysoldiers/fgrunt/check.wav"
+"!FG_CHECK1" "sc_toysoldiers/fgrunt/zone.wav"
+
+"!FG_IDLE0" "sc_toysoldiers/fgrunt/mission.wav"
+"!FG_IDLE1" "sc_toysoldiers/fgrunt/mission.wav"
+"!FG_IDLE2" "sc_toysoldiers/fgrunt/lost.wav"
+"!FG_IDLE3" "sc_toysoldiers/fgrunt/lost.wav"
+"!FG_IDLE4" "sc_toysoldiers/fgrunt/checkrecon.wav"
+"!FG_IDLE5" "sc_toysoldiers/fgrunt/checkrecon.wav"
+"!FG_IDLE6" "sc_toysoldiers/fgrunt/fubar.wav"
+"!FG_IDLE7" "sc_toysoldiers/fgrunt/fubar.wav"
+"!FG_IDLE8" "sc_toysoldiers/fgrunt/guard.wav"
+"!FG_IDLE9" "sc_toysoldiers/fgrunt/guard.wav"
+"!FG_IDLE10" "sc_toysoldiers/fgrunt/babysitting.wav"
+"!FG_IDLE11" "sc_toysoldiers/fgrunt/babysitting.wav"
+"!FG_IDLE12" "sc_toysoldiers/fgrunt/babysitting.wav"
+
+"!FG_ATTACK0" "sc_toysoldiers/fgrunt/flank.wav"
+"!FG_ATTACK1" "sc_toysoldiers/fgrunt/flank.wav"
+"!FG_ATTACK2" "sc_toysoldiers/fgrunt/wantsome.wav"
+"!FG_ATTACK3" "sc_toysoldiers/fgrunt/wantsome.wav"
+"!FG_ATTACK4" "sc_toysoldiers/fgrunt/recon.wav"
+"!FG_ATTACK5" "sc_toysoldiers/fgrunt/recon.wav"
+"!FG_ATTACK6" "sc_toysoldiers/fgrunt/freaks.wav"
+"!FG_ATTACK7" "sc_toysoldiers/fgrunt/freaks.wav"
+"!FG_ATTACK8" "sc_toysoldiers/fgrunt/rapidfire.wav"
+"!FG_ATTACK9" "sc_toysoldiers/fgrunt/rapidfire.wav"
+"!FG_ATTACK10" "sc_toysoldiers/fgrunt/suppressing.wav"
+"!FG_ATTACK11" "sc_toysoldiers/fgrunt/suppressing.wav"
+
+"!FG_MAD0" "sc_toysoldiers/fgrunt/ass.wav"
+"!FG_MAD1" "sc_toysoldiers/fgrunt/mister.wav"
+
+"!FG_HELLO0" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_HELLO1" "sc_toysoldiers/fgrunt/sir_01.wav"
+"!FG_HELLO2" "sc_toysoldiers/fgrunt/sir_01.wav"
+
+"!FG_WOUND0" "sc_toysoldiers/fgrunt/imhit.wav"
+"!FG_WOUND1" "sc_toysoldiers/fgrunt/fwound.wav"
+"!FG_WOUND2" "sc_toysoldiers/fgrunt/imhit.wav"
+
+"!FG_MORTAL0" "sc_toysoldiers/fgrunt/hitbad.wav"
+"!FG_MORTAL1" "sc_toysoldiers/fgrunt/critical.wav"
+"!FG_MORTAL2" "sc_toysoldiers/fgrunt/hitbad.wav"
+
+"!FG_CURE0" "sc_toysoldiers/fgrunt/needmedic.wav"
+"!FG_CURE1" "sc_toysoldiers/fgrunt/needmedic.wav"
+"!FG_CURE2" "sc_toysoldiers/fgrunt/hurt.wav"
+"!FG_CURE3" "sc_toysoldiers/fgrunt/hurt.wav"
+
+"!FG_MAKEIT" "sc_toysoldiers/fgrunt/makeit.wav"
+
+// TORCH GRUNT
+"!TG_OPEN0" "sc_toysoldiers/fgrunt/through.wav"
+"!TG_OPEN1" "sc_toysoldiers/fgrunt/through.wav"
+"!TG_OPEN2" "sc_toysoldiers/fgrunt/through.wav"
+
+"!TG_NOTOPEN0" "sc_toysoldiers/fgrunt/situations.wav"
+"!TG_NOTOPEN1" "sc_toysoldiers/fgrunt/situations.wav"
+"!TG_NOTOPEN2" "sc_toysoldiers/fgrunt/situations.wav"
+"!TG_NOTOPEN3" "sc_toysoldiers/fgrunt/situations.wav"
+
+// MEDIC GRUNT
+"!MG_HEAL0" "sc_toysoldiers/fgrunt/sting.wav"
+"!MG_HEAL1" "sc_toysoldiers/fgrunt/onepiece.wav"
+"!MG_HEAL2" "sc_toysoldiers/fgrunt/fwound.wav"
+
+"../sound/oghs/misc/cp02_03.mp3" "../sound/oghs/misc/cp02_03_fast.mp3"
+"items/suitchargeok1.wav" "kezaeiv/c_wep/misc/item_respawn.wav"

@@ -1,0 +1,133 @@
+@PointClass base(Targetname, Angles, RenderFields) size(-8 -8 -8, 8 8 8) = func_projectile_shooter : "Projectile shooter"
+[
+	spawnflags(flags) =
+	[
+		1 : "Timed mode" : 0
+		2 : "Timed mode: Start on" : 0
+	]
+	fire_timer(string) : "Time Between Fires" : "4"
+
+	model(studio) : "Projectile: Model" : ""
+	model_skin(integer) : "Projectile: Model Skin" : 0
+	model_body(integer) : "Projectile: Model Body" : 0
+	model_sequencename(string) : "Projectile: Model Sequence Name" : "idle"
+	model_sequence(integer) : "Projectile: Model Sequence Number (overrides name)" : 0
+	model_scale(string) : "Projectile: Model Scale" : "1"
+
+	sprite(sprite) : "Projectile: Sprite" : ""
+	sprite_framerate(string) : "Projectile: Sprite Framerate" : "10.0"
+	sprite_vp_type(choices) : "Projectile: Sprite Draw Type / Orientation" : 0 =
+	[
+		0: "Default"
+		3: "Parallel"
+		1: "Parallel Upright"
+		5: "Parallel Orientated"
+		2: "Facing Upright"
+		4: "Orientated"
+	]
+	sprite_scale(string) : "Projectile: Sprite Scale" : "1"
+
+	projectile_sound(sound) : "Projectile: Sound"
+	projectile_sound_volume(integer) : "Projectile: Sound Volume (10 = loudest)" : 10
+	projectile_sound_radius(choices) : "Projectile: Sound Radius" : 2 =
+	[
+		1 : "Small (~384)"
+		2 : "Medium (~768)"
+		3 : "Large (~1536)"
+		0 : "Everywhere"
+	]
+
+	projectile_minhullsize(string) : "Projectile: Min hull size (X Y Z)" : "0 0 0"
+	projectile_maxhullsize(string) : "Projectile: Max hull size (X Y Z)" : "0 0 0"
+	projectile_speed(integer) : "Projectile: Speed (units per second)" : 64
+	projectile_gravity(string) : "Projectile: Gravity" : "1"
+	projectile_drag(string) : "Projectile: Drag" : "1"
+	projectile_dmg(integer) : "Projectile: Damage" : 10
+	projectile_armordmg(integer) : "Projectile: Armor Damage" : 0
+	projectile_damagetype(choices) : "Projectile: Damage Type" : 0 =
+	[
+		0 : "GENERIC"
+		1 : "CRUSH"
+		2 : "BULLET"
+		4 : "SLASH"
+		8 : "BURN"
+		16 : "FREEZE"
+		32 : "FALL"
+		64 : "BLAST"
+		128 : "CLUB"
+		256 : "SHOCK"
+		512 : "SONIC"
+		1024 : "ENERGYBEAM"
+		16384 : "DROWN"
+		32768 : "PARALYSE"
+		65536 : "NERVEGAS"
+		131072 : "POISON"
+		262144 : "RADIATION"
+		524288 : "DROWNRECOVER"
+		1048576 : "CHEMICAL"
+		2097152 : "SLOWBURN"
+		4194304 : "SLOWFREEZE"
+	]
+
+	fire_target(target_source) : "On Fire: Trigger"
+	fire_triggerstate(choices) : "On Fire: Trigger State" : 2 =
+	[
+		0: "Off"
+		1: "On"
+		2: "Toggle"
+	]
+
+	fire_sprite(sprite) : "On Fire: Sprite" : ""
+	fire_sprite_framerate(string) : "On Fire: Sprite Framerate" : "10.0"
+	fire_sprite_vp_type(choices) : "On Fire: Sprite Draw Type / Orientation" : 0 =
+	[
+		0: "Default"
+		3: "Parallel"
+		1: "Parallel Upright"
+		5: "Parallel Orientated"
+		2: "Facing Upright"
+		4: "Orientated"
+	]
+	fire_sprite_scale(string) : "On Fire: Sprite Scale" : "1"
+
+	fire_sound(sound) : "On Fire: Sound"
+	fire_sound_volume(integer) : "On Fire: Sound Volume (10 = loudest)" : 10
+	fire_sound_radius(choices) : "On Fire: Sound Radius" : 2 =
+	[
+		1 : "Small (~384)"
+		2 : "Medium (~768)"
+		3 : "Large (~1536)"
+		0 : "Everywhere"
+	]
+
+	impact_target(target_source) : "On Impact: Trigger"
+	impact_triggerstate(choices) : "On Impact: Trigger State" : 2 =
+	[
+		0: "Off"
+		1: "On"
+		2: "Toggle"
+	]
+
+	impact_sprite(sprite) : "On Impact: Sprite" : ""
+	impact_sprite_framerate(string) : "On Impact: Sprite Framerate" : "10.0"
+	impact_sprite_vp_type(choices) : "On Impact: Sprite Draw Type / Orientation" : 0 =
+	[
+		0: "Default"
+		3: "Parallel"
+		1: "Parallel Upright"
+		5: "Parallel Orientated"
+		2: "Facing Upright"
+		4: "Orientated"
+	]
+	impact_sprite_scale(string) : "On Impact: Sprite Scale" : "1"
+
+	impact_sound(sound) : "On Impact: Sound"
+	impact_sound_volume(integer) : "On Impact: Sound Volume (10 = loudest)" : 10
+	impact_sound_radius(choices) : "On Impact: Sound Radius" : 2 =
+	[
+		1 : "Small (~384)"
+		2 : "Medium (~768)"
+		3 : "Large (~1536)"
+		0 : "Everywhere"
+	]
+]

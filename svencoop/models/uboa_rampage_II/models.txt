@@ -1,0 +1,6 @@
+"models/v_medkit.mdl" "models/uboa_rampage/v_medkit.mdl"
+"models/p_medkit.mdl" "models/uboa_rampage/p_medkit.mdl"
+"models/w_pmedkit.mdl" "models/uboa_rampage/w_pmedkit.mdl"
+
+"models/w_medkit.mdl" "models/uboa_rampage/ripoD.mdl"
+"models/w_battery.mdl" "models/uboa_rampage/akikan.mdl"
