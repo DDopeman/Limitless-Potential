@@ -1,5 +1,5 @@
 #include "HLSPClassicMode"
-#include "kezaeiv/kez_movement"
+#include "kezaeiv/autohop_playeruse"
 
 
 void MapInit()
