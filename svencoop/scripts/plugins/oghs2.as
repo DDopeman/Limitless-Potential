@@ -70,11 +70,14 @@ HookReturnCode PlayerSetAtributes( CBasePlayer@ pPlayer )
     if( pPlayer !is null )
     {
         pPlayer.pev.health = ( gpPlayerAtributes.health > 0 ? gpPlayerAtributes.health :
-							pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_health' ).GetFloat() );
-			pPlayer.pev.armortype = ( gpPlayerAtributes.armortype > 0 ? gpPlayerAtributes.armortype :
+                        pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_health' ).GetFloat() );
+        pPlayer.pev.armortype = ( gpPlayerAtributes.armortype > 0 ? gpPlayerAtributes.armortype :
                         pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_armortype' ).GetFloat() );
         pPlayer.pev.max_health = ( gpPlayerAtributes.max_health > 0 ? gpPlayerAtributes.max_health :
                         pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_max_health' ).GetFloat() );
+		if( pPlayer.pev.armorvalue > pPlayer.pev.armortype )
+        pPlayer.pev.armorvalue = ( gpPlayerAtributes.armorvalue > 0 ? gpPlayerAtributes.armorvalue :
+                        pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_armorvalue' ).GetFloat() );
 
         return HOOK_HANDLED;
     }

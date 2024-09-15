@@ -56,8 +56,8 @@ kof3a5
 kof3a6
 kof4a1
 kof4a2
-kof4a3
 rv_c2ac1_v6
+rv_c2ac2
 eshq01
 eshq02
 eshq03
@@ -460,3 +460,14 @@ hc2_s2
 hc2_s2a
 kz_tetris1
 ns_escape
+sc_toysoldiers_rb
+pizza_ya_san1
+pizza_ya_san2
+uboa_rampage_II
+og1a
+og1b
+og1c
+og2
+og3
+gungop4l_c07_a1
+gungop4l_c07_a2

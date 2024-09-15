@@ -27,6 +27,7 @@
 #include "weapon_kitchenknife"
 
 #include "monster_electro"
+#include "../point_checkpoint"
 
 const array<string> g_sinSoundList = {
     "uboa_rampage/bahhh.wav",
@@ -45,6 +46,8 @@ CPlayerClassUtil g_pcUtil;
 
 void MapInit() {
     
+	RegisterPointCheckPointEntity();
+	
     // プリキャッシュ
     for (uint i = 0; i < g_sinSoundList.length(); i++) {
         g_Game.PrecacheGeneric("sound/" + g_sinSoundList[i]);
