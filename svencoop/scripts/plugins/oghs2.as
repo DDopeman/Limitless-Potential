@@ -1,3 +1,5 @@
+#include '../mikk/as_utils'
+
 const float flVoteDelay = 10.0f;
 
 void PluginInit()
@@ -8,6 +10,7 @@ void PluginInit()
     g_Hooks.RegisterHook( Hooks::ASLP::Player::PlayerPostRevive, @PlayerPostRevive );
     g_Hooks.RegisterHook( Hooks::Player::ClientSay, @ClientSay );
     g_Hooks.RegisterHook( Hooks::Player::PlayerSpawn, @PlayerSpawn );
+    g_Hooks.RegisterHook( Hooks::Weapon::WeaponPrimaryAttack, @WeaponPrimaryAttack );
 }
 
 string VotingFor = String::EMPTY_STRING;
@@ -22,6 +25,27 @@ final class CPlayerAtributes
     float max_health = 1;
     float armorvalue = 0;
     float armortype = 0;
+}
+
+HookReturnCode WeaponPrimaryAttack( CBasePlayer@ pPlayer, CBasePlayerWeapon@ pWeapon )
+{
+    if( pPlayer is null || pWeapon is null || pWeapon.GetClassname() != "weapon_medkit" )
+        return HOOK_CONTINUE;
+
+    return RegenerateMedkit( pPlayer );
+}
+
+HookReturnCode RegenerateMedkit( CBasePlayer@ pPlayer )
+{
+    if( pPlayer is null )
+        return HOOK_CONTINUE;
+
+    CBasePlayerItem@ pMedkit = pPlayer.HasNamedPlayerItem( "weapon_medkit" );
+
+    if( pMedkit !is null )
+        pPlayer.m_rgAmmo( pMedkit.PrimaryAmmoIndex(), pMedkit.iMaxAmmo1() );
+
+    return HOOK_CONTINUE;
 }
 
 HookReturnCode PlayerAtributesChange( const string &in atr, int &in vl )
