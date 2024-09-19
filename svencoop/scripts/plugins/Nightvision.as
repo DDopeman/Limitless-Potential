@@ -4,7 +4,7 @@ dictionary g_PlayerNV;
 const Vector NV_COLOR( 0, 7, 12 );
 const int g_iRadius = 90;
 const int iDecay = 1;
-const int iLife	= 3;
+const int iLife	= 2;
 const int iBrightness = 10;
 
 void PluginInit()

@@ -1,0 +1,40 @@
+Half-Life Uplinked. MOD By: Ub-Oh
+
+Sven Co-op Conversion By: Mikk
+
+Testers
+AlexCorruptor
+noi
+
+Special Thanks to:
+Gaftherman
+Outerbeast
+Cubemath
+W00tguy
+
+And the creator Ub-Oh
+
+Uplinked Page
+
+Half-Life, Uplink, and more.
+
+Uplinked is a series of eleven maps (SC 14 + hl_c12 vote) that aims to be an extension to "Forget About Freeman!".
+Uplinked takes place between the original maps,
+hence it can be started from "Forget About Freeman!" or "Black Mesa Inbound" like the original game.
+The general premise is the same as the Half-Life demo, Uplink
+(tune the transmitter to gain access to Lambda Complex).
+Locations vary from Uplink or Half-Life Alpha inspired to completely original ones.
+Be aware that Uplinked has more puzzles compared to the original game,
+therefore might require more thinking.
+
+My main goal in creation of Uplinked was to offer a unique gameplay...
+experience while creating a chapter that is like it was part of the original game.
+
+LINKS
+
+Visit and support the original MOD playing it.
+https://www.moddb.com/mods/uplinked
+
+W00tGuy
+https://github.com/wootguy/bspguy
+

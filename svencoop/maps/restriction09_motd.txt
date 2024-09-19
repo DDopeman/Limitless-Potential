@@ -1,0 +1,31 @@
+RESTRICTION map suite
+
+-----------------------------
+Synopsis:
+
+You are a mercenary team. Your job is to manage the security of a private complex of the NPsociete, a gigantic corporation specialised in biotechnology.
+
+You have lost contact with your colleagues in the G Sector.
+
+
+Your mission :
+
+- Inspect the G sector and protect the NPsociete secrets
+
+Mapped by ReX and Sautreel
+
+Thanks goes to :
+
+Crampman
+D.G.F
+TrEmPlEr
+F-Boisier
+Seal Team 6
+Toul'Cher
+Trempler
+
+And all people who help us, of course !!
+
+Models are from the excellent game S.T.A.L.K.E.R and HL-LAB.ru, I assume it, I'm not a modeller ;)
+
+
