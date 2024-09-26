@@ -286,8 +286,6 @@ models/ins2/wpn/webley/p_webley.mdl
 models/ins2/wpn/webley/v_webley.mdl
 models/ins2/wpn/webley/w_webley.mdl
 models/kezaeiv/icons/mk_logo_grey.mdl
-models/player/DGF_p_spetsnaz/DGF_p_spetsnaz.bmp
-models/player/DGF_p_spetsnaz/DGF_p_spetsnaz.mdl
 models/sc_russian/barrel_burning.mdl
 models/sc_russian/barrel_metal.mdl
 models/sc_russian/bjork.mdl
