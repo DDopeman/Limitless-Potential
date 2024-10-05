@@ -1,10 +1,10 @@
 //Version 1.3
 CScheduledFunction@ g_pNVThinkFunc = null;
 dictionary g_PlayerNV;
-const Vector NV_COLOR( 0, 7, 12 );
+const Vector NV_COLOR( 0, 50, 50 );
 const int g_iRadius = 90;
-const int iDecay = 1;
-const int iLife	= 2;
+const int iDecay = 10;
+const int iLife	= 3;
 const int iBrightness = 10;
 
 void PluginInit()

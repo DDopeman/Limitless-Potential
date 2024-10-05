@@ -1,5 +1,3 @@
-#include '../mikk/as_utils'
-
 const float flVoteDelay = 10.0f;
 
 void PluginInit()
@@ -7,7 +5,7 @@ void PluginInit()
     g_Module.ScriptInfo.SetAuthor( "Mikk" );
     g_Module.ScriptInfo.SetContactInfo( "https://discord.gg/2ErNUQh6fE" );
 
-    g_Hooks.RegisterHook( Hooks::ASLP::Player::PlayerPostRevive, @PlayerPostRevive );
+    //g_Hooks.RegisterHook( Hooks::ASLP::Player::PlayerPostRevive, @PlayerPostRevive );
     g_Hooks.RegisterHook( Hooks::Player::ClientSay, @ClientSay );
     g_Hooks.RegisterHook( Hooks::Player::PlayerSpawn, @PlayerSpawn );
     g_Hooks.RegisterHook( Hooks::Weapon::WeaponPrimaryAttack, @WeaponPrimaryAttack );
@@ -95,13 +93,13 @@ HookReturnCode PlayerSetAtributes( CBasePlayer@ pPlayer )
     {
         pPlayer.pev.health = ( gpPlayerAtributes.health > 0 ? gpPlayerAtributes.health :
                         pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_health' ).GetFloat() );
-        pPlayer.pev.armortype = ( gpPlayerAtributes.armortype > 0 ? gpPlayerAtributes.armortype :
-                        pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_armortype' ).GetFloat() );
         pPlayer.pev.max_health = ( gpPlayerAtributes.max_health > 0 ? gpPlayerAtributes.max_health :
                         pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_max_health' ).GetFloat() );
-		if( pPlayer.pev.armorvalue > pPlayer.pev.armortype )
-        pPlayer.pev.armorvalue = ( gpPlayerAtributes.armorvalue > 0 ? gpPlayerAtributes.armorvalue :
-                        pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_armorvalue' ).GetFloat() );
+        pPlayer.pev.armortype = ( gpPlayerAtributes.armortype >= 0 ? gpPlayerAtributes.armortype :
+                        pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_armortype' ).GetFloat() );
+		if( pPlayer.pev.armorvalue >= pPlayer.pev.armortype )
+			pPlayer.pev.armorvalue = ( gpPlayerAtributes.armorvalue >= 0 ? gpPlayerAtributes.armorvalue :
+							pPlayer.GetCustomKeyvalues().GetKeyvalue( '$f_kalenep_armorvalue' ).GetFloat() );
 
         return HOOK_HANDLED;
     }
@@ -152,7 +150,7 @@ HookReturnCode ClientSay( SayParameters@ pParams )
     const CCommand@ args = pParams.GetArguments();
     CBasePlayer@ pPlayer = pParams.GetPlayer();
 
-    if( VotingFor != String::EMPTY_STRING && ( atoi( args[0] ) > 0 or atoi( args[0] ) == -1 ) )
+    if( VotingFor != String::EMPTY_STRING && g_Utility.IsStringInt( args[0] ) )
     {
         PlayerVote( pPlayer, atoi( args[0] ) );
 
@@ -170,7 +168,7 @@ HookReturnCode ClientSay( SayParameters@ pParams )
     {
         string atr = args[0].SubString( 1, args[0].Length() );
 
-        if( pPlayer !is null && g_PlayerFuncs.AdminLevel( pPlayer ) >= ADMIN_YES && ( atoi( args[1] ) > 0 or atoi( args[1] ) == -1 ) )
+        if( pPlayer !is null && g_PlayerFuncs.AdminLevel( pPlayer ) >= ADMIN_YES && g_Utility.IsStringInt( args[1] ) )
         {
             PlayerAtributesChange( atr, atoi( args[1] ) );
             g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "Admin "+string(pPlayer.pev.netname)+" Updated \""+atr+"\" to \""+args[1]+"\"\n" );

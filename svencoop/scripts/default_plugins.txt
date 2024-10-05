@@ -1,0 +1,136 @@
+//========================================
+//
+//	This file lists all plugins that are loaded by the game
+//	Plugins use Angelscript
+//
+//========================================
+"plugins"
+{
+	"plugin"
+	{
+		"name" "PlayerManagement"
+		"script" "admin/PlayerManagement"
+		"concommandns" "plrmgr"
+	}
+	
+"plugin"
+    {
+        "name" "AFBase"
+        "script" "AFBase"
+    }  
+	
+    "plugin"
+    {
+        "name" "AntiFlood"
+        "script" "AntiFlood"
+    }
+	
+
+//	"plugin"
+//	{
+//		"name" "EntityManager"
+//		"script" "EntityManager"
+//		"concommandns" "entmngr"
+//	}
+//
+//	"plugin"
+//	{
+//		"name" "Teleport"
+//		"script" "Teleport"
+//	}
+//
+//	"plugin"
+//	{
+//		"name" "Vox"
+//		"script" "Vox"
+//	}
+
+    "plugin"
+    {
+        "name" "AntiBlock"
+        "script" "AntiBlock"        
+    }
+
+	
+	"plugin"
+	{
+		"name" "oghs2"
+		"script" "oghs2"        
+	}
+	
+  //      "plugin"
+  //      {
+  //              "name" "Msg"
+ //               "script" "admin/Msg"
+ //               "concommandns" "msg"
+ //       }
+		
+  "plugin"
+  {
+    "name" "emotes"
+    "script" "emotes"
+  }
+
+	"plugin"
+	{
+		"name" "ForceSurvival"
+        "script" "ForceSurvival"
+    }
+
+  "plugin"
+  {
+    "name" "Speedometer"
+    "script" "speedometer"
+  }
+
+	"plugin"
+	{
+		"name" "ChatSounds"
+		"script" "ChatSounds"
+		"concommandns" "cs"
+	}
+
+	
+	"plugin"
+ 	{
+		"name" "Nightvision"
+		"script" "Nightvision"
+   }
+	
+    "plugin"
+    {
+        "name" "RockTheVote"
+        "script" "RockTheVote"
+        "concommandns" "rtv"
+    }
+	
+    "plugin"
+    {
+    "name" "SimpleGlow"
+    "script" "Zode/SimpleGlow"
+    }
+	
+    "plugin"
+    {
+    "name" "AFKManager"
+    "script" "mikk/AFKManager"
+    }
+    "plugin"
+    {
+    "name" "AntiClip"
+    "script" "mikk/AntiClip"
+    }
+    "plugin"
+    {
+    "name" "SurvivalRespawnAll"
+    "script" "mikk/SurvivalRespawnAll"
+    }
+    "plugin"
+    {
+    "name" "svenfixes"
+    "script" "mikk/svenfixes"
+    }
+
+	
+}
+

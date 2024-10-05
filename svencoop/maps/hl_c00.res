@@ -1,6 +1,10 @@
 // Created with resguy v9 (September 2018)
 // https://github.com/wootguy/resguy
 
+models/player/babaalien_kezaeiv/babaalien_kezaeiv.bmp
+models/player/babaalien_kezaeiv/babaalien_kezaeiv.mdl
+models/player/babarobo_kezaeiv/babarobo_kezaeiv.bmp
+models/player/babarobo_kezaeiv/babarobo_kezaeiv.mdl
 models/player/blackhelmet/blackhelmet.bmp
 models/player/blackhelmet/blackhelmet.mdl
 models/player/braixen/braixen.bmp
@@ -9,6 +13,10 @@ models/player/cheems/cheems.bmp
 models/player/cheems/cheems.mdl
 models/player/colette_cyan&white/colette_cyan&white.bmp
 models/player/colette_cyan&white/colette_cyan&white.mdl
+models/player/hololive_fubuki/hololive_fubuki.bmp
+models/player/hololive_fubuki/hololive_fubuki.mdl
+models/player/iiotoko/iiotoko.bmp
+models/player/iiotoko/iiotoko.mdl
 models/player/lucario_p_mega/lucario_p_mega.bmp
 models/player/lucario_p_mega/lucario_p_mega.mdl
 models/player/lucario_p_mega2/lucario_p_mega2.bmp
@@ -17,6 +25,8 @@ models/player/lycanroc/lycanroc.bmp
 models/player/lycanroc/lycanroc.mdl
 models/player/petdrone/petdrone.mdl
 models/player/shockroach_kez/shockroach_kez.mdl
+models/player/spenguin/spenguin.bmp
+models/player/spenguin/spenguin.mdl
 models/player/sw_cinderace_c/sw_cinderace_c.bmp
 models/player/sw_cinderace_c/sw_cinderace_c.mdl
 models/player/weaponbox/weaponbox.mdl
@@ -59,6 +69,7 @@ sound/oghs/cs06/ayaya.wav
 sound/oghs/cs06/aynob.wav
 sound/oghs/cs06/ayuda.wav
 sound/oghs/cs06/ayuda2.wav
+sound/oghs/cs06/ayuda3.wav
 sound/oghs/cs06/badbone.wav
 sound/oghs/cs06/banana.wav
 sound/oghs/cs06/barney.wav
