@@ -283,14 +283,14 @@ namespace PlayerUseSpawn
 		
 			if( pPlayer.m_afButtonLast & IN_USE != 0 || pPlayer.m_afButtonPressed & IN_USE != 0  )
 			{
-				CBaseEntity@ pSpawnPoint = null;
+				pPlayer.GetObserver().RemoveDeadBody(); //Remove the dead player body
+				
+				g_PlayerFuncs.RespawnPlayer( pPlayer, false, true );
 
-				while( g_PlayerFuncs.IsSpawnPointValid( ( @pSpawnPoint = g_EntityFuncs.FindEntityByClassname( pSpawnPoint, "info_player_*" ) ), pPlayer ) )
-				{
-					pPlayer.Revive();
-					g_PlayerFuncs.RespawnPlayer( pPlayer );
-					ckvSpawns.SetKeyvalue("$i_gs_spawns", kvSpawnIs - 1 );
-				}
+				// Must include https://github.com/Outerbeast/Entities-and-Gamemodes/blob/master/respawndead_keepweapons.as
+				RESPAWNDEAD_KEEPWEAPONS::ReEquipCollected( pPlayer, true );
+				
+				ckvSpawns.SetKeyvalue("$i_gs_spawns", kvSpawnIs - 1 );
 			}
 		}
 		return HOOK_CONTINUE;

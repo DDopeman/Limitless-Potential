@@ -1,0 +1,5 @@
+4	// number of sprites
+crosshair			640		portalgun/portalgunxhair	0 	0	100	100
+autoaim				320 	crosshairs					48	72	24	24
+weapon				640 	portalgun/portalgunhud		2	2	170	45
+weapon_s			640 	portalgun/portalgunhud		2	49	170	45

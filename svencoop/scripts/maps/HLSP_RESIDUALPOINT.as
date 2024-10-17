@@ -11,10 +11,12 @@
 #include "mikk/entities/item_airbubble"
 #include "mikk/entities/tram_ride_train"
 
-#include "point_checkpoint"
+#include "residualpoint/game_save"
 #include "residualpoint/trigger_once_mp"
 #include "residualpoint/weapon_teleporter"
 #include "residualpoint/monster_zombie_hev"
+
+#include "gaftherman/portal/weapon_portalgun"
 
 // Modify code bellow for Server operator's choices. -Mikk
 bool blSpawnNpcRequired = false;
@@ -87,7 +89,7 @@ void MapInit()
 	if( IsSurvivalEnabled and blWeWantSurvival )
 	{
 		g_EngineFuncs.CVarSetFloat( "mp_survival_starton", 1 );
-		RegisterPointCheckPointEntity();
+		RegisterGameSave();
 	}
 	
 	// Just in case...
@@ -102,6 +104,9 @@ void MapInit()
 		g_Game.PrecacheModel( "sprites/laserbeam.spr" );
 		g_Game.PrecacheGeneric( "sprites/laserbeam.spr" );
 	}
+	
+	
+	RegisterPortalGun();
 }
 
 void MapStart()

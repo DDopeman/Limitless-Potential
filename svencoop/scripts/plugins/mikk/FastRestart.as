@@ -111,18 +111,7 @@ void Think()
         }
         catch
         {
-			g_Scheduler.SetTimeOut( "DelayedChange", pJson[ "ReloadTime", 1.5 ] );
+            g_EngineFuncs.ChangeLevel( string( g_Engine.mapname ) );
         }
     }
-	
-}
-
-void DelayedChange()
-{
-            
-			
-			
-			
-			
-g_EngineFuncs.ChangeLevel( string( g_Engine.mapname ) );
 }

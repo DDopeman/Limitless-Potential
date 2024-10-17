@@ -1,7 +1,7 @@
 {
     "ShouldWaitMedic": true,
     "SearchRadius": 1024,
-	  "ReloadTime": 5,
+	"ReloadTime": 3,
     "blacklist maps":
     [
         "hl_c00",
