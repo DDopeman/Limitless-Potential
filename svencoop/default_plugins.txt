@@ -12,12 +12,6 @@
         "script" "AFBase"
     }  
 
-    "plugin"
-    {
-        "name" "RCBot"
-        "script" "BotManager/BotManager"
-        "concommandns" "rcbot"
-    }
 
     "plugin"
     {
@@ -31,12 +25,6 @@
         "script" "antidos"
     }
 
-//        "plugin"
-//        {
-//               "name" "chatbridge"
-//                "script" "chatbridge"
-//        }
-//
         "plugin"
         {
                 "name" "Msg"
@@ -44,11 +32,6 @@
                 "concommandns" "msg"
         }
 
-        "plugin"
-        {
-                "name" "randomassplugin"
-                "script" "randomassplugin"
-        }
 
     "plugin"
     {
@@ -65,25 +48,6 @@
 	}
 
 
-
-//	"plugin"
-//	{
-//		"name" "EntityManager"
-//		"script" "EntityManager"
-//		"concommandns" "entmngr"
-//	}
-//
-//	"plugin"
-//	{
-//		"name" "Teleport"
-//		"script" "Teleport"
-//	}
-//
-//	"plugin"
-//	{
-//		"name" "Vox"
-//		"script" "Vox"
-//	}
 	"plugin"
     {
 		"name" "AntiBlock"
@@ -91,15 +55,11 @@
         "concommandns" "antiblock"
 	}
 
-
-
     "plugin"
     {
             "name" "ForceSurvival"
             "script" "ForceSurvival"
     }
-
-
 
     "plugin"
 	{
@@ -137,6 +97,24 @@
         "script" "ChatSounds"
         "concommandns" "cs"
     }
+
+
+    "plugin"
+    {
+    "name" "AFKManager"
+    "script" "mikk/AFKManager"
+    }
+    "plugin"
+    {
+    "name" "SurvivalRespawnAll"
+    "script" "mikk/SurvivalRespawnAll"
+    }
+    "plugin"
+    {
+    "name" "svenfixes"
+    "script" "mikk/svenfixes"
+    }
+
 
 }
 
