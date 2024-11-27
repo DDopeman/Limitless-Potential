@@ -1,7 +1,6 @@
 #include "kezaeiv/w00tguy/v9/weapon_custom"
 #include "HLSPClassicMode"
 #include "point_checkpoint"
-#include "kezaeiv/autohop_playeruse"
 
 
 void MapInit()
@@ -10,7 +9,6 @@ void MapInit()
 		ClassicModeMapInit();
 		RegisterPointCheckPointEntity();
 		g_EngineFuncs.CVarSetFloat( "mp_classicmode", 1 );
-		RegisterAutoBhopping();
 		
 		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep5/weapon_amr.txt');
 		g_Game.PrecacheGeneric('sprites/kezaeiv/c_wep5/weapon_anvil.txt');

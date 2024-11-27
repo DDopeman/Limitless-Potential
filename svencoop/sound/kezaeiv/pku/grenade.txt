@@ -1,0 +1,1 @@
+"items/gunpickup2.wav" "kezaeiv/c_wep/ammo/grenades.wav"

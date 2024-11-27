@@ -1,0 +1,5 @@
+4
+weapon				640 	kezaeiv/kweps_v3_off	174	237	170	45
+weapon_s			640 	kezaeiv/kweps_v3_on		174	237	170	45
+ammo				640		kezaeiv/kezammo_v2		48	24	24	24
+crosshair			640		kezaeiv/kezcrosshairs	262	106	52	52

@@ -86,7 +86,8 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
-sound/kezaeiv/misc/cp_nod_reinf.mp3
+sound/../sound/kezaeiv/misc/cp_nod_reinf.mp3
+sound/kezaeiv/misc/teleport.wav
 sound/kezaeiv/music/rollermobster.ogg
 sound/kezaeiv/music/rollermobsterintro.ogg
 sound/kezaeiv/pku/superarmor.wav
@@ -122,3 +123,5 @@ sound/oghs/cs06/slip.wav
 sound/oghs/cs06/tom2.wav
 sound/oghs/cs06/wrong.wav
 sound/oghs/cs06/zzz.wav
+sound/oghs/misc/cp02_03.mp3
+sprites/kezaeiv/prtl/kz_exit1.spr

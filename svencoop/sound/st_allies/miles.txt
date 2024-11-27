@@ -1,0 +1,143 @@
+"weapons/pl_gun3.wav" "st_mission/weapons/fn_fire1.wav"
+
+"barney/ba_pain1.wav" "st_allies/miles/pain1.wav
+"barney/ba_pain2.wav" "st_allies/miles/pain2.wav
+"barney/ba_pain3.wav" "st_allies/miles/pain3.wav
+
+"barney/ba_die1.wav" "st_allies/miles/death1.wav
+"barney/ba_die2.wav" "st_allies/miles/death2.wav
+"barney/ba_die3.wav" "st_allies/miles/death3.wav
+
+"!BA_OK0" "st_allies/miles/ml_ok1.wav"
+"!BA_OK1" "st_allies/miles/ml_ok2.wav"
+"!BA_OK2" "st_allies/miles/ml_ok3.wav"
+"!BA_OK3" "st_allies/miles/ml_ok4.wav"
+"!BA_OK4" "st_allies/miles/ml_ok5.wav"
+"!BA_OK5" "st_allies/miles/ml_ok6.wav"
+"!BA_OK6" "st_allies/miles/ml_ok7.wav"
+
+"!BA_WAIT0" "st_allies/miles/ml_wait1.wav"
+"!BA_WAIT1" "st_allies/miles/ml_wait2.wav"
+"!BA_WAIT2" "st_allies/miles/ml_wait3.wav"
+"!BA_WAIT3" "st_allies/miles/ml_wait4.wav"
+"!BA_WAIT4" "st_allies/miles/ml_wait5.wav"
+"!BA_WAIT5" "st_allies/miles/ml_wait6.wav"
+
+"!BA_HELLO0" "st_allies/miles/ml_hello1.wav"
+"!BA_HELLO1" "st_allies/miles/ml_hello2.wav"
+"!BA_HELLO2" "st_allies/miles/ml_hello3.wav"
+"!BA_HELLO3" "st_allies/miles/ml_hello4.wav"
+"!BA_HELLO4" "st_allies/miles/ml_hello5.wav"
+"!BA_HELLO5" "st_allies/miles/ml_hello6.wav"
+"!BA_HELLO6" "st_allies/miles/ml_hello7.wav"
+
+"!BA_QUESTION0" "st_allies/miles/ml_quest1.wav"
+"!BA_QUESTION1" "st_allies/miles/ml_quest2.wav"
+"!BA_QUESTION2" "st_allies/miles/ml_quest3.wav"
+"!BA_QUESTION3" "st_allies/miles/ml_quest4.wav"
+"!BA_QUESTION4" "st_allies/miles/ml_quest5.wav"
+"!BA_QUESTION5" "st_allies/miles/ml_quest6.wav"
+"!BA_QUESTION6" "st_allies/miles/ml_quest7.wav"
+"!BA_QUESTION7" "st_allies/miles/ml_quest8.wav"
+"!BA_QUESTION8" "st_allies/miles/ml_quest9.wav"
+"!BA_QUESTION9" "st_allies/miles/ml_quest10.wav"
+"!BA_QUESTION10" "st_allies/miles/ml_quest11.wav"
+"!BA_QUESTION11" "st_allies/miles/ml_quest12.wav"
+"!BA_QUESTION12" "st_allies/miles/ml_quest13.wav"
+"!BA_QUESTION13" "st_allies/miles/ml_quest14.wav"
+"!BA_QUESTION14" "st_allies/miles/ml_quest15.wav"
+
+"!BA_ANSWER0" "st_allies/miles/ml_answer1.wav"
+"!BA_ANSWER1" "st_allies/miles/ml_answer2.wav"
+"!BA_ANSWER2" "st_allies/miles/ml_answer3.wav"
+"!BA_ANSWER3" "st_allies/miles/ml_answer4.wav"
+"!BA_ANSWER4" "st_allies/miles/ml_answer5.wav"
+"!BA_ANSWER5" "st_allies/miles/ml_answer6.wav"
+"!BA_ANSWER6" "st_allies/miles/ml_answer7.wav"
+"!BA_ANSWER7" "st_allies/miles/ml_answer8.wav"
+"!BA_ANSWER8" "st_allies/miles/ml_answer9.wav"
+"!BA_ANSWER9" "st_allies/miles/ml_answer10.wav"
+"!BA_ANSWER10" "st_allies/miles/ml_answer11.wav"
+"!BA_ANSWER11" "st_allies/miles/ml_answer12.wav"
+"!BA_ANSWER12" "st_allies/miles/ml_answer13.wav"
+"!BA_ANSWER13" "st_allies/miles/ml_answer14.wav"
+"!BA_ANSWER14" "st_allies/miles/ml_answer15.wav"
+"!BA_ANSWER15" "st_allies/miles/ml_answer16.wav"
+"!BA_ANSWER16" "st_allies/miles/ml_answer17.wav"
+"!BA_ANSWER17" "st_allies/miles/ml_answer18.wav"
+"!BA_ANSWER18" "st_allies/miles/ml_answer19.wav"
+"!BA_ANSWER19" "st_allies/miles/ml_answer20.wav"
+"!BA_ANSWER20" "st_allies/miles/ml_answer21.wav"
+"!BA_ANSWER21" "st_allies/miles/ml_answer22.wav"
+
+"!BA_STARE0" "st_allies/miles/ml_stare1.wav"
+"!BA_STARE1" "st_allies/miles/ml_stare2.wav"
+"!BA_STARE2" "st_allies/miles/ml_stare3.wav"
+"!BA_STARE3" "st_allies/miles/ml_stare4.wav"
+
+"!BA_IDLE0" "st_allies/miles/ml_idle1.wav"
+"!BA_IDLE1" "st_allies/miles/ml_idle2.wav"
+"!BA_IDLE2" "st_allies/miles/ml_idle3.wav"
+"!BA_IDLE3" "st_allies/miles/ml_idle4.wav"
+"!BA_IDLE4" "st_allies/miles/ml_idle5.wav"
+"!BA_IDLE5" "st_allies/miles/ml_idle6.wav"
+"!BA_IDLE6" "st_allies/miles/ml_idle7.wav"
+"!BA_IDLE7" "st_allies/miles/ml_idle8.wav"
+"!BA_IDLE8" "st_allies/miles/ml_idle9.wav"
+"!BA_IDLE9" "st_allies/miles/ml_idle10.wav"
+"!BA_IDLE10" "st_allies/miles/ml_idle11.wav"
+
+"!BA_ATTACK0" "st_allies/miles/ml_attack1.wav"(e50)
+"!BA_ATTACK1" "st_allies/miles/ml_attack2.wav"(s50)
+"!BA_ATTACK2" "st_allies/miles/ml_attack3.wav"
+"!BA_ATTACK3" "st_allies/miles/ml_attack4.wav"
+"!BA_ATTACK4" "st_allies/miles/ml_attack5.wav"
+"!BA_ATTACK5" "st_allies/miles/ml_attack6.wav"
+
+"!BA_HEAR0" "st_allies/miles/ml_hear1.wav"
+"!BA_HEAR1" "st_allies/miles/ml_hear2.wav"
+"!BA_HEAR2" "st_allies/miles/ml_hear3.wav"
+
+"!BA_SMELL0" "st_allies/miles/ml_smell1.wav"
+"!BA_SMELL1" "st_allies/miles/ml_smell2.wav"
+"!BA_SMELL2" "st_allies/miles/ml_smell3.wav"
+
+"!BA_CUREA" "st_allies/miles/ml_cure-a.wav"
+"!BA_CUREB" "st_allies/miles/ml_cure-b.wav"
+"!BA_CUREC" "st_allies/miles/ml_cure-c.wav"
+
+"!BA_SCARED0" "st_allies/miles/ml_scared1.wav"
+"!BA_SCARED1" "st_allies/miles/ml_scared2.wav"
+
+"!BA_WOUND0" "st_allies/miles/ml_wound1.wav"
+"!BA_WOUND1" "st_allies/miles/ml_wound2.wav"
+"!BA_MORTAL0" "st_allies/miles/ml_mortal1.wav"
+
+
+"!BA_SHOT0" "st_allies/miles/ml_shot1.wav"
+"!BA_SHOT1" "st_allies/miles/ml_shot2.wav"
+"!BA_SHOT2" "st_allies/miles/ml_shot3.wav"
+"!BA_SHOT3" "st_allies/miles/ml_shot4.wav"
+"!BA_SHOT4" "st_allies/miles/ml_shot5.wav"
+"!BA_SHOT5" "st_allies/miles/ml_shot6.wav"(e80)
+
+"!BA_MAD0" "st_allies/miles/ml_mad1.wav"
+"!BA_MAD1" "st_allies/miles/ml_mad2.wav"
+"!BA_MAD2" "st_allies/miles/ml_mad3.wav"
+"!BA_MAD3" "st_allies/miles/ml_mad4.wav"
+"!BA_MAD4" "st_allies/miles/ml_mad5.wav"
+"!BA_MAD5" "st_allies/miles/ml_mad6.wav"
+"!BA_MAD6" "st_allies/miles/ml_mad7.wav"
+
+"!BA_KILL0" "st_allies/miles/ml_kill1.wav"
+"!BA_KILL1" "st_allies/miles/ml_kill2.wav"
+"!BA_KILL2" "st_allies/miles/ml_kill3.wav"
+"!BA_KILL3" "st_allies/miles/ml_kill4.wav"
+"!BA_KILL4" "st_allies/miles/ml_kill5.wav"
+"!BA_KILL5" "st_allies/miles/ml_kill6.wav"
+"!BA_KILL6" "st_allies/miles/ml_kill7.wav"
+
+"!BA_POK0" "st_allies/miles/ml_pok1.wav"
+"!BA_POK1" "st_allies/miles/ml_pok2.wav"
+"!BA_POK2" "st_allies/miles/ml_pok3.wav"
+"!BA_POK3" "st_allies/miles/ml_pok4.wav"

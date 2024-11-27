@@ -1,0 +1,14 @@
+"gonome/gonome_melee1.wav" "custom_monsters/glitcherswift/gs_melee1.wav"
+"gonome/gonome_melee2.wav" "custom_monsters/glitcherswift/gs_melee2.wav"
+"gonome/gonome_death2.wav" "custom_monsters/glitcherswift/gs_die1.wav"
+"gonome/gonome_death3.wav" "custom_monsters/glitcherswift/gs_die2.wav"
+"gonome/gonome_death4.wav" "custom_monsters/glitcherswift/gs_die3.wav"
+"gonome/gonome_idle1.wav"  "custom_monsters/glitcherswift/gs_idle1.wav"
+"gonome/gonome_idle2.wav"  "custom_monsters/glitcherswift/gs_idle2.wav"
+"gonome/gonome_idle3.wav"  "custom_monsters/glitcherswift/gs_idle3.wav"
+"gonome/gonome_pain1.wav"  "custom_monsters/glitcherswift/gs_pain1.wav"
+"gonome/gonome_pain2.wav"  "custom_monsters/glitcherswift/gs_pain2.wav"
+"gonome/gonome_pain3.wav"  "custom_monsters/glitcherswift/gs_pain3.wav"
+"gonome/gonome_pain4.wav"  "custom_monsters/glitcherswift/gs_pain4.wav"
+
+

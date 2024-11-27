@@ -69,7 +69,7 @@ sound/oghs/cs06/ayaya.wav
 sound/oghs/cs06/aynob.wav
 sound/oghs/cs06/ayuda.wav
 sound/oghs/cs06/ayuda2.wav
-sound/oghs/cs06/ayuda3.wav
+sound/oghs/cs06/ayuda3b.wav
 sound/oghs/cs06/badbone.wav
 sound/oghs/cs06/banana.wav
 sound/oghs/cs06/barney.wav
@@ -107,6 +107,7 @@ sound/oghs/cs06/clr.wav
 sound/oghs/cs06/coletemurio.wav
 sound/oghs/cs06/coleterage2.wav
 sound/oghs/cs06/comemelculo.wav
+sound/oghs/cs06/comenten.wav
 sound/oghs/cs06/corre.wav
 sound/oghs/cs06/corre2.wav
 sound/oghs/cs06/correct.wav
@@ -118,6 +119,7 @@ sound/oghs/cs06/csm.wav
 sound/oghs/cs06/cum.wav
 sound/oghs/cs06/curame.wav
 sound/oghs/cs06/cyka.wav
+sound/oghs/cs06/death.wav
 sound/oghs/cs06/dementia.wav
 sound/oghs/cs06/denied.wav
 sound/oghs/cs06/dfac.wav
@@ -159,6 +161,7 @@ sound/oghs/cs06/freebird.wav
 sound/oghs/cs06/frenzy.wav
 sound/oghs/cs06/fuckhim.wav
 sound/oghs/cs06/gameover.wav
+sound/oghs/cs06/gane.wav
 sound/oghs/cs06/gasgasgas.wav
 sound/oghs/cs06/gay.wav
 sound/oghs/cs06/gay2.wav
@@ -190,6 +193,7 @@ sound/oghs/cs06/humiliation.wav
 sound/oghs/cs06/hype.wav
 sound/oghs/cs06/imbeciles.wav
 sound/oghs/cs06/imgonna.wav
+sound/oghs/cs06/imkillingyou.wav
 sound/oghs/cs06/impressive.wav
 sound/oghs/cs06/inc.wav
 sound/oghs/cs06/inc3.wav
@@ -199,6 +203,7 @@ sound/oghs/cs06/irn.wav
 sound/oghs/cs06/itried.wav
 sound/oghs/cs06/jackiechan.wav
 sound/oghs/cs06/jajaja.wav
+sound/oghs/cs06/jajaxd.wav
 sound/oghs/cs06/juega.wav
 sound/oghs/cs06/jumpscare.wav
 sound/oghs/cs06/juyjuyjuy.wav
@@ -236,6 +241,7 @@ sound/oghs/cs06/memori.wav
 sound/oghs/cs06/metacomiendo.wav
 sound/oghs/cs06/mevoy.wav
 sound/oghs/cs06/mevoyb.wav
+sound/oghs/cs06/mierda.wav
 sound/oghs/cs06/mihuevo.wav
 sound/oghs/cs06/miralo.wav
 sound/oghs/cs06/mire.wav
@@ -263,6 +269,7 @@ sound/oghs/cs06/nomeatrapas.wav
 sound/oghs/cs06/nooo.wav
 sound/oghs/cs06/nuclearmissionb.wav
 sound/oghs/cs06/nya.wav
+sound/oghs/cs06/oemrd.wav
 sound/oghs/cs06/oguo.wav
 sound/oghs/cs06/oh.wav
 sound/oghs/cs06/ohfuck.wav
@@ -270,6 +277,7 @@ sound/oghs/cs06/ohno.wav
 sound/oghs/cs06/okletsgo.wav
 sound/oghs/cs06/ola.wav
 sound/oghs/cs06/omg.wav
+sound/oghs/cs06/omg2.wav
 sound/oghs/cs06/omnom.wav
 sound/oghs/cs06/onichan.wav
 sound/oghs/cs06/oogh.wav
@@ -312,6 +320,7 @@ sound/oghs/cs06/restart.wav
 sound/oghs/cs06/retarded.wav
 sound/oghs/cs06/revb.wav
 sound/oghs/cs06/revive.wav
+sound/oghs/cs06/revive2.wav
 sound/oghs/cs06/riko.wav
 sound/oghs/cs06/rip.wav
 sound/oghs/cs06/run.wav
@@ -324,7 +333,6 @@ sound/oghs/cs06/scaped.wav
 sound/oghs/cs06/scream.wav
 sound/oghs/cs06/scream2.wav
 sound/oghs/cs06/sex.wav
-sound/oghs/cs06/shock.wav
 sound/oghs/cs06/shockb.wav
 sound/oghs/cs06/si.wav
 sound/oghs/cs06/sick.wav

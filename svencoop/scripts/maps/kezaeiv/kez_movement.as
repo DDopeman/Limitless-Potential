@@ -4,8 +4,8 @@
 //(found out later that another user called Dhalucario made it into a plugin aswell)
 //https://gitlab.com/dhalucario/dhalucario_svencoop_as/-/blob/master/svencoop/scripts/plugins/Autohop.as
 //altered from plugin to map script by Gaftherman
-//Used for my (KEZAEIV) custom campaign (keztris) wich has altered gravity,
-//for that reason it makes you jump higher, also it makes unusable the long jump module
+//Used for my (KEZAEIV) custom map projects,
+//also it makes unusable the long jump module
 
 
 void RegisterAutoBhopping()
@@ -45,7 +45,7 @@ HookReturnCode PlayerPreThink( CBasePlayer@ pPlayer, uint& out uiFlags )
 
 
 		Vector velocity = pPlayer.pev.velocity;
-		velocity.z += sqrt(2.5 * 625 * 45.0f);
+		velocity.z += sqrt(2 * 800 * 45.0f);
 		pPlayer.pev.velocity = velocity;
 
 		pPlayer.pev.gaitsequence = 6;

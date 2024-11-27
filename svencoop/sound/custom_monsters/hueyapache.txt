@@ -1,0 +1,2 @@
+"turret/tu_fire1.wav" "ambience/rifle2.wav"
+"apache/ap_rotor2.wav" "st_mission/huey_rotors.wav"

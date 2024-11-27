@@ -1,0 +1,46 @@
+//Haunted Souls Model Replacements Made By Blizz753
+
+
+//Weapons
+
+"models/hlclassic/v_medkit.mdl" "models/st_mission1/weapons_classic/v_medkit.mdl"
+"models/hlclassic/v_crowbar.mdl" "models/st_mission1/weapons_classic/v_crowbar.mdl"
+"models/hlclassic/v_9mmhandgun.mdl" "models/st_mission1/weapons_classic/v_9mmhandgun.mdl"
+"models/hlclassic/v_357.mdl" "models/st_mission1/weapons_classic/v_357.mdl"
+"models/hlclassic/v_9mmar.mdl" "models/st_mission1/weapons_classic/v_9mmar.mdl"
+"models/hlclassic/v_shotgun.mdl" "models/st_mission1/weapons_classic/v_shotgun.mdl"
+"models/hlclassic/v_crossbow.mdl" "models/st_mission1/weapons_classic/v_crossbow.mdl"
+"models/hlclassic/v_rpg.mdl" "models/st_mission1/weapons_classic/v_rpg.mdl"
+"models/hlclassic/v_gauss.mdl" "models/st_mission1/weapons_classic/v_gauss.mdl"
+"models/hlclassic/v_egon.mdl" "models/st_mission1/weapons_classic/v_egon.mdl"
+"models/hlclassic/v_grenade.mdl" "models/st_mission1/weapons_classic/v_grenade.mdl"
+"models/hlclassic/v_satchel.mdl" "models/st_mission1/weapons_classic/v_satchel.mdl"
+"models/hlclassic/v_satchel_radio.mdl" "models/st_mission1/weapons_classic/v_satchel_radio.mdl"
+"models/hlclassic/v_tripmine.mdl" "models/st_mission1/weapons_classic/v_tripmine.mdl"
+"models/hlclassic/v_squeak.mdl" "models/st_mission1/weapons_classic/v_squeak.mdl"
+
+"models/v_saw.mdl" "models/st_mission1/weapons_classic/v_saw.mdl"
+"models/v_spore_launcher.mdl" "models/st_mission1/weapons_classic/v_biolauncher.mdl"
+"models/v_m40a1.mdl" "models/st_mission1/weapons_classic/v_m40a1.mdl"
+"models/v_uzi.mdl" "models/st_mission1/weapons_classic/v_uzi.mdl"
+"models/v_displacer.mdl" "models/st_mission1/weapons_classic/v_displacer.mdl"
+"models/v_pipe_wrench.mdl" "models/st_mission1/weapons_classic/v_pipe_wrench.mdl"
+"models/v_desert_eagle.mdl" "models/st_mission1/weapons_classic/v_eagle.mdl"
+
+"models/w_spore_launcher.mdl" "models/st_mission1/w_isotopebox_bio.mdl"
+"models/p_spore_launcher.mdl" "models/st_mission1/weapons_classic/p_biolauncher.mdl"
+"models/spore.mdl" "models/st_mission1/biobomb.mdl"
+
+
+//Overlord Wizard's Grunt
+
+"models/agrunt.mdl" "models/custom_monsters/agrunt/agrunt_demon.mdl"
+"models/hlclassic/agrunt.mdl" "models/custom_monsters/agrunt/agrunt_demon.mdl"
+
+
+//Long Jump
+
+"models/w_longjump.mdl" "models/st_mission1/w_longjump.mdl"
+
+//Titan Skull Master
+"models/nihilanth.mdl" "models/custom_monsters/titans/titanskull.mdl"

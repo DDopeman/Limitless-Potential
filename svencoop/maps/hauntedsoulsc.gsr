@@ -1,0 +1,24 @@
+//Haunted Souls Sound Replacements by Blizz753
+
+//WEAPONS
+
+// SPAS-12
+
+"hlclassic/weapons/sbarrel1.wav" "st_mission/weapons/spas12/sbarrel1.wav"
+"hlclassic/weapons/dbarrel1.wav" "st_mission/weapons/spas12/dbarrel1.wav"
+"hlclassic/weapons/scock1.wav" "st_mission/weapons/spas12/scock1.wav"
+
+//BIO LAUNCHER
+
+"weapons/splauncher_altfire.wav" "weapons/glauncher2.wav"
+"weapons/splauncher_fire.wav" "weapons/glauncher.wav"
+"weapons/splauncher_bounce.wav" "weapons/grenade_hit1.wav"
+"weapons/spore_hit1.wav" "weapons/grenade_hit1.wav"
+"weapons/spore_hit2.wav" "weapons/grenade_hit2.wav"
+"weapons/spore_hit3.wav" "weapons/grenade_hit3.wav"
+"weapons/splauncher_impact.wav" "squeek/sqk_blast1.wav"
+"weapons/splauncher_pet.wav" "null.wav"
+"weapons/splauncher_reload.wav" "weapons/gren_cock1.wav"
+
+
+

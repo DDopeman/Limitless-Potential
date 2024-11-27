@@ -53,7 +53,6 @@ calla2 oghs/cs06/calla2c.wav
 masdespacio oghs/cs06/masdespacio.wav
 ahorasi oghs/cs06/ahorasi.wav
 gracias2 oghs/cs06/gracias2.wav
-shock oghs/cs06/shock.wav
 mevoy oghs/cs06/mevoy.wav
 crit oghs/cs06/crit.wav
 bonk oghs/cs06/bonk.wav
@@ -380,7 +379,7 @@ dross4 oghs/cs06/dross4.wav
 coletemurio oghs/cs06/coletemurio.wav
 callense oghs/cs06/callense.wav
 bugibugi oghs/cs06/bugibugi.wav
-ayuda2 oghs/cs06/ayuda2.wav
+ayuda3 oghs/cs06/ayuda3b.wav
 avisa oghs/cs06/avisa.wav
 ahhh oghs/cs06/ahhh.wav
 agh oghs/cs06/agh.wav
@@ -389,3 +388,11 @@ tension oghs/cs06/tensionb.wav
 ambience oghs/cs06/ambience.wav
 caos oghs/cs06/caos.wav
 srs oghs/cs06/srs.wav
+omg2 oghs/cs06/omg2.wav
+mierda oghs/cs06/mierda.wav
+imkillingyou oghs/cs06/imkillingyou.wav
+jajaxd oghs/cs06/jajaxd.wav
+gane oghs/cs06/gane.wav
+death oghs/cs06/death.wav
+comenten oghs/cs06/comenten.wav
+oemrd oghs/cs06/oemrd.wav

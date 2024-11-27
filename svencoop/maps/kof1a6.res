@@ -86,7 +86,7 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
-sound/kezaeiv/misc/cp_nod_reinf.mp3
+sound/../sound/kezaeiv/misc/cp_nod_reinf.mp3
 sound/kezaeiv/misc/teleport.wav
 sound/kezaeiv/music/surfacetension1.ogg
 sound/kezaeiv/music/surfacetension2.ogg

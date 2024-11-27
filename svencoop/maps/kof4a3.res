@@ -90,10 +90,10 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
-sound/kezaeiv/c_wep/ammo/health.wav
+sound/../sound/kezaeiv/misc/cp_nod_reinf.mp3
 sound/kezaeiv/c_wep/ammo/pku_ammo4.wav
-sound/kezaeiv/misc/cp_nod_reinf.mp3
 sound/kezaeiv/misc/teleport.wav
+sound/kezaeiv/pku/superarmor.wav
 sound/kezaeiv/singularity/npc/csgo_deag_shot.wav
 sound/kezaeiv/singularity/npc/dusk_shotgun_shot.wav
 sound/kezaeiv/singularity/npc/exp1.wav

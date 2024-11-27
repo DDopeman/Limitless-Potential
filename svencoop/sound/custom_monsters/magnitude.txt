@@ -1,0 +1,54 @@
+"fgrunt/gr_pain1.wav" "custom_monsters/magnitude/magnitude_pain1.wav"
+"fgrunt/gr_pain2.wav" "custom_monsters/magnitude/magnitude_pain2.wav"
+"fgrunt/gr_pain3.wav" "custom_monsters/magnitude/magnitude_pain3.wav"
+"fgrunt/gr_pain4.wav" "custom_monsters/magnitude/magnitude_pain2.wav"
+"fgrunt/pain1.wav" "custom_monsters/magnitude/magnitude_pain1.wav"
+"fgrunt/pain2.wav" "custom_monsters/magnitude/magnitude_pain2.wav"
+"fgrunt/pain3.wav" "custom_monsters/magnitude/magnitude_pain3.wav"
+"fgrunt/pain4.wav" "custom_monsters/magnitude/magnitude_pain1.wav"
+"fgrunt/death1.wav" "custom_monsters/magnitude/magnitude_die1.wav"
+"fgrunt/death2.wav" "custom_monsters/magnitude/magnitude_die1.wav"
+"fgrunt/death3.wav" "custom_monsters/magnitude/magnitude_die1.wav"
+"weapons/sbarrel1.wav" "st_mission/weapons/sbarrel1xx.wav"
+
+"!FG_GREN0" "custom_monsters/magnitude/magnitude_run.wav"
+"!FG_GREN1" "custom_monsters/magnitude/magnitude_run.wav"
+
+"!FG_ALERT0" "custom_monsters/magnitude/magnitude_contact.wav"
+"!FG_ALERT1" "custom_monsters/magnitude/magnitude_humans.wav"
+"!FG_ALERT2" "custom_monsters/magnitude/magnitude_killyou.wav"
+"!FG_ALERT3" "custom_monsters/magnitude/magnitude_hostile.wav"
+
+"!FG_MONSTER0" "custom_monsters/magnitude/magnitude_killyou.wav"
+"!FG_MONSTER1" "custom_monsters/magnitude/magnitude_killyou.wav"
+
+"!FG_COVER0" "custom_monsters/magnitude/magnitude_clear.wav"
+"!FG_COVER1" "custom_monsters/magnitude/magnitude_die1.wav"
+"!FG_COVER2" "custom_monsters/magnitude/magnitude_enemy.wav"
+
+"!FG_CHARGE0" "custom_monsters/magnitude/magnitude_move.wav"
+"!FG_CHARGE1" "custom_monsters/magnitude/magnitude_soul.wav"
+"!FG_CHARGE2" "custom_monsters/magnitude/magnitude_them.wav"
+
+"!FG_ATTACK0" "custom_monsters/magnitude/magnitude_get.wav
+"!FG_ATTACK1" "custom_monsters/magnitude/magnitude_out.wav
+"!FG_ATTACK2" "custom_monsters/magnitude/magnitude_move.wav"
+"!FG_ATTACK3" "custom_monsters/magnitude/magnitude_move2.wav"
+"!FG_ATTACK4" "custom_monsters/magnitude/magnitude_killyou.wav"
+"!FG_ATTACK5" "custom_monsters/magnitude/magnitude_clear.wav"
+"!FG_ATTACK6" "custom_monsters/magnitude/magnitude_die1.wav"
+"!FG_ATTACK7" "custom_monsters/magnitude/magnitude_goingdown.wav"
+"!FG_ATTACK8" "custom_monsters/magnitude/magnitude_nothing.wav"
+"!FG_ATTACK9" "custom_monsters/magnitude/magnitude_soul.wav"
+"!FG_ATTACK10" "custom_monsters/magnitude/magnitude_them.wav"
+"!FG_ATTACK11" "custom_monsters/magnitude/magnitude_human.wav"
+
+"!FG_TAUNT0" "custom_monsters/magnitude/magnitude_soul.wav"
+"!FG_TAUNT1" "custom_monsters/magnitude/magnitude_human.wav"
+"!FG_TAUNT2" "custom_monsters/magnitude/magnitude_humans.wav"
+"!FG_TAUNT3" "custom_monsters/magnitude/magnitude_already.wav"
+"!FG_TAUNT4" "custom_monsters/magnitude/magnitude_enemy.wav"
+"!FG_TAUNT5" "custom_monsters/magnitude/magnitude_backup.wav"
+
+"!FG_THROW0" "custom_monsters/magnitude/magnitude_out.wav"
+"!FG_THROW1" "custom_monsters/magnitude/magnitude_fire.wav"
