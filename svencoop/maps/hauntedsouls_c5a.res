@@ -498,7 +498,7 @@ sound/st_mission/caralarm.wav
 sound/st_mission/events/hs_c4/hs_c5_background.wav
 sound/st_mission/events/hs_c4/hs_c5_battle.wav
 sound/st_mission/events/hs_c4/stabbing.wav
-sound/st_mission/music/hs_c5_music02.wav
+sound/st_mission/music/hs_c5_music02.ogg
 sound/st_mission/radio/hs_c5_backup.wav
 sound/st_mission/radio/hs_c5_civies.wav
 sound/st_mission/radio/hs_c5_copy.wav

@@ -260,7 +260,7 @@ sound/st_mission/events/hs_c4/security_die.wav
 sound/st_mission/events/hs_c4/warp_out.wav
 sound/st_mission/flareidle.wav
 sound/st_mission/hellambient.wav
-sound/st_mission/music/ambience06.wav
+sound/st_mission/music/ambience06.ogg
 sound/st_mission/night.wav
 sound/st_mission/outdoorbattle.wav
 sound/st_mission/teleport_in.wav

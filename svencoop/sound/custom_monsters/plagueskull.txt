@@ -1,3 +1,3 @@
-"zombie/claw_miss1.wav" "custom_monsters/plagueskull/ps_float.wav"
-"zombie/claw_miss2.wav" "custom_monsters/plagueskull/ps_float.wav"
+"zombie/claw_miss1.wav" "custom_monsters/plagueskull/ps_float.ogg"
+"zombie/claw_miss2.wav" "custom_monsters/plagueskull/ps_float.ogg"
 "headcrab/hc_headbite.wav" "debris/bustflesh2.wav"

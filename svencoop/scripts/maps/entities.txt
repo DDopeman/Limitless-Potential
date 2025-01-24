@@ -1,0 +1,10 @@
+"entity"
+{
+	"classname" "weapon_rpg"
+	"origin" "128 128 8"
+}
+"entity"
+{
+	"classname" "monster_human_grunt_ally"
+	"origin" "128 256 8"
+}

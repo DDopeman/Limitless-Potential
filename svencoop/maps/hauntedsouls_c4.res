@@ -192,7 +192,7 @@ sound/st_mission/events/hs_c4/distant_explosion.wav
 sound/st_mission/flareidle.wav
 sound/st_mission/holyeffect.wav
 sound/st_mission/largebeamstart1.wav
-sound/st_mission/music/hs_c4_ambient.wav
+sound/st_mission/music/hs_c4_ambient.ogg
 sound/st_mission/outdoorbattle_inside.wav
 sound/st_mission/portal_charge.wav
 sound/st_mission/radio/hs_c4_adinnah.wav

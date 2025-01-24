@@ -87,7 +87,7 @@ sound/st_mission/events/hs_c4/hs_c6_sobrobo_firing.wav
 sound/st_mission/events/hs_c4/titanskull_warp.wav
 sound/st_mission/events/hs_c4/warp_out.wav
 sound/st_mission/hellambient.wav
-sound/st_mission/music/hs_c6_bossfight.wav
+sound/st_mission/music/hs_c6_bossfight.ogg
 sound/st_mission/teleport_out.wav
 sound/st_mission/weapons/spas12/dbarrel1.wav
 sound/st_mission/weapons/spas12/sbarrel1.wav

@@ -6,6 +6,13 @@
 //========================================
 "plugins"
 {
+	"plugin"
+	{
+		"name" "PlayerManagement"
+		"script" "admin/PlayerManagement"
+		"concommandns" "plrmgr"
+	}
+	
     "plugin"
     {
         "name" "AFBase"
@@ -40,13 +47,6 @@
         "concommandns" "rtv"
     }
 
-	"plugin"
-	{
-		"name" "PlayerManagement"
-		"script" "admin/PlayerManagement"
-		"concommandns" "plrmgr"
-	}
-
 
 	"plugin"
     {
@@ -54,12 +54,6 @@
 		"script" "AntiBlock"
         "concommandns" "antiblock"
 	}
-
-    "plugin"
-    {
-            "name" "ForceSurvival"
-            "script" "ForceSurvival"
-    }
 
     "plugin"
 	{
@@ -85,37 +79,20 @@
     "script" "Zode/helper"
 	}
 
-  "plugin"
-  {
-    "name" "emotes"
-    "script" "emotes"
-  }
-
 	"plugin"
     {
         "name" "ChatSounds"
         "script" "ChatSounds"
         "concommandns" "cs"
     }
-
-
+	
     "plugin"
     {
-    "name" "AFKManager"
-    "script" "mikk/AFKManager"
+        "name" "ForceSurvival"
+        "script" "ForceSurvival"
     }
-    "plugin"
-    {
-    "name" "SurvivalRespawnAll"
-    "script" "mikk/SurvivalRespawnAll"
-    }
-    "plugin"
-    {
-    "name" "svenfixes"
-    "script" "mikk/svenfixes"
-    }
-
-
+	
+	
 }
 
 

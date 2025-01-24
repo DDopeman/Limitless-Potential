@@ -1,0 +1,178 @@
+================================================================================
+* LEVEL INFORMATION *
+--------------------------------------------------------------------------------
+TITLE                   : Gut Reaction
+FILENAME                : reaction.zip
+AUTHOR                  : Tim Johnston <Slingblade>
+DATE                    : 11.16.1999
+GAME                    : Half-Life
+TYPE                    : SinglePlayer
+EMAIL ADDRESS           : digwig@telocity.com
+HOMEPAGE URL            : http://www.digwig.com
+ 
+--------------------------------------------------------------------------------
+* LEVEL DESCRIPTION *
+--------------------------------------------------------------------------------
+Mr Freeman has once again been "recruited" by the elusive and stone-faced g-man
+to handle a "situation' that could prove catastrophic if not handled immediately.
+
+It seems that a rift in the space-time continuum has allowed the minions of Xen 
+to establish a stronghold inside one of the main reactor cores in the Lambda Complex.
+Somehow they have figured out a way to tap directly into the complex's nuclear 
+power grid. They are using this energy to continually widen the rift to allow 
+more and more of the Xen inhabitants into our world.  That's bad.
+
+Oh, did I mention that the military has been instructed to keep a lid on this
+situation by eliminating ANYONE with knowledge of it? That's worse.
+
+Its Gordon's job to establish power to the test lab, then find his way to the
+reactor complex via the waste tunnels connecting the two. Once inside, he's got
+to find his way to the interior cores of the reactors and shut them down. 
+
+You'll need to keep your wits about you...
+You'll need to trust your instincts...
+You'll have to rely on your GUT REACTION!
+
+Good luck Gordon.
+--------------------------------------------------------------------------------
+SINGLE PLAYER           : 1 Player Start   Point(s)
+CO-OPERATIVE            : 0 Player Start   Point(s)
+DEATHMATCH              : 0 Player Respawn Point(s)
+ 
+DIFFICULTY SETTINGS     : Yes
+NEW TEXTURES            : No
+UHH... MODIFIED TEXTURES: No
+NEW SOUNDS              : No
+CD TRACK #              : Lots of 'em. PLEEEZE make sure you have your REGISTERED
+                          Half-Life CD in the drive before you jump in!
+ 
+--------------------------------------------------------------------------------
+* CONSTRUCTION *
+--------------------------------------------------------------------------------
+MAP BASE                : New Map
+PREFABS USED            : WOOF JEEP by Woof UK- Thanks!
+EDITOR(S) USED          : Worldcraft 2.1
+OTHER UTILITIES USED    : Half-Life Model Viewer - Mete Ciragan
+			  Pak Explorer - Ashley Bone
+ 			  SpriteView - David Flor
+KNOWN BUGS              : A couple of bad polygons here and there.
+			  I'm still working on my brush building techniques...
+			  Also, I had a hard time getting that Xen style trampoline
+			  thingy to work right...I'll get that down the next time.
+ 
+COMPILE MACHINE         : PII-233, 128MB RAM
+ 
+--------------------------------------------------------------------------------
+* OTHER LEVELS BY THE AUTHOR *
+--------------------------------------------------------------------------------
+None that I've had the guts to release to the demanding Half-Life and Quake community!
+ 
+--------------------------------------------------------------------------------
+* SPECIAL INSTRUCTIONS / ADDITIONAL INFORMATION *
+--------------------------------------------------------------------------------
+INSTALLATION:
+1. Go to your Half-Life directory (i.e. c:\sierra\half-life\ but it can be anywhere)
+2. Extract the contents of reaction.zip into the folder 'half-life' making sure that 
+	folder names are used (in winzip just check the box in the extract dialog 
+	called 'Use Folder Names'). You should end up with a folder called reaction 
+	containing the PAK file and two other folders called 'gfx' and 'media'.
+3. Place your HL CD in your CDROM drive
+4. Run Half-Life, and from the main menu, select 'Custom Game'
+	If there is no menu entry labelled 'Custom Game', you do not have v1.0.0.9 of 
+	Half-Life or later. Go update it.
+5. In the Custom Game menu, select the menu item titled 'Gut Reaction'. Select it.
+6. Choose 'Activate' on ther left side of the screen.
+7. Exit from that menu, so you're back on the main menu.
+8. Choose 'New Game', then your skill level. Rock n' Roll!
+
+
+**IMPORTANT**
+There are MANY instances where a crouch or crouch-jump is required. Remember this!
+
+Also, this level has not been tested for software mode, as anyone who is really serious
+about playing these games should ALREADY have a 3-D card! IF you dont have one, you're
+missing the point, so GET ONE!
+
+
+**ABOUT THE AUTHOR AND THIS LEVEL SET**
+This is my first real level development effort.
+
+What your about to play took me about 9 months to make...Admittedly,
+I spent about half that time learning the new WC and how the HL entities, etc, work.
+I would estimate that there are HUNDREDS of hours invested in this project. I had starts
+and stops fooling around with WC on the tail end of Quake II, then when HL came out, 
+I got serious about it. Man is there a lot to learn here!! I certainly have much respect
+for all those that do this professionally.
+
+But, seeing as I make my living as an interactive designer (http://www.digwig.com), 
+I dont have the kind of time or technical background to fully grasp the subtleties 
+of this craft (I had a helluva time getting those damn scripted sequences to work!). 
+
+The bottom line is that the passion for this project consumed me like nothing ever
+had before. I truly love creating an experience like this that gets people excited.
+So perhaps if anyone out there feels I have the potential for doing this on a 
+professional level, by all means CONTACT ME! I cant think of anything else I'd want to
+do for 12-14 hours a day!
+
+Tim Johnston
+digwig@telocity.com
+
+
+--------------------------------------------------------------------------------
+* CREDITS *
+--------------------------------------------------------------------------------
+Id Software   		: From whence all things FPS came....(I'm genuflecting..)
+
+Valve Software          : For the most complete and exciting single player experience
+			  yet. Thanks from the bottom of my HEV suit for not forgetting
+			  about us guys with less than average web connections who
+			  scour the web nightly looking for new SP levels instead of
+			  deathmatching! 
+			  	http://www.valvesoftware.com/
+
+Rust and HLERC		: If I could only cache both of these ENTIRE sites on my HD.
+		  	  	http://www.gamedesign.net/
+			  	http://halflife.gamedesign.net/
+
+Half-Life Workshop and	: Two more great resources of info! Thanks!
+Wavelength			http://www.planethalflife.com/workshop/
+			  	http://www.planethalflife.com/wavelength/
+
+Half Life Model Viewer	: Can you believe I didn't discover this gem until about 90%
+			  done with this??? Doh!
+	 		  	http://www.swissquake.ch/chumbalum-soft/
+
+Pak Explorer		: I remember the first time I poked into a PAK file and
+			  found all those goodies! Ooh!
+			 	http://www2.telefragged.com/quakestuff
+	 		  	
+Sprite Viewer		: Works great with HLMV too!
+			  http://www.planethalflife.com/mach3
+
+
+Dave Johnston (no relation) for his great ETC level and his .txt file...hehehe.
+
+All you other single-player addicts like myself who love it so much you just
+had to crack open WC and see what you could do!
+
+Oh, and thanks to Nostromo and ZigZang for beta testing and continually hounding
+me for a beta!!! HERE IT IS ALREADY! 
+
+================================================================================
+* COPYRIGHT / PERMISSIONS *
+--------------------------------------------------------------------------------
+Authors MAY NOT use this level as a base to build additional levels.
+ 
+You MUST NOT distribute this level UNLESS you INCLUDE THIS FILE WITH
+NO MODIFICATIONS. If you don't co-operate, then DON'T DISTRIBUTE IT
+IN ANY FORM.
+
+This LEVEL may be distributed ONLY over the Internet and/or BBS systems.
+You are NOT authorized to put this LEVEL on any CD or distribute it in
+any way without my written permission.
+
+Magazines: if you'd like to put it on your disc, I'd love the publicity. 
+Just be sure to get my okey doke first - digwig@telocity.com
+
+Half-Life (C) 1998-99 Sierra On-line and Valve L.L.C. All rights reserved.
+[END OF DATA]=========================================================[.txt|Gen]

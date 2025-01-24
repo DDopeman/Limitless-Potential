@@ -1,0 +1,1339 @@
+// HALF-LIFE SPEECH SYSTEM SENTENCES. DO NOT MODIFY THIS FILE! Max of 1023 sentences.
+
+// HUMAN GRUNTS
+HG_GREN0 hgrunt/clik(p120) grenade! clik
+HG_GREN1 hgrunt/(t30) clik take!(e75) cover!(s5) clik
+
+HG_ALERT0 hgrunt/clik(p110) target! clik
+HG_ALERT1 hgrunt/clik movement! clik
+
+HG_MONST0 hgrunt/clik(p110) (t50) bogies!(t0), my! sector!(t0) clik
+HG_MONST1 hgrunt/clik(p110) (t40) clik(p120) we!(e75) got! bogies! clik
+
+HG_COVER0 hgrunt/clik (t30) take! cover!(t0) clik
+HG_COVER1 hgrunt/clik (t45) (e75) I!(e80) need!(e80) suppressing!(t20) fire!(t10) clik
+
+HG_THROW0 hgrunt/clik(p120) (t40) fire!(e90) in!(e90) the!(e60) hole!(e100) clik
+HG_THROW1 hgrunt/clik (t30) take!(e75) this!(e100 t0) clik
+ 
+HG_TAUNT0 hgrunt/clik (t30 e75) uhh, we got heavy fire here clik
+HG_TAUNT1 hgrunt/clik(p120) (t40) roger, hold position clik
+
+HG_CHARGE0 hgrunt/clik (t40) go! recon! clik(p120)
+HG_CHARGE1 hgrunt/clik(p110) (t40) move!(e75) in! clik
+
+HG_IDLE0 hgrunt/gr_idle1
+HG_IDLE1 hgrunt/gr_idle2
+
+HG_QUEST0 hgrunt/clik (t25) stay(e80) alert people clik(p120)
+HG_QUEST1 hgrunt/clik (t30) radio(e75) check, over clik(p120) 
+
+HG_ANSWER0 hgrunt/clik(p110) (t20) uhh roger(e75) that, clik(p120) clik
+HG_ANSWER1 hgrunt/clik(p120) (t10) yessir clik
+
+HG_CLEAR0 hgrunt/clik(p130) (t30) all(e75) clear sir, clik
+HG_CLEAR1 hgrunt/clik (t30) bravo(e75) post, clear clik(p120)
+
+HG_CHECK0 hgrunt/clik (t30) ok, check(e75) in clik
+HG_CHECK1 hgrunt/clik(p110) (t30) squad, are(e80) hostiles clear clik(p120)
+
+// FID1A0 intercom main facility entrance level 1
+SAD1A0_0 deeoo (e95) emergency cleanup team to(e70) biological waste processing plant(e100)
+SAD1A0_1 buzwarn buzwarn attention, administration personnel evacuate sector d immediately
+SAD1A0_2 deeoo deeoo attention, security personnel to sector d
+SAD1A0_3 deeoo (e95) service team, check elevator one(s0 e100 t0), (p100) sector c(e100)
+SAD1A0_4 buzwarn buzwarn warning, unauthorized biological forms detected in ventillation system
+SAD1A0_5 deeoo (e95 p103) lieutenant backman and cleanup team, to(e70) sub level three(e100)
+SAD1A0_6 bizwarn bizwarn bizwarn danger, turret defense systems activated, sector d
+SAD1A0_7 deeoo deeoo security officer reports men down in sector d, medical help required
+SAD1A0_8 bizwarn bizwarn bizwarn extreme danger, all turret defense systems activated, sector d
+SAD1A0_9 deeoo (e95) turret repair personnel, to(e70) high security materials storage area(e100)
+SAD1A0_10 deeoo deeoo attention. electric shock hazard detected in administration center
+SAD1A0_11 buzwarn buzwarn. security officer reports medical emergency, administration center 
+
+// FID1A1 intercom dormitories level 3
+SAD1A1_0 (p130) buzwarn buzwarn (p98 e95) attention. all science personnel evacuate level three immediately (e100)
+SAD1A1_1 (p130) bizwarn bizwarn bizwarn (e95) (p95) attention.  this announcement system now under military command
+SAD1A1_2 (p110) bizwarn bizwarn bizwarn (e95) (p95) attention.  black mesa announcement system now (e100) under military command
+SAD1A1_3 (p110) bizwarn bizwarn bizwarn (e95) (p95) attention science team, report to nearest security checkpoint (e100) immediately
+SAD1A1_4 (p130) bizwarn bizwarn (p100 t15 e95) attention.  all military personnel, (e100) intruder detected in level three
+SAD1A1_5 (p130) buzwarn buzwarn (p90 e95) attention. all science personnel report to (e70) north transportation platform (e100) immediately
+SAD1A1_6 (p130) buzwarn buzwarn (p95 e90) warning, unauthorized biological forms detected in (e70) ventillation system (e100)
+SAD1A1_7 (p130) buzwarn buzwarn (p98 e95) charlie team reports bravo foxtrot johnson facility is secured
+SAD1A1_8 (p130) buzwarn buzwarn (p98 e95) search and destroy squad alpha, reports secondary objective terminated
+SAD1A1_9 (p130) buzwarn buzwarn (p98 e95) warning, main power failure on level three, deeoo
+
+
+// FID1A2 intercom sector e biodome gamma
+SAD1A2_0 deeoo (e95) sector c personnel immediately report to(e70) nearest security checkpoint.
+SAD1A2_1 deeoo (e95) repair crew report to(e70) track control, sector e(e100)
+SAD1A2_2 deeoo (e95) maintenance team blue(p100 t0 s0 e100), check heat exchange coolant level(e100)
+SAD1A2_3 deeoo (e95) maintenance team green, check voltage(e100) on cable seven two nine(e100)
+SAD1A2_4 (p130) buzwarn buzwarn (p98 e95) medical team to materials storage facility, team bravo reports men down
+SAD1A2_5 (p130) buzwarn buzwarn (p98 e95) alpha force move out, science personnel resistance extreme
+SAD1A2_6 (p130) buzwarn buzwarn (p98 e95) attention. all black mesa security personnel wanted for immediate questioning
+SAD1A2_7 (p130) buzwarn buzwarn (p98 e95) attention. gordon freeman report to military personnel for immediate security check
+SAD1A2_8 buzwarn buzwarn (p102) warning, hostile biological forms detected in track control sector e
+
+// FID1A3 intercom sector e storage unit 5
+SAD1A3_0 buzwarn buzwarn. warning. track power failure. check lower level power plant.
+SAD1A3_1 deeoo (e95) maintenance team yellow, please(s0 e100) service relay three hundred ninety four(e100)
+SAD1A3_2 (p130) dadeda (p98 e95) attention. gordon freeman report to military personnel for immediate security check
+SAD1A3_3 (p130) buzwarn buzwarn (p98 e95) delta team reports launch control secured
+SAD1A3_4 bizwarn bizwarn bizwarn danger, turret defense systems activated, silo e
+SAD1A3_5 deeoo sector e track control please report status
+SAD1A3_6 (p130) buzwarn buzwarn (p98 e95) echo force reports perimeter breach, sector e
+SAD1A3_7 (p130) buzwarn buzwarn (p98 e95) attention, search and destroy force go to code three. eliminate all biological forms.
+SAD1A3_8 bizwarn bizwarn danger, unauthorized detonation detected in experimental propulsion lab
+
+// FID1A4 intercom sector a mesa times
+SAD1A4_0 buzwarn buzwarn. attention, clear silo e launch area immediately
+SAD1A4_1 deeoo (e95) containment inspection team, to(e70) advanced biological research lab(e100)
+SAD1A4_2 (p130) buzwarn buzwarn (p98 e95) medical team to sector a, oscar team has men down
+SAD1A4_3 (p130) buzwarn buzwarn (p98 e95) alert, military personnel authorized to prosecute secondary target with extreme force
+SAD1A4_4 (p130) buzwarn buzwarn (p98 e95) alert, squad in coolant complex, secondary objective may be operating inside your perimeter
+SAD1A4_5 deeoo deeoo dimensional distortion activity detected in sector a
+SAD1A4_6 (p130) buzwarn buzwarn (p98 e95) medical team to sector a, oscar team squad failed to reach checkpoint
+
+
+// C1A0 intercom\
+C1A0_START dadeda vox_login
+
+C1A0_0 bloop (e95) immediate medical attention required in(e70) sector twenty(e95) seven(e100)
+C1A0_1 doop (e95) operations personnel report to(e70) emergency control zone for contamination cleanup, alpha seven access required(e100)
+C1A0_2 attention, supply team required in(e70) lower maintenance chamber sub sector b(e100)
+C1A0_3 doop (e95) security breach detected in(e70) silo thirty two(e100)
+C1A0_4 warning, extreme radiation leak detected in(e70) reactor core eight, time to(e70) reach minimum safe distance, fourteen minutes(e100)
+C1A0_5 dadeda (e95) doctor guthrie report to(e70) inspection lab six immediately(e100)
+C1A0_6 attention, doctor Freeman report to(e70) research administration center for questioning(e100)
+C1A0_7 deeoo (e95 p98) remaining science personnel report to medical lab six for radiation exposure inspection(e100)
+C1A0_8 warning, severe damage detected in ventillation systems under research lab two, evacuate area immediately(e100)
+
+
+// doors, general
+NA0 access denied
+NA1 access is denied
+NA2 unauthorized access
+NA3 illegal access
+NA4 this door is locked
+NA5 unauthorized access
+NA6 entry forbidden
+NA7 entry not permitted
+NA8 no unauthorized personnel
+NA9 you do not have access to this facility
+NA10 (p102) sorry, you may not enter
+NA11 (p102) sorry, this door is locked
+NA12 (p102) please, move away from this area
+NA13 (p102) please, move away from door
+NA14 (p103) you will not get in
+NA15 (p103) entry is not an option
+NA16 (p104) will we do this all day
+NA17 (p104) move on immediately
+NA18 (p105) no, no, and no(p80)
+EA0 access granted
+EA1 access permitted
+EA2 entry granted
+EA3 entry permitted
+EA4 access authorized
+EA5 entry is permitted
+EA6 access authorized
+EA7 access to facility, granted
+EA8 access granted
+
+// doors, security lockout
+ND0 security lock is engaged
+ND1 secure area, no entry
+ND2 security lockout, no entry
+ND3 secure door, no entry
+ND4 security system in force
+ND5 security system armed, no entry
+ND6 door is secured
+ND7 illegal access, move away
+ED0 security lock disengaged
+ED1 security clear, proceed
+ED2 security lockout, released
+ED3 secure override accepted
+ED4 security access acknowledged
+ED5 security system disengaged
+ED6 door security disengaged
+
+// blast doors
+NF0 emergency blast door activated
+NF1 emergency blast shield activated
+NF3 the blast containment shield is down
+EF0 emergency blast door, open
+EF1 emergency blast shield, deactivated
+EF3 blast containment shield is, open
+
+// fire door
+NFIRE0 fire containment door is down
+EFIRE0 fire containment door, open
+
+// chemical door
+NCHEM0 chemical leak containment door activated
+ECHEM0 chemical leak containment door, open
+
+// radiation door
+NRAD0 radiation containment door activated
+ERAD0 radiation containment door, open
+
+// generic containment door
+NCON0 emergency containment door engaged
+ECON0 emergency containment door disengaged
+
+// broken locked door
+NG0 sorry, this door is inoperative
+NG1 sorry, door out of service
+NG2 door damage detected, please call service personnel
+
+// maintenance door
+NH0 no access, maintenance area
+NH1 no personnel permitted in maintenance area
+EH0 maintenance area access granted
+EH1 maintenance area door open
+
+// require security card
+NCARD0 access key required
+NCARD1 security key required
+
+// turrets, defensive systems
+
+TURRET0 extreme hazard, defense system is armed in this zone
+TURRET1 hazard area, defense system activated
+TURRET2 danger, turret perimeter defense system armed
+TURRET3 extreme hazard, nearest defense system engaged
+TURRET4 danger, base defense turret system may power up
+TURRET5 danger, automatic defense system activated
+
+// warnings
+
+WE0 warning, high voltage cable
+WE1 warning, high power cable
+WE2 warning, electric shock hazard
+WE3 warning, severe electric shock hazard
+
+// danger
+
+DR0 danger, radiation leak detected
+DR1 danger, radiation hazard detected
+DR2 danger, high radiation level detected
+DR3 danger, severe radiation hazard, evacuate area immediately
+DR4 danger, safety violation, extreme radiation level detected
+
+DC0 danger, chemical leak, area now a high health hazard
+DC1 danger, chemical coolant leak, health hazard zone
+DC2 danger, chemical containment breach, all personnel evacuate this area
+DC3 danger, supercooled chemical leak
+DC4 danger, supercooled helium leak
+
+DB0 danger, liquid biohazard leak in immediate area
+DB1 danger, coolant leak, severe biohazard now in this area
+DB2 danger, liquid biohazard released, evacuate area
+DB3 danger, biohazard detected in immediate area
+
+// training room
+
+TR_A three, two, one, deeoo(p110)
+TR_B deeoo(p110) (p102 t20) target system deactivated
+
+
+// HEV Suit
+
+// powerup
+
+HEV_AAx player/pcv_vest
+HEV_A0 player/pcv_vest
+
+HEV_A1 fvox/blip
+HEV_A2 fvox/blip
+HEV_A3 fvox/blip
+HEV_A4 fvox/blip
+HEV_A5 fvox/blip
+HEV_A6 fvox/blip
+HEV_A7 fvox/blip
+HEV_A8 fvox/blip
+HEV_A9 fvox/fuzz
+HEV_A10 fvox/fuzz
+
+// medical
+HEV_DEAD0 fvox/beep beep, beep beep, beep, beep, flatline
+
+HEV_MED0 fvox/boop
+
+HEV_HEAL0 fvox/boop
+
+HEV_DMG0 fvox/boop
+
+HEV_HLTH0 fvox/beep
+
+HEV_SHOCK fvox/boop
+HEV_FIRE fvox/boop
+
+// items
+HEV_AIM_ON fvox/blip
+HEV_AIM_OFF fvox/blip
+HEV_BATTERY fvox/blip
+HEV_MEDKIT fvox/blip
+
+HEV_PISTOL fvox/blip
+HEV_SHOTGUN fvox/blip
+HEV_GRENADE fvox/blip
+HEV_ASSAULT fvox/blip
+HEV_44PISTOL fvox/blip
+HEV_RPG fvox/blip
+HEV_SATCHEL fvox/blip
+HEV_TRIPMINE fvox/blip
+HEV_HORNET fvox/blip
+HEV_SQUEEK fvox/blip
+HEV_EGON fvox/blip
+HEV_GAUSS fvox/blip
+HEV_XBOW fvox/blip
+
+HEV_9MM fvox/blip
+HEV_44AMMO fvox/blip
+HEV_BUCKSHOT fvox/blip
+HEV_BOLTS fvox/blip
+HEV_RPGAMMO fvox/blip
+HEV_AGRENADE fvox/blip
+HEV_EGONPOWER fvox/blip
+
+// time
+
+//HEV_C1t fvox/bell time_is_now one AM
+//HEV_C13t fvox/bell time_is_now one PM
+
+// power levels
+
+HEV_D00 fvox/fuzz
+HEV_D01 fvox/fuzz
+
+HEV_0P fvox/fuzz
+HEV_1P fvox/fuzz
+HEV_2P fvox/fuzz
+HEV_3P fvox/fuzz
+HEV_4P fvox/fuzz
+HEV_5P fvox/fuzz
+HEV_6P fvox/fuzz
+HEV_7P fvox/fuzz
+HEV_8P fvox/fuzz
+HEV_9P fvox/fuzz
+HEV_10P fvox/fuzz
+HEV_11P fvox/fuzz
+HEV_12P fvox/fuzz
+HEV_13P fvox/fuzz
+HEV_14P fvox/fuzz
+HEV_15P fvox/fuzz
+HEV_16P fvox/fuzz
+HEV_17P fvox/fuzz
+HEV_18P fvox/fuzz
+HEV_19P fvox/fuzz
+
+// weapon/ammo
+
+HEV_AMO0 fvox/blip
+
+// suit
+
+HEV_V0 fvox/blip
+HEV_V1 fvox/blip
+
+HEV_E0 fvox/buzz
+HEV_E1 fvox/buzz
+HEV_E2 fvox/buzz
+HEV_E3 fvox/buzz
+HEV_E4 fvox/buzz
+HEV_E5 fvox/buzz
+
+// time remaining countdown
+
+//HEV_F10t fvox/bell
+//HEV_F15t fvox/bell
+//HEV_F20t fvox/bell
+//HEV_F30t fvox/bell
+
+// detections
+
+HEV_DET0 fvox/blip blip blip
+HEV_DET1 fvox/blip blip blip
+HEV_DET2 fvox/blip blip blip
+HEV_DET3 fvox/blip blip blip
+HEV_DET4 fvox/blip blip blip
+HEV_DET5 fvox/blip blip blip
+
+
+// BARNEY
+
+BA_OK0 barney/teamup2
+BA_OK1 barney/dobettertogether
+BA_OK2 barney/imwithyou
+BA_OK3 barney/teamup1
+BA_OK4 barney/gladtolendhand
+BA_OK5 barney/letsgo
+BA_OK6 barney/letsmoveit
+
+BA_WAIT0 barney/helpothers
+BA_WAIT1 barney/iwaithere
+BA_WAIT2 barney/slowingyoudown
+BA_WAIT3 barney/illwait
+BA_WAIT4 barney/seeya
+BA_WAIT5 barney/standguard
+
+BA_HELLO0 barney/hellonicesuit
+BA_HELLO1 barney/howyoudoing
+BA_HELLO2 barney/hayfella
+BA_HELLO3 barney/armedforces
+BA_HELLO4 barney/soldier
+BA_HELLO5 barney/sir
+
+BA_QUESTION0 barney/beertopside
+BA_QUESTION1 barney/getanyworse
+BA_QUESTION2 barney/workingonstuff
+BA_QUESTION3 barney/whatsgoingon
+BA_QUESTION4 barney/aintscared
+BA_QUESTION5 barney/nodrill
+BA_QUESTION6 barney/crewdied
+BA_QUESTION7 barney/somethingmoves
+BA_QUESTION8 barney/thinking
+BA_QUESTION9 barney/missingleg
+
+BA_ANSWER0 barney/noway
+BA_ANSWER1 barney/ireckon
+BA_ANSWER2 barney/soundsright
+BA_ANSWER3 barney/yessir
+BA_ANSWER4 barney/youbet
+BA_ANSWER5 barney/yougotit
+BA_ANSWER6 barney/yup
+BA_ANSWER7 barney/dontaskme
+BA_ANSWER8 barney/dontbet
+BA_ANSWER9 barney/dontbuyit
+BA_ANSWER10 barney/dontfigure
+BA_ANSWER11 barney/dontguess
+BA_ANSWER12 barney/hardtosay
+BA_ANSWER13 barney/justdontknow
+BA_ANSWER14 barney/nope
+BA_ANSWER15 barney/nosir
+BA_ANSWER16 barney/cantfigure
+BA_ANSWER17 barney/maybe
+BA_ANSWER18 barney/notelling
+BA_ANSWER19 barney/bequiet
+BA_ANSWER20 barney/youtalkmuch
+BA_ANSWER21 barney/alreadyasked
+
+// player is staring at scientist
+BA_STARE0 barney/yup
+BA_STARE1 barney/yessir
+BA_STARE2 barney/howyoudoing
+BA_STARE3 barney/heyfella
+
+BA_IDLE0 barney/whatisthat
+BA_IDLE1 barney/coldone
+BA_IDLE2 barney/guyresponsible
+BA_IDLE3 barney/bigmess
+BA_IDLE4 barney/luckwillturn
+BA_IDLE5 barney/bigplace
+BA_IDLE6 barney/targetpractice
+BA_IDLE7 barney/badfeeling
+BA_IDLE8 barney/ambush
+BA_IDLE9 barney/survive
+BA_IDLE10 barney/stophere
+
+BA_ATTACK0 barney/standback
+BA_ATTACK1 barney/whatisthat
+BA_ATTACK2 barney/diebloodsucker
+BA_ATTACK3 barney/aimforhead
+
+BA_ATTACKP0 barney/diebloodsucker
+BA_ATTACKP1 barney/c1a4_ba_octo4
+BA_ATTACKP2 barney/easily
+
+BA_HEAR0 barney/hearsomething
+BA_HEAR1 barney/icanhear
+BA_HEAR2 barney/soundsbad
+
+BA_SMELL0 barney/somethingdied
+BA_SMELL1 barney/somethingstinky
+BA_SMELL2 barney/stench
+
+BA_CUREA barney/checkwounds
+BA_CUREB barney/youneedmedic
+BA_CUREC barney/realbadwound
+
+BA_SCARED0 barney/donthurtem
+BA_SCARED1 barney/leavealone
+
+BA_WOUND0 barney/imhit
+BA_WOUND1 barney/hitbad
+BA_MORTAL0 barney/imdead
+
+//If you shoot Barney:
+BA_SHOT0 barney/ba_dotoyou
+BA_SHOT1 barney/ba_watchit
+BA_SHOT2 barney/ba_whatyou
+BA_SHOT3 barney/ba_friends
+
+//When Barney's really pissed at you:
+BA_MAD0 barney/ba_stepoff
+BA_MAD1 barney/ba_iwish
+BA_MAD2 barney/ba_uwish
+BA_MAD3 barney/ba_somuch
+BA_MAD4 barney/ba_endline
+BA_MAD5 barney/ba_dontmake
+BA_MAD6 barney/ba_tomb
+BA_MAD7 barney/easily
+
+//When Barney's killed something
+BA_KILL0 barney/ba_gotone
+BA_KILL1 barney/ba_another
+BA_KILL2 barney/ba_buttugly
+BA_KILL3 barney/ba_seethat
+BA_KILL4 barney/ba_close
+BA_KILL5 barney/ba_firepl
+BA_KILL6 barney/ba_bring
+
+// if barney can't follow you
+BA_STOP0 barney/stop1
+BA_STOP1 barney/stop2
+
+
+// SCIENTIST
+
+SC_OK0 scientist/excellentteam
+SC_OK1 scientist/alright
+SC_OK2 scientist/fine
+SC_OK3 scientist/hopeyouknow
+SC_OK4 scientist/leadtheway
+SC_OK5 scientist/letsgo
+SC_OK6 scientist/yesletsgo
+SC_OK7 scientist/yes3
+
+SC_WAIT0 scientist/beenaburden
+SC_WAIT1 scientist/slowingyou
+SC_WAIT2 scientist/reconsider
+SC_WAIT3 scientist/whyleavehere
+SC_WAIT4 scientist/illwaithere
+SC_WAIT5 scientist/istay
+SC_WAIT6 scientist/illwait
+
+// fail to follow player any more
+SC_STOP0 scientist/stop1
+SC_STOP1 scientist/stop2
+SC_STOP2 scientist/stop4
+
+// player is staring at scientist
+SC_STARE0 scientist/yees
+SC_STARE1 scientist/areyouthink
+SC_STARE2 scientist/noidea
+
+SC_HELLO0 scientist/hellothere
+SC_HELLO1 scientist/greetings2
+SC_HELLO2 scientist/hello
+SC_HELLO3 scientist/goodtoseeyou
+
+SC_ANSWER0 scientist/notsure
+SC_ANSWER1 scientist/notcertain
+SC_ANSWER2 scientist/perhaps
+SC_ANSWER3 scientist/whocansay
+SC_ANSWER4 scientist/inconclusive
+SC_ANSWER5 scientist/theoretically
+SC_ANSWER6 scientist/whyaskme
+SC_ANSWER7 scientist/lowervoice
+SC_ANSWER8 scientist/ofcourse
+SC_ANSWER9 scientist/absolutely
+SC_ANSWER10 scientist/yes
+SC_ANSWER11 scientist/ibelieveso
+SC_ANSWER12 scientist/right
+SC_ANSWER13 scientist/imsure
+SC_ANSWER14 scientist/positively
+SC_ANSWER15 scientist/nodoubt
+SC_ANSWER16 scientist/yees
+SC_ANSWER17 scientist/ofcoursenot
+SC_ANSWER18 scientist/absolutelynot
+SC_ANSWER19 scientist/noo
+SC_ANSWER20 scientist/idontthinkso
+SC_ANSWER21 scientist/completelywrong
+SC_ANSWER22 scientist/cantbeserious
+SC_ANSWER23 scientist/dontknow
+SC_ANSWER24 scientist/ridiculous
+SC_ANSWER25 scientist/shutup
+SC_ANSWER26 scientist/noguess
+SC_ANSWER27 scientist/stopasking
+SC_ANSWER28 scientist/justasked
+SC_ANSWER29 scientist/repeat
+
+SC_QUESTION0 scientist/everseen
+SC_QUESTION1 scientist/needsleep
+SC_QUESTION2 scientist/areyouthink
+SC_QUESTION3 scientist/evergetout
+SC_QUESTION4 scientist/rightwayout
+SC_QUESTION5 scientist/cantbeworse
+SC_QUESTION6 scientist/rescueus
+SC_QUESTION7 scientist/fascinating
+SC_QUESTION8 scientist/stimulating
+SC_QUESTION9 scientist/luckwillchange
+SC_QUESTION10 scientist/hearsomething
+SC_QUESTION11 scientist/doyousmell
+SC_QUESTION12 scientist/uselessphd
+SC_QUESTION13 scientist/waithere
+SC_QUESTION14 scientist/survival
+SC_QUESTION15 scientist/headcrab
+SC_QUESTION16 scientist/goodpaper
+SC_QUESTION17 scientist/catchone
+SC_QUESTION18 scientist/dinner
+SC_QUESTION19 scientist/alientrick
+SC_QUESTION20 scientist/alienappeal
+SC_QUESTION21 scientist/rumorclean
+SC_QUESTION22 scientist/nothostile
+SC_QUESTION23 scientist/announcer
+SC_QUESTION24 scientist/smellburn
+SC_QUESTION25 scientist/noidea
+SC_QUESTION26 scientist/whatnext
+
+SC_IDLE0 scientist/ipredictedthis
+SC_IDLE1 scientist/containfail
+SC_IDLE2 scientist/chaostheory
+SC_IDLE3 scientist/howinteresting
+SC_IDLE4 scientist/neverseen
+SC_IDLE5 scientist/peculiarmarks
+SC_IDLE6 scientist/whoresponsible
+SC_IDLE7 scientist/nogrant
+SC_IDLE8 scientist/bloodsample
+SC_IDLE9 scientist/administrator
+SC_IDLE10 scientist/improbable
+SC_IDLE11 scientist/organicmatter
+SC_IDLE12 scientist/lambdalab
+SC_IDLE13 scientist/ihearsomething
+
+SC_NOGO scientist/dontgothere
+
+SC_MONST0 scientist/seeheadcrab
+SC_MONST1 scientist/importantspecies
+
+SC_HEAR0 scientist/ihearsomething
+SC_HEAR1 scientist/didyouhear
+SC_HEAR2 scientist/whatissound
+
+SC_SMELL0 scientist/somethingfoul
+SC_SMELL1 scientist/odorfromyou
+SC_SMELL2 scientist/peculiarodor
+SC_SMELL3 scientist/stench
+
+SC_WOUND0 scientist/iwounded
+SC_WOUND1 scientist/iwounded2
+
+SC_MORTAL0 scientist/iwoundedbad
+SC_MORTAL1 scientist/iwounded2
+
+SC_CUREA scientist/youlookbad
+SC_CUREB scientist/youwounded
+SC_CUREC scientist/youneedmedic
+
+SC_HEAL0 scientist/heal1
+SC_HEAL1 scientist/heal2
+SC_HEAL2 scientist/youneedmedic, letstrythis
+SC_HEAL3 scientist/youlookbad, holdstill
+SC_HEAL4 scientist/youwounded, letstrythis
+SC_HEAL5 scientist/heal3
+SC_HEAL6 scientist/heal4
+SC_HEAL7 scientist/heal5
+
+SC_PLFEAR0 scientist/whatyoudoing
+SC_PLFEAR1 scientist/canttakemore
+SC_PLFEAR2 scientist/madness
+SC_PLFEAR3 scientist/noplease
+SC_PLFEAR4 scientist/getoutofhere
+SC_PLFEAR5 scientist/sorryimleaving
+
+SC_FEAR0 scientist/nooo
+SC_FEAR1 scientist/startle2
+SC_FEAR2 scientist/startle1 nooo
+SC_FEAR3 scientist/dontwantdie
+SC_FEAR4 scientist/getoutalive
+SC_FEAR5 scientist/startle3
+SC_FEAR6 scientist/startle4
+SC_FEAR7 scientist/startle5
+SC_FEAR8 scientist/startle6
+SC_FEAR9 scientist/startle7
+SC_FEAR10 scientist/startle8
+SC_FEAR11 scientist/startle9
+SC_FEAR12 scientist/startle1
+
+SC_SCREAM0 scientist/sci_fear1
+SC_SCREAM1 scientist/sci_fear2
+SC_SCREAM2 scientist/sci_fear3
+SC_SCREAM3 scientist/sci_fear4
+SC_SCREAM4 scientist/sci_fear5
+SC_SCREAM5 scientist/sci_fear6
+SC_SCREAM6 scientist/sci_fear7
+SC_SCREAM7 scientist/sci_fear8
+SC_SCREAM8 scientist/sci_fear9
+SC_SCREAM9 scientist/sci_fear10
+SC_SCREAM10 scientist/sci_fear11
+SC_SCREAM11 scientist/sci_fear12
+SC_SCREAM12 scientist/sci_fear13
+SC_SCREAM13 scientist/sci_fear14
+SC_SCREAM14 scientist/sci_fear15
+SC_SCREAM15 scientist/scream07
+
+SC_SCARED0 scientist/whatyoudoing
+SC_SCARED1 scientist/stopattacking
+SC_SCARED2 scientist/youinsane
+
+// outdoor
+WILD0 ambience/(v30) quail1(p103), quail1(t10), quail1(p101)
+WILD1 ambience/bee1(v75)
+WILD2 ambience/bee2(p105)
+WILD3 ambience/hawk1(p98 v30)
+WILD4 ambience/hawk1(p105 v20)
+WILD5 ambience/(v50 p97) quail1, quail1(t15)
+WILD6 ambience/bee1(p98 v50)
+WILD7 ambience/bee1(p97)
+WILD8 ambience/quail1(p98 v20))
+WILD9 ambience/des_wind1(v50)
+WILD10 ambience/des_wind2(v50)
+WILD11 ambience/des_wind3(v50)
+WILD12 ambience/des_wind2(v40 p98)
+WILD13 ambience/des_wind3(v40 p103)
+WILD14 ambience/wren1(v80)
+WILD15 ambience/des_wind1(v40 p105)
+
+// rocket
+ROCKET0 ambience/steamburst1
+ROCKET1 ambience/steamburst1(p80)
+ROCKET2 ambience/steamburst1(p120)
+ROCKET3 ambience/rocket_groan1
+ROCKET4 ambience/rocket_groan2
+ROCKET5 ambience/rocket_groan3
+ROCKET6 ambience/rocket_groan4
+
+// distant war zone
+FAR_WAR0 ambience/(v50) distantmortar1
+FAR_WAR1 ambience/(v60) distantmortar2
+FAR_WAR2 ambience/(v50) distantmortar3
+FAR_WAR3 ambience/(v15) biggun3
+FAR_WAR4 ambience/(v20) rifle2
+FAR_WAR5 ambience/(v10 p120) jetflyby1
+FAR_WAR6 ambience/(v10) mgun_burst4
+FAR_WAR7 ambience/(v30) distantmortar1 distantmortar3 distantmortar2
+FAR_WAR8 ambience/(v10) biggun2 biggun2 biggun2
+FAR_WAR9 ambience/(v15) mgun_burst1
+FAR_WAR10 ambience/(v20) biggun1 rifle2
+FAR_WAR11 ambience/(v60) distantmortar1 distantmortar1, distantmortar2, distantmortar1
+FAR_WAR12 ambience/(v30) distantmortar2, distantmortar2 distantmortar2 distantmortar2, distantmortar3 distantmortar1
+FAR_WAR13 ambience/(v10) mgun_burst2
+FAR_WAR14 ambience/(v15) mgun_burst3 mgun_burst3
+FAR_WAR15 ambience/(v10) rifle1 rifle1
+FAR_WAR16 ambience/(v10) biggun2, biggun2 biggun2
+
+// near war zone
+NEAR_WAR0 ambience/(v60) mgun_burst3 mgun_burst3 mgun_burst3(v50)
+NEAR_WAR1 ambience/(v60) rifle1 rifle2 rifle2 rifle1 rifle1
+NEAR_WAR2 ambience/(v60) alienflyby1
+NEAR_WAR3 ambience/(v60) biggun3 biggun3 biggun3
+NEAR_WAR4 ambience/(v60) mgun_burst4 mgun_burst3 rifle1 mgun_burst4
+NEAR_WAR5 ambience/(v60) jetflyby1
+NEAR_WAR6 ambience/(v60) mgun_burst4 mgun_burst3
+NEAR_WAR7 ambience/distantmortar1 distantmortar3 distantmortar2
+NEAR_WAR8 ambience/(v60) biggun2 biggun2 biggun2 biggun2(v30)
+NEAR_WAR9 ambience/(v60) mgun_burst1 mgun_burst1 rifle2 mgun_burst3
+NEAR_WAR10 agrunt/(v40) ag_fire1 ag_fire2 ag_fire2 ag_fire1
+NEAR_WAR11 ambience/distantmortar1 distantmortar1, distantmortar2
+NEAR_WAR12 ambience/(v60) mgun_burst2 mgun_burst2 mgun_burst3 mgun_burst2
+
+
+
+// alien slave
+SLV_IDLE0 aslave/slv_word1 slv_word2
+SLV_IDLE1 aslave/slv_word2 slv_word3(p95)
+SLV_IDLE2 aslave/slv_word3 slv_word4
+SLV_IDLE3 aslave/slv_word4 slv_word5 slv_word5(p90)
+SLV_IDLE4 aslave/slv_word2(p110) slv_word6 slv_word7 slv_word3
+SLV_IDLE5 aslave/slv_word6 slv_word7 slv_word2
+SLV_IDLE6 aslave/slv_word7 slv_word8 slv_word3
+SLV_IDLE7 aslave/slv_word8 slv_word1 slv_word8 slv_word8(p95)
+SLV_IDLE8 aslave/slv_word1(p115) slv_word6
+SLV_IDLE9 aslave/slv_word3 slv_word3(p90)
+SLV_IDLE10 aslave/slv_word7(p85)
+
+SLV_ALERT0 aslave/(p105) slv_alert1 slv_word2
+SLV_ALERT1 aslave/(p105) slv_word8 slv_word8 slv_word8 slv_word5
+SLV_ALERT2 aslave/(p105) slv_alert4 slv_word4 slv_alert3
+SLV_ALERT3 aslave/(p108) slv_alert1 slv_word5
+SLV_ALERT4 aslave/(p108) slv_word5(p110) slv_word8 slv_word8
+SLV_ALERT5 aslave/(p108) slv_alert4 slv_word7 slv_alert1
+
+
+
+// OTIS
+
+//When player asks Otis to follow:
+OT_OK0 otis/reputation
+OT_OK1 otis/live
+OT_OK2 otis/together
+OT_OK3 otis/letsgo
+OT_OK4 otis/diealone
+OT_OK5 otis/joinyou
+OT_OK6 otis/teamup
+
+OT_WAIT0 otis/help
+OT_WAIT1 otis/go_on
+OT_WAIT2 otis/slowingyoudown
+OT_WAIT3 otis/illwait
+OT_WAIT4 otis/seeya
+OT_WAIT5 otis/standguard
+OT_WAIT6 otis/notalone
+
+OT_HELLO0 otis/hello
+OT_HELLO1 otis/soldier
+OT_HELLO2 otis/hiya
+OT_HELLO3 otis/hey
+
+OT_QUESTION0 otis/beer
+OT_QUESTION1 otis/rightdirection
+OT_QUESTION2 otis/getanyworse
+OT_QUESTION3 otis/gladof
+OT_QUESTION4 otis/aliencombat
+OT_QUESTION5 otis/somethingmoves
+OT_QUESTION6 otis/noise
+
+OT_ANSWER0 otis/yes
+OT_ANSWER1 otis/yessir
+OT_ANSWER2 otis/youbet
+OT_ANSWER3 otis/alright
+OT_ANSWER4 otis/yup
+OT_ANSWER5 otis/yeah
+OT_ANSWER6 otis/noway
+OT_ANSWER7 otis/doubt
+OT_ANSWER8 otis/breath
+OT_ANSWER9 otis/no
+OT_ANSWER10 otis/dontguess
+OT_ANSWER12 otis/nope
+OT_ANSWER13 otis/nosir
+OT_ANSWER14 otis/dontask
+OT_ANSWER15 otis/suppose
+OT_ANSWER16 otis/hell
+OT_ANSWER17 otis/cantfigure
+OT_ANSWER18 otis/maybe
+OT_ANSWER19 otis/talkmuch
+OT_ANSWER20 otis/dejavu
+
+OT_KILL0 otis/gotone
+OT_KILL1 otis/another
+OT_KILL2 otis/buttugly
+OT_KILL3 otis/seethat
+OT_KILL4 otis/close
+OT_KILL5 otis/firepl
+OT_KILL6 otis/bring
+
+OT_MAD0 otis/bully
+OT_MAD1 otis/somuch
+OT_MAD2 otis/dontmake
+OT_MAD3 otis/tomb
+
+OT_SHOT0 otis/friends
+OT_SHOT1 otis/chump
+OT_SHOT2 otis/watchit
+OT_SHOT3 otis/damn
+OT_SHOT4 otis/quitit
+OT_SHOT5 otis/onry
+
+OT_IDLE0 otis/mom
+OT_IDLE1 otis/aliens
+OT_IDLE2 otis/wuss
+OT_IDLE3 otis/bridge
+OT_IDLE4 otis/closet
+OT_IDLE5 otis/cousin
+OT_IDLE6 otis/mall
+
+OT_ATTACK0 otis/behind
+OT_ATTACK1 otis/leftovers
+OT_ATTACK2 otis/yourback
+OT_ATTACK3 otis/die
+
+OT_HEAR0 otis/hearsomething
+OT_HEAR1 otis/soundsbad
+
+OT_SMELL0 otis/ass
+OT_SMELL1 otis/chili
+OT_SMELL2 otis/janitor
+
+OT_CUREA otis/scar
+OT_CUREB otis/insurance
+OT_CUREC otis/medic
+
+OT_SCARED0 otis/donthurtem
+OT_SCARED1 otis/leavealone
+
+OT_WOUND0 otis/imhit
+OT_WOUND1 otis/virgin
+OT_WOUND2 otis/tooyoung
+
+OT_MORTAL0 otis/imdead
+OT_MORTAL1 otis/hitbad
+
+OT_MISC0 otis/stupidmachines
+OT_MISC1 otis/quarter
+
+OT_STARE0 otis/bigboned
+OT_STARE1 otis/quarter
+OT_STARE2 otis/hiya
+OT_STARE3 otis/yup
+
+//FRIENDLY GRUNT
+FG_QUESTION0 fgrunt/seensquad
+FG_QUESTION1 fgrunt/current
+FG_QUESTION2 fgrunt/coverup
+FG_QUESTION3 fgrunt/chicken
+FG_QUESTION4 fgrunt/charge
+FG_QUESTION5 fgrunt/bfeeling
+
+FG_QUEST0 fgrunt/bfeeling
+FG_QUEST1 fgrunt/current
+
+FG_ANSWER0 fgrunt/roger
+FG_ANSWER1 fgrunt/quiet
+FG_ANSWER2 fgrunt/stayalert
+FG_ANSWER3 fgrunt/no
+
+FG_GREN0 fgrunt/incoming
+FG_GREN1 fgrunt/grenade
+
+FG_ALERT0 fgrunt/alert
+FG_ALERT1 fgrunt/down
+FG_ALERT2 fgrunt/bogies
+FG_ALERT3 fgrunt/hostiles
+
+FG_MONSTER0 fgrunt/alert
+FG_MONSTER1 fgrunt/alien
+
+FG_COVER0 fgrunt/clear
+FG_COVER1 fgrunt/cover
+FG_COVER2 fgrunt/staydown
+
+FG_CLEAR0 fgrunt/clear
+FG_CLEAR1 fgrunt/area
+
+FG_THROW0 fgrunt/fire
+FG_THROW1 fgrunt/grenade
+
+FG_CHARGE0 fgrunt/go
+FG_CHARGE1 fgrunt/getsome
+FG_CHARGE2 fgrunt/move
+
+FG_TAUNT0 fgrunt/mister
+FG_TAUNT1 fgrunt/nothing
+FG_TAUNT2 fgrunt/oneshot
+FG_TAUNT3 fgrunt/getsome
+FG_TAUNT4 fgrunt/corners
+FG_TAUNT5 fgrunt/backup
+
+FG_OK0 fgrunt/damage
+FG_OK1 fgrunt/six
+FG_OK2 fgrunt/moving
+FG_OK3 fgrunt/gotit
+FG_OK4 fgrunt/hellout
+FG_OK5 fgrunt/sir
+FG_OK6 fgrunt/right
+FG_OK7 fgrunt/command
+FG_OK8 fgrunt/notfail
+FG_OK9 fgrunt/yes
+
+FG_SCARED0 fgrunt/hearsome
+FG_SCARED1 fgrunt/hear
+
+FG_WAIT0 fgrunt/secure
+FG_WAIT1 fgrunt/orders
+FG_WAIT2 fgrunt/scout
+FG_WAIT3 fgrunt/guardduty
+
+FG_STOP0 fgrunt/post
+FG_STOP1 fgrunt/stay
+FG_STOP2 fgrunt/leave
+
+FG_KILL0 fgrunt/oneshot
+FG_KILL1 fgrunt/killer
+FG_KILL2 fgrunt/sniper
+FG_KILL3 fgrunt/tag
+FG_KILL4 fgrunt/corporal
+FG_KILL5 fgrunt/talking
+FG_KILL6 fgrunt/take
+FG_KILL7 fgrunt/sniper
+FG_KILL8 fgrunt/checkin
+FG_KILL9 fgrunt/area
+
+FG_SHOT0 fgrunt/check
+FG_SHOT1 fgrunt/wantsome
+FG_SHOT2 fgrunt/zone
+FG_SHOT3 fgrunt/watchit
+FG_SHOT4 fgrunt/watchfire
+FG_SHOT5 fgrunt/friendly
+
+FG_CHECK0 fgrunt/check
+FG_CHECK1 fgrunt/zone
+
+FG_IDLE0 fgrunt/guard
+FG_IDLE1 fgrunt/mission
+FG_IDLE2 fgrunt/babysitting
+FG_IDLE3 fgrunt/coverup
+FG_IDLE4 fgrunt/now
+FG_IDLE5 fgrunt/seensquad
+FG_IDLE6 fgrunt/short
+FG_IDLE7 fgrunt/outof
+FG_IDLE8 fgrunt/lost
+FG_IDLE9 fgrunt/fubar
+FG_IDLE10 fgrunt/dogs
+FG_IDLE11 fgrunt/disney
+FG_IDLE12 fgrunt/checkrecon
+
+FG_ATTACK0 fgrunt/flank
+FG_ATTACK1 fgrunt/wantsome
+FG_ATTACK2 fgrunt/freaks
+FG_ATTACK3 fgrunt/recon
+FG_ATTACK4 fgrunt/rapidfire
+FG_ATTACK5 fgrunt/sweep
+FG_ATTACK6 fgrunt/suppressing
+FG_ATTACK7 fgrunt/marines
+FG_ATTACK8 fgrunt/moveup
+FG_ATTACK9 fgrunt/go
+FG_ATTACK10 fgrunt/covering
+FG_ATTACK11 fgrunt/ass
+
+FG_MAD0 fgrunt/ass
+
+FG_HELLO0 fgrunt/tosee
+FG_HELLO1 fgrunt/hellosir
+
+FG_WOUND0 fgrunt/imhit
+FG_WOUND1 fgrunt/fwound
+FG_WOUND2 fgrunt/makeit
+
+FG_MORTAL0 fgrunt/hitbad
+FG_MORTAL1 fgrunt/critical
+FG_MORTAL2 fgrunt/sdamage
+
+FG_CURE0 fgrunt/needmedic
+FG_CURE1 fgrunt/hurt
+FG_CURE2 fgrunt/hell
+FG_CURE3 fgrunt/feel
+
+FG_MAKEIT fgrunt/makeit
+
+// TORCH GRUNT
+TG_OPEN0 fgrunt/stand
+TG_OPEN1 fgrunt/through
+
+TG_NOTOPEN0 fgrunt/blocked
+TG_NOTOPEN1 fgrunt/thick
+TG_NOTOPEN2 fgrunt/cutting
+TG_NOTOPEN3 fgrunt/situations
+
+TG_CUTIT fgrunt/of5a3_fg01
+
+// MEDIC GRUNT
+MG_HEAL0 fgrunt/sting
+MG_HEAL1 fgrunt/onepiece
+MG_HEAL2 fgrunt/fwound
+
+MG_NOTHEAL0 fgrunt/nohealth
+
+// SHOCK TROOPER
+ST_GREN0 shocktrooper/kss kyur kiml
+ST_ALERT0 shocktrooper/dit dit
+ST_ALERT1 shocktrooper/dit kss kss
+ST_ALERT2 shocktrooper/kss dit dit kss
+ST_MONST0 shocktrooper/pur thirv pur kss kss
+ST_COVER0 shocktrooper/ka ga blis blis ka
+ST_THROW0 shocktrooper/kss wirt ras
+ST_TAUNT0 shocktrooper/kiml kiml
+ST_CHARGE0 shocktrooper/mub puh mub dit dit
+ST_IDLE0 shocktrooper/ku kur ku
+ST_QUEST0 shocktrooper/puh pur hyu ka
+ST_ANSWER0 shocktrooper/dup dup
+ST_CLEAR0 shocktrooper/dup blis dup
+ST_CHECK0 shocktrooper/kss kss
+
+// G-Man outro speech
+OF7A0_GM01 gman/of7a0_gm01
+OF7A0_GM02 gman/of7a0_gm02
+OF7A0_GM03 gman/of7a0_gm03
+OF7A0_GM04 gman/of7a0_gm04
+
+// Zombie in HEV
+
+ZHEV_DEAD0 fvox/beep beep, beep beep, beep, beep, flatline
+ZHEV_DEAD1 fvox/beep beep, beep beep, beep, flatline
+
+ZHEV_DMG0 fvox/(p160) boop, boop, boop, (p100) minor_lacerations
+ZHEV_DMG1 fvox/(p160) boop, boop, boop, (p100) internal_bleeding
+ZHEV_DMG2 fvox/(p160) boop, boop, boop, (p100) minor_fracture
+ZHEV_DMG3 fvox/(p160) boop, boop, boop, (p100) blood_loss
+
+ZHEV_HLTH0 fvox/(p120) beep, beep, (p100) health_dropping
+ZHEV_HLTH1 fvox/(p120) beep, beep, (p100) health_dropping2
+ZHEV_HLTH2 fvox/(p120) beep, beep, beep, (p100) health_critical
+ZHEV_HLTH3 fvox/(p120) beep, beep, beep, (p100) near_death
+
+// Useful scripts
+
+// Barney
+BA_LONGNITE barney/c2a4_ba_longnite
+BA_STAYSHOOT barney/c3a2_ba_stay
+BA_OPENDOOR barney/ba_door0
+BA_GEARUP barney/c3a2_ba_8surv(e35)
+BA_TAKEALL barney/of6a4_ba04(s73)
+
+// Scientist
+SC_INFIRMARY1 scientist/of1a1_sc01
+SC_INFIRMARY2 scientist/of1a1_sc02
+
+SC_1MAN scientist/c1a3_sci_1man
+SC_BLIND scientist/c1a4_sci_blind
+SC_GENER scientist/c1a4_sci_gener
+
+SC_LETYOUIN scientist/letyouin
+SC_OVERHERE scientist/overhere
+SC_PROTECTME scientist/protectme
+
+SC_PLEASE scientist/please
+SC_GETALONG scientist/getalong
+SC_SAVED scientist/saved
+SC_ADVANCE scientist/advance
+SC_SCANER scientist/c1a0_sci_scanrpt
+
+SC_RUNSCREAM scientist/scream22
+
+SC_HIDMYSELF scientist/of2a3_sc01
+
+SC_BETTERLUCK scientist/of1a1_sc04
+
+// FGrunt
+FG_YOUWITHUS fgrunt/of2a4_fg03
+FG_MONSTER fgrunt/of3a4_fg01
+FG_MASKFREAKS fgrunt/of5a1_fg01
+FG_PATIENT fgrunt/of5a1_fg02
+FG_SUPRISE fgrunt/of5a1_fg04
+FG_EVAC fgrunt/of5a3_fg01
+FG_FIREPOWER fgrunt/of5a3_fg03
+FG_BLACKOPS fgrunt/of6a1_fg01(s6)
+FG_LETSGO fgrunt/of6a1_fg02
+FG_FUBAR fgrunt/fubar
+
+//GMAN
+GM_POTENTIAL gman/gman_potential
+
+//////////////////////////
+// FIELD INTENSITY SCRIPTS
+//////////////////////////
+
+// "HAVE A SAFE DAY"
+
+NULLSENT common/null.wav
+
+KV_RESPONDA fi/kevin/kv_responda
+KV_RESPONDB fi/kevin/kv_respondb
+
+KV_HELLO fi/kevin/kv_hello
+KV_BRIEF fi/kevin/kv_brief
+
+TG_GATES fgrunt/tg_gates
+TG_PANEL fgrunt/tg_panel
+TG_NVG fgrunt/tg_nvg
+
+TG_DOGS fgrunt/tg_dogs
+
+KV_ELEVA fi/kevin/kv_eleva
+KV_ELEVB fi/kevin/kv_elevb
+
+KV_ORDER fi/kevin/kv_order
+
+// HOSTILE TAKEOVER
+
+TG_BROKEN fi/fgrunt/tg_broken
+TG_ELEVA fi/fgrunt/tg_eleva
+TG_ELEVB fi/fgrunt/tg_elevb
+
+KV_FREEMAN fi/kevin/kv_freeman
+
+GINA_ATTACK0 gina/gina_attack2
+COL_ATTACK0 colette/colette_attack2
+
+FG_LADIES fgrunt/fg_ladies
+
+ELI_A0 fi/hl2/eli_whatgoingon
+ELI_B0 fi/hl2/eli_kleinerstop
+KL_A0 fi/hl2/kl_greatscott
+
+KV_RESTCREW fi/kevin/kv_restcrew
+
+TG_ZOMBIES fi/fgrunt/tg_zombies
+
+KV_NEWOBJ fi/kevin/kv_newobj
+KV_THEYMAD fi/kevin/kv_theymad
+
+TG_POWER fi/fgrunt/tg_power
+TG_STUCK fi/fgrunt/tg_stuck
+
+// HAZARDOUS ENVIRONMENT
+
+KV_HEARME fi/kevin/kv_hearme
+KV_CONNECT fi/kevin/kv_connect
+KV_SECTORE fi/kevin/kv_sectore
+KV_OTHERSCI fi/kevin/kv_othersci
+
+BA_GAMMA fi/barney/ba_gamma
+BA_SCANNER fi/barney/ba_scanner
+
+KV_SIERRA kevin/kv_sierra
+
+SC_BIOHELLO fi/scientist/sc_biohello
+SC_BIOGARG fi/scientist/sc_biogarg
+SC_BIOUNLOCK fi/scientist/sc_biounlock
+SC_BIOBYE fi/scientist/sc_biobye
+
+SC_BIOTEST fi/scientist/sc_biotest
+SC_BIOPLAN fi/scientist/sc_bioplan
+
+SC_BIONOISE scientist/whatissound
+SC_BIOLETSGO fi/scientist/sc_bioletsgo
+
+SC_BIOGAMMA fi/scientist/sc_biogamma
+SC_DETOUR scientist/sc_detour
+
+SC_SATELLITE fi/scientist/sc_satellite
+SC_MILITARY fi/scientist/sc_military
+
+KV_SATELLITE fi/kevin/kv_satellite
+KV_ROCKET fi/kevin/kv_rocket
+
+KEL_DREF0 fi/keller/dk_newstuff
+
+KV_HEVSUIT fi/kevin/kv_hevsuit
+KV_EXAMINEHEV fi/kevin/kv_examinehev
+KV_CHECKHEV fi/kevin/kv_checkhev
+KV_HEVTRACK fi/kevin/kv_hevtrack
+
+ELECTRODIS vox/severe electric shock hazard disengaged
+
+KV_NOVEMBER fi/kevin/kv_november
+
+// ON THE TRACK
+
+KV_ONTHETRACK fi/kevin/kv_onthetrack
+
+FG_NOVHELLO fi/fgrunt/fg_novhello
+FG_NOVFREEMAN fi/fgrunt/fg_novfreeman
+
+FG_NOVNOWAYA fi/fgrunt/fg_novnowaya
+FG_NOVNOWAYB fi/fgrunt/fg_novnowayb
+
+KV_BARNEY fi/kevin/kv_barney
+
+KV_NOVATTACKED fi/kevin/kv_novattacked
+
+KV_LIMAISNEAR fi/kevin/kv_limaisnear
+
+KV_ROSENBERG fi/kevin/kv_rosenberg
+
+KV_MANTARAYS fi/kevin/kv_mantarays
+KV_ANTIAIR fi/kevin/kv_antiair
+
+// WEAK FORCE
+
+KV_BLACKOPS fi/kevin/kv_blackops
+KV_OBJECTIVES fi/kevin/kv_objectives
+
+KV_SETUPTRAP fi/kevin/kv_setuptrap
+
+// RECOVERY
+
+SC_WOKEN fi/scientist/sc_woken
+SC_SITUATION fi/scientist/sc_situation
+SC_NOWEAPONS scientist/sc_noweapons
+SC_MEDKIT scientist/sc_medkit
+SC_GOODLUCK fi/scientist/sc_goodluck
+
+BA_POK0 barney/c2a1_ba_hub2a
+BA_POK1 barney/ba_canal_wound1(e68)
+BA_POK2 barney/imdead
+BA_POK3 barney/imdead
+
+BA_YOUNEEDME fi/barney/ba_youneedme
+BA_DOORACCESS fi/barney/ba_dooraccess
+
+BA_ABOUTGUY barney/c3a1_ba_5sat
+BA_WHYYOUHERE fi/barney/ba_whyyouhere
+
+WR_SURFACE fi/worker/wr_surface
+WR_SWARMED fi/worker/wr_swarmed
+WR_GONNADIE scientist/c1a3_sci_silo2a
+
+SC_POK0 scientist/c1a4_sci_gener
+SC_POK1 fi/worker/wr_leavealone
+SC_POK2 scientist/c1a4_sci_gener
+SC_POK3 fi/worker/wr_leavealone
+SC_POK4 scientist/c1a4_sci_gener
+
+OT_NOISE otis/noise
+OT_SURVIVE otis/live
+OT_FINDMORE otis/of1a1_ot04
+
+BA_NOTEATEN barney/ba_becareful1
+OT_SPEAKMUCH otis/talkmuch
+
+OT_DIRECTION otis/rightdirection
+BA_CLIMB barney/c1a2_ba_climb
+OT_STAYANDDIE otis/go_on
+
+KV_SQUADALPHA fi/kevin/kv_squadalpha
+KV_LUCKY fi/kevin/kv_lucky
+KV_EVAC fi/kevin/kv_evac
+KV_CATCHUP fi/kevin/kv_catchup
+KV_WHATISTHIS fi/kevin/kv_whatisthis
+
+// FIELD INTENSITY
+
+FG_HEADEVAC fi/fgrunt/fg_headevac
+
+FG_SHEPHARD1 fi/fgrunt/fg_shephard1
+FG_SHEPHARD2 fi/fgrunt/fg_shephard2
+FG_SHEPHARD3 fi/fgrunt/fg_shephard3
+
+GG_KEEPSEYE fi/greg/gg_keepseye
+GG_BLOWGATES fi/greg/gg_blowgates
+
+GG_CANTBELIEVE fi/greg/gg_cantbelieve
+GG_OHCRAP fi/greg/gg_ohcrap
+
+// F.U.B.A.R.
+
+KV_RETURN fi/kevin/kv_return
+KV_REUNITE fi/kevin/kv_reunite
+
+KV_RADIO fi/kevin/kv_radio
+KV_CONTACT fi/kevin/kv_contact
+
+// DEATHMATCH
+
+KV_DEATH fi/kevin/kv_death
+
+SC_COMMONENEMY fi/scientist/sc_commonenemy
+SC_BOTHWORK fi/scientist/sc_bothwork
+SC_LOCKEDGATES fi/scientist/sc_lockedgates
+SC_DANGERFIRE fi/scientist/sc_dangerfire
+SC_GETAROUND fi/scientist/sc_getround
+SC_KEEPGOING fi/scientist/sc_keepgoing
+SC_DANGERGAS fi/scientist/sc_dangergas
+SC_WORRY fi/scientist/sc_worry
+SC_DEVICE fi/scientist/sc_device
+SC_DISPLACER fi/scientist/sc_displacer
+SC_DANGERRAD fi/scientist/sc_dangerrad
+
+// DEDUCTION
+
+OSPREY1 misc/osprey_takeoff
+
+KV_DARKNESS fi/kevin/kv_darkness
+KV_DOORWAY fi/kevin/kv_doorway
+
+KV_HEREIAM fi/kevin/kv_hereiam
+KV_ACCOMPANY fi/kevin/kv_accompany
+KV_KEYS fi/kevin/kv_keys

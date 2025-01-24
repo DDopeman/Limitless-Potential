@@ -1,2 +1,0 @@
-"speech/saveme1.wav" "uboa_rampage/sunaa.wav"
-"speech/grenade1.wav" "uboa_rampage/dareda.wav"

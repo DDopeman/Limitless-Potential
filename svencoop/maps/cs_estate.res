@@ -168,7 +168,6 @@ models/oghs/cm/wep/w_spore_launcher.mdl
 models/oghs/cm/wep/w_uzi.mdl
 models/oghs/cm/wep/w_uzi_clip.mdl
 models/oghs/cm/wep/w_uzi_gold.mdl
-sound/../sound/kezaeiv/cp/starcraft_terran_rescue.mp3
 sound/cs16/57/magin.wav
 sound/cs16/57/magout.wav
 sound/cs16/57/shoot.wav
@@ -297,6 +296,7 @@ sound/cs16/usp/sldbk.wav
 sound/cs16/usp/sldrl.wav
 sound/cs16/xm1014/shoot.wav
 sound/kezaeiv/c_wep/misc/item_respawn.wav
+sound/kezaeiv/cp/starcraft_terran_rescue.mp3
 sound/kezaeiv/misc/teleport.wav
 sound/kezaeiv/singularity/npc/hl2_flesh_hit1.wav
 sound/kezaeiv/singularity/npc/hl2_flesh_hit2.wav

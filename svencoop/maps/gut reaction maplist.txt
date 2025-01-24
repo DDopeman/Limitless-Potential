@@ -1,0 +1,10 @@
+gut_reaction
+gr_generate
+gr_lab
+gr_tunnel3
+gr_corentry
+gr_coremain
+gr_drainage		desactivar HEV	-921 -856 -476 agregar sprite use		tiene changelevle a coremain, hacer duplicado coremain con otro spawn
+gr_coremain2		hacer jugadores non-solid
+gr_reactors
+gr_finale

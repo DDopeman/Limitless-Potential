@@ -215,7 +215,7 @@ sound/st_allies/nimble_grunt/yes.wav
 sound/st_allies/nimble_grunt/zone.wav
 sound/st_allies/sobrobo/sr_hs_c1_squad.wav
 sound/st_mission/elev_shaft1.wav
-sound/st_mission/music/ambience01.wav
+sound/st_mission/music/ambience01.ogg
 sound/st_mission/outdoorbattle.wav
 sound/st_mission/outdoorbattle_inside.wav
 sound/st_mission/rain1.wav

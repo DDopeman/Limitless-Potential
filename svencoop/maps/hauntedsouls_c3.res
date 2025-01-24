@@ -297,7 +297,7 @@ sound/st_mission/events/hs_c4/distant_demon_dash.wav
 sound/st_mission/events/hs_c4/distant_displace.wav
 sound/st_mission/events/hs_c4/distant_explosion.wav
 sound/st_mission/flareidle.wav
-sound/st_mission/music/ambience04.wav
+sound/st_mission/music/ambience04.ogg
 sound/st_mission/outdoorbattle.wav
 sound/st_mission/outdoorbattle_inside.wav
 sound/st_mission/rain1.wav

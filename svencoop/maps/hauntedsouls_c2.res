@@ -101,7 +101,7 @@ sound/custom_monsters/zombie/zo_pain1.wav
 sound/custom_monsters/zombie/zo_pain2.wav
 sound/kezaeiv/misc/teleport.wav
 sound/oghs/misc/cp02_03.mp3
-sound/st_mission/music/darkambient.wav
+sound/st_mission/music/darkambient.ogg
 sound/st_mission/weapons/spas12/dbarrel1.wav
 sound/st_mission/weapons/spas12/sbarrel1.wav
 sound/st_mission/weapons/spas12/scock1.wav
