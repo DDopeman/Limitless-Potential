@@ -1,0 +1,95 @@
+// Scientist
+"!SC_HELLO2" 				"scientist/inmesstoo.wav"
+"!SC_HELLO6" 				"scientist/whoareyou.wav"
+"!SC_HELLO7"				"scientist/sc_hello2.wav"
+"!SC_WAIT4"	 				"scientist/leavingme.wav"
+"!SC_OK4" 					"scientist/sc_ok0.wav"
+"!SC_OK1"		 			"scientist/sc_ok3.wav"
+"!SC_POK0" 					"bts_rc/scientist/sci_poke1.wav"
+"!SC_POK3" 					"bts_rc/scientist/sci_poke2.wav"
+"!SC_POK0" 					"bts_rc/scientist/sci_poke3.wav"
+"!SC_POK2"					"scientist/sc_pok0.wav"
+"!SC_STOP2" 				"scientist/sc_stop3.wav"
+"!SC_DIS1A" 				"bts_rc/scientist/sci_adminroom.wav"
+"!SC_DIS2A" 				"bts_rc/scientist/sci_lockdown.wav"
+"!SC_DIS3A"					"bts_rc/scientist/sci_generator.wav"
+"!SC_DIS4A"					"bts_rc/scientist/sci_damn.wav"
+"!SC_DIS5A"					"bts_rc/scientist/sci_situation.wav"
+"!SC_DIS6A"					"bts_rc/scientist/sci_sorry.wav"
+"!SC_ARG1A"					"bts_rc/scientist/sci_labhint.wav"
+"!SC_ARG2A"					"bts_rc/scientist/sci_upgradehint.wav"
+"!SC_ROCKET"				"scientist/sci_dragoff.wav"
+"!SC_BLIND"					"bts_rc/scientist/sci_simulation.wav"
+
+// Barney
+"!BA_HELLO5" 				"barney/heyfella.wav"
+"!BA_HELLO1"				"barney/heyfella.wav"
+"!BA_SHOT5" 				"barney/ba_mad0.wav"
+"!BA_ATTACK0" 				"barney/c1a4_ba_octo2.wav"
+"!BA_ATTACK1" 				"barney/c1a4_ba_octo2.wav"
+"!BA_POK0"					"bts_rc/otis/ot_poke1.wav"
+"!BA_POK1"					"bts_rc/otis/ot_poke2.wav"
+"!BA_POK2"					"bts_rc/otis/ot_poke3.wav"
+"!BA_POK3"					"bts_rc/otis/ot_poke4.wav"
+"!BA_LATE"					"bts_rc/barney/ba_intro.wav"
+"!BA_SURFACE"				"bts_rc/barney/ba_gears.wav"
+"!BA_TOPSIDE"				"bts_rc/barney/ba_alternative.wav"
+"!BA_SLEW"					"bts_rc/barney/ba_passaway.wav"
+"!BA_ASSN"					"bts_rc/barney/ba_a1hint.wav"
+
+// Holo
+"!HOLO_3JUMPS"				"bts_rc/holo/tr_holo_simulation.wav"
+"!HOLO_BREAKBOX"			"bts_rc/holo/tr_holo_medpun.wav"
+"!HOLO_BREATH"				"bts_rc/holo/tr_holo_tortured.wav"
+"!HOLO_BUTTON"				"bts_rc/holo/tr_holo_tortured2.wav"
+
+
+// Fgrunt
+"!FG_SHOT0"				"fgrunt/imhit.wav"
+"!FG_SHOT1"				"fgrunt/staydown.wav"
+"!FG_SHOT2				"fgrunt/takecover.wav"
+"!FG_SHOT3"				"fgrunt/pain1.wav"
+"!FG_SHOT4"				"fgrunt/pain2.wav"	
+"!FG_SHOT5"				"fgrunt/pain3.wav"
+"!FG_KILL4"				"fgrunt/stayalert.wav"
+
+"!FG_MASKFREAKS" 		"bts_rc/fgrunt/gr_area1.wav"
+"!FG_PATIENT" 			"bts_rc/fgrunt/gr_area2.wav"
+"!FG_TABLES" 			"bts_rc/fgrunt/gr_area3.wav"
+"!FG_SUPRISE" 			"bts_rc/fgrunt/gr_area4.wav"
+"!FG_EVAC" 				"bts_rc/fgrunt/gr_area5.wav"
+"!FG_DAMNWALLS" 		"bts_rc/fgrunt/sandbags.wav"
+"!FG_FIREPOWER" 		"bts_rc/fgrunt/suppliesup.wav"
+"!FG_STANDOFF" 			"bts_rc/fgrunt/sentryup.wav"
+"!FG_WIPEDOUT" 			"bts_rc/fgrunt/gr_zombiehint.wav"
+"!FG_IDLE11" 			"bts_rc/fgrunt/securitysystem.wav"
+
+	
+// Player
+"!HEV_DEAD0"            "common/null.wav"
+"!HEV_DEAD1"          	"common/null.wav"
+
+// Default Ammo Pickup
+"items/9mmclip1.wav"		"hlclassic/items/9mmclip1.wav"
+
+// Weapon/Ammo Drop
+"items/weapondrop1.wav"		"hlclassic/items/weapondrop1.wav"
+
+// Hgrunt
+"hgrunt/gr_mgun1.wav"		"bts_rc/weapons/m16_burst1.wav"
+"hgrunt/gr_mgun2.wav"		"bts_rc/weapons/m16_burst1.wav"
+"hgrunt/gr_mgun3.wav"		"bts_rc/weapons/m16_burst1.wav"
+
+// Weapons
+"weapons/pl_gun3.wav"		"bts_rc/weapons/glock_fire1.wav"
+"weapons/hks1.wav"			"bts_rc/weapons/mp5_fire1.wav"
+"weapons/hks2.wav"			"bts_rc/weapons/mp5_fire2.wav"
+"weapons/hks3.wav"			"bts_rc/weapons/mp5_fire3.wav"
+"weapons/sbarrel1.wav"		"hlclassic/weapons/sbarrel1.wav"
+"weapons/m16_3round.wav"	"bts_rc/weapons/m16_burst1.wav"
+"weapons/saw_fire1.wav"		"bts_rc/weapons/saw_fire1.wav"
+"weapons/saw_fire2.wav"		"bts_rc/weapons/saw_fire1.wav"
+"weapons/saw_fire3.wav"		"bts_rc/weapons/saw_fire1.wav"
+"weapons/sniper_fire.wav"	"ambience/rifle2.wav"
+
+

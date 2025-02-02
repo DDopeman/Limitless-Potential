@@ -1,0 +1,10 @@
+// GUNFIRE
+"hgrunt/gr_mgun1.wav"		"bts_rc/weapons/glocksd_fire1.wav"
+"hgrunt/gr_mgun2.wav"		"bts_rc/weapons/glocksd_fire2.wav"
+"hgrunt/gr_mgun3.wav"		"bts_rc/weapons/glocksd_fire1.wav"
+
+"weapons/hks1.wav"		"bts_rc/weapons/glocksd_fire1.wav"
+"weapons/hks2.wav"		"bts_rc/weapons/glocksd_fire2.wav"
+"weapons/hks3.wav"		"bts_rc/weapons/glocksd_fire1.wav"
+
+"weapons/m16_3round.wav"	"bts_rc/weapons/m16sd_burst1.wav"

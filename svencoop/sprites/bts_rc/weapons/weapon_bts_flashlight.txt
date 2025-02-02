@@ -1,0 +1,4 @@
+3
+weapon			640 bts_rc/wepspr			0	270	170	45
+weapon_s		640 bts_rc/wepspr			0	315	170	45
+ammo			640 bts_rc/ammo_battery		0	0	24	24

@@ -1,0 +1,10 @@
+"turret/tu_deploy.wav" "bts_rc/sentry/tu_deploy.wav"
+"turret/tu_die.wav" "bts_rc/sentry/tu_die.wav"
+"turret/tu_die2.wav" "bts_rc/sentry/tu_die2.wav"
+"turret/tu_die3.wav" "bts_rc/sentry/tu_die3.wav"
+"turret/tu_ping.wav" "bts_rc/sentry/tu_ping.wav"
+"turret/tu_ping.wav" "bts_rc/sentry/tu_ping.wav"
+"weapons/hks_hl1.wav" "bts_rc/sentry/tu_fire1.wav"
+"weapons/hks_hl2.wav" "bts_rc/sentry/tu_fire1.wav"
+"weapons/hks_hl3.wav" "bts_rc/sentry/tu_fire1.wav"
+

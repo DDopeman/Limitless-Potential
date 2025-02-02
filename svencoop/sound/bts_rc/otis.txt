@@ -1,0 +1,5 @@
+// Barney
+"barney/ba_post.wav"				"bts_rc/otis/ot_poke1.wav"
+"barney/ba_duty.wav"				"bts_rc/otis/ot_poke2.wav"
+"barney/ba_raincheck.wav"			"bts_rc/otis/ot_poke3.wav"
+"barney/ba_later.wav"				"bts_rc/otis/ot_poke4.wav"

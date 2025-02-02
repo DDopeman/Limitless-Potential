@@ -13,6 +13,7 @@ void MapInit()
 CCVar g_TeleportMode ( "teleport_mode", 1, "Alguna descripción funny", ConCommandFlag::AdminOnly );
 CCVar g_Texture ( "textures", "", "Restrict to textures. Use space to separate them.", ConCommandFlag::AdminOnly );
 CCVar g_PassMonsterClip ( "pass_monster_clip", 0, "Allow monsterclip to disable portals.", ConCommandFlag::AdminOnly );
+CCVar g_ShouldTeleportAll ( "teleport_everything", 0, "Allow anything to teleport through portals", ConCommandFlag::AdminOnly );
 
 namespace PortalSounds
 {
@@ -562,7 +563,7 @@ class portal : ScriptBaseEntity
 		g_EntityFuncs.SetModel( self, "models/portalgun/portal.mdl" );
 
         g_EntityFuncs.SetOrigin( self, self.pev.origin );
-        g_EntityFuncs.SetSize( self.pev, Vector( -16, -16, -16 ), Vector( 16, 16, 16 ) );
+        g_EntityFuncs.SetSize( self.pev, Vector( -32, -32, -32 ), Vector( 32, 32, 32 ) );
 
         BaseClass.Spawn();
     }
@@ -594,7 +595,11 @@ class portal : ScriptBaseEntity
     {
         CBaseEntity@ pEntityOwner = g_EntityFuncs.Instance( pEntity.pev.owner );
 
-        if( pEntity.GetClassname() != "pre_portal" && ( pEntityOwner is pMyOwner || pMyOwner is pEntity  )  )
+        bool ShouldTeleport = ( pEntity.GetClassname() != "pre_portal" && (
+            g_ShouldTeleportAll.GetInt() == 0 ? ( pEntityOwner is pMyOwner || pMyOwner is pEntity  ) : true )
+        );
+
+        if( ShouldTeleport  )
         {
             CBaseEntity@ pFindExitPortal = null;
             while( (@pFindExitPortal = g_EntityFuncs.FindEntityByClassname( pFindExitPortal, "portal" )) !is null )
@@ -610,7 +615,8 @@ class portal : ScriptBaseEntity
                         Vector pushMiddle = pEntity.pev.mins + (pEntity.pev.maxs - pEntity.pev.mins) / 2.0f;
                         Vector pushOri = pEntity.pev.origin + pushMiddle;       
                         Vector offset = pEntity.pev.origin - pushOri;
-
+						
+						
                         pEntity.pev.origin = pFindExitPortalDelay.VerifyDirection() + offset + Vector(0, 0, -18);
 
                         CBasePlayerItem@ pItem = cast<CBasePlayer@>(pEntityOwner).HasNamedPlayerItem( "weapon_portalgun" );
@@ -646,6 +652,10 @@ class portal : ScriptBaseEntity
                             else
                                 pEntity.pev.velocity = g_Engine.v_forward * 150;
                         }
+						if( !pEntity.IsPlayer() )
+						{  
+							pEntity.pev.origin.z -= 60;
+						}
                     }
                     g_SoundSystem.PlaySound( pFindExitPortal.edict(), CHAN_AUTO, PortalSounds::SoundEnter[Math.RandomLong( 0, PortalSounds::SoundEnter.length()-1)], VOL_NORM, ATTN_NORM, 0, PITCH_NORM, pMyOwner.entindex(), true, pFindExitPortal.GetOrigin() );
                 }
@@ -712,7 +722,7 @@ class pre_portal : ScriptBaseEntity
             PortalMisc::CreateParticle( self.pev.origin, self.pev.skin );
         }
         else
-        {       
+        {                 
             Vector vOrigin = self.pev.origin;
             Vector vVelo = self.pev.velocity;
             Vector vEndOrigin;
@@ -722,6 +732,9 @@ class pre_portal : ScriptBaseEntity
             TraceResult tr;
 
             g_Utility.TraceLine( vOrigin, vEndOrigin, ignore_monsters, ignore_glass, pMyOwner.edict(), tr );
+
+            if( tr.pHit !is null && g_EntityFuncs.Instance( tr.pHit ).IsMonster() )
+                  g_EntityFuncs.Instance( tr.pHit ).TakeDamage( pMyOwner.pev, pMyOwner.pev, 10.0, DMG_GENERIC );
 
             //if( PortalMisc::ValidWall( tr.vecEndPos, tr.vecPlaneNormal ) && PortalMisc::CheckPlace( self.Center(), self.pev.skin, pMyOwner ) && PortalMisc::TextureList().find(PortalMisc::GetTextureName( vOrigin, vEndOrigin )) >= 0 ) 
 

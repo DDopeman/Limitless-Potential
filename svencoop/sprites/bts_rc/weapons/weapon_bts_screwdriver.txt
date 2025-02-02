@@ -1,0 +1,5 @@
+4
+weapon			320 bts_rc/screwd	0	0	80	20
+weapon_s		320 bts_rc/screwd	0	20	80	20
+weapon			640 bts_rc/screwd	0	0	170	45
+weapon_s		640 bts_rc/screwd	0	0	170	45

@@ -16,8 +16,6 @@
 #include "residualpoint/weapon_teleporter"
 #include "residualpoint/monster_zombie_hev"
 
-#include "gaftherman/portal/weapon_portalgun"
-
 // Modify code bellow for Server operator's choices. -Mikk
 bool blSpawnNpcRequired = false;
 /*
@@ -104,9 +102,6 @@ void MapInit()
 		g_Game.PrecacheModel( "sprites/laserbeam.spr" );
 		g_Game.PrecacheGeneric( "sprites/laserbeam.spr" );
 	}
-	
-	
-	RegisterPortalGun();
 }
 
 void MapStart()
