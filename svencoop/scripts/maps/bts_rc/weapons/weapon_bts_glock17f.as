@@ -42,7 +42,7 @@ namespace weapon_bts_glock17f
     int SLOT = 1;
     int POSITION = 7;
     // Vars
-    int DAMAGE = 12;
+    int DAMAGE = 13;
     float DRAIN_TIME = 0.8f;
     Vector SHELL( 32.0f, 6.0f, -12.0f );
 

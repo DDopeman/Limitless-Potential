@@ -34,7 +34,7 @@ namespace weapon_bts_knife
     int WEIGHT = 10;
     // Weapon HUD
     int SLOT = 0;
-    int POSITION = 9;
+    int POSITION = 10;
     // Vars
     float RANGE = 32.0f;
     float DAMAGE = 18.0f;

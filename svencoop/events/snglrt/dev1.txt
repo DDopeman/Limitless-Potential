@@ -1,0 +1,9 @@
+attachment 0
+bone 10
+spritename sprites/singularity/muz/devastator_muz.spr 
+scale  20
+colorR 50
+colorG 50
+colorB 50
+rendermode 5
+transparency 100

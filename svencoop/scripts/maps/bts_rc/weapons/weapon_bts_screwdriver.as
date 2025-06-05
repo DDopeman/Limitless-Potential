@@ -26,7 +26,7 @@ namespace weapon_bts_screwdriver
     int WEIGHT = 10;
     // Weapon HUD
     int SLOT = 0;
-    int POSITION = 7;
+    int POSITION = 8;
     // Vars
     float RANGE = 32.0f;
     float DAMAGE = 9.0f;
@@ -59,7 +59,7 @@ namespace weapon_bts_screwdriver
 
         bool Deploy()
         {
-            return bts_deploy( "models/bts_rc/weapons/v_screwdriver.mdl", "models/bts_rc/weapons/p_screwdriver.mdl", DRAW, "crowbar", 0 );
+            return bts_deploy( "models/bts_rc/weapons/v_screwdriver.mdl", "models/bts_rc/weapons/p_screwdriver.mdl", DRAW, "crowbar", 1 );
         }
 
         void Holster( int skiplocal = 0 )

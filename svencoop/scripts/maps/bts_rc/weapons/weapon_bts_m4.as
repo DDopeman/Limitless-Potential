@@ -30,7 +30,7 @@ namespace weapon_bts_m4
     int SLOT = 2;
     int POSITION = 8;
     // Vars
-    int DAMAGE = 15;
+    int DAMAGE = 19;
     Vector SHELL( 32.0f, 6.0f, -12.0f );
 
     class weapon_bts_m4 : ScriptBasePlayerWeaponEntity, bts_rc_base_weapon
@@ -90,7 +90,7 @@ namespace weapon_bts_m4
             if( m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD || self.m_iClip <= 0 )
             {
                 self.PlayEmptySound();
-                self.m_flNextPrimaryAttack = g_Engine.time + 0.12f;
+                self.m_flNextPrimaryAttack = g_Engine.time + 0.10f;
                 return;
             }
 
@@ -111,7 +111,7 @@ namespace weapon_bts_m4
 
             bool is_trained_personal = g_PlayerClass.is_trained_personal(m_pPlayer);
 
-            float CONE = ( is_trained_personal ? ( m_pPlayer.IsMoving() ? 0.02618f : 0.01f ) : ( m_pPlayer.IsMoving() ? 0.2f : 0.05f ) );
+            float CONE = ( is_trained_personal ? ( m_pPlayer.IsMoving() ? 0.02618f : 0.01f ) : ( m_pPlayer.IsMoving() ? 0.1f : 0.05f ) );
 
             float x, y;
             g_Utility.GetCircularGaussianSpread( x, y );
@@ -180,11 +180,13 @@ namespace weapon_bts_m4
             self.m_flTimeWeaponIdle = g_Engine.time + g_PlayerFuncs.SharedRandomFloat( m_pPlayer.random_seed, 10.0f, 15.0f );
         }
 
+/*
         void SecondaryAttack()
         {
             self.SetFOV( m_pPlayer.m_iFOV != 0 ? 0 : 45 );
             self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = g_Engine.time + 0.3f;
         }
+*/
 
         void Reload()
         {

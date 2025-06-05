@@ -1,0 +1,9 @@
+attachment 0 
+bone 4
+spritename sprites/singularity/muz/energy_line.spr 
+scale  30
+colorR 255
+colorG 10
+colorB 10
+rendermode 5
+transparency 255

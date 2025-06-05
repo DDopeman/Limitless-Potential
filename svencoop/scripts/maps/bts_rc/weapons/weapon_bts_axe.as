@@ -40,7 +40,7 @@ namespace weapon_bts_axe
             info.iAmmo2Drop = -1;
             info.iMaxClip = WEAPON_NOCLIP;
             info.iSlot = 0;
-            info.iPosition = 8;
+            info.iPosition = 9;
             info.iId = g_ItemRegistry.GetIdForName( pev.classname );
             info.iFlags = m_flags;
             info.iWeight = 10;

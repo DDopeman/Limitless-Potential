@@ -33,7 +33,7 @@ namespace weapon_bts_mp5gl
     int SLOT = 2;
     int POSITION = 5;
     // Vars
-    int DAMAGE = 8;
+    int DAMAGE = 13;
     float DAMAGE2 = 100.0f;
     Vector CROUCH_CONE( 0.01f, 0.01f, 0.01f );
     Vector SHELL( 32.0f, 6.0f, -12.0f );
@@ -95,7 +95,7 @@ namespace weapon_bts_mp5gl
             if( m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD || self.m_iClip <= 0 )
             {
                 self.PlayEmptySound();
-                self.m_flNextPrimaryAttack = g_Engine.time + 0.12f;
+                self.m_flNextPrimaryAttack = g_Engine.time + 0.09f;
                 return;
             }
 
@@ -116,7 +116,7 @@ namespace weapon_bts_mp5gl
 
             bool is_trained_personal = g_PlayerClass.is_trained_personal(m_pPlayer);
 
-            float CONE = ( is_trained_personal ? ( m_pPlayer.IsMoving() ? 0.02618f : 0.01f ) : ( m_pPlayer.IsMoving() ? 0.2f : 0.05f ) );
+            float CONE = ( is_trained_personal ? ( m_pPlayer.IsMoving() ? 0.02618f : 0.01f ) : ( m_pPlayer.IsMoving() ? 0.1f : 0.05f ) );
 
             float x, y;
             g_Utility.GetCircularGaussianSpread( x, y );

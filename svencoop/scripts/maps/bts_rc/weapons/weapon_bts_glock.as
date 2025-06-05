@@ -30,7 +30,7 @@ namespace weapon_bts_glock
     int SLOT = 1;
     int POSITION = 4;
     // Vars
-    int DAMAGE = 12;
+    int DAMAGE = 13;
     Vector SHELL( 32.0f, 6.0f, -12.0f );
 
     class weapon_bts_glock : ScriptBasePlayerWeaponEntity, bts_rc_base_weapon

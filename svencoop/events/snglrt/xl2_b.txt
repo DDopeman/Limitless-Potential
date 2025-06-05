@@ -1,0 +1,9 @@
+attachment 1 
+bone 4
+spritename sprites/singularity/muz/energy_ring.spr 
+scale  15
+colorR 25
+colorG 190
+colorB 25
+rendermode 5
+transparency 255

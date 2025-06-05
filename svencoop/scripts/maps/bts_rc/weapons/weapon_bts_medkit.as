@@ -34,7 +34,7 @@ namespace weapon_bts_medkit
 
     // Vars
     const int HEAL_AMMOUNT = 10;
-    const int REVIVE_COST = 50;
+    const int REVIVE_COST = 49;
     const int VOLUME = 128;
     const int REVIVE_RADIUS = 64;
     const int RECHARGE_AMOUNT = 1;
@@ -76,7 +76,7 @@ namespace weapon_bts_medkit
 
         bool Deploy()
         {
-            return bts_deploy( "models/bts_rc/weapons/v_medkit.mdl", "models/bts_rc/weapons/p_medkit.mdl", DRAW, "trip", 0, 0.6f );
+            return bts_deploy( "models/bts_rc/weapons/v_medkit.mdl", "models/bts_rc/weapons/p_medkit.mdl", DRAW, "trip", 1, 0.6f );
         }
 
         void Holster( int skiplocal /*= 0*/ )

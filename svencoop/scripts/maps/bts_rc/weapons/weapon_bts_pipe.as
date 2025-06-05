@@ -36,12 +36,12 @@ namespace weapon_bts_pipe
     int WEIGHT = 10;
     // Weapon HUD
     int SLOT = 0;
-    int POSITION = 5;
+    int POSITION = 6;
     // Vars
     float RANGE = 32.0f;
-    float DAMAGE = 15.0f;
+    float DAMAGE = 16.0f;
     float RANGE2 = 35.0f;
-    float DAMAGE2 = 19.0f;
+    float DAMAGE2 = 27.0f;
 
     class weapon_bts_pipe : ScriptBasePlayerWeaponEntity, bts_rc_base_weapon, bts_rc_base_melee
     {
@@ -176,7 +176,7 @@ namespace weapon_bts_pipe
                         case 1: self.SendWeaponAnim( ATTACK2MISS, 0, pev.body ); break;
                         case 2: self.SendWeaponAnim( ATTACK3MISS, 0, pev.body ); break;
                     }
-                    self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = g_Engine.time + ( is_trained_personal ? 0.95f : 1.25f );
+                    self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = g_Engine.time + ( is_trained_personal ? 1.10f : 1.35f );
                     self.m_flTimeWeaponIdle = g_Engine.time + 2.0f;
 
                     // play wiff or swish sound
@@ -200,7 +200,7 @@ namespace weapon_bts_pipe
                     case 2: self.SendWeaponAnim( ATTACK3HIT, 0, pev.body ); break;
                 }
 
-                self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = g_Engine.time + ( is_trained_personal ? 0.25f : 0.5f );
+                self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = g_Engine.time + ( is_trained_personal ? 0.45f : 0.75f );
                 self.m_flTimeWeaponIdle = g_Engine.time + 2.0f;
 
                 // player "shoot" animation

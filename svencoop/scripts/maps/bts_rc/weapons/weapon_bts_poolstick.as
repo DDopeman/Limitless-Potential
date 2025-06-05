@@ -26,7 +26,7 @@ namespace weapon_bts_poolstick
     int WEIGHT = 10;
     // Weapon HUD
     int SLOT = 0;
-    int POSITION = 6;
+    int POSITION = 7;
     // Vars
     float RANGE = 48.0f;
     float DAMAGE = 11.0f;

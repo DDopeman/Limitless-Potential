@@ -1,0 +1,6 @@
+5
+weapon				640 	singularity/snglrt_wep_hud_off		346	49	170	45
+weapon_s			640 	singularity/snglrt_wep_hud_on		346	49	170	45
+crosshair			640		singularity/kezcrosshairs			210	106	52	52
+ammo				640		singularity/snglrt_ammo				120	72	24	24
+ammo2				640		singularity/snglrt_ammo				96	72	24	24

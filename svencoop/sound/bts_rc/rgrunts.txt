@@ -1,0 +1,125 @@
+"!HG_GREN0"				"bts_rc/rgrunt/rb_gren1.wav"
+"!HG_GREN1"				"bts_rc/rgrunt/rb_gren1.wav"
+"!HG_GREN2"				"bts_rc/rgrunt/rb_gren1.wav"
+"!HG_GREN3"				"bts_rc/rgrunt/rb_gren1.wav"
+"!HG_GREN4"				"bts_rc/rgrunt/rb_gren2.wav"
+"!HG_GREN5"				"bts_rc/rgrunt/rb_gren2.wav"
+"!HG_GREN6"				"bts_rc/rgrunt/rb_gren2.wav"
+
+// Player Alert
+"!HG_ALERT0" "bts_rc/rgrunt/rb_alert1.wav"
+"!HG_ALERT1" "bts_rc/rgrunt/rb_alert1.wav"
+"!HG_ALERT2" "bts_rc/rgrunt/rb_alert2.wav"
+"!HG_ALERT3" "bts_rc/rgrunt/rb_alert2.wav"
+"!HG_ALERT4" "bts_rc/rgrunt/rb_alert3.wav"
+"!HG_ALERT5" "bts_rc/rgrunt/rb_alert3.wav"
+"!HG_ALERT6" "bts_rc/rgrunt/rg_alert1.wav"
+
+// Monster Alert
+"!HG_MONST0" "bts_rc/rgrunt/rb_alert1.wav"
+"!HG_MONST1" "bts_rc/rgrunt/rb_alert1.wav"
+"!HG_MONST2" "bts_rc/rgrunt/rb_alert2.wav"
+"!HG_MONST3" "bts_rc/rgrunt/rb_alert2.wav"
+
+// Take cover
+"!HG_COVER0" "bts_rc/null.wav"
+"!HG_COVER1" "bts_rc/null.wav"
+"!HG_COVER2" "bts_rc/null.wav"
+"!HG_COVER3" "bts_rc/null.wav"
+"!HG_COVER4" "bts_rc/null.wav"
+"!HG_COVER5" "bts_rc/null.wav"
+"!HG_COVER6" "bts_rc/null.wav"
+"!HG_COVER7" "bts_rc/null.wav"
+
+// Throw grenade
+"!HG_THROW0" "bts_rc/null.wav"
+"!HG_THROW1" "bts_rc/null.wav"
+"!HG_THROW2" "bts_rc/null.wav"
+"!HG_THROW3" "bts_rc/null.wav"
+ 
+// Taunt
+"!HG_TAUNT0" "bts_rc/null.wav"
+"!HG_TAUNT1" "bts_rc/null.wav"
+"!HG_TAUNT2" "bts_rc/null.wav"
+"!HG_TAUNT3" "bts_rc/null.wav"
+"!HG_TAUNT4" "bts_rc/null.wav"
+"!HG_TAUNT5" "bts_rc/null.wav"
+
+// Charge
+"!HG_CHARGE0" "bts_rc/null.wav"
+"!HG_CHARGE1" "bts_rc/null.wav"
+"!HG_CHARGE2" "bts_rc/null.wav"
+"!HG_CHARGE3" "bts_rc/null.wav"
+
+// Idle
+"!HG_IDLE0" "bts_rc/null.wav"
+"!HG_IDLE1" "bts_rc/null.wav"
+"!HG_IDLE2" "bts_rc/null.wav"
+
+"!HG_QUEST0" "bts_rc/null.wav"
+"!HG_QUEST1" "bts_rc/null.wav"
+"!HG_QUEST2" "bts_rc/null.wav"
+"!HG_QUEST3" "bts_rc/null.wav"
+"!HG_QUEST4" "bts_rc/null.wav"
+"!HG_QUEST5" "bts_rc/null.wav"
+"!HG_QUEST6" "bts_rc/null.wav"
+"!HG_QUEST7" "bts_rc/null.wav"
+"!HG_QUEST8" "bts_rc/null.wav"
+"!HG_QUEST9" "bts_rc/null.wav"
+"!HG_QUEST10" "bts_rc/null.wav"
+"!HG_QUEST11" "bts_rc/null.wav"
+
+"!HG_ANSWER0 "bts_rc/null.wav"
+"!HG_ANSWER1 "bts_rc/null.wav"
+"!HG_ANSWER2 "bts_rc/null.wav"
+"!HG_ANSWER3 "bts_rc/null.wav"
+"!HG_ANSWER4 "bts_rc/null.wav"
+"!HG_ANSWER5 "bts_rc/null.wav"
+"!HG_ANSWER6 "bts_rc/null.wav"
+
+"!HG_FLOF0" "bts_rc/rgrunt/rb_flof1.wav"
+"!HG_FLOF1" "bts_rc/rgrunt/rb_flof1.wav"
+"!HG_FLOF2" "bts_rc/rgrunt/rb_flof2.wav"
+"!HG_FLOF3" "bts_rc/rgrunt/rb_flof2.wav"
+"!HG_FLOF4" "bts_rc/rgrunt/rb_flof3.wav"
+"!HG_FLOF5" "bts_rc/rgrunt/rb_flof3.wav"
+
+
+"!HG_CLEAR0 "bts_rc/null.wav"
+"!HG_CLEAR1 "bts_rc/rgrunt/rb_clear1.wav"
+"!HG_CLEAR2 "bts_rc/rgrunt/rb_clear1.wav"
+"!HG_CLEAR3 "bts_rc/rgrunt/rb_clear1.wav"
+"!HG_CLEAR4 "bts_rc/null.wav"
+"!HG_CLEAR5 "bts_rc/rgrunt/rb_clear2.wav"
+"!HG_CLEAR6 "bts_rc/rgrunt/rb_clear2.wav"
+"!HG_CLEAR7 "bts_rc/rgrunt/rb_clear2.wav"
+"!HG_CLEAR8 "bts_rc/null.wav"
+"!HG_CLEAR9 "bts_rc/rgrunt/rb_clear1.wav"
+"!HG_CLEAR10 "bts_rc/rgrunt/rb_clear2.wav"
+"!HG_CLEAR11 "bts_rc/null.wav"
+"!HG_CLEAR12 "bts_rc/null.wav"
+
+"!HG_CHECK0" "bts_rc/rgrunt/rb_check1.wav"
+"!HG_CHECK1" "bts_rc/null.wav"
+"!HG_CHECK2" "bts_rc/rgrunt/rb_check1.wav"
+"!HG_CHECK3" "bts_rc/null.wav"
+"!HG_CHECK4" "bts_rc/rgrunt/rb_check2.wav"
+"!HG_CHECK5" "bts_rc/null.wav"
+"!HG_CHECK6" "bts_rc/rgrunt/rb_check2.wav"
+"!HG_CHECK7" "bts_rc/null.wav"
+
+"hgrunt/gr_alert1.wav" "bts_rc/rgrunt/rg_alert1.wav"
+
+"hgrunt/gr_pain1.wav" "bts_rc/rgrunt/rg_hurt1.wav"
+"hgrunt/gr_pain2.wav" "bts_rc/rgrunt/rg_hurt2.wav"
+"hgrunt/gr_pain3.wav" "bts_rc/rgrunt/rg_hurt3.wav"
+"hgrunt/gr_pain4.wav" "bts_rc/rgrunt/rg_hurt2.wav"
+"hgrunt/gr_pain5.wav" "bts_rc/rgrunt/rg_hurt1.wav"
+
+"hgrunt/gr_idle1.wav" "bts_rc/null.wav"
+"hgrunt/gr_idle2.wav" "bts_rc/null.wav"
+"hgrunt/gr_idle3.wav" "bts_rc/null.wav"
+
+"hgrunt/gr_die1.wav" "bts_rc/rgrunt/rb_death1.wav"
+"hgrunt/gr_die2.wav" "bts_rc/rgrunt/rb_death2.wav"
+"hgrunt/gr_die3.wav" "bts_rc/rgrunt/rb_death1.wav"

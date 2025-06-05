@@ -1,0 +1,9 @@
+attachment 1
+bone 4
+spritename sprites/singularity/muz/srs_muzzle1.spr 
+scale  30
+colorR 255
+colorG 255
+colorB 255
+rendermode 5
+transparency 255

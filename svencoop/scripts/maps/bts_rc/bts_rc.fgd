@@ -1,0 +1,18 @@
+@PointClass color(140 0 130) = trigger_update_class : "Trigger class update"
+[
+    targetname(target_source) : "Name"
+
+    // Index of the class, It's used in the code for setting the proper view models and some more operations
+    m_class(choices) : "Class index" : "0" =
+    [
+// Unsafe to use :/
+//        "-1" : "Unset (no class, scientist hands)"
+        "0" : "Barney"
+        "1" : "Scientist"
+        "2" : "Construction | Worker"
+// 3 now selected in order as with 1
+//        "3" : "Black Hands Scientist"
+        "4" : "H.E.V Scientist"
+        "5" : "Cleansuit (Scrapped)"
+    ]
+]

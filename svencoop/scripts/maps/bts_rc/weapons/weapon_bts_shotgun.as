@@ -31,7 +31,7 @@ namespace weapon_bts_shotgun
     int SLOT = 2;
     int POSITION = 7;
     // Vars
-    int DAMAGE = 17;
+    int DAMAGE = 22;
     int PELLETS = 4;
     Vector SINGLE_CONE( 0.08716f, 0.04362f, 0.0f );
     Vector DOUBLE_CONE( 0.17365f, 0.04362f, 0.0f );
@@ -306,7 +306,7 @@ namespace weapon_bts_shotgun
                 self.SendWeaponAnim( RELOAD, 0, pev.body );
                 switch( Math.RandomLong( 0, 1 ) )
                 {
-                    case 0: g_SoundSystem.EmitSoundDyn( m_pPlayer.edict(), CHAN_ITEM, "bts_rc/weapons/reload1.wav", 1.0f, ATTN_NORM, 0, 85 + Math.RandomLong( 0, 0x1f ) ); break;
+                    case 0: g_SoundSystem.EmitSoundDyn( m_pPlayer.edict(), CHAN_ITEM, "hlclassic/weapons/reload1.wav", 1.0f, ATTN_NORM, 0, 85 + Math.RandomLong( 0, 0x1f ) ); break;
                     case 1: g_SoundSystem.EmitSoundDyn( m_pPlayer.edict(), CHAN_ITEM, "hlclassic/weapons/reload3.wav", 1.0f, ATTN_NORM, 0, 85 + Math.RandomLong( 0, 0x1f ) ); break;
                 }
                 m_flTimeWeaponReload = g_Engine.time + 0.5f;

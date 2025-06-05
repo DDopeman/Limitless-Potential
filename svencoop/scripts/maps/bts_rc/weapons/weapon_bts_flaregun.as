@@ -142,10 +142,10 @@ namespace weapon_bts_flaregun
             if( self.m_flNextPrimaryAttack > g_Engine.time )
                 return;
 
-            self.DefaultReload( MAX_CLIP, HOLSTER, 2.5f, pev.body );
-            self.m_flNextPrimaryAttack = self.m_flTimeWeaponIdle = g_Engine.time + 2.75f;
+            self.DefaultReload( MAX_CLIP, RELOAD, 5.0f, pev.body );
+            self.m_flNextPrimaryAttack = self.m_flTimeWeaponIdle = g_Engine.time + 4.0f;
             SetThink( ThinkFunction( this.FinishAnim ) );
-            pev.nextthink = g_Engine.time + 1.5f;
+            pev.nextthink = g_Engine.time + 4.0f;
         }
 
         void WeaponIdle()

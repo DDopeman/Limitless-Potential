@@ -30,7 +30,7 @@ namespace weapon_bts_saw
     int SLOT = 5;
     int POSITION = 4;
     // Vars
-    int DAMAGE = 15;
+    int DAMAGE = 19;
     Vector SHELL( 14.0f, 8.0f, -10.0f );
 
     const int m_iLink = g_Game.PrecacheModel( "models/saw_link.mdl" );
@@ -106,7 +106,7 @@ namespace weapon_bts_saw
             if( m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD || self.m_iClip <= 0 )
             {
                 self.PlayEmptySound();
-                self.m_flNextPrimaryAttack = g_Engine.time + 0.15f;
+                self.m_flNextPrimaryAttack = g_Engine.time + 0.12f;
                 return;
             }
 
@@ -128,7 +128,7 @@ namespace weapon_bts_saw
 
             bool is_trained_personal = g_PlayerClass.is_trained_personal(m_pPlayer);
 
-            float CONE = ( is_trained_personal ? ( m_pPlayer.IsMoving() ? 0.02618f : 0.01f ) : ( m_pPlayer.IsMoving() ? 0.2f : 0.05f ) );
+            float CONE = ( is_trained_personal ? ( m_pPlayer.IsMoving() ? 0.02618f : 0.01f ) : ( m_pPlayer.IsMoving() ? 0.15f : 0.05f ) );
 
             float x, y;
             g_Utility.GetCircularGaussianSpread( x, y );

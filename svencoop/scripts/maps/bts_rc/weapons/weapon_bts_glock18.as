@@ -71,7 +71,7 @@ namespace weapon_bts_glock18
 
         bool Deploy()
         {
-            return bts_deploy( "models/bts_rc/weapons/v_glock18.mdl", "models/bts_rc/weapons/p_9mmhandgun.mdl", DRAW, "onehanded", 0 );
+            return bts_deploy( "models/bts_rc/weapons/v_glock18.mdl", "models/bts_rc/weapons/p_9mmhandgun.mdl", DRAW, "onehanded", 1 );
         }
 
         void Holster( int skiplocal = 0 )
@@ -180,7 +180,7 @@ namespace weapon_bts_glock18
             if( self.m_iClip == MAX_CLIP || m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) <= 0 )
                 return;
 
-            self.DefaultReload( MAX_CLIP, self.m_iClip != 0 ? RELOAD : RELOAD_EMPTY, 1.5f, pev.body );
+            self.DefaultReload( MAX_CLIP, self.m_iClip != 0 ? RELOAD_EMPTY : RELOAD, 1.5f, pev.body );
             self.m_flTimeWeaponIdle = g_Engine.time + g_PlayerFuncs.SharedRandomFloat( m_pPlayer.random_seed, 10.0f, 15.0f );
             BaseClass.Reload();
         }

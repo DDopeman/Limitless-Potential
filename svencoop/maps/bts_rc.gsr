@@ -21,7 +21,15 @@
 "!SC_ROCKET"				"scientist/sci_dragoff.wav"
 "!SC_BLIND"					"bts_rc/scientist/sci_simulation.wav"
 
+// Rgrunt
+"!RD_MORARFIELD"			"bts_rc/rgrunt/rb_bo.wav"
+"!RD_SOMEWORM"				"bts_rc/rgrunt/rb_d4.wav"
+
 // Barney
+"!OT_HELLO0"				"otis/hiya.wav"
+"!OT_HELLO1"				"otis/hiya.wav"
+"!OT_HELLO2"				"otis/hiya.wav"
+"!OT_HELLO3"				"otis/hiya.wav"
 "!BA_HELLO5" 				"barney/heyfella.wav"
 "!BA_HELLO1"				"barney/heyfella.wav"
 "!BA_SHOT5" 				"barney/ba_mad0.wav"
@@ -37,22 +45,27 @@
 "!BA_SLEW"					"bts_rc/barney/ba_passaway.wav"
 "!BA_ASSN"					"bts_rc/barney/ba_a1hint.wav"
 
+
 // Holo
 "!HOLO_3JUMPS"				"bts_rc/holo/tr_holo_simulation.wav"
 "!HOLO_BREAKBOX"			"bts_rc/holo/tr_holo_medpun.wav"
 "!HOLO_BREATH"				"bts_rc/holo/tr_holo_tortured.wav"
 "!HOLO_BUTTON"				"bts_rc/holo/tr_holo_tortured2.wav"
 
+// Ops
+"!BO_BECAREFUL"				"bts_rc/ops/d0_targets.wav"
 
 // Fgrunt
 "!FG_SHOT0"				"fgrunt/imhit.wav"
 "!FG_SHOT1"				"fgrunt/staydown.wav"
-"!FG_SHOT2				"fgrunt/takecover.wav"
+"!FG_SHOT2"				"fgrunt/takecover.wav"
 "!FG_SHOT3"				"fgrunt/pain1.wav"
 "!FG_SHOT4"				"fgrunt/pain2.wav"	
 "!FG_SHOT5"				"fgrunt/pain3.wav"
 "!FG_KILL4"				"fgrunt/stayalert.wav"
+"!SC_GOFREEMAN"			"bts_rc/fgrunt/gr_d3tor.wav"
 
+"!RD_YOUREALIVE"		"bts_rc/fgrunt/d0_nightvision.wav"
 "!FG_MASKFREAKS" 		"bts_rc/fgrunt/gr_area1.wav"
 "!FG_PATIENT" 			"bts_rc/fgrunt/gr_area2.wav"
 "!FG_TABLES" 			"bts_rc/fgrunt/gr_area3.wav"
@@ -63,6 +76,14 @@
 "!FG_STANDOFF" 			"bts_rc/fgrunt/sentryup.wav"
 "!FG_WIPEDOUT" 			"bts_rc/fgrunt/gr_zombiehint.wav"
 "!FG_IDLE11" 			"bts_rc/fgrunt/securitysystem.wav"
+
+"!BA_SURVEY2A"			"bts_rc/fgrunt/gr_trips.wav"
+"!BA_SURVEY4A"			"bts_rc/fgrunt/gr_breach_main.wav
+"!BA_SURVEY6A"			"bts_rc/fgrunt/gr_breach_sec.wav
+"!FG_YOUWITHUS"			"bts_rc/fgrunt/gr_powerback.wav
+
+// gman
+"!GM_SUIT" 				"bts_rc/gman/gman_denied.wav"
 
 	
 // Player
@@ -82,6 +103,8 @@
 
 // Weapons
 "weapons/pl_gun3.wav"		"bts_rc/weapons/glock_fire1.wav"
+"weapons/fire_both1.wav"	"bts_rc/weapons/uzi_fire_both1.wav"
+"weapons/fire_both2.wav"	"bts_rc/weapons/uzi_fire_both2.wav"
 "weapons/hks1.wav"			"bts_rc/weapons/mp5_fire1.wav"
 "weapons/hks2.wav"			"bts_rc/weapons/mp5_fire2.wav"
 "weapons/hks3.wav"			"bts_rc/weapons/mp5_fire3.wav"
@@ -91,5 +114,54 @@
 "weapons/saw_fire2.wav"		"bts_rc/weapons/saw_fire1.wav"
 "weapons/saw_fire3.wav"		"bts_rc/weapons/saw_fire1.wav"
 "weapons/sniper_fire.wav"	"ambience/rifle2.wav"
+
+// bodyguard
+"bodyguard/bashestoashes.ogg"		"bodyguard/_comma.wav"
+"bodyguard/babysitter.ogg"			"bodyguard/_comma.wav"
+"bodyguard/backoff.ogg"				"bodyguard/_comma.wav"
+"bodyguard/bringiton.ogg"		"bodyguard/_comma.wav"
+"bodyguard/die1.ogg"		"bodyguard/_comma.wav"
+"bodyguard/die2.ogg"		"bodyguard/_comma.wav"
+"bodyguard/die3.ogg"		"bodyguard/_comma.wav"
+"bodyguard/getlost.ogg"		"bodyguard/_comma.wav"
+"bodyguard/getshitoverwith.ogg"		"bodyguard/_comma.wav"
+"bodyguard/happenedhere.ogg"		"bodyguard/_comma.wav"
+"bodyguard/hellaimingat.ogg"		"bodyguard/_comma.wav"
+"bodyguard/hellareyoudoing.ogg"		"bodyguard/_comma.wav"
+"bodyguard/hellhappenedyou.ogg"		"bodyguard/_comma.wav"
+"bodyguard/hello.ogg"		"bodyguard/_comma.wav"
+"bodyguard/heyoverhere.ogg"		"bodyguard/_comma.wav"
+"bodyguard/imbusy.ogg"		"bodyguard/_comma.wav"
+"bodyguard/justafleshwound.ogg"		"bodyguard/_comma.wav"
+"bodyguard/knockitoff.ogg"		"bodyguard/_comma.wav"
+"bodyguard/laterfellas.ogg"		"bodyguard/_comma.wav"
+"bodyguard/layeggs.ogg"		"bodyguard/_comma.wav"
+"bodyguard/letsmove.ogg"		"bodyguard/_comma.wav"
+"bodyguard/looklikeshit.ogg"		"bodyguard/_comma.wav"
+"bodyguard/mondays.ogg"		"bodyguard/_comma.wav"
+"bodyguard/nicesuit.ogg"		"bodyguard/_comma.wav"
+"bodyguard/notaninjury.ogg"		"bodyguard/_comma.wav"
+"bodyguard/onassignment.ogg"		"bodyguard/_comma.wav"
+"bodyguard/pain1.ogg"		"bodyguard/_comma.wav"
+"bodyguard/pain2.ogg"		"bodyguard/_comma.wav"
+"bodyguard/pain3.ogg"		"bodyguard/_comma.wav"
+"bodyguard/pain4.ogg"		"bodyguard/_comma.wav"
+"bodyguard/palimworking.ogg"		"bodyguard/_comma.wav"
+"bodyguard/pathetic.ogg"		"bodyguard/_comma.wav"
+"bodyguard/primalroar.ogg"		"bodyguard/_comma.wav"
+"bodyguard/pumpsomelead.ogg"		"bodyguard/_comma.wav"
+"bodyguard/seeyalaterogg"		"bodyguard/_comma.wav"
+"bodyguard/shootface.ogg"		"bodyguard/_comma.wav"
+"bodyguard/shownupdrunk.ogg"		"bodyguard/_comma.wav"
+"bodyguard/someonescoming.ogg"		"bodyguard/_comma.wav"
+"bodyguard/stop1.ogg"		"bodyguard/_comma.wav"
+"bodyguard/stop2.ogg"		"bodyguard/_comma.wav"
+"bodyguard/stop3.ogg"		"bodyguard/_comma.wav"
+"bodyguard/waitinrighthere.ogg"		"bodyguard/_comma.wav"
+"bodyguard/watchyourfire.ogg"		"bodyguard/_comma.wav"
+"bodyguard/whathelljoke.ogg"		"bodyguard/_comma.wav"
+"bodyguard/wounded1.ogg"		"bodyguard/_comma.wav"
+"bodyguard/wounded2.ogg"		"bodyguard/_comma.wav"
+"bodyguard/yougotit.ogg"		"bodyguard/_comma.wav"
 
 

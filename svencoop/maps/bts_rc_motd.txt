@@ -1,5 +1,5 @@
 BLACKMESA TRAINING SIMULATION - RESONANCE CASCADE
-Version: V1.05
+Version: V4.90C
 -----------------------------------
 You have been selected to take part in this months training simulation, this experience will prepare for you the possibility of a resonance cascade scenario! please report to Sector H - a briefing is waiting for all personnel attending the simulation. The administrator and the Sector C personnel are pushing for this simulation, so it is a mandatory event.
 
@@ -26,6 +26,7 @@ Each Difficulty has its own perks.. Storymode is recommended for the first playt
 Use the custom flashlights and flares - it will give a sense of fear when navigating the map.
 
 Map Features
+-------------
 Randomly placed Weapons, Ammo, items and Monsters
 Random start locations
 Heavy Item Inventory system
@@ -35,8 +36,42 @@ Inventory system tutorial for the map
 ------------------------------------
 Everything you come across will need to be interacted with to pick up, weapons will go into your inventory and so will health kits. you can then activate these items and it will then be given to you, this Is to allow players to carry multiple weapons for other players, you can however activate the multiple weapons and it will give you the ammo, but you need to make sure to give a short interval or the weapon will delete.
 
+Difficulty information
+----------------------
+Storymode: no short cuts, easy bosses, no race x or military by default, reduced weapons. - checkpoints available
+relaxed: short cuts, easy bosses, race x, easy military, all weapons and ammo. - checkpoints available
+medium: no short cuts, medium bosses, race x, medium military, standard weapons. - checkpoints available
+punished: no short cuts, hard bosses, race x, hard military, reduced weapons. - checkpoints reduced
+tortured: no short cuts, hard bosses + additional, race x + additional, hard military, no weapons or ammo. - checkpoints removed
+
+Military information
+--------------------
+Allied HECU
+Storymode - Tortured
+A group of HECU who will assist the player, if taken to various locations, they will drop supplies and barricades when idle
+
+HECU
+Relaxed - squad of grunts that will reinforce from a single location
+Medium - squad of grunts with medic and engineers, can construct sentries and radios to call for additional forces
+punished - squad of grunts with medic, engineers, automatic rifleman and heavy weapon grunts.
+tortured - same as above, only reinforcements is 3x faster.
+Sentry system take over time: 120-600 seconds
+
+Blackops
+Storymode - Relaxed
+Black operations squad that have both mp5 and m16, female assassin with suppressed pistol, radios and sentries are constructed
+Medium - Tortured
+same as above, however the female assassin carries a suppressed uzi instead.
+Sentry system take over time: 60-300 seconds
+
+Robotics
+Storymode - Medium
+Crates are placed around the facility, after a certain amount of time they break. 
+Sentry system take over time: 0-15 seconds
+Tortured - Light Gunner spawns on the map, and relays information depending on player activity
+
+
 KNOWN BUGS
 ----------
-Some locations can have NPCS fire through them, screenshot and report them to me - as you can imagine the map is massive. Not All bugs will have been reported - the inventory glitch has been fixed
+Some locations can have NPCS fire through them, screenshot and report them to me - as you can imagine the map is massive. Not All bugs will have been reported.
 
-Sometimes players will throw their starting key cards down on teleporting to the buffer zone - unknown on how to fix this

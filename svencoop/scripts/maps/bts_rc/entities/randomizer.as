@@ -55,17 +55,17 @@ namespace randomizer
             switch( this.type() )
             {
                 case 1:
-                    return g_RandomizerNpc.indexes[ Math.RandomLong( 0, g_RandomizerNpc.indexes.length() ) ];
+                    return g_RandomizerNpc.indexes[ Math.RandomLong( 0, g_RandomizerNpc.indexes.length() -1 ) ];
                 case 2:
-                    return g_RandomizerItem.indexes[ Math.RandomLong( 0, g_RandomizerItem.indexes.length() ) ];
+                    return g_RandomizerItem.indexes[ Math.RandomLong( 0, g_RandomizerItem.indexes.length() -1 ) ];
                 case 3:
-                    return g_RandomizerHull.indexes[ Math.RandomLong( 0, g_RandomizerHull.indexes.length() ) ];
+                    return g_RandomizerHull.indexes[ Math.RandomLong( 0, g_RandomizerHull.indexes.length() -1 ) ];
                 case 4:
-                    return g_RandomizerBoss.indexes[ Math.RandomLong( 0, g_RandomizerBoss.indexes.length() ) ];
+                    return g_RandomizerBoss.indexes[ Math.RandomLong( 0, g_RandomizerBoss.indexes.length() -1 ) ];
                 case 5:
-                    return g_RandomizerWave.indexes[ Math.RandomLong( 0, g_RandomizerWave.indexes.length() ) ];
+                    return g_RandomizerWave.indexes[ Math.RandomLong( 0, g_RandomizerWave.indexes.length() -1 ) ];
                 case 6:
-                    return g_RandomizerHeadcrab.indexes[ Math.RandomLong( 0, g_RandomizerHeadcrab.indexes.length() ) ];
+                    return g_RandomizerHeadcrab.indexes[ Math.RandomLong( 0, g_RandomizerHeadcrab.indexes.length() -1 ) ];
             }
 
             return self.entindex();
@@ -236,7 +236,11 @@ namespace randomizer
                 "GM_HEAD_S5",
                 "GM_HEAD_S6",
                 "GM_HEAD_S7",
-                "GM_HEAD_S8"
+                "GM_HEAD_S8",
+				"GM_HEADZOEA_S1",
+				"GM_HEADZOEA_S2",
+				"GM_HEADZOEA_S3",
+				"GM_HEADZOEA_S4"
             };
         }
     }
@@ -277,6 +281,7 @@ namespace randomizer
                 "GM_HG_6",
                 "GM_HG_7",
                 "GM_HG_8",
+				"GM_FGUN_1",
                 "GM_G18_1",
                 "GM_PHK_1",
                 "GM_PHK_2",
@@ -476,7 +481,11 @@ namespace randomizer
                 "GM_ZM_S27",
                 "GM_ZM_S28",
                 "GM_ZM_S29",
-                "GM_ZM_S30"
+                "GM_ZM_S30",
+				"GM_ZM_CS_1",
+				"GM_ZM_CS_2",
+				"GM_ZM_CS_3",
+				"GM_ZM_CS_4"
             };
         }
     }
@@ -490,7 +499,11 @@ namespace randomizer
         {
             return
             {
-                "GM_R_SLAVE_S1",
+				"GM_AGRUNT_TORTURED1",
+				"GM_AGRUNT_TORTURED2",
+				"GM_AGRUNT_TORTURED_A51",
+				"GM_AGRUNT_TORTURED_A52",
+				"GM_R_SLAVE_S1",
                 "GM_R_SLAVE_S2",
                 "GM_R_SLAVE_S3",
                 "GM_R_SLAVE_S4",
