@@ -29,7 +29,7 @@ meahogo oghs/cs06/meahogob.wav
 gnomo oghs/cs06/gnomob.wav
 granada oghs/cs06/granadab.wav
 asumare oghs/cs06/asumareb.wav
-armon oghs/cs06/armonb.wav
+armon oghs/cs06/armonc.wav
 ala oghs/cs06/alab.wav
 a oghs/cs06/ab.wav
 qfeocp oghs/cs06/qfeocpb.wav
@@ -49,7 +49,7 @@ unshock oghs/cs06/unshockb.wav
 uy oghs/cs06/uyb.wav
 chipi oghs/cs06/chipib.wav
 ayno oghs/cs06/aynob.wav
-calla2 oghs/cs06/calla2c.wav
+callate oghs/cs06/callate.wav
 masdespacio oghs/cs06/masdespacio.wav
 ahorasi oghs/cs06/ahorasi.wav
 gracias2 oghs/cs06/gracias2.wav
@@ -377,7 +377,7 @@ estupido oghs/cs06/estupido.wav
 dude oghs/cs06/dude.wav
 dross4 oghs/cs06/dross4.wav
 coletemurio oghs/cs06/coletemurio.wav
-callense oghs/cs06/callense.wav
+callense oghs/cs06/callenseb.wav
 bugibugi oghs/cs06/bugibugi.wav
 ayuda3 oghs/cs06/ayuda3b.wav
 avisa oghs/cs06/avisa.wav
@@ -396,3 +396,11 @@ gane oghs/cs06/gane.wav
 death oghs/cs06/death.wav
 comenten oghs/cs06/comenten.wav
 oemrd oghs/cs06/oemrd.wav
+ala2 oghs/cs06/ala2.wav
+ooh oghs/cs06/ooh.wav
+ondadechoke oghs/cs06/ondadechoke.wav
+dross5 oghs/cs06/dross5.wav
+ptmr oghs/cs06/ptmr.wav
+hdp oghs/cs06/hdp.wav
+como oghs/cs06/como.wav
+boom3 oghs/cs06/boom3.wav

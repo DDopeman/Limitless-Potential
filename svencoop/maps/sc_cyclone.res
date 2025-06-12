@@ -84,7 +84,7 @@ models/sc_cyclone/baby_voltigore_pink.mdl
 models/sc_cyclone/bil1.mdl
 models/sc_cyclone/hevcharge_wall.mdl
 models/sc_cyclone/medkit_wall.mdl
-models/sc_cyclone/Truckrussian.mdl
+models/sc_cyclone/truckrussian.mdl
 sc_cyclone.wad
 sound/oghs/cs06/a!.wav
 sound/oghs/cs06/badbone.wav
