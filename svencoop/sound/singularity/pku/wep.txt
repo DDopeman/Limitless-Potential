@@ -1,0 +1,1 @@
+"items/gunpickup2.wav" "singularity/pku/w_pkup.wav"

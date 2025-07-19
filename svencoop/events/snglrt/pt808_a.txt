@@ -1,7 +1,7 @@
 attachment 2
 bone 4
 spritename sprites/singularity/muz/plasma_muzzle.spr 
-scale  5
+scale  9
 colorR 255
 colorG 255
 colorB 255

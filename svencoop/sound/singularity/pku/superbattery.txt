@@ -1,1 +1,1 @@
-"items/gunpickup2.wav" "kezaeiv/pku/superarmor.wav"
+"items/gunpickup2.wav" "singularity/pku/superarmor.wav"

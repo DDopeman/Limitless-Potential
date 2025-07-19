@@ -1,0 +1,5 @@
+4
+weapon				640 	singularity/kweps_vanil			518	143	170	45
+weapon_s			640 	singularity/kweps_vanil_slct	518	143	170	45
+ammo				640		singularity/kezammo_v2			96	0	24	24
+crosshair			640		singularity/kezcrosshairs		54	54	52	68

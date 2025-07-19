@@ -1,0 +1,38 @@
+
+                              * * * * * * sc_psyko (updated 13.3.2013) * * * * * *
+
+Author: LemonSoda (lemonsoda1@hotmail.com)
+
+
+* * * * * *
+
+
+You have been sent to a weird magical world for a hard mission. You need to collect 10 powerfully magical symbols for a science team. These symbols are the heart of this world and give it it's bright colours and magic.
+
+Each symbol is located in it's own area, protected by monsters and different puzzles. In addition to a certain colour, the symbol also represents it's own theme, which is related to the symbols own area, monsters and puzzles.
+
+After finding a symbol, a new door will open randomly. This way you will never know which puzzle you need to solve next.
+
+The symbols will appear in the spawn area after they have been picked up. 
+
+
+* * * * * *
+
+
+MISSION: 
+
+- Find and collect 10 magical symbols and bring them home
+
+
+* * * * * *
+
+
+THANKS TO:
+
+- SvenCoop team for the mod       
+- Original slime model: WarpZone
+- Music: Kevin MacLeod (incompetech.com)
+- Sounds: All those nice free sound sites
+
+- Beta testers: pcfdo.bat, Torpedo
+

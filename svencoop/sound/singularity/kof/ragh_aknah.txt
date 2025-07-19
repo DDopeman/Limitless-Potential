@@ -1,0 +1,13 @@
+gonome/gonome_death2.wav singularity/kof/ragh_aknah/hurt4.wav
+gonome/gonome_death3.wav singularity/kof/ragh_aknah/hurt4.wav
+gonome/gonome_death4.wav singularity/kof/ragh_aknah/hurt4.wav
+gonome/gonome_idle1.wav singularity/kof/ragh_aknah/taunt.wav
+gonome/gonome_idle2.wav singularity/kof/ragh_aknah/taunt.wav
+gonome/gonome_idle3.wav singularity/kof/ragh_aknah/taunt.wav
+gonome/gonome_melee1.wav singularity/kof/ragh_aknah/atack1.wav
+gonome/gonome_melee2.wav singularity/kof/ragh_aknah/hurt2.wav
+gonome/gonome_pain1.wav singularity/kof/ragh_aknah/hurt3.wav
+gonome/gonome_pain2.wav singularity/kof/ragh_aknah/hurt4.wav
+gonome/gonome_pain3.wav singularity/kof/ragh_aknah/hurt3.wav
+gonome/gonome_pain4.wav singularity/kof/ragh_aknah/hurt4.wav
+gonome/gonome_run.wav singularity/null.wav

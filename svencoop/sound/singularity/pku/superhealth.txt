@@ -1,1 +1,1 @@
-"items/smallmedkit1.wav" "kezaeiv/pku/superhealth.wav"
+"items/smallmedkit1.wav" "singularity/pku/superhealth.wav"
