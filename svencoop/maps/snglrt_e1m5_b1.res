@@ -43,6 +43,7 @@ models/singularity/c_weps/ammo/cannon_balls.mdl
 models/singularity/c_weps/ammo/darkmatter.mdl
 models/singularity/c_weps/ammo/grenades.mdl
 models/singularity/c_weps/ammo/hornets.mdl
+models/singularity/c_weps/ammo/ion.mdl
 models/singularity/c_weps/ammo/nails.mdl
 models/singularity/c_weps/ammo/plasma.mdl
 models/singularity/c_weps/ammo/rockets.mdl
@@ -63,14 +64,14 @@ models/singularity/c_weps/dev/p_devastator.mdl
 models/singularity/c_weps/dev/v_devastator.mdl
 models/singularity/c_weps/dstinger/p_dstinger.mdl
 models/singularity/c_weps/dstinger/v_dstinger.mdl
-models/singularity/c_weps/ehve/p_ehve.mdl
-models/singularity/c_weps/ehve/v_ehve.mdl
 models/singularity/c_weps/freedom/p_freedom.mdl
 models/singularity/c_weps/freedom/v_freedom.mdl
 models/singularity/c_weps/frostbite/p_frostbite.mdl
 models/singularity/c_weps/frostbite/v_frostbite.mdl
 models/singularity/c_weps/hyper_blaster/p_hblaster.mdl
 models/singularity/c_weps/hyper_blaster/v_hblaster.mdl
+models/singularity/c_weps/ion_cannon/p_ion.mdl
+models/singularity/c_weps/ion_cannon/v_ion.mdl
 models/singularity/c_weps/kz_annihilator/p_kzannihilator.mdl
 models/singularity/c_weps/kz_annihilator/v_kzannihilator.mdl
 models/singularity/c_weps/kz_purifier/p_kzpurifier.mdl
@@ -107,6 +108,7 @@ models/singularity/c_weps/seeker/v_seeker.mdl
 models/singularity/c_weps/w_mdls/null.mdl
 models/singularity/c_weps/w_mdls/w_cannon.mdl
 models/singularity/c_weps/w_mdls/w_freedom.mdl
+models/singularity/c_weps/w_mdls/w_ion_cannon.mdl
 models/singularity/c_weps/w_mdls/w_xl2.mdl
 models/singularity/c_weps/xl2/p_xl2.mdl
 models/singularity/c_weps/xl2/v_xl2.mdl
@@ -210,6 +212,7 @@ sound/singularity/c_wep/amr/ss_snpr3.wav
 sound/singularity/c_wep/amr/wlf_stn1.wav
 sound/singularity/c_wep/anv/1shot.wav
 sound/singularity/c_wep/anv/2shots.wav
+sound/singularity/c_wep/anv/dragon_shot.wav
 sound/singularity/c_wep/bal/bal_sht3.wav
 sound/singularity/c_wep/bal/f_hit1.wav
 sound/singularity/c_wep/bal/f_hit2.wav
@@ -218,7 +221,7 @@ sound/singularity/c_wep/bone/saw_fly_flesh.wav
 sound/singularity/c_wep/bone/saw_long.wav
 sound/singularity/c_wep/bone/saw_short.wav
 sound/singularity/c_wep/bone/saw_stop.wav
-sound/singularity/c_wep/bone/saw_tick.wav
+sound/singularity/c_wep/com/ar2_fire.wav
 sound/singularity/c_wep/com/cm_b1.wav
 sound/singularity/c_wep/com/cm_g1.wav
 sound/singularity/c_wep/com/cm_s1.wav
@@ -236,11 +239,7 @@ sound/singularity/c_wep/dstngr/sting03.wav
 sound/singularity/c_wep/dstngr/tib_hit.wav
 sound/singularity/c_wep/dstngr/tibrifle.wav
 sound/singularity/c_wep/dstngr/tox_hlth01.wav
-sound/singularity/c_wep/ehve/lightning.wav
 sound/singularity/c_wep/ehve/roach_blast.wav
-sound/singularity/c_wep/ehve/volt1.wav
-sound/singularity/c_wep/ehve/volt2.wav
-sound/singularity/c_wep/ehve/volt3.wav
 sound/singularity/c_wep/frdm/fire.wav
 sound/singularity/c_wep/frdm/rotd.wav
 sound/singularity/c_wep/frdm/rotu.wav
@@ -254,9 +253,14 @@ sound/singularity/c_wep/hblst/hb_plsm.wav
 sound/singularity/c_wep/hblst/hb_plsm_blast.wav
 sound/singularity/c_wep/hblst/hb_plsm_chrg.wav
 sound/singularity/c_wep/hblst/hb_plsm_nova_fly01.wav
+sound/singularity/c_wep/ion/lg_fire_loop.wav
+sound/singularity/c_wep/ion/lg_fire_start.wav
+sound/singularity/c_wep/ion/lg_hit1.wav
+sound/singularity/c_wep/ion/lg_hit2.wav
+sound/singularity/c_wep/ion/lg_hit3.wav
 sound/singularity/c_wep/k_annih/bigshot.wav
+sound/singularity/c_wep/k_annih/eng_charge.wav
 sound/singularity/c_wep/k_annih/nova.wav
-sound/singularity/c_wep/k_annih/p_rcht.wav
 sound/singularity/c_wep/k_annih/r_snipe.wav
 sound/singularity/c_wep/k_annih/shockwave.wav
 sound/singularity/c_wep/k_purifier/k_flesh.wav
@@ -264,10 +268,6 @@ sound/singularity/c_wep/k_purifier/k_spcl.wav
 sound/singularity/c_wep/k_purifier/slsh03.wav
 sound/singularity/c_wep/k_purifier/slsh04.wav
 sound/singularity/c_wep/k_purifier/vcut.wav
-sound/singularity/c_wep/k_purifier/vcutend.wav
-sound/singularity/c_wep/k_purifier/y_mss1.wav
-sound/singularity/c_wep/k_purifier/y_mss2.wav
-sound/singularity/c_wep/k_purifier/y_mss3.wav
 sound/singularity/c_wep/misc/bounce/g_bounce1.wav
 sound/singularity/c_wep/misc/bounce/g_bounce2.wav
 sound/singularity/c_wep/misc/bounce/g_bounce3.wav
@@ -289,6 +289,7 @@ sound/singularity/c_wep/misc/wpn_pku.wav
 sound/singularity/c_wep/mprl/bombpop.wav
 sound/singularity/c_wep/mprl/rkt_bounce.wav
 sound/singularity/c_wep/mprl/rkt_hit.wav
+sound/singularity/c_wep/mprl/rl_shoot3.wav
 sound/singularity/c_wep/mprl/rl_shoot4.wav
 sound/singularity/c_wep/obs/burn1.wav
 sound/singularity/c_wep/obs/burn2.wav
@@ -298,11 +299,6 @@ sound/singularity/c_wep/pt808/pt_charge.wav
 sound/singularity/c_wep/pt808/pt_overcharge.wav
 sound/singularity/c_wep/pt808/pt_shot.wav
 sound/singularity/c_wep/pt808/pt_xpl.wav
-sound/singularity/c_wep/purifier/lg_fire_loop.wav
-sound/singularity/c_wep/purifier/lg_fire_start.wav
-sound/singularity/c_wep/purifier/lg_hit1.wav
-sound/singularity/c_wep/purifier/lg_hit2.wav
-sound/singularity/c_wep/purifier/lg_hit3.wav
 sound/singularity/c_wep/rptr/r_blt.wav
 sound/singularity/c_wep/rptr/r_focus_shot.wav
 sound/singularity/c_wep/rptr/r_shot.wav
@@ -316,6 +312,7 @@ sound/singularity/c_wep/scho/scho_dual.wav
 sound/singularity/c_wep/scho/scho_fire.wav
 sound/singularity/c_wep/scho/scho_rel_dual.wav
 sound/singularity/c_wep/seek/sk_rel.wav
+sound/singularity/c_wep/xl2/xl2_destroyer.wav
 sound/singularity/c_wep/xl2/xl4_shot.wav
 sound/singularity/door/chains2.wav
 sound/singularity/door/doorbig.wav
@@ -441,10 +438,10 @@ sprites/singularity/c_wep/weapon_bonecracker.txt
 sprites/singularity/c_wep/weapon_commando.txt
 sprites/singularity/c_wep/weapon_devastator.txt
 sprites/singularity/c_wep/weapon_duality_stinger.txt
-sprites/singularity/c_wep/weapon_ehve.txt
 sprites/singularity/c_wep/weapon_freedom_machine.txt
 sprites/singularity/c_wep/weapon_frostbite.txt
 sprites/singularity/c_wep/weapon_hyper_blaster.txt
+sprites/singularity/c_wep/weapon_ion_cannon.txt
 sprites/singularity/c_wep/weapon_kz_annihilator.txt
 sprites/singularity/c_wep/weapon_kz_purifier.txt
 sprites/singularity/c_wep/weapon_mprl.txt
@@ -460,8 +457,6 @@ sprites/singularity/fx/b-tele_prpl_pk.spr
 sprites/singularity/fx/energy_sphere.spr
 sprites/singularity/fx/hotglow_crimson.spr
 sprites/singularity/fx/hotglow_prpl.spr
-sprites/singularity/fx/kz_green_nado.spr
-sprites/singularity/fx/kz_knf_ht_fx.spr
 sprites/singularity/fx/kz_nova_xpl.spr
 sprites/singularity/fx/laser_crshr_cy.spr
 sprites/singularity/fx/laser_crshr_wht.spr
@@ -487,3 +482,4 @@ sprites/singularity/xpl/spore_exp_c_01_rd.spr
 sprites/singularity/xpl/zxlp_blue.spr
 sprites/singularity/xpl/zxlp_crimson.spr
 sprites/singularity/xpl/zxlp_purple.spr
+sprites/singularity/xpl/zxpl_green.spr

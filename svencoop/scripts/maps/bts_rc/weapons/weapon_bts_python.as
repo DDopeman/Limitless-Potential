@@ -30,7 +30,6 @@ namespace weapon_bts_python
     int POSITION = 8;
     // Vars
     int DAMAGE = 66;
-    Vector CONE( 0.01f, 0.01f, 0.01f );
 
     class weapon_bts_python : ScriptBasePlayerWeaponEntity, bts_rc_base_weapon
     {
@@ -106,7 +105,8 @@ namespace weapon_bts_python
                 float x, y;
                 g_Utility.GetCircularGaussianSpread( x, y );
 
-                Vector vecDir = vecAiming + x * CONE.x * g_Engine.v_right + y * CONE.y * g_Engine.v_up;
+                float CONE = Accuracy( 0.01f, 0.1f, 0.01f, 0.05f );
+                Vector vecDir = vecAiming + x * CONE * g_Engine.v_right + y * CONE * g_Engine.v_up;
                 Vector vecEnd = vecSrc + vecDir * 8192.0f;
 
                 TraceResult tr;

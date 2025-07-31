@@ -267,3 +267,14 @@ class ammo_bts_uzi : ScriptBasePlayerAmmoEntity, bts_ammo_base
         return AddAmmo(other, weapon_bts_uzi::AMMO_GIVE, "9mm", weapon_bts_uzi::MAX_CARRY );
     }
 }
+
+class ammo_bts_uzisd : ScriptBasePlayerAmmoEntity, bts_ammo_base
+{
+    void Spawn() {
+        Spawn("models/bts_rc/weapons/w_uzi_clip.mdl" );
+    }
+
+    bool AddAmmo( CBaseEntity@ other ) {
+        return AddAmmo(other, weapon_bts_uzisd::AMMO_GIVE, "9mm", weapon_bts_uzisd::MAX_CARRY );
+    }
+}

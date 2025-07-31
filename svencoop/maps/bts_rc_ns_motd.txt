@@ -1,5 +1,5 @@
 BLACKMESA TRAINING SIMULATION - RESONANCE CASCADE - NON-SURVIVAL
-Version: V2.00
+Version: V4.50
 -----------------------------------
 You have been selected to take part for the testing of this months training simulation, You will have unlimited respawns and be able to test out the 
 simulation In a more practical way. You have been reported to test the seed thoroughly and accurately, to rule out any issues that may happen during
@@ -39,5 +39,3 @@ Everything you come across will need to be interacted with to pick up, weapons w
 KNOWN BUGS
 ----------
 Some locations can have NPCS fire through them, screenshot and report them to me - as you can imagine the map is massive. Not All bugs will have been reported - the inventory glitch has been fixed
-
-Sometimes players will throw their starting key cards down on teleporting to the buffer zone - unknown on how to fix this

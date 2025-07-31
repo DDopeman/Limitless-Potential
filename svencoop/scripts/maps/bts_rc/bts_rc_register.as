@@ -5,9 +5,6 @@
 /*==========================================================================
 *   - Start of includes
 ==========================================================================*/
-#if DEVELOP
-#include "Logger"
-#endif
 
 #include "entities/ammo"
 #include "entities/env_bloodpuddle"
@@ -16,7 +13,7 @@
 #include "entities/point_checkpoint"
 #include "entities/randomizer"
 #include "entities/trigger_update_class"
-#if DEVELOP
+#if SERVER
 #include "entities/trigger_logger"
 #endif
 
@@ -69,13 +66,6 @@
 /*==========================================================================
 *   - Start of base class for weapons
 ==========================================================================*/
-#if DEVELOP
-namespace btsweapon
-{
-    CLogger@ m_Logger = CLogger( "Weapon" );
-}
-#endif
-
 mixin class bts_rc_base_weapon
 {
     // Default flags for weapons
@@ -105,7 +95,17 @@ mixin class bts_rc_base_weapon
         self.SendWeaponAnim( animation, 0, pev.body );
 
         m_pPlayer.m_flNextAttack = time; // For some reason the weapon's *Attack functions weren't being called without this.
-        self.m_flNextPrimaryAttack = self.m_flTimeWeaponIdle = self.m_flNextSecondaryAttack = g_Engine.time + time;
+
+        time += g_Engine.time;
+
+        if( self.m_flNextPrimaryAttack < time )
+            self.m_flNextPrimaryAttack = time;
+
+        if( self.m_flTimeWeaponIdle < time )
+            self.m_flTimeWeaponIdle = time;
+
+        if( self.m_flNextSecondaryAttack < time )
+            self.m_flNextSecondaryAttack = time;
 
         return true;
     }
@@ -160,13 +160,12 @@ mixin class bts_rc_base_weapon
                 if( should_sparks && freeedicts( 17 ) )
                 {
                     int sparks_color;
-					
 
                     if( "monster_robogrunt" == hit.pev.classname )
-					{
-						sparks_color = 5;
-					}
-					else if( "models/bts_rc/monsters/hwrgrunt.mdl" == hit.pev.model )
+                    {
+                        sparks_color = 5;
+                    }
+                    else if( "models/bts_rc/monsters/robothwgrunt.mdl" == hit.pev.model )
                     {
                         sparks_color = 7;
                     }
@@ -248,15 +247,29 @@ mixin class bts_rc_base_weapon
         if( !BaseClass.AddToPlayer( player ) )
             return false;
 
-#if DEVELOP
-        btsweapon::m_Logger.info( "Added {} to player {}", { pev.classname, player.pev.netname } );
-#endif
 
         NetworkMessage weapon( MSG_ONE, NetworkMessages::WeapPickup, player.edict() );
             weapon.WriteLong( g_ItemRegistry.GetIdForName( pev.classname ) );
         weapon.End();
 
         return true;
+    }
+
+    protected float Accuracy( float tr, float def, float trd, float defd )
+    {
+        if( g_PlayerClass.is_trained_personal(m_pPlayer) )
+        {
+            if( ( m_pPlayer.pev.button & IN_DUCK ) != 0 )
+            {
+                return trd;
+            }
+            return tr;
+        }
+        else if( ( m_pPlayer.pev.button & IN_DUCK ) != 0 )
+        {
+            return defd;
+        }
+        return def;
     }
 };
 
@@ -291,6 +304,7 @@ mixin class bts_rc_base_melee
 /*==========================================================================
 *   - Start of Cvars for server operators. Modify these in maps/bts_rc.cfg
 ==========================================================================*/
+CCVar@ cvar_player_models = CCVar( "bts_rc_disable_player_models", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly );
 CCVar@ cvar_player_voices = CCVar( "bts_rc_disable_player_voices", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly );
 CCVar@ cvar_bloodpuddles = CCVar( "bts_rc_disable_bloodpuddles", 0, String::EMPTY_STRING, ConCommandFlag::AdminOnly );
 CCVar@ cvar_sentry_laser = CCVar( "bts_rc_disable_sentry_laser", -1, String::EMPTY_STRING, ConCommandFlag::AdminOnly, @CSentryCallback );
@@ -306,7 +320,7 @@ void MapActivate()
     *   - Start of turret lasers
     ==========================================================================*/
     const array<string> turrets = {
-#if DEVELOP
+#if SERVER
         "monster_sentry",
 #endif
         "monster_turret",
@@ -329,11 +343,6 @@ void MapActivate()
 
 void MapInit()
 {
-#if DEVELOP
-    LoggerLevel = ( Warning | Debug | Info | Critical | Error );
-}
-	
-#endif
     /*==========================================================================
     *   - Start of custom entities registry
     ==========================================================================*/
@@ -341,9 +350,6 @@ void MapInit()
     g_CustomEntityFuncs.RegisterCustomEntity( "func_bts_recharger::func_bts_recharger", "func_bts_recharger" );
     g_CustomEntityFuncs.RegisterCustomEntity( "trigger_update_class::trigger_update_class", "trigger_update_class" );
     g_CustomEntityFuncs.RegisterCustomEntity( "point_checkpoint::point_checkpoint", "point_checkpoint" );
-#if DEVELOP
-    g_CustomEntityFuncs.RegisterCustomEntity( "trigger_logger::trigger_logger", "trigger_logger" );
-#endif
 
     // Randomizer
     g_CustomEntityFuncs.RegisterCustomEntity( "randomizer::randomizer_npc", "randomizer_npc" );
@@ -352,6 +358,7 @@ void MapInit()
     g_CustomEntityFuncs.RegisterCustomEntity( "randomizer::randomizer_boss", "randomizer_boss" );
     g_CustomEntityFuncs.RegisterCustomEntity( "randomizer::randomizer_wave", "randomizer_wave" );
     g_CustomEntityFuncs.RegisterCustomEntity( "randomizer::randomizer_headcrab", "randomizer_headcrab" );
+    g_CustomEntityFuncs.RegisterCustomEntity( "randomizer::randomizer_hullwave", "randomizer_hullwave" );
 
     // Items
     g_CustomEntityFuncs.RegisterCustomEntity( "item_bts_armorvest", "item_bts_armorvest" );
@@ -365,7 +372,7 @@ void MapInit()
 
     // Weapon Entities
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_axe::weapon_bts_axe", "weapon_bts_axe" );
-	g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_pipewrench::weapon_bts_pipewrench", "weapon_bts_pipewrench" );
+    g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_pipewrench::weapon_bts_pipewrench", "weapon_bts_pipewrench" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_beretta::weapon_bts_beretta", "weapon_bts_beretta" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_crowbar::weapon_bts_crowbar", "weapon_bts_crowbar" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_eagle::weapon_bts_eagle", "weapon_bts_eagle" );
@@ -390,7 +397,7 @@ void MapInit()
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_python::weapon_bts_python", "weapon_bts_python" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_shotgun::weapon_bts_shotgun", "weapon_bts_shotgun" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_uzi::weapon_bts_uzi", "weapon_bts_uzi" );
-	g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_uzisd::weapon_bts_uzisd", "weapon_bts_uzisd" );
+    g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_uzisd::weapon_bts_uzisd", "weapon_bts_uzisd" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_saw::weapon_bts_saw", "weapon_bts_saw" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_sbshotgun::weapon_bts_sbshotgun", "weapon_bts_sbshotgun" );
     g_CustomEntityFuncs.RegisterCustomEntity( "weapon_bts_screwdriver::weapon_bts_screwdriver", "weapon_bts_screwdriver" );
@@ -430,11 +437,11 @@ void MapInit()
     g_CustomEntityFuncs.RegisterCustomEntity( "ammo_bts_shotgun", "ammo_bts_shotgun" );
     g_CustomEntityFuncs.RegisterCustomEntity( "ammo_bts_shotgun", "ammo_bts_shotshell" );
     g_CustomEntityFuncs.RegisterCustomEntity( "ammo_bts_uzi", "ammo_bts_uzi" );
-	g_CustomEntityFuncs.RegisterCustomEntity( "ammo_bts_uzisd", "ammo_bts_uzisd" );
+    g_CustomEntityFuncs.RegisterCustomEntity( "ammo_bts_uzisd", "ammo_bts_uzisd" );
 
     // Weapons
     g_ItemRegistry.RegisterWeapon( "weapon_bts_axe", "bts_rc/weapons" );
-	g_ItemRegistry.RegisterWeapon( "weapon_bts_pipewrench", "bts_rc/weapons" );
+    g_ItemRegistry.RegisterWeapon( "weapon_bts_pipewrench", "bts_rc/weapons" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_beretta", "bts_rc/weapons", "9mm", "bts:battery", "ammo_bts_beretta", "ammo_bts_beretta_battery" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_crowbar", "bts_rc/weapons" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_eagle", "bts_rc/weapons", "357", "bts:battery", "ammo_bts_eagle", "ammo_bts_eagle_battery" );
@@ -459,7 +466,7 @@ void MapInit()
     g_ItemRegistry.RegisterWeapon( "weapon_bts_python", "bts_rc/weapons", "357", "", "ammo_bts_python", "" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_shotgun", "bts_rc/weapons", "buckshot", "", "ammo_bts_shotgun", "" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_uzi", "bts_rc/weapons", "9mm", "", "ammo_bts_uzi", "" );
-	g_ItemRegistry.RegisterWeapon( "weapon_bts_uzisd", "bts_rc/weapons", "9mm", "", "ammo_bts_uzisd", "" );
+    g_ItemRegistry.RegisterWeapon( "weapon_bts_uzisd", "bts_rc/weapons", "9mm", "", "ammo_bts_uzisd", "" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_saw", "bts_rc/weapons", "556", "", "ammo_bts_saw", "" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_sbshotgun", "bts_rc/weapons", "buckshot", "bts:battery", "ammo_bts_sbshotgun", "ammo_bts_sbshotgun_battery" );
     g_ItemRegistry.RegisterWeapon( "weapon_bts_screwdriver", "bts_rc/weapons" );
@@ -477,13 +484,13 @@ void MapInit()
             ItemMapping( "weapon_glock", "ammo_bts_dglocksd" ),
             ItemMapping( "weapon_357", "ammo_bts_357cyl" ),
             ItemMapping( "weapon_eagle", "ammo_bts_dreagle" ),
-			ItemMapping( "weapon_uzi", "ammo_bts_9mmbox" ),
-			ItemMapping( "weapon_uziakimbo", "ammo_bts_9mmbox" ),
+            ItemMapping( "weapon_uzi", "ammo_bts_9mmbox" ),
+            ItemMapping( "weapon_uziakimbo", "ammo_bts_9mmbox" ),
             ItemMapping( "weapon_9mmAR", "ammo_bts_9mmbox" ),
             ItemMapping( "weapon_mp5", "ammo_bts_9mmbox" ),
             ItemMapping( "weapon_shotgun", "ammo_bts_shotshell" ),
             ItemMapping( "weapon_m16", "ammo_bts_556mag" ),
-			ItemMapping( "weapon_sniperrifle", "ammo_bts_556mag" ),
+            ItemMapping( "weapon_sniperrifle", "ammo_bts_556mag" ),
             ItemMapping( "weapon_saw", "ammo_bts_dsaw" ),
             ItemMapping( "weapon_m249", "ammo_bts_dsaw" ),
             ItemMapping( "weapon_minigun", "ammo_bts_dsaw" ),
@@ -597,8 +604,10 @@ void MapInit()
     models::shell = g_Game.PrecacheModel( "models/hlclassic/shell.mdl" );
     models::saw_shell = g_Game.PrecacheModel( "models/bts_rc/weapons/saw_shell.mdl" );
     models::shotgunshell = g_Game.PrecacheModel( "models/hlclassic/shotgunshell.mdl" );
+	
+	g_Game.PrecacheModel( "models/bts_rc/weapons/p_9mmhandgun.mdl" );
 
-#if DEVELOP
+#if SERVER
     g_Game.PrecacheOther( "monster_headcrab" );
 #endif
     /*==========================================================================
@@ -637,7 +646,7 @@ bool freeedicts( int overhead = 1 )
     return ( g_EngineFuncs.NumberOfEntities() < g_Engine.maxEntities - ( 16 * g_Engine.maxClients ) - 100 - overhead );
 }
 
-#if DEVELOP
+#if SERVER
 // Should we display info of aiming entity?
 void whatsthat( CBasePlayer@ player )
 {
@@ -673,9 +682,6 @@ enum PM
 
 final class PlayerClass
 {
-#if DEVELOP
-    CLogger@ m_Logger = CLogger( "Player Class System" );
-#endif
 
     // Index of the last used model so we give each player a different one instead of a random one.
     private uint mdl_scientist_last = Math.RandomLong( 0, 4 );
@@ -707,9 +713,6 @@ final class PlayerClass
                     return PM::UNSET;
                 }
 
-#if DEVELOP
-                m_Logger.info( "Unseted class for {}. Setting as operator", { player.pev.netname } );
-#endif
 
                 set_class( player, PM( Math.RandomLong( PM::BARNEY, PM::CONSTRUCTION ) ) );
             }
@@ -759,9 +762,6 @@ final class PlayerClass
             }
         }
 
-#if DEVELOP
-        m_Logger.debug( "Asigned model \"{}\" to player {} at class {}", { model, player.pev.netname, player_class } );
-#endif
     }
 
     // Return a player model for the given class
@@ -796,9 +796,6 @@ PlayerClass g_PlayerClass;
 
 namespace item_tracker
 {
-#if DEVELOP
-    CLogger@ m_Logger = CLogger( "Item Tracker" );
-#endif
     // Last frame we did an operation.
     float time;
     // String containing all the information.
@@ -936,7 +933,7 @@ namespace precache
         "bts_rc/weapons/pipe_hitbod2.wav",
         "bts_rc/weapons/pipe_hitbod3.wav",
         "bts_rc/weapons/pipe_miss1.wav",
-		"weapons/pwrench_hit1.wav",
+        "weapons/pwrench_hit1.wav",
         "weapons/pwrench_hit2.wav",
         "weapons/pwrench_hitbod1.wav",
         "weapons/pwrench_hitbod2.wav",
@@ -1017,20 +1014,22 @@ namespace precache
         "models/bts_rc/weapons/p_flare.mdl",
         "models/bts_rc/weapons/p_flaregun.mdl",
         "models/bts_rc/weapons/p_flashlight.mdl",
+		"models/bts_rc/weapons/p_glock17f.mdl",
+		"models/bts_rc/weapons/p_glock18.mdl",
         "models/bts_rc/weapons/p_m16.mdl",
         "models/bts_rc/weapons/p_m4.mdl",
         "models/bts_rc/weapons/p_m4sd.mdl",
         "models/bts_rc/weapons/p_m79.mdl",
         "models/bts_rc/weapons/p_medkit.mdl",
         "models/bts_rc/weapons/p_pipe.mdl",
-		"models/bts_rc/weapons/p_pipe_wrench.mdl",
+        "models/bts_rc/weapons/p_pipe_wrench.mdl",
         "models/bts_rc/weapons/p_poolstick.mdl",
         "models/bts_rc/weapons/p_saw.mdl",
         "models/bts_rc/weapons/p_sbshotgun.mdl",
         "models/bts_rc/weapons/p_screwdriver.mdl",
         "models/bts_rc/weapons/p_shotgun.mdl",
         "models/bts_rc/weapons/p_uzi.mdl",
-		"models/bts_rc/weapons/p_uzisd.mdl",
+        "models/bts_rc/weapons/p_uzisd.mdl",
         "models/bts_rc/weapons/v_357.mdl",
         "models/bts_rc/weapons/v_9mmARGL.mdl",
         "models/bts_rc/weapons/v_9mmar.mdl",
@@ -1039,6 +1038,7 @@ namespace precache
         "models/bts_rc/weapons/v_axe.mdl",
         "models/bts_rc/weapons/v_beretta.mdl",
         "models/bts_rc/weapons/v_crowbar.mdl",
+        "models/bts_rc/weapons/v_crowbary.mdl",
         "models/bts_rc/weapons/v_desert_eagle.mdl",
         "models/bts_rc/weapons/v_flare.mdl",
         "models/bts_rc/weapons/v_flaregun.mdl",
@@ -1053,14 +1053,14 @@ namespace precache
         "models/bts_rc/weapons/v_m79.mdl",
         "models/bts_rc/weapons/v_medkit.mdl",
         "models/bts_rc/weapons/v_pipe.mdl",
-		"models/bts_rc/weapons/v_pipe_wrench.mdl",
+        "models/bts_rc/weapons/v_pipe_wrench.mdl",
         "models/bts_rc/weapons/v_poolstick.mdl",
         "models/bts_rc/weapons/v_saw.mdl",
         "models/bts_rc/weapons/v_sbshotgun.mdl",
         "models/bts_rc/weapons/v_screwdriver.mdl",
         "models/bts_rc/weapons/v_shotgun.mdl",
         "models/bts_rc/weapons/v_uzi.mdl",
-		"models/bts_rc/weapons/v_uzisd.mdl",
+        "models/bts_rc/weapons/v_uzisd.mdl",
         "models/bts_rc/weapons/w_556nato.mdl",
         "models/bts_rc/weapons/w_9mmARGL.mdl",
         "models/bts_rc/weapons/w_9mmar.mdl",
@@ -1080,7 +1080,7 @@ namespace precache
         "models/bts_rc/weapons/w_medkit.mdl",
         "models/bts_rc/weapons/w_pmedkit.mdl",
         "models/bts_rc/weapons/w_pipe.mdl",
-		"models/bts_rc/weapons/w_pipe_wrench.mdl",
+        "models/bts_rc/weapons/w_pipe_wrench.mdl",
         "models/bts_rc/weapons/w_poolstick.mdl",
         "models/bts_rc/weapons/w_saw.mdl",
         "models/bts_rc/weapons/w_saw_clip.mdl",
@@ -1088,12 +1088,13 @@ namespace precache
         "models/bts_rc/weapons/w_screwdriver.mdl",
         "models/bts_rc/weapons/w_shotgun.mdl",
         "models/bts_rc/weapons/w_uzi.mdl",
-		"models/bts_rc/weapons/w_uzisd.mdl",
+        "models/bts_rc/weapons/w_uzisd.mdl",
         "models/bts_rc/weapons/w_uzi_clip.mdl",
         "models/hlclassic/grenade.mdl",
         "models/hlclassic/p_357.mdl",
         "models/hlclassic/p_9mmhandgun.mdl",
         "models/hlclassic/p_crowbar.mdl",
+        "models/bts_rc/weapons/p_crowbary.mdl",
         "models/hlclassic/p_grenade.mdl",
         "models/hlclassic/w_357.mdl",
         "models/hlclassic/w_357ammo.mdl",
@@ -1101,9 +1102,12 @@ namespace precache
         "models/hlclassic/w_9mmarclip.mdl",
         "models/hlclassic/w_9mmclip.mdl",
         "models/hlclassic/w_9mmhandgun.mdl",
+		"models/bts_rc/weapons/w_glock17f.mdl",
+		"models/bts_rc/weapons/w_glock18.mdl",
         "models/hlclassic/w_argrenade.mdl",
         "models/hlclassic/w_battery.mdl",
         "models/hlclassic/w_crowbar.mdl",
+        "models/bts_rc/weapons/w_crowbary.mdl",
         "models/hlclassic/w_grenade.mdl",
         "models/hlclassic/w_shotbox.mdl",
         "models/mikk/misc/bloodpuddle.mdl",
@@ -1145,7 +1149,7 @@ namespace precache
     array<string> generic =
     {
         "events/muzzle_saw.txt",
-		"sprites/bts_rc/weapons/weapon_bts_pipewrench.txt",
+        "sprites/bts_rc/weapons/weapon_bts_pipewrench.txt",
         "sprites/bts_rc/weapons/weapon_bts_axe.txt",
         "sprites/bts_rc/weapons/weapon_bts_beretta.txt",
         "sprites/bts_rc/weapons/weapon_bts_crowbar.txt",
@@ -1173,6 +1177,6 @@ namespace precache
         "sprites/bts_rc/weapons/weapon_bts_screwdriver.txt",
         "sprites/bts_rc/weapons/weapon_bts_shotgun.txt",
         "sprites/bts_rc/weapons/weapon_bts_uzi.txt",
-		"sprites/bts_rc/weapons/weapon_bts_uzisd.txt"
+        "sprites/bts_rc/weapons/weapon_bts_uzisd.txt"
     };
 }

@@ -1,5 +1,5 @@
 BLACKMESA TRAINING SIMULATION - RESONANCE CASCADE
-Version: V4.90C
+Version: V5.20
 -----------------------------------
 You have been selected to take part in this months training simulation, this experience will prepare for you the possibility of a resonance cascade scenario! please report to Sector H - a briefing is waiting for all personnel attending the simulation. The administrator and the Sector C personnel are pushing for this simulation, so it is a mandatory event.
 
@@ -73,5 +73,6 @@ Tortured - Light Gunner spawns on the map, and relays information depending on p
 
 KNOWN BUGS
 ----------
-Some locations can have NPCS fire through them, screenshot and report them to me - as you can imagine the map is massive. Not All bugs will have been reported.
+Some locations have scuffed clipping, this can prevent you from shooting enemies, screenshot these locations and they will be fixed.
+
 

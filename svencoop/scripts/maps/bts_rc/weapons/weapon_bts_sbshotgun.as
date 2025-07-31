@@ -31,7 +31,7 @@ namespace weapon_bts_sbshotgun
     // int DEFAULT_GIVE = Math.RandomLong( 1, 6 );
     // int DEFAULT_GIVE2 = Math.RandomLong( 1, 2 );
     int AMMO_GIVE = MAX_CLIP;
-    int AMMO_GIVE2 = 1;
+    int AMMO_GIVE2 = 0;
     int AMMO_DROP = AMMO_GIVE;
     int AMMO_DROP2 = AMMO_GIVE2;
     int WEIGHT = 15;
@@ -39,8 +39,8 @@ namespace weapon_bts_sbshotgun
     int SLOT = 2;
     int POSITION = 6;
     // Vars
-    int DAMAGE = 22;
-    int PELLETS = 4;
+    int DAMAGE = 13;
+    int PELLETS = 8;
     float DRAIN_TIME = 0.8f;
     Vector CONE( 0.08716f, 0.04362f, 0.0f );
     Vector SHELL( 14.0f, 6.0f, -34.0f );

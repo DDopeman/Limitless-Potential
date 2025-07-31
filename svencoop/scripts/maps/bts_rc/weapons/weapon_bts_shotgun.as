@@ -31,8 +31,8 @@ namespace weapon_bts_shotgun
     int SLOT = 2;
     int POSITION = 7;
     // Vars
-    int DAMAGE = 22;
-    int PELLETS = 4;
+    int DAMAGE = 13;
+    int PELLETS = 8;
     Vector SINGLE_CONE( 0.08716f, 0.04362f, 0.0f );
     Vector DOUBLE_CONE( 0.17365f, 0.04362f, 0.0f );
     Vector SHELL( 14.0f, 6.0f, -34.0f );

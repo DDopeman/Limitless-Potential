@@ -47,7 +47,7 @@ namespace weapon_bts_glock18
 
         void Spawn()
         {
-            g_EntityFuncs.SetModel( self, self.GetW_Model( "models/hlclassic/w_9mmhandgun.mdl" ) );
+            g_EntityFuncs.SetModel( self, self.GetW_Model( "models/bts_rc/weapons/w_glock18.mdl" ) );
             self.m_iDefaultAmmo = Math.RandomLong( 9, MAX_CLIP );
             self.FallInit();
 
@@ -71,7 +71,7 @@ namespace weapon_bts_glock18
 
         bool Deploy()
         {
-            return bts_deploy( "models/bts_rc/weapons/v_glock18.mdl", "models/bts_rc/weapons/p_9mmhandgun.mdl", DRAW, "onehanded", 1 );
+            return bts_deploy( "models/bts_rc/weapons/v_glock18.mdl", "models/bts_rc/weapons/p_glock18.mdl", DRAW, "onehanded", 1 );
         }
 
         void Holster( int skiplocal = 0 )
@@ -118,7 +118,7 @@ namespace weapon_bts_glock18
 
             bool is_trained_personal = g_PlayerClass.is_trained_personal(m_pPlayer);
 
-            float CONE = ( is_trained_personal ? 0.01f : 0.05f );
+            float CONE = Accuracy( 0.01f, 0.05f, 0.01f, 0.05f );
 
             float x, y;
             g_Utility.GetCircularGaussianSpread( x, y );

@@ -92,3 +92,5 @@ sound/oghs/cs06/zzz.wav
 sound/oghs/misc/cp02_03.mp3
 sound/singularity/misc/teleport.wav
 sprites/singularity/prtl/kz_exit1.spr
+sprites/singularity/prtl/kz_exit4.spr
+sprites/singularity/prtl/kz_exit6.spr

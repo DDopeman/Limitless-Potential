@@ -38,8 +38,6 @@ namespace weapon_bts_uzisd
     int POSITION = 15;
     // Vars
     int DAMAGE = 12;
-    Vector HEV_CONE( 0.015f, 0.015f, 0.015f );
-    Vector NOHEV_CONE( 0.0175f, 0.0175f, 0.0175f );
     Vector SHELL( 32.0f, 6.0f, -12.0f );
 
     class weapon_bts_uzisd : ScriptBasePlayerWeaponEntity, bts_rc_base_weapon
@@ -88,11 +86,6 @@ namespace weapon_bts_uzisd
             return false;
         }
 
-        void PrimaryAttack()
-        {
-            Fire( g_PlayerClass.is_trained_personal(m_pPlayer) ? HEV_CONE : NOHEV_CONE, 0.07f );
-        }
-
         void Reload()
         {
             if( self.m_iClip == MAX_CLIP || m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) <= 0 )
@@ -121,7 +114,7 @@ namespace weapon_bts_uzisd
             self.m_flTimeWeaponIdle = g_Engine.time + g_PlayerFuncs.SharedRandomFloat( m_pPlayer.random_seed, 7.0f, 9.0f );
         }
 
-        private void Fire( const Vector& in vecSpread, float flCycleTime )
+        void PrimaryAttack()
         {
             // don't fire underwater
             if( m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD || self.m_iClip <= 0 )
@@ -150,7 +143,9 @@ namespace weapon_bts_uzisd
                 float x, y;
                 g_Utility.GetCircularGaussianSpread( x, y );
 
-                Vector vecDir = vecAiming + x * vecSpread.x * g_Engine.v_right + y * vecSpread.y * g_Engine.v_up;
+                float CONE = Accuracy( 0.015f, 0.0175f, 0.015f, 0.0175f );
+
+                Vector vecDir = vecAiming + x * CONE * g_Engine.v_right + y * CONE * g_Engine.v_up;
                 Vector vecEnd = vecSrc + vecDir * 8192.0f;
 
                 TraceResult tr;
@@ -194,7 +189,7 @@ namespace weapon_bts_uzisd
             if( self.m_iClip <= 0 && m_pPlayer.m_rgAmmo( self.m_iPrimaryAmmoType ) <= 0 && g_PlayerClass[m_pPlayer] == PM::HELMET )
                 m_pPlayer.SetSuitUpdate( "!HEV_AMO0", false, 0 );
 
-            self.m_flNextPrimaryAttack = g_Engine.time + flCycleTime;
+            self.m_flNextPrimaryAttack = g_Engine.time + 0.07f;
             self.m_flTimeWeaponIdle = g_Engine.time + g_PlayerFuncs.SharedRandomFloat( m_pPlayer.random_seed, 10.0f, 15.0f );
         }
     }

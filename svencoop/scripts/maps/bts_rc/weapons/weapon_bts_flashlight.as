@@ -26,7 +26,7 @@ namespace weapon_bts_flashlight
     int MAX_CARRY = 10;
     int MAX_CLIP = WEAPON_NOCLIP;
     // int DEFAULT_GIVE = 10;
-    int AMMO_GIVE = 5;
+    int AMMO_GIVE = 1;
     int AMMO_DROP = 1;
     int WEIGHT = 10;
     // Weapon HUD

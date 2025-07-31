@@ -34,7 +34,7 @@ namespace weapon_bts_glock17f
     // int DEFAULT_GIVE = Math.RandomLong( 8, 17 );
     // int DEFAULT_GIVE2 = Math.RandomLong( 1, 2 );
     int AMMO_GIVE = MAX_CLIP;
-    int AMMO_GIVE2 = 1;
+    int AMMO_GIVE2 = 0;
     int AMMO_DROP = AMMO_GIVE;
     int AMMO_DROP2 = AMMO_GIVE2;
     int WEIGHT = 10;
@@ -67,7 +67,7 @@ namespace weapon_bts_glock17f
 
         void Spawn()
         {
-            g_EntityFuncs.SetModel( self, self.GetW_Model( "models/hlclassic/w_9mmhandgun.mdl" ) );
+            g_EntityFuncs.SetModel( self, self.GetW_Model( "models/bts_rc/weapons/w_glock17f.mdl" ) );
             self.m_iDefaultAmmo = Math.RandomLong( 8, MAX_CLIP );
             self.m_iDefaultSecAmmo = Math.RandomLong( 1, 2 );
             self.FallInit();
@@ -104,7 +104,7 @@ namespace weapon_bts_glock17f
                 msg.WriteByte( m_iCurrentBaterry );
             msg.End();
 
-            return bts_deploy( "models/bts_rc/weapons/v_glock17f.mdl", "models/bts_rc/weapons/p_9mmhandgun.mdl", DRAW, "onehanded", 2 );
+            return bts_deploy( "models/bts_rc/weapons/v_glock17f.mdl", "models/bts_rc/weapons/p_glock17f.mdl", DRAW, "onehanded", 2 );
         }
 
         void Holster( int skiplocal = 0 )
@@ -193,7 +193,7 @@ namespace weapon_bts_glock17f
 
             bool is_trained_personal = g_PlayerClass.is_trained_personal(m_pPlayer);
 
-            float CONE = ( is_trained_personal ? 0.01f : 0.05f );
+            float CONE = Accuracy( 0.01f, 0.05f, 0.01f, 0.05f );
 
             float x, y;
             g_Utility.GetCircularGaussianSpread( x, y );

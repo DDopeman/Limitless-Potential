@@ -83,12 +83,12 @@ namespace weapon_bts_glocksd
 
         void PrimaryAttack()
         {
-            Fire( 0.01f, 0.3f );
+            Fire( Accuracy( 0.01f, 0.02f, 0.005f, 0.01f ), 0.3f );
         }
 
         void SecondaryAttack()
         {
-            Fire( 0.1f, 0.2f);
+            Fire( Accuracy( 0.1f, 0.2f, 0.01f, 0.02f ), 0.2f);
         }
 
         void Reload()
@@ -145,12 +145,10 @@ namespace weapon_bts_glocksd
 
             bool is_trained_personal = g_PlayerClass.is_trained_personal(m_pPlayer);
 
-            float CONE = ( is_trained_personal ? flSpread : Math.min( flSpread * 5, 0.2f ) );
-
             float x, y;
             g_Utility.GetCircularGaussianSpread( x, y );
 
-            Vector vecDir = vecAiming + x * CONE * g_Engine.v_right + y * CONE * g_Engine.v_up;
+            Vector vecDir = vecAiming + x * flSpread * g_Engine.v_right + y * flSpread * g_Engine.v_up;
             Vector vecEnd = vecSrc + vecDir * 8192.0f;
 
             TraceResult tr;

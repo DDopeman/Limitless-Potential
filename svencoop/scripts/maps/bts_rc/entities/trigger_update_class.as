@@ -20,6 +20,55 @@ namespace trigger_update_class
         private PM m_class = PM::SCIENTIST;
         private LoadOut m_loadout = LoadOut::Nothing;
 
+        void AddItems( CBasePlayer@ player, dictionary@ kvObj )
+        {
+            array<string> keys = kvObj.getKeys();
+
+            for( uint ui = 0; ui < keys.length(); ui++ )
+                for( int i = 0; i < int(kvObj[keys[ui]]); i++ )
+                    player.GiveNamedItem( keys[ui], SF_GIVENITEM ); // Somehow the third argument is not working so we iterate
+        }
+
+        void AddItemInventory( CBasePlayer@ player, dictionary@ kvObj )
+        {
+            if( player !is null )
+            {
+                auto entity = g_EntityFuncs.CreateEntity( "item_inventory", kvObj );
+
+                if( entity !is null )
+                {
+                    entity.Touch( player );
+                }
+            }
+        }
+
+        void AddKeyCard( CBasePlayer@ player, dictionary@ kvObj )
+        {
+            if( player !is null )
+            {
+                if( !kvObj.exists( "model" ) )
+                    kvObj[ "model" ] = "models/w_security.mdl";
+                if( !kvObj.exists( "delay" ) )
+                    kvObj[ "delay" ] = "0";
+                if( !kvObj.exists( "holder_timelimit_wait_until_activated" ) )
+                    kvObj[ "holder_timelimit_wait_until_activated" ] = "0";
+                if( !kvObj.exists( "m_flCustomRespawnTime" ) )
+                    kvObj[ "m_flCustomRespawnTime" ] = "0";
+                if( !kvObj.exists( "holder_keep_on_death" ) )
+                    kvObj[ "holder_keep_on_death" ] = "0";
+                if( !kvObj.exists( "holder_keep_on_respawn" ) )
+                    kvObj[ "holder_keep_on_respawn" ] = "0";
+                if( !kvObj.exists( "holder_can_drop" ) )
+                    kvObj[ "holder_can_drop" ] = "1";
+                if( !kvObj.exists( "carried_hidden" ) )
+                    kvObj[ "carried_hidden" ] = "1";
+                if( !kvObj.exists( "return_timelimit" ) )
+                    kvObj[ "return_timelimit" ] = "-1";
+
+                AddItemInventory( player, kvObj );
+            }
+        }
+
         void Spawn()
         {
             msgParams.x = 0;
@@ -89,580 +138,583 @@ namespace trigger_update_class
 
         void Use( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue )
         {
-            if( pActivator !is null )
-            {
-                CBasePlayer@ player = null;
-
-                if( pActivator.IsPlayer() && ( @player = cast<CBasePlayer@>( pActivator ) ) !is null )
-                {
-                    g_PlayerClass.set_class( player, m_class );
-
-                    string sound;
-                    string message = "";
-                    Vector fadeColor;
-
-                    dictionary keycard;
-                    CBaseEntity@ invkeycard = null;
-                    keycard[ "model" ] = "models/w_security.mdl";
-                    keycard[ "delay" ] = "0";
-                    keycard[ "holder_timelimit_wait_until_activated" ] = "0";
-                    keycard[ "m_flCustomRespawnTime" ] = "0";
-                    keycard[ "holder_keep_on_death" ] = "0";
-                    keycard[ "holder_keep_on_respawn" ] = "0";
-                    keycard[ "holder_can_drop" ] = "1";
-                    keycard[ "carried_hidden" ] = "1";
-                    keycard[ "return_timelimit" ] = "-1";
-
-                    switch( m_loadout )
-                    {
-                        case LoadOut::Nothing:
-                        {
-                            return; // Exit.
-                        }
-                        case LoadOut::Solo:
-                        {
-                            snprintf( sound, "vox/user.wav" );
-                            fadeColor = Vector(255, 0, 0);
-
-							switch( Math.RandomLong( 1, 30 ) )
-                            {
-                                case 1:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_glock", SF_GIVENITEM );  
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: BLUE-SHIFT" );
-                                    break;
-                                }
-                                case 2:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_flaregun", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: SIGNAL" );
-                                    break;
-                                }
-                                case 3:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_sbshotgun", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM ); 
-									player.GiveNamedItem( "ammo_buckshot", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_eagle", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_mp5clip", SF_GIVENITEM );
-									keycard[ "skin" ] = "2";
-									keycard[ "description" ] = "Blackmesa Research Clearance level 1";
-									keycard[ "display_name" ] = "Research Keycard lvl 1";
-									keycard[ "item_name" ] = "Blackmesa_Research_Clearance_1";
-									keycard[ "item_icon" ] = "bts_rc/inv_card_research.spr";
-									@invkeycard = g_EntityFuncs.CreateEntity( "item_inventory", keycard );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: 99 PERCENT GAMBLERS QUIT" );
-                                    break;
-                                }
-                                case 4:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_glock17f", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									keycard[ "skin" ] = "3";
-									keycard[ "description" ] = "Blackmesa Security Clearance level 1";
-									keycard[ "display_name" ] = "Security Keycard lvl 1";
-									keycard[ "item_name" ] = "Blackmesa_Security_Clearance_1";
-									keycard[ "item_icon" ] = "bts_rc/inv_card_security.spr";
-									keycard[ "item_group" ] = "security";
-									@invkeycard = g_EntityFuncs.CreateEntity( "item_inventory", keycard );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: LEVEL 1 SECURITY" );
-                                    break;
-                                }
-								case 5:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_handgrenade", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_screwdriver", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: FINAL SOLUTION" );
-                                    break;
-                                }
-								case 6:
-                                {
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: OLD TIMES" );
-                                    break;
-                                }
-								case 7:
-                                {
-									player.GiveNamedItem( "weapon_bts_knife", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-								    player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: THE BRITISH" );
-                                    break;
-                                }
-								case 8:
-                                {
-									player.GiveNamedItem( "weapon_bts_flare", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flare", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flare", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flaregun", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_flarebox", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_flarebox", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_flarebox", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: PYROMANIAC" );
-                                    break;
-                                }
-								case 9:
-                                {
-									player.GiveNamedItem( "weapon_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_eagle", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_eagle", SF_GIVENITEM );
-									keycard[ "skin" ] = "2";
-									keycard[ "description" ] = "Blackmesa Maintenance Clearance";
-									keycard[ "display_name" ] = "Maintenance Keycard";
-									keycard[ "item_name" ] = "Blackmesa_Maintenance_Clearance";
-									keycard[ "item_icon" ] = "bts_rc/inv_card_maint.spr";
-									keycard[ "item_group" ] = "repair";
-									@invkeycard = g_EntityFuncs.CreateEntity( "item_inventory", keycard );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: SIX PACK" );
-                                    break;
-                                }
-								case 10:
-                                {
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_crowbar", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: FREE MAN" );
-                                    break;
-                                }
-								case 11:
-                                {
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: BETTER LUCK NEXT TIME BUCKAROO" );
-                                    break;
-                                }
-								case 12:
-                                {
-									player.GiveNamedItem( "weapon_bts_medkit", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_eagle", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: POOR MAN'S MEDIC" );
-                                    break;
-                                }
-								case 13:
-                                {
-									player.GiveNamedItem( "weapon_bts_screwdriver", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flare", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_battery", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_mp5clip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_buckshot", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: HOARDER" );
-                                    break;
-                                }
-								case 14:
-                                {
-									player.GiveNamedItem( "weapon_bts_handgrenade", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_handgrenade", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_handgrenade", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_handgrenade", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_m16_grenade", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flare", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: DEMOLITION MAN" );
-                                    break;
-                                }
-								case 15:
-                                {
-									player.GiveNamedItem( "weapon_bts_poolstick", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_screwdriver", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_crowbar", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_knife", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: BLACKMESA REDEMPTION" );
-                                    break;
-                                }
-								case 16:
-                                {
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_glock", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_glock17f", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_beretta", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: WEAPON COLLECTOR" );
-                                    break;
-                                }
-								case 17:
-                                {
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_beretta", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									keycard[ "skin" ] = "3";
-									keycard[ "description" ] = "Blackmesa Security Clearance level 1";
-									keycard[ "display_name" ] = "Security Keycard lvl 1";
-									keycard[ "item_name" ] = "Blackmesa_Security_Clearance_1";
-									keycard[ "item_icon" ] = "bts_rc/inv_card_security.spr";
-									keycard[ "item_group" ] = "security";
-									@invkeycard = g_EntityFuncs.CreateEntity( "item_inventory", keycard );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: TAX EVASION" );
-                                    break;
-                                }
-								case 18:
-                                {
-									player.GiveNamedItem( "weapon_bts_poolstick", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: SNOOKERED" );
-                                    break;
-                                }
-								case 19:
-                                {
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_beretta", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_knife", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: LUCKY DAY" );
-                                    break;
-                                }
-								case 20:
-                                {
-									player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									dictionary kv;
-									kv[ "model" ] = "models/w_antidote.mdl";
-									kv[ "delay" ] = "0";
-									kv[ "holder_timelimit_wait_until_activated" ] = "0";
-									kv[ "m_flCustomRespawnTime" ] = "0";
-									kv[ "holder_keep_on_death" ] = "0";
-									kv[ "holder_keep_on_respawn" ] = "0";
-									kv[ "weight" ] = "25";
-									kv[ "carried_hidden" ] = "1";
-									kv[ "holder_can_drop" ] = "1";
-									kv[ "return_timelimit" ] = "-1";
-									kv[ "scale" ] = "1.3";
-									kv[ "item_name" ] = "pickup";
-									kv[ "item_group" ] = "Items";
-									kv[ "description" ] = "Increased damage... at a cost. (25 SLOTS)";
-									kv[ "display_name" ] = "Adrenaline";
-									kv[ "effect_damage"] = "115";
-                            CBaseEntity@ pickup = g_EntityFuncs.CreateEntity( "item_inventory", kv );
-
-                            if( pickup !is null )
-                            {
-                                pickup.Touch( player );
-                            }
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: SPEED RUNNER" );
-                                    break;
-                            }  
-							case 21:
-                                {
-									player.GiveNamedItem( "weapon_bts_screwdriver", SF_GIVENITEM );
-									player.GiveNamedItem( "hornet", SF_GIVENITEM );
-									player.GiveNamedItem( "hornet", SF_GIVENITEM );
-									dictionary kv;
-									kv[ "model" ] = "models/w_antidote.mdl";
-									kv[ "delay" ] = "0";
-									kv[ "holder_timelimit_wait_until_activated" ] = "0";
-									kv[ "m_flCustomRespawnTime" ] = "0";
-									kv[ "holder_keep_on_death" ] = "0";
-									kv[ "holder_keep_on_respawn" ] = "0";
-									kv[ "weight" ] = "10";
-									kv[ "carried_hidden" ] = "1";
-									kv[ "holder_can_drop" ] = "1";
-									kv[ "return_timelimit" ] = "-1";
-									kv[ "scale" ] = "1.3";
-									kv[ "item_name" ] = "pickup";
-									kv[ "item_group" ] = "Items";
-									kv[ "description" ] = "Increased movement speed (10 SLOTS)";
-									kv[ "display_name" ] = "Morphine Can";
-									kv[ "effect_speed"] = "115";
-                            CBaseEntity@ pickup = g_EntityFuncs.CreateEntity( "item_inventory", kv );
-
-                            if( pickup !is null )
-                            {
-                                pickup.Touch( player );
-                            }
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: JUNKY" );
-                                    break;
-                            }
-							case 22:
-                                {
-									player.GiveNamedItem( "weapon_bts_screwdriver", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: SCREWED" );
-                                    break;
-                                }
-							case 23:
-                                {
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_eagle", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_python", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: TOUGH CHOICE" );
-                                    break;
-                                }
-							case 24:
-                                {
-									player.GiveNamedItem( "weapon_bts_python", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: ROULETTE" );
-                                    break;
-                                }
-							case 25:
-                                {
-									player.GiveNamedItem( "weapon_bts_medkit", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: MEDIC" );
-                                    break;
-                                }
-							case 26:
-                                {
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_glock17f", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_screwdriver", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flare", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: ALL ROUNDER" );
-                                    break;
-                                }
-							case 27:
-                                {
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_m16", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_m16", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_m16", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: AND YET NO GUN" );
-                                    break;
-                                }
-							case 28:
-                                {
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_shotshell", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: AND YET NO DAMN GUN" );
-                                    break;
-                                }
-							case 29:
-                                {
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_glock17f", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_eagle", SF_GIVENITEM );
-									player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_bts_python", SF_GIVENITEM );
-									player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: DUAL WIELD" );
-                                    break;
-								}
-							case 30:
-                                {
-									snprintf( message, "RANDOM USER MODE SELECTED\nGEAR NAME: TORTURED PLUS" );
-                                    break;
-                                }
-						} 
-#if DEVELOP
-                            g_PlayerClass.m_Logger.error( "Set loadout \"Solo\" for player {}", { player.pev.netname } );
-#endif
-                            break;
-                        }
-                        case LoadOut::Security:
-                        {
-                            fadeColor = Vector(0, 170, 255);
-                            snprintf( sound, "vox/security.wav" );
-                            snprintf( message, "%1%2", message, "Blackmesa Security Force" );
-
-                            switch( Math.RandomLong( 1, 4 ) )
-                            {
-                                case 1:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_eagle", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_bts_eagle", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_bts_eagle", SF_GIVENITEM );
-                                    break;
-                                }
-                                case 2:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_beretta", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-                                    break;
-                                }
-                                case 3:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_glock", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-                                    break;
-                                }
-                                case 4:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_glock17f", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-                                    player.GiveNamedItem( "ammo_9mmclip", SF_GIVENITEM );
-                                    break;
-                                }
-                            }
-                            player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-                            player.GiveNamedItem( "item_bts_armorvest", SF_GIVENITEM );
-                            player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-
-                            keycard[ "skin" ] = "3";
-                            keycard[ "description" ] = "Blackmesa Security Clearance level 1";
-                            keycard[ "display_name" ] = "Security Keycard lvl 1";
-                            keycard[ "item_name" ] = "Blackmesa_Security_Clearance_1";
-                            keycard[ "item_icon" ] = "bts_rc/inv_card_security.spr";
-                            keycard[ "item_group" ] = "security";
-                            @invkeycard = g_EntityFuncs.CreateEntity( "item_inventory", keycard );
-#if DEVELOP
-                            g_PlayerClass.m_Logger.error( "Set loadout \"Security\" for player {}", { player.pev.netname } );
-#endif
-                            break;
-                        }
-                        case LoadOut::Scientist:
-                        {
-                            fadeColor = Vector(0, 255, 93);
-                            snprintf( sound, "vox/research.wav" );
-                            snprintf( message, "%1%2", message, "Blackmesa Science Team" );
-
-                            player.GiveNamedItem( "weapon_bts_screwdriver", SF_GIVENITEM );
-                            player.GiveNamedItem( "weapon_medkit", SF_GIVENITEM );
-                            player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-
-                            keycard[ "skin" ] = "2";
-                            keycard[ "description" ] = "Blackmesa Research Clearance level 1";
-                            keycard[ "display_name" ] = "Research Keycard lvl 1";
-                            keycard[ "item_name" ] = "Blackmesa_Research_Clearance_1";
-                            keycard[ "item_icon" ] = "bts_rc/inv_card_research.spr";
-                            @invkeycard = g_EntityFuncs.CreateEntity( "item_inventory", keycard );
-#if DEVELOP
-                            g_PlayerClass.m_Logger.error( "Set loadout \"Scientist\" for player {}", { player.pev.netname } );
-#endif
-                            break;
-                        }
-                        case LoadOut::Constructor:
-                        {
-                            fadeColor = Vector(255, 255, 127);
-                            snprintf( sound, "vox/maintenance.wav" );
-                            snprintf( message, "%1%2", message, "Blackmesa Maintenance" );
-
-                            switch( Math.RandomLong( 1, 2 ) )
-                            {
-                                case 1:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_pipewrench", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-                                    break;
-                                }
-                                case 2:
-                                {
-                                    player.GiveNamedItem( "weapon_bts_crowbar", SF_GIVENITEM );
-									player.GiveNamedItem( "weapon_bts_flashlight", SF_GIVENITEM );
-                                    break;
-                                }
-                            }
-                            player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-                            player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-							player.GiveNamedItem( "item_bts_helmet", SF_GIVENITEM );
-
-                            keycard[ "skin" ] = "2";
-                            keycard[ "description" ] = "Blackmesa Maintenance Clearance";
-                            keycard[ "display_name" ] = "Maintenance Keycard";
-                            keycard[ "item_name" ] = "Blackmesa_Maintenance_Clearance";
-                            keycard[ "item_icon" ] = "bts_rc/inv_card_maint.spr";
-							keycard[ "item_group" ] = "repair";
-                            @invkeycard = g_EntityFuncs.CreateEntity( "item_inventory", keycard );
-
-                            dictionary kv;
-                            kv[ "model" ] = "models/tool_box.mdl";
-                            kv[ "delay" ] = "0";
-                            kv[ "holder_timelimit_wait_until_activated" ] = "0";
-                            kv[ "m_flCustomRespawnTime" ] = "0";
-                            kv[ "holder_keep_on_death" ] = "0";
-                            kv[ "holder_keep_on_respawn" ] = "0";
-                            kv[ "weight" ] = "10";
-                            kv[ "carried_hidden" ] = "1";
-                            kv[ "holder_can_drop" ] = "1";
-                            kv[ "return_timelimit" ] = "-1";
-                            kv[ "scale" ] = "0.8";
-                            kv[ "item_icon" ] = "bts_rc/inv_card_maint.spr";
-                            kv[ "item_name" ] = "GM_TOOLBOX_SPECIAL";
-							kv[ "item_group" ] = "TOOLBOX";
-                            kv[ "description" ] = "Blackmesa Maintenance Engineers Toolbox";
-                            kv[ "display_name" ] = "Maintenance Engineers Toolbox (10 SLOTS)";
-
-                            CBaseEntity@ toolbox = g_EntityFuncs.CreateEntity( "item_inventory", kv );
-
-                            if( toolbox !is null )
-                            {
-                                toolbox.Touch( player );
-                            }
-#if DEVELOP
-                            g_PlayerClass.m_Logger.error( "Set loadout \"Constructor\" for player {}", { player.pev.netname } );
-#endif
-                            break;
-                        }
-                    }
-
-                    if( invkeycard !is null )
-                    {
-                        invkeycard.Touch( player );
-                    }
-
-                    g_PlayerFuncs.ScreenFade( player, fadeColor, 0.25f, 1.0f, 255.0f, FFADE_OUT );
-                    g_Scheduler.SetTimeout( this, "PlayerFade", 1.0f, @player, fadeColor);
-					g_PlayerFuncs.HudMessage( player, msgParams, message );
-                }
-#if DEVELOP
-                else
-                {
-                    g_PlayerClass.m_Logger.error( "Entity \"{}\" origin {} got an !activator that is not a player!", { self.GetTargetname(), self.GetOrigin().ToString() } );
-                }
-                #endif
-            }
-#if DEVELOP
-            else
-            {
+            if( pActivator is null ) {
+                #if DEVELOP
                 g_PlayerClass.m_Logger.error( "Entity \"{}\" origin {} got no !activator!", { self.GetTargetname(), self.GetOrigin().ToString() } );
+                #endif
+                return;
             }
-#endif
+
+            CBasePlayer@ player = null;
+
+            if( !pActivator.IsPlayer() ) {
+                #if DEVELOP
+                g_PlayerClass.m_Logger.error( "Entity \"{}\" origin {} got an !activator that is not a player!", { self.GetTargetname(), self.GetOrigin().ToString() } );
+                #endif
+                return;
+            }
+
+            @player = cast<CBasePlayer@>( pActivator );
+
+            if( player is null ) {
+                return;
+            }
+			
+
+            g_PlayerClass.set_class( player, m_class );
+
+            Vector fadeColor;
+
+            switch( m_loadout )
+            {
+                case LoadOut::Nothing:
+                {
+                    return; // Exit.
+                }
+                case LoadOut::Solo:
+                {
+                    fadeColor = Vector(255, 0, 0);
+
+                    switch( Math.RandomLong( 1, 30 ) )
+                    {
+                        case 1:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_glock", 3 },
+                                { "weapon_bts_flashlight", 1 },
+                                { "item_bts_armorvest", 2 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: BLUE-SHIFT" );
+							g_PlayerFuncs.SayText(player, "You have: Random: BLUE-SHIFT.\n");
+                            break;
+                        }
+                        case 2:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_flaregun", 1 }
+                            } );
+                            player.GiveNamedItem( "weapon_bts_flaregun", SF_GIVENITEM );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: SIGNAL" );
+							g_PlayerFuncs.SayText(player, "You have: Random: SIGNAL.\n");
+                            break;
+                        }
+                        case 3:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_sbshotgun", 1 },
+                                { "weapon_bts_flashlight", 1 },
+                                { "item_bts_helmet", 1 },
+                                { "item_bts_armorvest", 1 },
+                                { "ammo_buckshot", 1 },
+                                { "ammo_bts_eagle", 1 },
+                                { "ammo_mp5clip", 1 }
+                            } );
+                            AddKeyCard( player, {
+                                { "skin", "2" },
+                                { "description", "Blackmesa Research Clearance level 1" },
+                                { "display_name", "Research Keycard lvl 1" },
+                                { "item_name", "Blackmesa_Research_Clearance_1" },
+                                { "item_icon", "bts_rc/inv_card_research.spr" }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: 99 PERCENT GAMBLERS QUIT" );
+							g_PlayerFuncs.SayText(player, "You have: Random: 99 PERCENT GAMBLERS QUIT.\n");
+                            break;
+                        }
+                        case 4:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_glock17f", 2 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            AddKeyCard( player, {
+                                { "skin", "3" },
+                                { "description", "Blackmesa Security Clearance level 1" },
+                                { "display_name", "Security Keycard lvl 1" },
+                                { "item_name", "Blackmesa_Security_Clearance_1" },
+                                { "item_icon", "bts_rc/inv_card_security.spr" },
+                                { "item_group", "security" }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: LEVEL 1 SECURITY" );
+							g_PlayerFuncs.SayText(player, "You have: Random: LEVEL 1 SECURITY.\n");
+                            break;
+                        }
+                        case 5:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_handgrenade", 1 },
+                                { "weapon_bts_screwdriver", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: FINAL SOLUTION" );
+							g_PlayerFuncs.SayText(player, "You have: Random: FINAL SOLUTION.\n");
+                            break;
+                        }
+                        case 6:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: OLD TIMES" );
+							g_PlayerFuncs.SayText(player, "You have: Random: OLD TIMES.\n");
+                            break;
+                        }
+                        case 7:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_knife", 1 },
+                                { "weapon_bts_flashlight", 1 },
+                                { "item_bts_helmet", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: THE BRITISH" );
+							g_PlayerFuncs.SayText(player, "You have: Random: THE BRITISH.\n");
+                            break;
+                        }
+                        case 8:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_flare", 3 },
+                                { "weapon_bts_flaregun", 1 },
+                                { "weapon_bts_flashlight", 1 },
+                                { "ammo_bts_flarebox", 3 },
+                                { "item_bts_helmet", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: PYROMANIAC" );
+							g_PlayerFuncs.SayText(player, "You have: Random: PYROMANIAC.\n");
+                            break;
+                        }
+                        case 9:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_python", 1 },
+                                { "ammo_bts_eagle", 2 }
+                            } );
+                            AddKeyCard( player, {
+                                { "skin", "2" },
+                                { "description", "Blackmesa Maintenance Clearance" },
+                                { "display_name", "Maintenance Keycard" },
+                                { "item_name", "Blackmesa_Maintenance_Clearance" },
+                                { "item_icon", "bts_rc/inv_card_maint.spr" },
+                                { "item_group", "repair" }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: SIX PACK" );
+							g_PlayerFuncs.SayText(player, "You have: Random: SIX PACK.\n");
+                            break;
+                        }
+                        case 10:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_flashlight", 1 },
+                                { "item_bts_armorvest", 1 },
+                                { "weapon_bts_crowbar", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: FREE MAN" );
+							g_PlayerFuncs.SayText(player, "You have: Random: FREE MAN.\n");
+                            break;
+                        }
+                        case 11:
+                        {
+                            AddItems( player, {
+                                { "item_bts_armorvest", 1 },
+                                { "item_bts_helmet", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: BETTER LUCK NEXT TIME BUCKAROO" );
+							g_PlayerFuncs.SayText(player, "You have: Random: BETTER LUCK NEXT TIME BUCKAROO.\n");
+                            break;
+                        }
+                        case 12:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_medkit", 1 },
+                                { "weapon_bts_eagle", 1 },
+                                { "item_bts_helmet", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: POOR MAN'S MEDIC" );
+							g_PlayerFuncs.SayText(player, "You have: Random: POOR MAN'S MEDIC.\n");
+                            break;
+                        }
+                        case 13:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_screwdriver", 1 },
+                                { "weapon_bts_flashlight", 1 },
+                                { "item_bts_helmet", 1 },
+                                { "ammo_mp5clip", 1 },
+                                { "ammo_bts_battery", 1 },
+                                { "ammo_buckshot", 1 },
+                                { "ammo_bts_python", 2 },
+                                { "weapon_bts_flare", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: HOARDER" );
+							g_PlayerFuncs.SayText(player, "You have: Random: HOARDER.\n");
+                            break;
+                        }
+                        case 14:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_flashlight", 1 },
+                                { "ammo_bts_m16_grenade", 1 },
+                                { "weapon_bts_flare", 1 },
+                                { "item_bts_helmet", 2 },
+                                { "weapon_bts_handgrenade", 4 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: DEMOLITION MAN" );
+							g_PlayerFuncs.SayText(player, "You have: Random: DEMOLITION MAN.\n");
+                            break;
+                        }
+                        case 15:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_poolstick", 1 },
+                                { "weapon_bts_crowbar", 1 },
+                                { "weapon_bts_flashlight", 1 },
+                                { "weapon_bts_knife", 1 },
+                                { "weapon_bts_screwdriver", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: BLACKMESA REDEMPTION" );
+							g_PlayerFuncs.SayText(player, "You have: Random: BLACKMESA REDEMPTION.\n");
+                            break;
+                        }
+                        case 16:
+                        {
+                            AddItems( player, {
+                                { "item_bts_helmet", 1 },
+                                { "weapon_bts_glock17f", 1 },
+                                { "weapon_bts_flashlight", 1 },
+                                { "weapon_bts_beretta", 1 },
+                                { "ammo_9mmclip", 3 },
+                                { "weapon_bts_glock", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: WEAPON COLLECTOR" );
+							g_PlayerFuncs.SayText(player, "You have: Random: WEAPON COLLECTOR.\n");
+                            break;
+                        }
+                        case 17:
+                        {
+                            AddItems( player, {
+                                { "item_bts_armorvest", 2 },
+                                { "weapon_bts_beretta", 1 },
+                                { "ammo_9mmclip", 3 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            AddKeyCard( player, {
+                                { "skin", "3" },
+                                { "description", "Blackmesa Security Clearance level 1" },
+                                { "display_name", "Security Keycard lvl 1" },
+                                { "item_name", "Blackmesa_Security_Clearance_1" },
+                                { "item_icon", "bts_rc/inv_card_security.spr" },
+                                { "item_group", "security" }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: TAX EVASION" );
+							g_PlayerFuncs.SayText(player, "You have: Random: TAX EVASION.\n");
+                            break;
+                        }
+                        case 18:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_poolstick", 1 },
+                                { "item_bts_helmet", 1 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: SNOOKERED" );
+							g_PlayerFuncs.SayText(player, "You have: Random: SNOOKERED.\n");
+                            break;
+                        }
+                        case 19:
+                        {
+                            AddItems( player, {
+                                { "item_bts_armorvest", 1 },
+                                { "weapon_bts_beretta", 1 },
+                                { "ammo_9mmclip", 2 },
+                                { "weapon_bts_knife", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: LUCKY DAY" );
+							g_PlayerFuncs.SayText(player, "You have: Random: LUCKY DAY.\n");
+                            break;
+                        }
+                        case 20:
+                        {
+                            AddItems( player, {
+                                { "item_bts_armorvest", 1 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            AddItemInventory( player, {
+                                { "model", "models/w_antidote.mdl" },
+                                { "delay", "0" },
+                                { "holder_timelimit_wait_until_activated", "0" },
+                                { "m_flCustomRespawnTime", "0" },
+                                { "holder_keep_on_death", "0" },
+                                { "holder_keep_on_respawn", "0" },
+                                { "weight", "25" },
+                                { "carried_hidden", "1" },
+                                { "holder_can_drop", "1" },
+                                { "return_timelimit", "-1" },
+                                { "scale", "1.3" },
+                                { "item_name", "pickup" },
+                                { "item_group", "Items" },
+                                { "description", "Increased damage... at a cost. (25 SLOTS)" },
+                                { "display_name", "Adrenaline" },
+                                { "effect_damage", "112" }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: SPEED RUNNER" );
+							g_PlayerFuncs.SayText(player, "You have: Random: SPEED RUNNER.\n");
+                            break;
+                        }  
+                        case 21:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_screwdriver", 1 },
+                                { "hornet", 2 }
+                            } );
+                            AddItemInventory( player, {
+                                { "model", "models/w_antidote.mdl" },
+                                { "delay", "0" },
+                                { "holder_timelimit_wait_until_activated", "0" },
+                                { "m_flCustomRespawnTime", "0" },
+                                { "holder_keep_on_death", "0" },
+                                { "holder_keep_on_respawn", "0" },
+                                { "weight", "10" },
+                                { "carried_hidden", "1" },
+                                { "holder_can_drop", "1" },
+                                { "return_timelimit", "-1" },
+                                { "scale", "1.3" },
+                                { "item_name", "pickup" },
+                                { "item_group", "Items" },
+                                { "description", "Increased movement speed (10 SLOTS)" },
+                                { "display_name", "Morphine Can" },
+                                { "effect_speed", "108" }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: JUNKY" );
+							g_PlayerFuncs.SayText(player, "You have: Random: JUNKY.\n");
+                            break;
+                        }
+                        case 22:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_screwdriver", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: SCREWED" );
+							g_PlayerFuncs.SayText(player, "You have: Random: SCREWED.\n");
+                            break;
+                        }
+                        case 23:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_flashlight", 1 },
+                                { "item_bts_helmet", 2 },
+                                { "weapon_bts_eagle", 1 },
+                                { "weapon_bts_python", 1 },
+                                { "ammo_bts_python", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: TOUGH CHOICE" );
+							g_PlayerFuncs.SayText(player, "You have: Random: TOUGH CHOICE.\n");
+                            break;
+                        }
+                        case 24:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_python", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: ROULETTE" );
+							g_PlayerFuncs.SayText(player, "You have: Random: ROULETTE.\n");
+                            break;
+                        }
+                        case 25:
+                        {
+                            AddItems( player, {
+                                { "weapon_bts_medkit", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: MEDIC" );
+							g_PlayerFuncs.SayText(player, "You have: Random: MEDIC.\n");
+                            break;
+                        }
+                        case 26:
+                        {
+                            AddItems( player, {
+                                { "item_bts_helmet", 2 },
+                                { "weapon_bts_glock17f", 1 },
+                                { "ammo_9mmclip", 1 },
+                                { "weapon_bts_screwdriver", 1 },
+                                { "ammo_bts_python", 1 },
+                                { "ammo_bts_shotshell", 2 },
+                                { "weapon_bts_flare", 1 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: ALL ROUNDER" );
+							g_PlayerFuncs.SayText(player, "You have: Random: ALL ROUNDER.\n");
+                            break;
+                        }
+                        case 27:
+                        {
+                            AddItems( player, {
+                                { "item_bts_helmet", 1 },
+                                { "ammo_9mmclip", 1 },
+                                { "ammo_bts_m16", 1 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: AND YET NO GUN" );
+							g_PlayerFuncs.SayText(player, "You have: Random: AND YET NO GUN.\n");
+                            break;
+                        }
+                        case 28:
+                        {
+                            AddItems( player, {
+                                { "item_bts_helmet", 1 },
+                                { "ammo_bts_shotshell", 2 },
+                                { "ammo_bts_python", 3 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: AND YET NO DAMN GUN" );
+							g_PlayerFuncs.SayText(player, "You have: Random: AND YET NO DAMN GUN.\n");
+                            break;
+                        }
+                        case 29:
+                        {
+                            AddItems( player, {
+                                { "item_bts_helmet", 2 },
+                                { "weapon_bts_glock17f", 1 },
+                                { "weapon_bts_eagle", 1 },
+                                { "ammo_bts_python", 1 },
+                                { "ammo_9mmclip", 1 },
+                                { "weapon_bts_flashlight", 1 }
+                            } );
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: DUAL WIELD" );
+							g_PlayerFuncs.SayText(player, "You have: Random: DUAL WIELD.\n");
+                            break;
+                        }
+                        case 30:
+                        {
+                            g_PlayerFuncs.HudMessage( player, msgParams, "RANDOM USER MODE SELECTED\nGEAR NAME: TORTURED PLUS" );
+							g_PlayerFuncs.SayText(player, "You have: Random: TORTURED PLUS.\n");
+                            break;
+                        }
+                    } 
+                    break;
+                }
+                case LoadOut::Security:
+                {
+                    fadeColor = Vector(0, 170, 255);
+
+                    string barney_ammo_type = "ammo_9mmclip";
+                    string barney_wpn_type = "weapon_bts_glock17f";
+
+                    switch( Math.RandomLong( 1, 3 ) )
+                    {
+                        case 1:
+                            barney_ammo_type = "ammo_bts_eagle";
+                            barney_wpn_type = "weapon_bts_eagle";
+							g_PlayerFuncs.SayText(player, "Security: Desert Eagle.\n");
+                        break;
+                        case 2:
+                            barney_wpn_type = "weapon_bts_beretta";
+							g_PlayerFuncs.SayText(player, "Security: M9 Beretta.\n");
+                        break;
+                        case 3:
+                            barney_wpn_type = "weapon_bts_glock";
+							g_PlayerFuncs.SayText(player, "Security: Glock17.\n");
+                        break;
+                    }
+
+                    AddItems( player, {
+                        { "item_bts_helmet", 1 },
+                        { barney_wpn_type, 1 },
+                        { barney_ammo_type, 2 },
+                        { "weapon_bts_flashlight", 1 },
+                        { "item_bts_armorvest", 1 }
+                    } );
+                    AddKeyCard( player, {
+                        { "skin", "3" },
+                        { "description", "Blackmesa Security Clearance level 1" },
+                        { "display_name", "Security Keycard lvl 1" },
+                        { "item_name", "Blackmesa_Security_Clearance_1" },
+                        { "item_icon", "bts_rc/inv_card_security.spr" },
+                        { "item_group", "security" }
+                    } );
+                    g_PlayerFuncs.HudMessage( player, msgParams, "Blackmesa Security Force" );
+                    break;
+                }
+                case LoadOut::Scientist:
+                {
+                    fadeColor = Vector(0, 255, 93);
+
+                    AddItems( player, {
+                        { "weapon_bts_screwdriver", 1 },
+                        { "weapon_bts_flashlight", 1 },
+                        { "weapon_medkit", 1 }
+                    } );
+                    AddKeyCard( player, {
+                        { "skin", "2" },
+                        { "description", "Blackmesa Research Clearance level 1" },
+                        { "display_name", "Research Keycard lvl 1" },
+                        { "item_name", "Blackmesa_Research_Clearance_1" },
+                        { "item_icon", "bts_rc/inv_card_research.spr" }
+                    } );
+                    g_PlayerFuncs.HudMessage( player, msgParams, "Blackmesa Science Team" );
+					g_PlayerFuncs.SayText(player, "Scientist.\n");
+                    break;
+                }
+                case LoadOut::Constructor:
+                {
+                    fadeColor = Vector(255, 255, 127);
+					
+					switch( Math.RandomLong( 1, 2 ) ) // sorry
+                    {
+                        case 1:
+						AddItems( player, {
+							{ "weapon_bts_pipewrench", 1 },
+							{ "item_bts_helmet", 3 },
+							{ "weapon_bts_flashlight", 1 }
+						} );
+						g_PlayerFuncs.SayText(player, "Maintenance: Pipewrench.\n");
+                        break;
+                        case 2:
+						AddItems( player, {
+							{ "weapon_bts_crowbar", 1 },
+							{ "item_bts_helmet", 3 },
+							{ "weapon_bts_flashlight", 1 }
+						} );
+						g_PlayerFuncs.SayText(player, "Maintenance: Crowbar.\n");
+						break;
+                    }
+                    AddKeyCard( player, {
+                        { "skin", "2" },
+                        { "description", "Blackmesa Maintenance Clearance" },
+                        { "display_name", "Maintenance Keycard" },
+                        { "item_name", "Blackmesa_Maintenance_Clearance" },
+                        { "item_icon", "bts_rc/inv_card_maint.spr" },
+                        { "item_group", "repair" }
+                    } );
+                    AddItemInventory( player, {
+                        { "model", "models/bts_rc/items/tool_box.mdl" },
+						{ "skin", "1" },
+                        { "delay", "0" },
+                        { "holder_timelimit_wait_until_activated", "0" },
+                        { "m_flCustomRespawnTime", "0" },
+                        { "holder_keep_on_death", "0" },
+                        { "holder_keep_on_respawn", "0" },
+                        { "weight", "10" },
+                        { "carried_hidden", "1" },
+                        { "holder_can_drop", "1" },
+                        { "return_timelimit", "-1" },
+                        { "scale", "0.8" },
+                        { "item_icon", "bts_rc/inv_card_maint.spr" },
+                        { "item_name", "GM_TOOLBOX_SPECIAL" },
+                        { "item_group", "TOOLBOX" },
+                        { "description", "This Toolbox can be used for yellow and orange repair markers,(10 SLOTS)" },
+                        { "display_name", "Engineers Toolbox" }
+                    } );
+                    g_PlayerFuncs.HudMessage( player, msgParams, "Blackmesa Maintenance" );
+                    break;
+                }
+            }
+            g_PlayerFuncs.ScreenFade( player, fadeColor, 0.25f, 1.0f, 255.0f, FFADE_OUT );
+            g_Scheduler.SetTimeout( this, "PlayerFade", 1.0f, @player, fadeColor);
         }
 
-        protected void PlayerFade(CBasePlayer@ player, Vector& in color)
+        protected void PlayerFade(CBasePlayer@ player, Vector color)
         {
             if( player !is null )
             {
                 g_PlayerFuncs.ScreenFade(player, color, 1.0f, 0.0f, 255.0f, FFADE_IN );
+				g_PlayerFuncs.SayText(player, "The game is about to start.\n");
             }
         }
     }

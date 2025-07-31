@@ -21,6 +21,7 @@ void MapInit()
 		g_Game.PrecacheGeneric('sprites/singularity/c_wep/weapon_freedom_machine.txt');
 		g_Game.PrecacheGeneric('sprites/singularity/c_wep/weapon_frostbite.txt');
 		g_Game.PrecacheGeneric('sprites/singularity/c_wep/weapon_hyper_blaster.txt');
+		g_Game.PrecacheGeneric('sprites/singularity/c_wep/weapon_ion_cannon.txt');
 		g_Game.PrecacheGeneric('sprites/singularity/c_wep/weapon_kz_annihilator.txt');
 		g_Game.PrecacheGeneric('sprites/singularity/c_wep/weapon_kz_purifier.txt');
 		g_Game.PrecacheGeneric('sprites/singularity/c_wep/weapon_mprl.txt');

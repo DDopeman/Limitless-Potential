@@ -205,7 +205,6 @@ sound/singularity/c_wep/bone/saw_fly_flesh.wav
 sound/singularity/c_wep/bone/saw_long.wav
 sound/singularity/c_wep/bone/saw_short.wav
 sound/singularity/c_wep/bone/saw_stop.wav
-sound/singularity/c_wep/bone/saw_tick.wav
 sound/singularity/c_wep/com/cm_b1.wav
 sound/singularity/c_wep/com/cm_g1.wav
 sound/singularity/c_wep/com/cm_s1.wav

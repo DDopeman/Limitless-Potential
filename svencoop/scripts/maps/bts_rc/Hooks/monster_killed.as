@@ -1,10 +1,3 @@
-#if DEVELOP
-    namespace monster_killed
-    {
-        CLogger@ m_Logger = CLogger( "MonsterKilledHook" );
-    }
-#endif
-
 HookReturnCode monster_killed( CBaseMonster@ monster, CBaseEntity@ attacker, int gib )
 {
     if( monster !is null )
@@ -121,17 +114,8 @@ HookReturnCode monster_killed( CBaseMonster@ monster, CBaseEntity@ attacker, int
                         {
                             headcrab.pev.health = headcrab_health - headcrab_damage;
 
-#if DEVELOP
-                            monster_killed::m_Logger.info( "Created Headcrab for \"{}\" at \"{}\" with \"{}\" HP", { monster.pev.classname, headcrab.pev.origin.ToString(), headcrab.pev.health } );
-#endif
                         }
                     }
-#if DEVELOP
-                    else
-                    {
-                        monster_killed::m_Logger.info( "Monster \"{}\" doesn't have a headcrab hitgroup for model \"{}\"", { monster.pev.classname, monster.pev.model } );
-                    }
-#endif
                 }
             }
 
@@ -141,9 +125,6 @@ HookReturnCode monster_killed( CBaseMonster@ monster, CBaseEntity@ attacker, int
 
                 if( item !is null )
                 {
-#if DEVELOP
-                    monster_killed::m_Logger.info( "Created item \"{}\" for monster \"{}\" at \"{}\"", { drop_item, monster.pev.classname, monster.Center().ToString() } );
-#endif
                     item.pev.spawnflags |= 1024; // no more respawn
                 }
             }
@@ -193,17 +174,11 @@ HookReturnCode monster_killed( CBaseMonster@ monster, CBaseEntity@ attacker, int
                     }
                     else
                     {
-#if DEVELOP
-                        env_bloodpuddle::m_Logger.error( "Failed to cast to class, Liberating edict." );
-#endif
                         entity.pev.flags |= FL_KILLME;
                     }
                 }
                 else
                 {
-#if DEVELOP
-                    env_bloodpuddle::m_Logger.error( "Failed to create for monster \"{}\" at \"{}\"", { monster.pev.classname, monster.pev.origin.ToString() } );
-#endif
                 }
 
                 user_data[ "bloodpuddle" ] = true;

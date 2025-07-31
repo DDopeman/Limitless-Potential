@@ -111,7 +111,7 @@ namespace func_bts_recharger
             if ( m_sound_status == sound_status::ON && m_flSoundTime <= g_Engine.time )
             {
                 m_sound_status++;
-                g_SoundSystem.EmitSound( self.edict(), CHAN_STATIC, "items/suitcharge1.wav", 1.0, ATTN_NORM );
+                g_SoundSystem.EmitSound( self.edict(), CHAN_STATIC, "bts_rc/items/suitcharge1.wav", 1.0, ATTN_NORM );
             }
 
             // charge the player
@@ -156,7 +156,7 @@ namespace func_bts_recharger
             // Stop looping sound.
             if ( m_sound_status >= sound_status::LOOP )
             {
-                g_SoundSystem.StopSound( self.edict(), CHAN_STATIC, "items/suitcharge1.wav" );
+                g_SoundSystem.StopSound( self.edict(), CHAN_STATIC, "bts_rc/items/suitcharge1.wav" );
             }
             m_sound_status = sound_status::OFF;
         }

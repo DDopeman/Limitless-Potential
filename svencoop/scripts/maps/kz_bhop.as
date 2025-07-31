@@ -1,5 +1,5 @@
 #include "HLSPClassicMode"
-#include "kezaeiv/autohop_playeruse"
+#include "singularity/autohop_playeruse"
 
 
 void MapInit()

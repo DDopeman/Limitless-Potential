@@ -8,6 +8,6 @@
 "weapons/hks3.wav"		"bts_rc/weapons/glocksd_fire1.wav"
 
 "weapons/m16_3round.wav"	"bts_rc/weapons/m16sd_burst1.wav"
-"weapons/sniper_fire.wav"	"ambience/rifle2.wav"
+"weapons/sniper_fire.wav"	"ambience/rifle1.wav"
 
-"!BO_BECAREFUL"				"bts_rc/ops/d0_targets.wav"
+"!BO_BECAREFUL"			"bts_rc/ops/d0_targets.wav"

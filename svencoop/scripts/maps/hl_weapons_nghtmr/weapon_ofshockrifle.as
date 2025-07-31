@@ -200,11 +200,11 @@ class weapon_ofshockrifle : ScriptBasePlayerWeaponEntity, WeaponUtils
 
     if (g_ShockRifleFast.GetBool())
     {
-      self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.10;
+      self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.07;
     }
     else
     {
-      self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.2;
+      self.m_flNextPrimaryAttack = WeaponTimeBase() + 0.12;
     }
 
     self.m_flTimeWeaponIdle = WeaponTimeBase() + 0.33;

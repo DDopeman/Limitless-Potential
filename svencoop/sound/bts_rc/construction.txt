@@ -1,0 +1,161 @@
+// BARNEY
+// WEAPON
+"weapons/pl_gun3.wav"		"bts_rc/weapons/glock_fire1.wav"
+
+// GRENADES
+"barney/aghh.wav"		"bts_rc/null.wav"
+"barney/hey.wav"		"bts_rc/null.wav"
+"barney/down.wav"		"bts_rc/null.wav"
+"barney/c1a4_ba_octo3.wav"	"bts_rc/null.wav"
+
+
+// PAIN
+"barney/ba_pain1.wav"		"bts_rc/construction/ma_pain1.wav"
+"barney/ba_pain2.wav"		"bts_rc/construction/ma_pain2.wav"
+"barney/ba_pain3.wav"		"bts_rc/construction/ma_pain3.wav"
+
+// DEATH
+"barney/ba_die1.wav"		"bts_rc/construction/ma_die1.wav"
+"barney/ba_die2.wav"		"bts_rc/construction/ma_die2.wav"
+"barney/ba_die3.wav"		"bts_rc/construction/ma_die3.wav"
+
+// DIALOG
+"!BA_SURFACE"			"bts_rc/construction/ma_gears.wav"
+"!BA_TOPSIDE"			"bts_rc/construction/ma_alternative.wav"
+"!BA_SLEW"			"bts_rc/barney/ba_passaway.wav"
+"!BA_ARG1A"			"bts_rc/construction/ma_can.wav"
+"!BA_ARG2A"			"bts_rc/construction/ma_cant.wav"
+"!BA_ARG3A"			"bts_rc/construction/ma_greet2.wav"
+"!BA_LAUNCH"			"bts_rc/construction/ma_greet.wav"
+"!BA_ASSN"			"bts_rc/construction/ma_codes.wav"
+
+"!BA_OK0"	"bts_rc/construction/ma_ok1.wav"
+"!BA_OK1"	"bts_rc/construction/ma_ok2.wav"
+"!BA_OK2"	"bts_rc/construction/ma_ok3.wav"
+"!BA_OK3"	"bts_rc/construction/ma_ok4.wav"
+"!BA_OK4"	"bts_rc/construction/ma_ok5.wav"
+"!BA_OK5"	"bts_rc/construction/ma_ok6.wav"
+"!BA_OK6"	"bts_rc/construction/ma_ok7.wav"
+
+"!BA_WAIT0"	"bts_rc/construction/ma_stop1.wav"
+"!BA_WAIT1"	"bts_rc/construction/ma_stop2.wav"
+"!BA_WAIT2"	"bts_rc/construction/ma_stop3.wav"
+"!BA_WAIT3"	"bts_rc/construction/ma_stop4.wav"
+"!BA_WAIT4"	"bts_rc/construction/ma_stop5.wav"
+"!BA_WAIT5"	"bts_rc/construction/ma_stop6.wav"
+
+"!BA_HELLO0"	"bts_rc/construction/ma_hello1.wav"
+"!BA_HELLO1"	"bts_rc/construction/ma_hello2.wav"
+"!BA_HELLO2"	"bts_rc/construction/ma_hello3.wav"
+"!BA_HELLO3"	"bts_rc/construction/ma_hello4.wav"
+"!BA_HELLO4"	"bts_rc/construction/ma_hello3.wav"
+"!BA_HELLO5"	"bts_rc/construction/ma_hello2.wav"
+"!BA_HELLO6"	"bts_rc/construction/ma_hello1.wav"
+
+"!BA_QUESTION0"		"bts_rc/construction/ma_question1.wav"
+"!BA_QUESTION1"		"bts_rc/construction/ma_question2.wav"
+"!BA_QUESTION2"		"bts_rc/construction/ma_question3.wav"
+"!BA_QUESTION3"		"bts_rc/construction/ma_question4.wav"
+"!BA_QUESTION4"		"bts_rc/construction/ma_question5.wav"
+"!BA_QUESTION5"		"bts_rc/construction/ma_question6.wav"
+"!BA_QUESTION6"		"bts_rc/construction/ma_question7.wav"
+"!BA_QUESTION7"		"bts_rc/construction/ma_question8.wav"
+"!BA_QUESTION8"		"bts_rc/construction/ma_question9.wav"
+"!BA_QUESTION9"		"bts_rc/construction/ma_question10.wav"
+"!BA_QUESTION10"	"bts_rc/construction/ma_question11.wav"
+"!BA_QUESTION11"	"bts_rc/construction/ma_question9.wav"
+"!BA_QUESTION12"	"bts_rc/construction/ma_question8.wav"
+"!BA_QUESTION13"	"bts_rc/construction/ma_question7.wav"
+"!BA_QUESTION14"	"bts_rc/construction/ma_question6.wav"
+
+"!BA_ANSWER0"	"bts_rc/construction/ma_answer1.wav"
+"!BA_ANSWER1"	"bts_rc/construction/ma_answer2.wav"
+"!BA_ANSWER2"	"bts_rc/construction/ma_answer3.wav"
+"!BA_ANSWER3"	"bts_rc/construction/ma_answer4.wav"
+"!BA_ANSWER4"	"bts_rc/construction/ma_answer5.wav"
+"!BA_ANSWER5"	"bts_rc/construction/ma_answer6.wav"
+"!BA_ANSWER6"	"bts_rc/construction/ma_answer7.wav"
+"!BA_ANSWER7"	"bts_rc/construction/ma_answer6.wav"
+"!BA_ANSWER8"	"bts_rc/construction/ma_answer5.wav"
+"!BA_ANSWER9"	"bts_rc/construction/ma_answer4.wav"
+"!BA_ANSWER10"	"bts_rc/construction/ma_answer3.wav"
+"!BA_ANSWER11"	"bts_rc/construction/ma_answer2.wav"
+"!BA_ANSWER12"	"bts_rc/construction/ma_answer1.wav"
+"!BA_ANSWER13"	"bts_rc/construction/ma_answer2.wav"
+"!BA_ANSWER14"	"bts_rc/construction/ma_answer3.wav"
+"!BA_ANSWER15"	"bts_rc/construction/ma_answer4.wav"
+"!BA_ANSWER16"	"bts_rc/construction/ma_answer5.wav"
+"!BA_ANSWER17"	"bts_rc/construction/ma_answer6.wav"
+"!BA_ANSWER18"	"bts_rc/construction/ma_answer7.wav"
+"!BA_ANSWER19"	"bts_rc/construction/ma_answer6.wav"
+"!BA_ANSWER20"	"bts_rc/construction/ma_answer5.wav"
+"!BA_ANSWER21"	"bts_rc/construction/ma_answer4.wav"
+
+"!BA_STARE0"	"bts_rc/null.wav"
+"!BA_STARE1"	"bts_rc/null.wav"
+"!BA_STARE2"	"bts_rc/null.wav"
+
+"!BA_IDLE0"	"bts_rc/construction/ma_idle1.wav"
+"!BA_IDLE1"	"bts_rc/construction/ma_idle2.wav"
+"!BA_IDLE2"	"bts_rc/construction/ma_idle3.wav"
+"!BA_IDLE3"	"bts_rc/construction/ma_idle4.wav"
+"!BA_IDLE4"	"bts_rc/construction/ma_idle5.wav"
+"!BA_IDLE5"	"bts_rc/construction/ma_idle6.wav"
+"!BA_IDLE6"	"bts_rc/construction/ma_idle7.wav"
+"!BA_IDLE7"	"bts_rc/construction/ma_idle8.wav"
+"!BA_IDLE8"	"bts_rc/construction/ma_idle9.wav"
+"!BA_IDLE9"	"bts_rc/construction/ma_idle2.wav"
+"!BA_IDLE10"	"bts_rc/construction/ma_idle1.wav"
+
+"!BA_ATTACK0"	"bts_rc/null.wav"
+"!BA_ATTACK1"	"bts_rc/null.wav"
+"!BA_ATTACK2"	"bts_rc/null.wav"
+"!BA_ATTACK3"	"bts_rc/null.wav"
+"!BA_ATTACK4"	"bts_rc/null.wav"	
+"!BA_ATTACK5"	"bts_rc/null.wav"
+
+"!BA_HEAR0"	"bts_rc/construction/ma_hear1.wav"
+"!BA_HEAR1"	"bts_rc/construction/ma_hear2.wav"
+"!BA_HEAR2"	"bts_rc/construction/ma_hear3.wav"
+
+"!BA_SMELL0"	"bts_rc/construction/ma_smell1.wav"
+"!BA_SMELL1"	"bts_rc/construction/ma_smell2.wav"
+"!BA_SMELL2"	"bts_rc/construction/ma_smell3.wav"
+
+"!BA_CUREA"	"bts_rc/construction/ma_cure1.wav"
+"!BA_CUREB"	"bts_rc/construction/ma_cure2.wav"
+"!BA_CUREC"	"bts_rc/construction/ma_cure3.wav"
+
+"!BA_SCARED0"	"bts_rc/construction/ma_scared1.wav"
+"!BA_SCARED1"	"bts_rc/construction/ma_scared2.wav"
+
+"!BA_WOUND0"	"bts_rc/construction/ma_wound1.wav"
+"!BA_WOUND1"	"bts_rc/construction/ma_wound2.wav"
+"!BA_MORTAL0"	"bts_rc/construction/ma_mortal.wav"
+
+//If you shoot Barney:
+"!BA_SHOT0"	"bts_rc/construction/ma_shot1.wav"
+"!BA_SHOT1"	"bts_rc/construction/ma_shot2.wav"
+"!BA_SHOT2"	"bts_rc/construction/ma_shot3.wav"
+"!BA_SHOT3"	"bts_rc/construction/ma_shot4.wav"	
+"!BA_SHOT4"	"bts_rc/construction/ma_shot3.wav"
+"!BA_SHOT5"	"bts_rc/construction/ma_shot2.wav"
+
+
+//When Barney s really pissed at you:
+"!BA_MAD0"	"bts_rc/construction/ma_mad1.wav"
+"!BA_MAD1"	"bts_rc/construction/ma_mad2.wav"
+"!BA_MAD2"	"bts_rc/construction/ma_mad3.wav"
+"!BA_MAD3"	"bts_rc/construction/ma_mad4.wav"	
+"!BA_MAD4"	"bts_rc/construction/ma_mad5.wav"
+"!BA_MAD5"	"bts_rc/construction/ma_mad6.wav"
+"!BA_MAD6"	"bts_rc/construction/ma_mad7.wav"
+
+//When Barney s killed something
+"!BA_KILL0"	"bts_rc/construction/ma_kill1.wav"
+"!BA_KILL1"	"bts_rc/construction/ma_kill2.wav"	
+"!BA_KILL2"	"bts_rc/construction/ma_kill3.wav"
+"!BA_KILL3"	"bts_rc/construction/ma_kill4.wav"
+"!BA_KILL4"	"bts_rc/construction/ma_kill5.wav"
+"!BA_KILL5"	"bts_rc/construction/ma_kill6.wav"
+"!BA_KILL6"	"bts_rc/construction/ma_kill7.wav"
