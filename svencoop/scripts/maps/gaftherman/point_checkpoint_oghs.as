@@ -155,7 +155,7 @@ class point_checkpoint : ScriptBaseAnimating
                         return;
 
                     g_Game.AlertMessage( at_logged, "CHECKPOINT: \"%1\" activated Checkpoint\n", (pActivator is null) ? string_t('\'The world\'') : pActivator.pev.netname );
-                    g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "-[ " + ((pActivator is null) ? string_t('\'The world\'') : string_t('\''+pActivator.pev.netname+'\'')) + " ]- activated a Checkpoint. Everyone has gained an additional life.\n" );
+                    g_PlayerFuncs.ClientPrintAll( HUD_PRINTTALK, "-[ " + ((pActivator is null) ? string_t('\'The world\'') : string_t('\''+pActivator.pev.netname+'\'')) + " ]- activated a Respawn Totem. Everyone has gained an additional life.\n" );
 
                     self.pev.frags = 1.0f;
 
