@@ -2,10 +2,10 @@
 // Weapon Script: MP5k
 // Author: Zorbos
 
-const float MP5K_MOD_DAMAGE = 17.0;
-const float MP5K_MOD_FIRERATE = 0.055;
+const float MP5K_MOD_DAMAGE = 40.0;
+const float MP5K_MOD_FIRERATE = 0.09;
 
-const float MP5K_MOD_DAMAGE_SURVIVAL = 13.0; // Reduce damage by 25% on Survival
+const float MP5K_MOD_DAMAGE_SURVIVAL = 40.0; // Reduce damage by 25% on Survival
 
 enum Mp5Animation
 {
@@ -20,7 +20,7 @@ enum Mp5Animation
 };
 
 const int MP5_DEFAULT_AMMO 	= 30;
-const int MP5_MAX_AMMO		= 120;
+const int MP5_MAX_AMMO		= 180;
 const int MP5_MAX_AMMO2 	= -1;
 const int MP5_MAX_CLIP 		= 30;
 const int MP5_WEIGHT 		= 5;

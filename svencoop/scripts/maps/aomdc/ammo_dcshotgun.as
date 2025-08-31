@@ -3,7 +3,7 @@
 // Author: Zorbos
 
 const int AMMO_SHOTGUN_GIVE = 8;
-const int AMMO_SHOTGUN_MAX_CARRY = 32;
+const int AMMO_SHOTGUN_MAX_CARRY = 48;
 
 class ammo_dcshotgun : ScriptBasePlayerAmmoEntity
 {

@@ -150,15 +150,7 @@ class weapon_csdeagle : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		Vector vecSpread;
 
-		if( m_pPlayer.pev.velocity.Length2D() > 0 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.25f;
-		}
-		else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_2DEGREES * 1.5f;
-		}
-		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
+		if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 		{
 			vecSpread = VECTOR_CONE_1DEGREES * 1.115f;
 		}
@@ -186,7 +178,7 @@ class weapon_csdeagle : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		m_pPlayer.m_iWeaponVolume = BIG_EXPLOSION_VOLUME;
 		m_pPlayer.m_iWeaponFlash = NORMAL_GUN_FLASH;
 
-		m_pPlayer.pev.punchangle.x -= 2;
+		m_pPlayer.pev.punchangle.x -= 0.9;
 
 		ShellEject( m_pPlayer, m_iShell, Vector( 15, 10, -6 ), true, false );
 	}

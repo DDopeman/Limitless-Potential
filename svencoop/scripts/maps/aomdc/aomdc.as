@@ -49,7 +49,7 @@ const array<string> AOMDC_LIST_E3 = {"aomdc_3hospital", "aomdc_3hospital2", "aom
 #include "ammo_dcshotgun"
 #include "item_aompills"
 #include "item_aombattery"
-#include "../point_checkpoint"
+#include "point_checkpoint"
 #include "monster_hellhound"
 #include "monster_ghost"
 #include "attachkeyspr"
@@ -72,7 +72,6 @@ void MapInit()
 	RegisterDCDeagle();
 	RegisterDCAxe();
 	RegisterDCL85A1();
-	g_EngineFuncs.CVarSetFloat( "mp_classicmode", 0 );
 	
 	// Register monsters
 	AOMHellhound::Register();
@@ -107,17 +106,12 @@ void CheckSurvival()
 	// Is survival on?
 	bool bSurvivalEnabled = g_EngineFuncs.CVarGetFloat("mp_survival_starton") == 1 && g_EngineFuncs.CVarGetFloat("mp_survival_supported") == 1;
 	
-	const array<string> RemoveTargetnamesSurvivalOn = {"mm_checkpoint1", "mm_checkpoint2", "checkpoint_spr1", "checkpoint_spr2", "checkpoint_txt", "spr_checkpoint1", "spr_checkpoint2"};
-	const array<string> RemoveTargetnamesSurvivalOff = {"start_block", "relay_init_map", "survival_weapons"};
+	const array<string> RemoveTargetnamesSurvivalOn = {"start_block", "relay_init_map", "mm_checkpoint1", "mm_checkpoint2", "checkpoint_spr1", "checkpoint_spr2", "checkpoint_txt", "spr_checkpoint1", "spr_checkpoint2"};
+	const array<string> RemoveTargetnamesSurvivalOff = {"survival_weapons"};
 	
 	edict_t@ pEdict = null;
 	CBaseEntity@ pEntity = null;
 	
-	// Activate the built in relays
-	if(bSurvivalEnabled)
-		g_EntityFuncs.FireTargets("relay_survivalenabled", null, null, USE_ON, 0, 0);
-	else
-		g_EntityFuncs.FireTargets("relay_survivaldisabled", null, null, USE_ON, 0, 0);
 	
 	// Now, search for survival/non-survival specific entities
 	for( int pIndex = 0; pIndex < g_Engine.maxEntities; ++pIndex )
@@ -127,17 +121,9 @@ void CheckSurvival()
 		
 		if( pEntity !is null )
 		{		
-			if(bSurvivalEnabled) // Remove non-survival entities (checkpoints)
-			{
 				if(RemoveTargetnamesSurvivalOn.find(pEntity.pev.targetname) >= 0)
 					g_EntityFuncs.Remove(pEntity);
-			}
-			else // Remove survival checkpoints and entities
-			{
-				if(RemoveTargetnamesSurvivalOff.find(pEntity.pev.targetname) >= 0 ||
-				   pEntity.GetClassname() == "point_checkpoint" || pEntity.pev.globalname == "survival_weapons")
-					g_EntityFuncs.Remove(pEntity);
-			}
+			
 		}
 	}
 }
@@ -328,13 +314,13 @@ void EquipPlayer(CBasePlayer@ pPlayer)
 	
 		// Give ammo if necessary (is ammo low enough and are we on a map that needs this ammo?)
 		if(m_iReserve9mm < 65 && bCanGiveMelee)
-			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("9mm"), 65); // Set the ammo amounts
+			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("9mm"), 90); // Set the ammo amounts
 		if(m_iReserveBuckshot < 12 && bCanGivePrimary)
 			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("buckshot"), 12);
 		if(m_iReserve556 < 30 && bCanGivePrimary)
-			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("556"), 30);
+			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("556"), 75);
 		if(m_iReserve357 < 7 && bCanGiveMagnum)
-			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("357"), 7);
+			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("357"), 10);
 	}
 }
 

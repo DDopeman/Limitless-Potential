@@ -144,36 +144,14 @@ class weapon_famas : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		Vector vecSpread;
 		if( WeaponFireMode == CS16BASE::MODE_BURST )
 		{
-			if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-			{
-				vecSpread = VECTOR_CONE_1DEGREES * 1.33 * (0.125 + (m_iShotsFired * 0.2));
-			}
-			else if( m_pPlayer.pev.velocity.Length2D() > 140 )
-			{
-				vecSpread = VECTOR_CONE_1DEGREES * 1.13 * (0.07 + (m_iShotsFired * 0.125));
-			}
-			else
-			{
 				vecSpread = VECTOR_CONE_1DEGREES * 1.15;
-			}
 		}
 		else
 		{
-			if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-			{
-				vecSpread = VECTOR_CONE_1DEGREES * 1.31 * (0.12 + (m_iShotsFired * 0.2));
-			}
-			else if( m_pPlayer.pev.velocity.Length2D() > 140 )
-			{
-				vecSpread = VECTOR_CONE_1DEGREES * 1.12 * (0.07 + (m_iShotsFired * 0.125));
-			}
-			else
-			{
 				vecSpread = VECTOR_CONE_1DEGREES * 1.1;
-			}
 		}
 
-		vecSpread = vecSpread * (m_iShotsFired * 0.195); // do vector math calculations here to make the Spread worse
+		vecSpread = vecSpread * (m_iShotsFired * 0.1); // do vector math calculations here to make the Spread worse
 
 		self.SendWeaponAnim( SHOOT1 + Math.RandomLong( 0, 2 ), 0, GetBodygroup() );
 
@@ -184,19 +162,19 @@ class weapon_famas : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		if( m_pPlayer.pev.velocity.Length2D() > 0 )
 		{
-			KickBack( 1.0, 0.45, 0.275, 0.05, 4.0, 2.5, 7 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 		else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
 		{
-			KickBack( 1.25, 0.45, 0.22, 0.18, 5.5, 4.0, 5 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 		{
-			KickBack( 0.575, 0.325, 0.2, 0.011, 3.25, 2.0, 8 );
+			KickBack( 0.2, 0.08, 0.05, 0.08, 0.3, 0.1, 1 );
 		}
 		else
 		{
-			KickBack( 0.625, 0.375, 0.25, 0.0125, 3.5, 2.25, 8 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 
 		ShellEject( m_pPlayer, m_iShell, Vector( 14, 15, -12 ), false, false );
@@ -218,7 +196,7 @@ class weapon_famas : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 			m_iBurstLeft = m_iBurstCount - 1;
 
 			m_flNextBurstFireTime = WeaponTimeBase() + RPM_BURST;
-			self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + 0.55f;
+			self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = WeaponTimeBase() + 0.3f;
 		}
 		else
 		{

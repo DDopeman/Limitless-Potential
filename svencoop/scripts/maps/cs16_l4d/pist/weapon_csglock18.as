@@ -153,34 +153,18 @@ class weapon_csglock18 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		Vector vecSpread;
 		if( WeaponFireMode == CS16BASE::MODE_BURST )
 		{
-			if( m_pPlayer.pev.velocity.Length2D() > 0 )
+			if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 			{
-				vecSpread = VECTOR_CONE_2DEGREES * 1.185f;
-			}
-			else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-			{
-				vecSpread = VECTOR_CONE_2DEGREES * 2.2f;
-			}
-			else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
-			{
-				vecSpread = VECTOR_CONE_2DEGREES * 1.095f;
+				vecSpread = VECTOR_CONE_1DEGREES * 1.075f;
 			}
 			else
 			{
-				vecSpread = VECTOR_CONE_2DEGREES * 1.3f;
+				vecSpread = VECTOR_CONE_1DEGREES * 1.1f;
 			}
 		}
 		else
 		{
-			if( m_pPlayer.pev.velocity.Length2D() > 0 )
-			{
-				vecSpread = VECTOR_CONE_1DEGREES * 1.165f;
-			}
-			else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-			{
-				vecSpread = VECTOR_CONE_2DEGREES * 2.0f;
-			}
-			else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
+			if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 			{
 				vecSpread = VECTOR_CONE_1DEGREES * 1.075f;
 			}
@@ -190,7 +174,7 @@ class weapon_csglock18 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 			}
 		}
 
-		vecSpread = vecSpread * (m_iShotsFired * 0.2); // do vector math calculations here to make the Spread worse
+		vecSpread = vecSpread * (m_iShotsFired * 0.08); // do vector math calculations here to make the Spread worse
 
 		ShootWeapon( SHOOT_S, 1, vecSpread, MAX_SHOOT_DIST, DAMAGE );
 
@@ -251,7 +235,7 @@ class weapon_csglock18 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 				break;
 			}
 		}
-		self.m_flNextSecondaryAttack = WeaponTimeBase() + 0.3f;
+		self.m_flNextSecondaryAttack = WeaponTimeBase() + 0.19f;
 	}
 
 	void ItemPostFrame()

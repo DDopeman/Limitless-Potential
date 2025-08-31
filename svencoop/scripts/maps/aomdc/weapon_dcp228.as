@@ -2,13 +2,13 @@
 // Weapon Script: P228
 // Author: Zorbos
 
-const float P228_MOD_DAMAGE = 19.0;
-const float P228_MOD_FIRERATE = 0.05;
+const float P228_MOD_DAMAGE = 48.0;
+const float P228_MOD_FIRERATE = 0.095;
 
-const float P228_MOD_DAMAGE_SURVIVAL = 15.0; // Reduce damage by 25% on Survival
+const float P228_MOD_DAMAGE_SURVIVAL = 48.0; // Reduce damage by 25% on Survival - no more thx
 
 const int P228_DEFAULT_AMMO = 13;
-const int P228_MAX_CARRY = 130;
+const int P228_MAX_CARRY = 160;
 const int P228_MAX_CLIP = 13;
 const int P228_WEIGHT = 5;
 

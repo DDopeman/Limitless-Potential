@@ -2,6 +2,7 @@
 #include "swap/SwapWeapons"
 #include "../point_checkpoint"
 #include "../HLSPClassicMode"
+#include "../kezaeiv/mikk/classicmode"
 
 void MapInit()
 {
@@ -127,14 +128,14 @@ void MapInit()
 	CS16_M3::MAX_CARRY = 120;
 	CS16_M3::MAX_CLIP = 18;
 	CS16_M3::DEFAULT_GIVE = 60;
-	CS16_M3::DAMAGE = 15;
+	CS16_M3::DAMAGE = 11;
 	CS16_M3::PELLETS = 10;
 	CS16_M3::RPM_PUMP = 0.88f;
 	
 	CS16_XM1014::MAX_CARRY = 120;
 	CS16_XM1014::MAX_CLIP = 12;
 	CS16_XM1014::DEFAULT_GIVE = 60;
-	CS16_XM1014::DAMAGE = 9;
+	CS16_XM1014::DAMAGE = 8;
 	CS16_XM1014::PELLETS = 10;
 	CS16_XM1014::RPM = 0.24f;
 	

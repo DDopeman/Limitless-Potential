@@ -2,10 +2,10 @@
 // Weapon Script: Hammer
 // Author: Zorbos
 
-const float HAMMER_MOD_DAMAGE = 55.0;
+const float HAMMER_MOD_DAMAGE = 500.0;
 const float HAMMER_MOD_ATKSPEED = 1.34;
 
-const float HAMMER_MOD_DAMAGE_SURVIVAL = 41.0; // Reduce damage by 25% on Survival
+const float HAMMER_MOD_DAMAGE_SURVIVAL = 500.0; // Reduce damage by 25% on Survival
 
 enum hammer_e
 {

@@ -2,10 +2,10 @@
 // Weapon Script: Uzi
 // Author: Zorbos
 
-const float UZI_MOD_DAMAGE = 15.0;
-const float UZI_MOD_FIRERATE = 0.08;
+const float UZI_MOD_DAMAGE = 36.0;
+const float UZI_MOD_FIRERATE = 0.078;
 
-const float UZI_MOD_DAMAGE_SURVIVAL = 11.0; // Reduce damage by 25% on Survival
+const float UZI_MOD_DAMAGE_SURVIVAL = 36.0; // Reduce damage by 25% on Survival
 
 enum UziAnimation
 {
@@ -20,7 +20,7 @@ enum UziAnimation
 };
 
 const int UZI_DEFAULT_AMMO 	= 25;
-const int UZI_MAX_AMMO		= 120;
+const int UZI_MAX_AMMO		= 180;
 const int UZI_MAX_AMMO2 	= -1;
 const int UZI_MAX_CLIP 		= 25;
 const int UZI_WEIGHT 		= 5;

@@ -147,18 +147,7 @@ class weapon_csm249 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		Vector vecSpread;
 
-		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 3.545f * (m_iShotsFired * 0.5);
-		}
-		else if( m_pPlayer.pev.velocity.Length2D() > 140 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 2.14f * (m_iShotsFired * 0.3);
-		}
-		else
-		{
 			vecSpread = VECTOR_CONE_1DEGREES * 1.93f * (m_iShotsFired * 0.2);
-		}
 
 		vecSpread = vecSpread * (m_iShotsFired * 0.35f);
 
@@ -174,19 +163,19 @@ class weapon_csm249 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
 		{
-			KickBack( 1.8, 0.65, 0.45, 0.125, 5.0, 3.5, 8 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 		else if( m_pPlayer.pev.velocity.Length2D() > 0 )
 		{
-			KickBack( 1.1, 0.5, 0.3, 0.06, 4.0, 3.0, 8 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 		{
-			KickBack( 0.75, 0.325, 0.25, 0.025, 3.5, 2.5, 9 );
+			KickBack( 0.2, 0.08, 0.05, 0.08, 0.3, 0.1, 1 );
 		}
 		else
 		{
-			KickBack( 0.8, 0.35, 0.3, 0.03, 3.75, 3.0, 9 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 
 		m_pPlayer.m_iWeaponVolume = NORMAL_GUN_VOLUME;

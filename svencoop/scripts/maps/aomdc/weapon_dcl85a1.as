@@ -14,8 +14,8 @@ enum L85A1Animation
 	L85_FIRE3,
 };
 
-const float L85_DAMAGE = 2000.0;
-const float L85_MOD_FIRERATE = 0.06;
+const float L85_DAMAGE = 500.0;
+const float L85_MOD_FIRERATE = 0.1;
 
 const int L85_DEFAULT_GIVE 	= -1;
 const int L85_MAX_AMMO		= -1;

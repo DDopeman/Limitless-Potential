@@ -2,13 +2,13 @@
 // Weapon Script: Revolver
 // Author: Zorbos
 
-const float REVOLVER_MOD_DAMAGE = 120.0;
-const float REVOLVER_MOD_FIRERATE = 0.75;
+const float REVOLVER_MOD_DAMAGE = 300.0;
+const float REVOLVER_MOD_FIRERATE = 0.70;
 
-const float REVOLVER_MOD_DAMAGE_SURVIVAL = 90.0; // Reduce damage by 25% on Survival
+const float REVOLVER_MOD_DAMAGE_SURVIVAL = 300.0; // Reduce damage by 25% on Survival
 
 const int REVOLVER_DEFAULT_AMMO = 6;
-const int REVOLVER_MAX_CARRY 	= 12;
+const int REVOLVER_MAX_CARRY 	= 18;
 const int REVOLVER_MAX_CLIP 	= 6;
 const int REVOLVER_WEIGHT 		= 5;
 

@@ -149,20 +149,9 @@ class weapon_p90 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		Vector vecSpread;
 
-		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_2DEGREES * 1.3f * 1.45f;
-		}
-		else if( m_pPlayer.pev.velocity.Length2D() > 170 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.115f * 1.41f;
-		}
-		else
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.045f * 1.38f;
-		}
+			vecSpread = VECTOR_CONE_1DEGREES * 1.045f;
 
-		vecSpread = vecSpread * (m_iShotsFired * 0.2f);
+		vecSpread = vecSpread * (m_iShotsFired * 0.05f);
 
 		self.m_flNextPrimaryAttack = WeaponTimeBase() + RPM;
 		self.m_flTimeWeaponIdle = WeaponTimeBase() + 1.0f;
@@ -170,21 +159,21 @@ class weapon_p90 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		ShootWeapon( SHOOT_S, 1, vecSpread, MAX_SHOOT_DIST, DAMAGE, DMG_SNIPER | DMG_NEVERGIB );
 		self.SendWeaponAnim( SHOOT1 + Math.RandomLong( 0, 2 ), 0, GetBodygroup() );
 
-		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
+		if( m_pPlayer.pev.velocity.Length2D() > 0 )
 		{
-			KickBack( 0.9, 0.45, 0.35, 0.04, 5.25, 3.5, 4 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
-		else if( m_pPlayer.pev.velocity.Length2D() > 0 )
+		else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
 		{
-			KickBack( 0.45, 0.3, 0.2, 0.0275, 4.0, 2.25, 7 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 		{
-			KickBack( 0.275, 0.2, 0.125, 0.02, 3.0, 1.0, 9 );
+			KickBack( 0.2, 0.08, 0.05, 0.08, 0.3, 0.1, 1 );
 		}
 		else
 		{
-			KickBack( 0.3, 0.225, 0.125, 0.02, 3.25, 1.25, 8 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 
 		m_pPlayer.m_iWeaponVolume = NORMAL_GUN_VOLUME;

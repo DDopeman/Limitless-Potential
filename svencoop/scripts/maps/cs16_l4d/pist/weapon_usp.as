@@ -169,15 +169,7 @@ class weapon_usp : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		if( WeaponFireMode == CS16BASE::MODE_SUP_OFF )
 		{
-			if( m_pPlayer.pev.velocity.Length2D() > 0 )
-			{
-				vecSpread = VECTOR_CONE_1DEGREES * 1.165f;
-			}
-			else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-			{
-				vecSpread = VECTOR_CONE_2DEGREES * 2.0f;
-			}
-			else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
+			if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 			{
 				vecSpread = VECTOR_CONE_1DEGREES * 1.075f;
 			}
@@ -188,15 +180,7 @@ class weapon_usp : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		}
 		else
 		{
-			if( m_pPlayer.pev.velocity.Length2D() > 0 )
-			{
-				vecSpread = VECTOR_CONE_1DEGREES * 1.15f;
-			}
-			else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-			{
-				vecSpread = VECTOR_CONE_2DEGREES * 1.85f;
-			}
-			else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
+			if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 			{
 				vecSpread = VECTOR_CONE_1DEGREES * 1.0f;
 			}
@@ -226,7 +210,7 @@ class weapon_usp : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		m_pPlayer.m_iWeaponVolume = (WeaponSilMode == CS16BASE::MODE_SUP_OFF) ? NORMAL_GUN_VOLUME : 0;
 		m_pPlayer.m_iWeaponFlash = (WeaponSilMode == CS16BASE::MODE_SUP_OFF) ? DIM_GUN_FLASH : 0;
 
-		m_pPlayer.pev.punchangle.x -= 2;
+		m_pPlayer.pev.punchangle.x -= 0.5;
 
 		ShellEject( m_pPlayer, m_iShell, Vector( 16, 7, -6 ), true, false );
 	}

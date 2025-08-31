@@ -2,13 +2,13 @@
 // Weapon Script: Beretta
 // Author: Zorbos
 
-const float BERETTA_MOD_DAMAGE = 17.0;
-const float BERETTA_MOD_FIRERATE = 0.05;
+const float BERETTA_MOD_DAMAGE = 60.0;
+const float BERETTA_MOD_FIRERATE = 0.15;
 
-const float BERETTA_MOD_DAMAGE_SURVIVAL = 13.0; // Reduce damage by 25% on Survival
+const float BERETTA_MOD_DAMAGE_SURVIVAL = 60.0; // Reduce damage by 25% on Survival
 
 const int BERETTA_DEFAULT_AMMO 	= 15;
-const int BERETTA_MAX_CARRY 	= 130;
+const int BERETTA_MAX_CARRY 	= 160;
 const int BERETTA_MAX_CLIP 		= 15;
 const int BERETTA_WEIGHT 		= 5;
 

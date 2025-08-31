@@ -168,15 +168,7 @@ class weapon_dualelites : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 			return;
 
 		Vector vecSpread;
-		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_2DEGREES * 1.3f;
-		}
-		else if( m_pPlayer.pev.velocity.Length2D() > 0 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.7f;
-		}
-		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
+		if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 		{
 			vecSpread = VECTOR_CONE_1DEGREES * 1.08f;
 		}
@@ -214,7 +206,7 @@ class weapon_dualelites : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		m_pPlayer.m_iWeaponVolume = BIG_EXPLOSION_VOLUME;
 		m_pPlayer.m_iWeaponFlash = DIM_GUN_FLASH;
 
-		m_pPlayer.pev.punchangle.x -= 2.0f;
+		m_pPlayer.pev.punchangle.x -= 0.5f;
 
 		ShellEject( m_pPlayer, m_iShell, (self.m_iClip % 2 == 0) ? Vector( 21, -9, -7 ) : Vector( 21, 9, -7 ), true, false );
 	}

@@ -65,7 +65,7 @@ class point_checkpoint : ScriptBaseEntity
 		
 		// Allow for custom models
 		if( string( self.pev.model ).IsEmpty() )
-			g_Game.PrecacheModel( "models/kezaeiv/icons/mk_logo_red.mdl" );
+			g_Game.PrecacheModel( "models/aomdc/lambda_custom.mdl" );
 		else
 			g_Game.PrecacheModel( self.pev.model );
 		
@@ -97,7 +97,7 @@ class point_checkpoint : ScriptBaseEntity
 		
 		// Allow for custom models
 		if( string( self.pev.model ).IsEmpty() )
-			g_EntityFuncs.SetModel( self, "models/kezaeiv/icons/mk_logo_red.mdl" );
+			g_EntityFuncs.SetModel( self, "models/aomdc/lambda_custom.mdl" );
 		else
 			g_EntityFuncs.SetModel( self, self.pev.model );
 		

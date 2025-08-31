@@ -6,17 +6,17 @@
 const Vector VECTOR_CONE_DM_SHOTGUN( 0.08716, 0.04362, 0.00  );		// 10 degrees by 5 degrees
 const Vector VECTOR_CONE_DM_DOUBLESHOTGUN( 0.17365, 0.04362, 0.00 ); 	// 20 degrees by 5 degrees
 
-const float SHOTGUN_MOD_DAMAGE = 18.0;
+const float SHOTGUN_MOD_DAMAGE = 75.0;
 const float SHOTGUN_MOD_FIRERATE = 1.15;
 
-const float SHOTGUN_MOD_DAMAGE_SURVIVAL = 13.0; // Reduce damage by 25% on Survival
+const float SHOTGUN_MOD_DAMAGE_SURVIVAL = 75.0; // Reduce damage by 25% on Survival
 
 const int SHOTGUN_DEFAULT_AMMO 	= 8;
 const int SHOTGUN_MAX_CARRY 	= 32;
 const int SHOTGUN_MAX_CLIP 		= 8;
 const int SHOTGUN_WEIGHT 		= 15;
 
-const uint SHOTGUN_SINGLE_PELLETCOUNT = 8;
+const uint SHOTGUN_SINGLE_PELLETCOUNT = 4;
 const uint SHOTGUN_DOUBLE_PELLETCOUNT = SHOTGUN_SINGLE_PELLETCOUNT * 2;
 
 enum ShotgunAnimation

@@ -2,8 +2,8 @@
 // Misc Script: MP5k / Uzi Ammo
 // Author: Zorbos
 
-const int AMMO_MP5K_GIVE = 30;
-const int AMMO_MP5K_MAX_CARRY = 120;
+const int AMMO_MP5K_GIVE = 60;
+const int AMMO_MP5K_MAX_CARRY = 180;
 
 class ammo_dcmp5k : ScriptBasePlayerAmmoEntity
 {

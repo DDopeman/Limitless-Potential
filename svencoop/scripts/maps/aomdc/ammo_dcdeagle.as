@@ -2,8 +2,8 @@
 // Misc Script: Desert Eagle Ammo
 // Author: Zorbos
 
-const int AMMO_DEAGLE_GIVE = 7;
-const int AMMO_DEAGLE_MAX_CARRY = 14;
+const int AMMO_DEAGLE_GIVE = 10;
+const int AMMO_DEAGLE_MAX_CARRY = 28;
 
 class ammo_dcdeagle : ScriptBasePlayerAmmoEntity
 {

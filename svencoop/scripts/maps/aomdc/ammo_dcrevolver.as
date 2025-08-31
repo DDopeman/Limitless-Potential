@@ -2,8 +2,8 @@
 // Misc Script: Revolver Ammo
 // Author: Zorbos
 
-const int AMMO_REVOLVER_GIVE = 6;
-const int AMMO_REVOLVER_MAX_CARRY = 12;
+const int AMMO_REVOLVER_GIVE = 9;
+const int AMMO_REVOLVER_MAX_CARRY = 18;
 
 class ammo_dcrevolver : ScriptBasePlayerAmmoEntity
 {

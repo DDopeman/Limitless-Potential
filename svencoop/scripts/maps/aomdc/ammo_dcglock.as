@@ -2,8 +2,8 @@
 // Misc Script: Glock Ammo
 // Author: Zorbos
 
-const int AMMO_GLOCK_GIVE = 20;
-const int AMMO_GLOCK_MAX_CARRY = 130;
+const int AMMO_GLOCK_GIVE = 40;
+const int AMMO_GLOCK_MAX_CARRY = 160;
 
 class ammo_dcglock : ScriptBasePlayerAmmoEntity
 {

@@ -2,13 +2,13 @@
 // Weapon Script: Desert Eagle
 // Author: Zorbos
 
-const float DEAGLE_MOD_DAMAGE = 90.0;
-const float DEAGLE_MOD_FIRERATE = 0.75;
+const float DEAGLE_MOD_DAMAGE = 210.0;
+const float DEAGLE_MOD_FIRERATE = 0.15;
 
-const float DEAGLE_MOD_DAMAGE_SURVIVAL = 67.0; // Reduce damage by 25% on Survival
+const float DEAGLE_MOD_DAMAGE_SURVIVAL = 210.0; // Reduce damage by 25% on Survival
 
 const int DEAGLE_DEFAULT_AMMO 	= 7;
-const int DEAGLE_MAX_CARRY 	= 14;
+const int DEAGLE_MAX_CARRY 	= 28;
 const int DEAGLE_MAX_CLIP 		= 7;
 const int DEAGLE_WEIGHT 		= 5;
 

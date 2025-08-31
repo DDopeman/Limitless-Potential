@@ -147,22 +147,7 @@ class weapon_g3sg1 : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		Vector vecSpread;
 
-		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_2DEGREES * 2.45f * (m_iShotsFired * 0.35f);
-		}
-		else if( m_pPlayer.pev.velocity.Length2D() > 0 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 2.15f * (m_iShotsFired * 0.3f);
-		}
-		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
-		{
 			vecSpread = VECTOR_CONE_1DEGREES * 1.035f;
-		}
-		else
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.055f * (m_iShotsFired * 0.4f);
-		}
 
 		vecSpread = (WeaponZoomMode != CS16BASE::MODE_FOV_NORMAL) ? vecSpread * (m_iShotsFired * 0.21f) : vecSpread * (m_iShotsFired * 0.19f); // do vector math calculations here to make the Spread worse
 

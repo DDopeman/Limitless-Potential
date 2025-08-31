@@ -2,10 +2,10 @@
 // Weapon Script: Axe
 // Author: Zorbos
 
-const float AXE_MOD_DAMAGE = 70.0;
-const float AXE_MOD_ATKSPEED = 1.00;
+const float AXE_MOD_DAMAGE = 150.0;
+const float AXE_MOD_ATKSPEED = 0.90;
 
-const float AXE_MOD_DAMAGE_SURVIVAL = 53.0; // Reduce damage by 25% on Survival
+const float AXE_MOD_DAMAGE_SURVIVAL = 150.0; // Reduce damage by 25% on Survival
 
 enum axe_e
 {
@@ -246,7 +246,7 @@ class weapon_dcaxe : ScriptBasePlayerWeaponEntity
 
 		Math.MakeVectors( m_pPlayer.pev.v_angle );
 		Vector vecSrc	= m_pPlayer.GetGunPosition();
-		Vector vecEnd	= vecSrc + g_Engine.v_forward * 32;
+		Vector vecEnd	= vecSrc + g_Engine.v_forward * 56;
 
 		g_Utility.TraceLine( vecSrc, vecEnd, dont_ignore_monsters, m_pPlayer.edict(), tr );
 

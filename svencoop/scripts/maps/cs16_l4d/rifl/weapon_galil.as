@@ -146,20 +146,9 @@ class weapon_galil : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		Vector vecSpread;
 
-		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.34 * (0.12 + (m_iShotsFired * 0.21));
-		}
-		else if( m_pPlayer.pev.velocity.Length2D() > 140 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.14 * (0.07 + (m_iShotsFired * 0.135));
-		}
-		else
-		{
 			vecSpread = VECTOR_CONE_1DEGREES * 1.0375;
-		}
 
-		vecSpread = vecSpread * (m_iShotsFired * 0.215); // do vector math calculations here to make the Spread worse
+		vecSpread = vecSpread * (m_iShotsFired * 0.1); // do vector math calculations here to make the Spread worse
 
 		self.m_flNextPrimaryAttack = WeaponTimeBase() + RPM;
 		self.m_flTimeWeaponIdle = WeaponTimeBase() + 1.5f;
@@ -169,19 +158,19 @@ class weapon_galil : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		if( m_pPlayer.pev.velocity.Length2D() > 0 )
 		{
-			KickBack( 1.0, 0.45, 0.28, 0.045, 3.75, 3.0, 7 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 		else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
 		{
-			KickBack( 1.2, 0.5, 0.23, 0.15, 5.5, 3.5, 6 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 		{
-			KickBack( 0.6, 0.3, 0.2, 0.0125, 3.25, 2.0, 7 );
+			KickBack( 0.2, 0.08, 0.05, 0.08, 0.3, 0.1, 1 );
 		}
 		else
 		{
-			KickBack( 0.65, 0.35, 0.25, 0.015, 3.5, 2.25, 7 );
+			KickBack( 0.3, 0.1, 0.05, 0.08, 0.5, 0.1, 1 );
 		}
 
 		m_pPlayer.m_iWeaponVolume = NORMAL_GUN_VOLUME;

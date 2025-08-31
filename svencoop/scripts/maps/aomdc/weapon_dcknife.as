@@ -2,10 +2,10 @@
 // Weapon Script: Knife
 // Author: Zorbos
 
-const float KNIFE_MOD_DAMAGE = 12.0;
-const float KNIFE_MOD_ATKSPEED = 0.25;
+const float KNIFE_MOD_DAMAGE = 25.0;
+const float KNIFE_MOD_ATKSPEED = 0.1;
 
-const float KNIFE_MOD_DAMAGE_SURVIVAL = 9.0; // Reduce damage by 25% on Survival
+const float KNIFE_MOD_DAMAGE_SURVIVAL = 25.0; // Reduce damage by 25% on Survival
 
 enum knife_e
 {

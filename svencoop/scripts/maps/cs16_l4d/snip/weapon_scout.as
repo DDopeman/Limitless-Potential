@@ -173,22 +173,7 @@ class weapon_scout : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		Vector vecSpread;
 
-		if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_4DEGREES * 2.2f * (m_iShotsFired * 0.75f);
-		}
-		else if( m_pPlayer.pev.velocity.Length2D() > 170 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 2.075f * (m_iShotsFired * 0.45f);
-		}
-		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
-		{
 			vecSpread = VECTOR_CONE_1DEGREES;
-		}
-		else
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.07f * (m_iShotsFired * 0.4f);
-		}
 
 		vecSpread = (WeaponZoomMode != CS16BASE::MODE_FOV_NORMAL) ? vecSpread * (m_iShotsFired * 0.225f) : vecSpread * (m_iShotsFired * 0.15f);
 

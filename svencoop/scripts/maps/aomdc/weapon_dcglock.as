@@ -2,13 +2,13 @@
 // Weapon Script: Glock
 // Author: Zorbos
 
-const float GLOCK_MOD_DAMAGE = 14.0;
-const float GLOCK_MOD_FIRERATE = 0.05;
+const float GLOCK_MOD_DAMAGE = 48.0;
+const float GLOCK_MOD_FIRERATE = 0.12;
 
-const float GLOCK_MOD_DAMAGE_SURVIVAL = 10.0; // Reduce damage by 25% on Survival
+const float GLOCK_MOD_DAMAGE_SURVIVAL = 48.0; // Reduce damage by 25% on Survival
 
 const int GLOCK_DEFAULT_AMMO = 20;
-const int GLOCK_MAX_CARRY 	= 130;
+const int GLOCK_MAX_CARRY 	= 160;
 const int GLOCK_MAX_CLIP 	= 20;
 const int GLOCK_WEIGHT 		= 5;
 
@@ -266,11 +266,6 @@ class weapon_dcglock : ScriptBasePlayerWeaponEntity
 	{
 		int m_iBulletDamage;
 		
-		if(bIsFiring)
-			return;
-			
-		if(!bIsFiring)
-			bIsFiring = true;
 	
 		// don't fire underwater
 		if( m_pPlayer.pev.waterlevel == WATERLEVEL_HEAD )
@@ -379,7 +374,7 @@ class weapon_dcglock : ScriptBasePlayerWeaponEntity
 		if (self.m_iClip == 0)
 		{
 			self.PlayEmptySound();
-			self.m_flNextSecondaryAttack = g_Engine.time + 0.075;
+			self.m_flNextSecondaryAttack = g_Engine.time + 0.15;
 			return;
 		}
 		else if (self.m_iClip != 0)
@@ -411,11 +406,11 @@ class weapon_dcglock : ScriptBasePlayerWeaponEntity
 
 		m_pPlayer.FireBullets( 1, vecSrc, vecAiming, g_vecZero, 8192, BULLET_PLAYER_CUSTOMDAMAGE, 0, m_iBulletDamage );
 
-		self.m_flNextSecondaryAttack = g_Engine.time + 0.075;
+		self.m_flNextSecondaryAttack = g_Engine.time + 0.045;
 		self.m_flTimeWeaponIdle = g_Engine.time + GLOCK_MOD_FIRERATE;
 
 		m_pPlayer.pev.punchangle.x = m_flPunchAngle;
-		m_flPunchAngle += -1.5; // Make the gun kick harder as it is fired for longer
+		m_flPunchAngle += -0.4; // Make the gun kick harder as it is fired for longer
 		
 		TraceResult tr;
 		float x, y;

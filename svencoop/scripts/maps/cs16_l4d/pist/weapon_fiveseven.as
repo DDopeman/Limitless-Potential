@@ -151,15 +151,7 @@ class weapon_fiveseven : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 
 		Vector vecSpread;
 
-		if( m_pPlayer.pev.velocity.Length2D() > 0 )
-		{
-			vecSpread = VECTOR_CONE_1DEGREES * 1.255f;
-		}
-		else if( !( m_pPlayer.pev.flags & FL_ONGROUND != 0 ) )
-		{
-			vecSpread = VECTOR_CONE_2DEGREES * 1.5f;
-		}
-		else if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
+		if( m_pPlayer.pev.flags & FL_DUCKING != 0 )
 		{
 			vecSpread = VECTOR_CONE_1DEGREES * 1.075f;
 		}
@@ -187,7 +179,7 @@ class weapon_fiveseven : ScriptBasePlayerWeaponEntity, CS16BASE::WeaponBase
 		m_pPlayer.m_iWeaponVolume = BIG_EXPLOSION_VOLUME;
 		m_pPlayer.m_iWeaponFlash = DIM_GUN_FLASH;
 
-		m_pPlayer.pev.punchangle.x -= 2;
+		m_pPlayer.pev.punchangle.x -= 0.6;
 
 		ShellEject( m_pPlayer, m_iShell, Vector( 15, 8, -6 ), true, false );
 	}
