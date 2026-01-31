@@ -4,9 +4,9 @@
 
 // SPAS-12
 
-"hlclassic/weapons/sbarrel1.wav" "st_mission/weapons/spas12/sbarrel1.wav"
-"hlclassic/weapons/dbarrel1.wav" "st_mission/weapons/spas12/dbarrel1.wav"
-"hlclassic/weapons/scock1.wav" "st_mission/weapons/spas12/scock1.wav"
+"hlclassic/weapons/sbarrel1.wav" "st_mission/weapons/spas12/sbarrel1.ogg"
+"hlclassic/weapons/dbarrel1.wav" "st_mission/weapons/spas12/dbarrel1.ogg"
+"hlclassic/weapons/scock1.wav" "st_mission/weapons/spas12/scock1.ogg"
 
 //BIO LAUNCHER
 

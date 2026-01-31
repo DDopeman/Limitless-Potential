@@ -1,0 +1,66 @@
+
+// medical
+HEV_DEAD0 oghs/cs07/toma
+HEV_DEAD1 oghs/cs07/(p85) fart
+HEV_DEAD2 oghs/cs07/slip
+HEV_DEAD3 oghs/cs07/(p115) ala
+HEV_DEAD4 oghs/cs07/bell
+HEV_DEAD5 oghs/cs07/(p85) bell
+HEV_DEAD6 oghs/cs07/nooo
+HEV_DEAD7 oghs/cs07/(p85) oogh
+HEV_DEAD8 oghs/cs07/(p85) cave1
+HEV_DEAD9 oghs/cs07/pluh
+HEV_DEAD10 oghs/cs07/fart
+HEV_DEAD11 oghs/cs07/(p85) dies
+HEV_DEAD12 oghs/cs07/(p115) gay
+HEV_DEAD13 oghs/cs07/(p85) dross
+HEV_DEAD14 oghs/cs07/dross
+HEV_DEAD15 oghs/cs07/(p115) vine
+HEV_DEAD16 oghs/cs07/(p115) fack2
+HEV_DEAD17 oghs/cs07/(p85) pluh
+HEV_DEAD18 oghs/cs07/pipe
+HEV_DEAD19 oghs/cs07/vine
+HEV_DEAD20 oghs/cs07/(p115) bell
+HEV_DEAD21 oghs/cs07/(p85) slip
+HEV_DEAD22 oghs/cs07/csm
+HEV_DEAD23 oghs/cs07/(p115) csm
+HEV_DEAD24 oghs/cs07/dies
+HEV_DEAD25 oghs/cs07/(p115) nooo
+HEV_DEAD26 oghs/cs07/(p115) oogh
+HEV_DEAD27 oghs/cs07/(p115) pipe
+HEV_DEAD28 oghs/cs07/(p115) boing
+HEV_DEAD29 oghs/cs07/(p85) fah
+HEV_DEAD30 oghs/cs07/(p85) pui
+HEV_DEAD31 oghs/cs07/(p85) gay
+HEV_DEAD32 oghs/cs07/(p85) nooo
+HEV_DEAD33 oghs/cs07/boing
+HEV_DEAD34 oghs/cs07/(p115) fart
+HEV_DEAD35 oghs/cs07/(p115) slip
+HEV_DEAD36 oghs/cs07/ala
+HEV_DEAD37 oghs/cs07/(p85) ahhhh
+HEV_DEAD38 oghs/cs07/rip2
+HEV_DEAD39 oghs/cs07/oogh
+HEV_DEAD40 oghs/cs07/(p85) ala
+HEV_DEAD41 oghs/cs07/(p115) dies
+HEV_DEAD42 oghs/cs07/(p115) rip2
+HEV_DEAD43 oghs/cs07/(p85) vine
+HEV_DEAD44 oghs/cs07/pui
+HEV_DEAD45 oghs/cs07/(p85) toma
+HEV_DEAD46 oghs/cs07/gay
+HEV_DEAD47 oghs/cs07/fack2
+HEV_DEAD48 oghs/cs07/(p115) fah
+HEV_DEAD49 oghs/cs07/(p115) toma
+HEV_DEAD50 oghs/cs07/(p85) pipe
+HEV_DEAD51 oghs/cs07/(p115) pluh
+HEV_DEAD52 oghs/cs07/(p85) fack2
+HEV_DEAD53 oghs/cs07/(p115) ahhhh
+HEV_DEAD54 oghs/cs07/ahhhh
+HEV_DEAD55 oghs/cs07/(p85) csm
+HEV_DEAD56 oghs/cs07/(p115) pui
+HEV_DEAD57 oghs/cs07/(p85) rip2
+HEV_DEAD58 oghs/cs07/(p115) cave1
+HEV_DEAD59 oghs/cs07/cave1
+HEV_DEAD60 oghs/cs07/(p115) dross
+HEV_DEAD61 oghs/cs07/(p85) boing
+HEV_DEAD62 oghs/cs07/fah
+

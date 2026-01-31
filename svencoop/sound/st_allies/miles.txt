@@ -1,4 +1,4 @@
-"weapons/pl_gun3.wav" "st_mission/weapons/fn_fire1.wav"
+"weapons/pl_gun3.wav" "custom_monsters/guns/g3/g3_fire.ogg"
 
 "barney/ba_pain1.wav" "st_allies/miles/pain1.wav
 "barney/ba_pain2.wav" "st_allies/miles/pain2.wav
@@ -14,7 +14,7 @@
 "!BA_OK3" "st_allies/miles/ml_ok4.wav"
 "!BA_OK4" "st_allies/miles/ml_ok5.wav"
 "!BA_OK5" "st_allies/miles/ml_ok6.wav"
-"!BA_OK6" "st_allies/miles/ml_ok7.wav"
+"!BA_OK6" "st_allies/miles/ml_ok3.wav"
 
 "!BA_WAIT0" "st_allies/miles/ml_wait1.wav"
 "!BA_WAIT1" "st_allies/miles/ml_wait2.wav"
@@ -92,7 +92,7 @@
 "!BA_ATTACK2" "st_allies/miles/ml_attack3.wav"
 "!BA_ATTACK3" "st_allies/miles/ml_attack4.wav"
 "!BA_ATTACK4" "st_allies/miles/ml_attack5.wav"
-"!BA_ATTACK5" "st_allies/miles/ml_attack6.wav"
+"!BA_ATTACK5" "st_allies/miles/ml_attack5.wav"
 
 "!BA_HEAR0" "st_allies/miles/ml_hear1.wav"
 "!BA_HEAR1" "st_allies/miles/ml_hear2.wav"
@@ -106,12 +106,12 @@
 "!BA_CUREB" "st_allies/miles/ml_cure-b.wav"
 "!BA_CUREC" "st_allies/miles/ml_cure-c.wav"
 
-"!BA_SCARED0" "st_allies/miles/ml_scared1.wav"
+"!BA_SCARED0" "st_allies/miles/ml_scared1.ogg"
 "!BA_SCARED1" "st_allies/miles/ml_scared2.wav"
 
-"!BA_WOUND0" "st_allies/miles/ml_wound1.wav"
+"!BA_WOUND0" "st_allies/miles/ml_wound.wav"
 "!BA_WOUND1" "st_allies/miles/ml_wound2.wav"
-"!BA_MORTAL0" "st_allies/miles/ml_mortal1.wav"
+"!BA_MORTAL0" "st_allies/miles/ml_mortal.wav"
 
 
 "!BA_SHOT0" "st_allies/miles/ml_shot1.wav"
@@ -119,7 +119,7 @@
 "!BA_SHOT2" "st_allies/miles/ml_shot3.wav"
 "!BA_SHOT3" "st_allies/miles/ml_shot4.wav"
 "!BA_SHOT4" "st_allies/miles/ml_shot5.wav"
-"!BA_SHOT5" "st_allies/miles/ml_shot6.wav"(e80)
+"!BA_SHOT5" "st_allies/miles/ml_shot4.wav"(e80)
 
 "!BA_MAD0" "st_allies/miles/ml_mad1.wav"
 "!BA_MAD1" "st_allies/miles/ml_mad2.wav"

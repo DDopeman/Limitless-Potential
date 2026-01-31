@@ -1,4 +1,4 @@
-/* anti_rush Entity Version 1.1
+/* anti_rush Entity Version 1.2
 by Outerbeast
 Custom entity for creating percentage player condition requirements for level progression
 For install and usage instructions, see anti_rush.fgd
@@ -6,12 +6,12 @@ For install and usage instructions, see anti_rush.fgd
 namespace ANTI_RUSH
 {
 
-enum antirush_modes
+enum AntiRushMode
 {
-    DEFAULT = 0,    // Let the map control AntiRush mode
-    FORCE_ON,       // Have AntiRush enabled for all (supported) levels
-    FORCE_OFF,      // Force AntiRush disabled for all (supported) levels
-    SOLO          // Disable AntiRush in single player
+    DEFAULT,    // Let the map control AntiRush mode
+    FORCE_ON,   // Have AntiRush enabled for all (supported) levels
+    FORCE_OFF,  // Force AntiRush disabled for all (supported) levels
+    SOLO        // Disable AntiRush in single player
 };
 
 enum antirush_flags
@@ -24,21 +24,19 @@ enum antirush_flags
 };
 
 array<EHandle> H_AR_ENTITIES;
-
-const uint OverrideSetting = DEFAULT; // Override the map setting for AntiRush. See "antirush_modes" enum for possible options
-string RemoveEntities;
+const AntiRushMode OverrideSetting = DEFAULT;// Override the map setting for AntiRush. See "AntiRushMode" enum for possible options
 
 bool IsActive()
 {
     return g_CustomEntityFuncs.IsCustomEntity( "anti_rush" );
 }
 
-bool EntityRegister(bool blEnable = true, uint iAntiRushMode = OverrideSetting)
+bool EntityRegister(bool blEnable = true, AntiRushMode mode = OverrideSetting)
 {
-    if( IsActive() && iAntiRushMode != FORCE_OFF )
+    if( IsActive() && mode != FORCE_OFF )
         return true;
     
-    switch( iAntiRushMode )
+    switch( mode )
     {
         case FORCE_ON:
             g_CustomEntityFuncs.RegisterCustomEntity( "ANTI_RUSH::anti_rush", "anti_rush" );
@@ -67,12 +65,13 @@ bool EntityRegister(bool blEnable = true, uint iAntiRushMode = OverrideSetting)
         }
     }
 
-    if( !IsActive() && RemoveEntities != "" )
-        g_Scheduler.SetTimeout( "AREntityRemove", 0.1f, RemoveEntities );
-    else
-        ARLoadEnts( "" );
+    ARLoadEnts( "" );
+    g_EntityFuncs.FireTargets( "game_antirush_" + ( IsActive() ? "enabled" : "disabled" ), null, null, USE_TOGGLE, 0.0f, 0.1f );
 
-    return g_CustomEntityFuncs.IsCustomEntity( "anti_rush" );
+    if( IsActive() )
+        g_Hooks.RegisterHook( Hooks::Player::PlayerPostThink, PunishRushers );
+
+    return IsActive();
 }
 // Use preconfigured antirush entities
 bool ARLoadEnts(string strCustomFile)
@@ -87,43 +86,46 @@ bool ARLoadEnts(string strCustomFile)
 
     return g_EntityLoader.LoadFromFile( strAntiRushFile );
 }
-// Routine for cleaning up antirush remnant entities when disabled - call in MapStart(). Wildcards supported
-void AREntityRemove(string strAntiRushRemoveList)
+
+HookReturnCode PunishRushers(CBasePlayer@ pPlayer)
 {
-    if( IsActive() || strAntiRushRemoveList == "" )
-        return;
+    if( pPlayer is null || !pPlayer.IsAlive() )
+        return HOOK_CONTINUE;
 
-    const array<string> STR_ANTIRUSH_REMOVE_LST = strAntiRushRemoveList.Split( ";" );
-
-    if( STR_ANTIRUSH_REMOVE_LST.length() < 1 )
-        return;
-
-    for( uint i = 0; i < STR_ANTIRUSH_REMOVE_LST.length(); i++ )
+    for( uint i = 0; i < H_AR_ENTITIES.length(); i++ )
     {
-        if( STR_ANTIRUSH_REMOVE_LST[i] == "" )
+        if( !H_AR_ENTITIES[i] )
             continue;
 
-        CBaseEntity@ pEntity;
+        CBaseEntity@ pAntiRush = H_AR_ENTITIES[i].GetEntity();
 
-        while( ( @pEntity = g_EntityFuncs.FindEntityByTargetname( pEntity, STR_ANTIRUSH_REMOVE_LST[i] ) ) !is null )
-            g_EntityFuncs.Remove( pEntity );
+        if( pAntiRush is null || pAntiRush.pev.size == g_vecZero || pAntiRush.pev.solid == SOLID_NOT )
+            continue;
 
-        while( ( @pEntity = g_EntityFuncs.FindEntityByString( pEntity, "target", STR_ANTIRUSH_REMOVE_LST[i] ) ) !is null )
-            g_EntityFuncs.Remove( pEntity );
-
-        while( ( @pEntity = g_EntityFuncs.FindEntityByString( pEntity, "model", STR_ANTIRUSH_REMOVE_LST[i] ) ) !is null )
-            g_EntityFuncs.Remove( pEntity );
+        if
+        ( 
+            ( pPlayer.pev.origin.x >= pAntiRush.pev.absmin.x && pPlayer.pev.origin.x <= pAntiRush.pev.absmax.x ) &&
+            ( pPlayer.pev.origin.y >= pAntiRush.pev.absmin.y && pPlayer.pev.origin.y <= pAntiRush.pev.absmax.y ) &&
+            ( pPlayer.pev.origin.z >= pAntiRush.pev.absmin.z && pPlayer.pev.origin.z <= pAntiRush.pev.absmax.z )
+        )
+        {
+            g_EntityFuncs.Remove( pPlayer );
+            g_PlayerFuncs.ShowMessage( pPlayer, "Please do not rush, " + pPlayer.pev.netname + "." );
+        }
     }
+
+    return HOOK_CONTINUE;
 }
 
-final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity baseclass please.
+final class anti_rush : ScriptBaseEntity// Need a ScriptBaseToggleEntity baseclass please.
 {
     private EHandle hAntiRushIcon, hAntiRushLock;
     private array<EHandle> H_ANTIRUSH_BORDER_BEAMS;
+    private array<string> STR_ANTIRUSH_MONSTERS( 1 );
     
     private CSprite@ pAntiRushIcon
     {
-        get { return hAntiRushIcon ? cast<CSprite@>( hAntiRushIcon.GetEntity() ) : null; }
+        get { return cast<CSprite@>( hAntiRushIcon.GetEntity() ); }
         set { hAntiRushIcon = EHandle( @value ); }
     }
 
@@ -144,7 +146,7 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
             strAntiRushIcon = szValue;
         else if( szKey == "icon_drawtype" )
             iVpType = atoui( szValue );
-        else if( szKey == "master" )// This should be a standard CBaseEntity property!!
+        else if( szKey == "master" )// This should be a standard CBaseEntity property!!!
             strMaster = szValue;
         else if( szKey == "killtarget" )// This should be a standard CBaseEntity property!!!
             strKillTarget = szValue;
@@ -164,6 +166,13 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
             strBorderBeamPoints = szValue;
         else if( szKey == "percentage" )
             self.pev.frame = atof( szValue ) < 0.0f ? 0.0f : atof( szValue );
+        else if( szKey == "kill_monsters" && szValue != "" )
+        {
+            STR_ANTIRUSH_MONSTERS = szValue.Split( ";" );
+
+            if( STR_ANTIRUSH_MONSTERS.length() > 0 )
+                g_Hooks.RegisterHook( Hooks::Monster::MonsterKilled, MonsterKilledHook( this.MonsterKillRequirement ) );
+        }
         else if( szKey == "delay" )// This should be a standard CBaseEntity property!!!
             flTargetDelay = atof( szValue ) < 0.0f ? 0.0f : atof( szValue );
         else if( szKey == "fadetime" )
@@ -176,19 +185,17 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
 	
     void Precache()
     {
-        if( strAntiRushIcon == "" )
-            strAntiRushIcon = "sprites/antirush/percent.spr";
-
         if( self.pev.noise == "" )
             self.pev.noise = "buttons/bell1.wav";
     
-        g_Game.PrecacheModel( strAntiRushIcon );
-        g_Game.PrecacheGeneric( strAntiRushIcon );
+        if( strAntiRushIcon != "" )
+            g_Game.PrecacheModel( strAntiRushIcon );
 
+        g_Game.PrecacheModel( "sprites/antirush/percent.spr" );
+        g_Game.PrecacheModel( "sprites/antirush/skull.spr" );
         g_Game.PrecacheModel( "sprites/laserbeam.spr" );
 
         g_SoundSystem.PrecacheSound( self.pev.noise );
-        g_Game.PrecacheGeneric( "sound/" + self.pev.noise );
 
         BaseClass.Precache();
     }
@@ -210,19 +217,25 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
             blInitialised = Initialise();
         // If set, entity will trigger "netname" when it spawns
         if( self.pev.netname != "" && self.pev.netname != self.GetTargetname() )
-            g_EntityFuncs.FireTargets( "" + self.pev.netname, self, self, USE_TOGGLE, 0.0f, 0.5f );
+            g_EntityFuncs.FireTargets( string( self.pev.netname ), self, self, USE_TOGGLE, 0.0f, 0.1f );
 
         H_AR_ENTITIES.insertLast( self );
     }
     // Configuring the settings for each antirush component
     bool Initialise()
     {
+        if( strAntiRushIcon == "" )
+            strAntiRushIcon = STR_ANTIRUSH_MONSTERS.length() > 0 && self.pev.frame <= 0.0f ? "sprites/antirush/skull.spr" : "sprites/antirush/percent.spr";
+
         if( !self.pev.SpawnFlagBitSet( SF_NO_ICON ) )
             CreateIcon();
 
-        if( vecBlockerCornerMin != g_vecZero && 
+        if
+        (
+            vecBlockerCornerMin != g_vecZero && 
             vecBlockerCornerMax != g_vecZero && 
-            vecBlockerCornerMin != vecBlockerCornerMax )
+            vecBlockerCornerMin != vecBlockerCornerMax
+        )
             blAntiRushBarrier = CreateBarrier();
 
         if( self.pev.target != "" || strLockEnts != "" )
@@ -237,7 +250,7 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
             H_ANTIRUSH_BORDER_BEAMS = DrawBorder();
 
         self.pev.spawnflags &= ~SF_START_OFF;
-        self.pev.nextthink = self.pev.frame >= 0.01f ? g_Engine.time + 5.0f : 0.0f;
+        self.pev.nextthink = self.pev.frame >= 0.01f || STR_ANTIRUSH_MONSTERS.length() > 0 ? g_Engine.time + 5.0f : 0.0f;
         
         return( pAntiRushIcon !is null || 
                 hAntiRushLock.IsValid() ||
@@ -271,7 +284,7 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
         if( strLockEnts != "" )
         {
             if( self.pev.target == "" )
-                self.pev.target = "" + self.GetClassname() + "_ent_ID" + self.edict().serialnumber;
+                self.pev.target = self.GetClassname() + "_ent_ID#" + string( self.entindex() ) + string( self.edict().serialnumber );
 
             const array<string> STR_LOCK_ENTS = strLockEnts.Split( ";" );
 
@@ -292,7 +305,7 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
             }
         }
 
-        return g_EntityFuncs.CreateEntity( "multisource", {{ "targetname", "" + self.pev.target }} );
+        return g_EntityFuncs.CreateEntity( "multisource", {{ "targetname", string( self.pev.target ) }} );
     }
 
     bool CreateBarrier()
@@ -329,7 +342,7 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
                 continue;
 
             CBeam@ pBorderBeam = g_EntityFuncs.CreateBeam( "sprites/laserbeam.spr", 7 );
-            pBorderBeam.SetFlags( BEAM_POINTS );
+            pBorderBeam.SetType( BEAM_POINTS );
             pBorderBeam.SetStartPos( vecStartPos );
             pBorderBeam.SetEndPos( vecEndPos );
             pBorderBeam.SetBrightness( 128 );
@@ -337,23 +350,17 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
             pBorderBeam.pev.rendercolor = self.pev.rendercolor == g_vecZero ? Vector( 255, 0, 0 ) : self.pev.rendercolor;
             @pBorderBeam.pev.owner = self.edict();
 
-            H_BEAMS_OUT.insertLast( EHandle( pBorderBeam ) );
+            H_BEAMS_OUT.insertLast( pBorderBeam );
         }
 
-        return @H_BEAMS_OUT;
+        return H_BEAMS_OUT;
     }
     // Calculate percentage of players in the zone
-    void Think()
+    bool PercentPlayerRequirement(const float flRequiredPercent)
     {
-        if( self.pev.frame <= 0.0f )
-            return;
-        // Why is there no m_sMaster property for CBaseEntity???
-        if( !g_EntityFuncs.IsMasterTriggered( strMaster, null ) )
-        {
-            self.pev.nextthink = g_Engine.time + 0.5f;
-            return;
-        }
-        
+        if( flRequiredPercent <= 0.0f )
+            return false;
+
         uint 
             iPlayersAlive = 0,
             iPlayersInZone = 0;
@@ -378,9 +385,7 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
 
             if( blPlayerInZone )
             {
-                @fnTriggerBlocked = self.pev.message != "" && self.pev.message != self.GetTargetname() && self.pev.iuser1 & 1 << ( iPlayer & 31 ) == 0 ? 
-                                    g_Scheduler.SetTimeout( this, "TriggerBlocked", 0.0f, EHandle( pPlayer ) ) : null;
-
+                @fnTriggerBlocked = self.pev.iuser1 & 1 << ( iPlayer & 31 ) == 0 ? g_Scheduler.SetTimeout( this, "TriggerBlocked", 0.0f, EHandle( pPlayer ) ) : null;
                 self.pev.iuser1 |= 1 << ( iPlayer & 31 );
                 iPlayersInZone++;
             }
@@ -388,30 +393,59 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
                 iPlayersInZone++;
         }
         
-        if( iPlayersAlive >= 1 )
+        if( iPlayersAlive < 1 )
+            return false;
+
+        const float flCurrentPercent = float( iPlayersInZone ) / float( iPlayersAlive ) + 0.00001f;
+
+        if( flCurrentPercent >= flRequiredPercent )
         {
-            const float
-                flCurrentPercent = float( iPlayersInZone ) / float( iPlayersAlive ) + 0.00001f,
-                flRequiredPercent = self.pev.frame / 100.0f;
-
-            if( flCurrentPercent >= flRequiredPercent )
-            {
-                g_Scheduler.RemoveTimer( fnTriggerBlocked );
-                self.Use( self, self, USE_ON );
-                self.pev.nextthink = 0.0f;// We are done here, stop thinking
-                return;
-            }
+            g_Scheduler.RemoveTimer( fnTriggerBlocked );
+            return true;
         }
-
-        self.pev.nextthink = g_Engine.time + 0.5f;
+        else
+            return false;
     }
 
     void TriggerBlocked(EHandle hActivator)
     {
-        g_EntityFuncs.FireTargets( self.pev.message, hActivator ? hActivator.GetEntity() : null, self, USE_ON, 0.0f, 0.0f );
+        if( self.pev.message != "" && self.pev.message != self.GetTargetname() )
+            g_EntityFuncs.FireTargets( self.pev.message, hActivator.GetEntity(), self, USE_ON, 0.0f, 0.0f );
+    }
+
+    HookReturnCode MonsterKillRequirement(CBaseMonster@ pMonster, CBaseEntity@ pAttacker, int iGib)
+    {
+        if( pMonster is null || STR_ANTIRUSH_MONSTERS.find( pMonster.GetTargetname() ) < 0 )
+            return HOOK_CONTINUE;
+
+        STR_ANTIRUSH_MONSTERS.removeAt( STR_ANTIRUSH_MONSTERS.find( pMonster.GetTargetname() ) );
+
+        if( STR_ANTIRUSH_MONSTERS.length() > 1 )
+            TriggerBlocked( pAttacker );
+
+        return HOOK_CONTINUE;
+    }
+
+    void Think()
+    {   // Why is there no m_sMaster property for CBaseEntity???
+        if( !g_EntityFuncs.IsMasterTriggered( strMaster, null ) )
+        {
+            self.pev.nextthink = g_Engine.time + 0.5f;
+            return;
+        }
+
+        if( PercentPlayerRequirement( self.pev.frame / 100.0f ) || STR_ANTIRUSH_MONSTERS.length() < 1 )
+        {
+            self.Use( self, self, USE_ON );
+            // We are done here, stop thinking
+            g_Hooks.RemoveHook( Hooks::Monster::MonsterKilled, MonsterKilledHook( this.MonsterKillRequirement ) );
+            self.pev.nextthink = 0.0f;
+        }
+        else
+            self.pev.nextthink = g_Engine.time + 0.5f;
     }
     // Main triggering business
-    void Use(CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float value)
+    void Use(CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue)
     {
         if( !blInitialised )
         {
@@ -425,10 +459,8 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
         if( pAntiRushIcon !is null )
         {
             pAntiRushIcon.SetColor( 0, 255, 0 );
-            // !-BUG-!: CSprite method "float Frames() const" doesn't work. This is the current workaround.
-            const int iAntiRushIconFrames = Math.max( 0, g_EngineFuncs.ModelFrames( g_EngineFuncs.ModelIndex( pAntiRushIcon.pev.model ) ) - 1 );
             // Change the icon to display 100% when applicable
-            if( self.pev.frame > 0.0f && iAntiRushIconFrames >= 100 )
+            if( self.pev.frame > 0.0f && pAntiRushIcon.Frames() >= 100 )
                 pAntiRushIcon.pev.frame = 100.0f;
 
             if( flFadeTime > 0 )
@@ -504,6 +536,7 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
     {
         RemoveIcon();
         RemoveBorder();
+        g_Hooks.RemoveHook( Hooks::Monster::MonsterKilled, MonsterKilledHook( this.MonsterKillRequirement ) );
 
         if( hAntiRushLock )
             g_EntityFuncs.Remove( hAntiRushLock.GetEntity() );
@@ -513,6 +546,8 @@ final class anti_rush : ScriptBaseEntity // Need a ScriptBaseToggleEntity basecl
 
         if( fnTriggerBlocked !is null )
             g_Scheduler.RemoveTimer( fnTriggerBlocked );
+
+        H_AR_ENTITIES.removeAt( H_AR_ENTITIES.findByRef( EHandle( self ) ) );
 
         BaseClass.UpdateOnRemove();
     }

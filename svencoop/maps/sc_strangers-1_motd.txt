@@ -1,0 +1,40 @@
+-----------------------------------------------------------------------
+Map Title:  Strangers 1-2 Merged
+
+-----------------------------------------------------------------------
+Map Author: - Onox792
+
+-----------------------------------------------------------------------
+
+-=STORY=-
+	A call warned about Gman stalking around a remote area of Black
+	Mesa, we don't know what his mysterious agenda is, but one
+	thing's assured: He must be stopped.
+
+	Now you and your squad must stop him with the help of some HECU
+	marines, it isn't a surprise that Black Mesa is still a zone with
+	a lot of alien activity. Reports indicate high levels of Xen
+	wildlife presence as well as the new "Race X", bio-mech units 
+	and even unidentified enemies. Be careful!
+-----------------------------------------------------------------------
+
+-=Special Thanks=-
+
+	**Beta Testers**
+	Ainaryu
+	Nikov
+	Lopeta
+	Manel
+
+	Hezus for some of his prefabs
+	Dracula9AntiChapel for his Metroid Escape remix
+	Mick Gordon for his Doom ost
+	Tripwire for the Volter boss theme
+
+	Valve
+	Gearbox
+
+	and last but not least, all of the
+	SC developers.
+
+-----------------------------------------------------------------------

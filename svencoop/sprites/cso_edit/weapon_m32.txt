@@ -1,0 +1,6 @@
+5
+weapon			640	custom_weapons/cs16/640hud75	0	90  	170	45
+weapon_s		640	custom_weapons/cs16/640hud75	0	135	170	45
+ammo			640 	custom_weapons/cs16/640hud7cso	192	124	24	24
+crosshair       	640 	cso_edit/scope_vip_grenade	0	0	256	256
+autoaim         	640 	crosshairs  			24  	72  	24  	24

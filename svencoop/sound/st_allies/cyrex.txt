@@ -1,12 +1,12 @@
-"weapons/sniper_fire.wav" "custom_monsters/guns/msg90/sniper_fire.wav"
+"weapons/sniper_fire.wav" "custom_monsters/guns/msg90/sniper_fire.ogg"
 "weapons/uzi/fire_both1.wav" "hunger/thweapons/ap9_fire.wav"
 "weapons/uzi/fire_both2.wav" "hunger/thweapons/ap9_fire.wav"
-"weapons/hks1.wav" "st_mission/weapons/g36.wav"
-"weapons/hks2.wav" "st_mission/weapons/g36.wav"
-"weapons/hks3.wav" "st_mission/weapons/g36.wav"
+"weapons/hks1.wav" "st_mission/weapons/g36.ogg"
+"weapons/hks2.wav" "st_mission/weapons/g36.ogg"
+"weapons/hks3.wav" "st_mission/weapons/g36.ogg"
 "weapons/de_shot1.wav" "weapons/357_shot1.wav"
 "weapons/desert_eagle_fire.wav" "weapons/357_shot1.wav"
-"weapons/sbarrel1.wav" "custom_monsters/guns/m3/m3-1.wav"
+"weapons/sbarrel1.wav" "custom_monsters/guns/m3/m3-1.ogg"
 
 
 "!BG_IDLE0" "st_allies/cyrex/cy_idle3.ogg"

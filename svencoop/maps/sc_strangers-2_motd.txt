@@ -1,0 +1,33 @@
+-----------------------------------------------------------------------
+Map Title:  Strangers 3-4 Merged
+
+-----------------------------------------------------------------------
+Map Author: - Onox792
+
+-----------------------------------------------------------------------
+
+-=STORY=-
+	After helping those scientists, we believe that Gman should be
+	near... This area is like a maze and there are a lot of lasers.
+-----------------------------------------------------------------------
+
+-=Special Thanks=-
+
+	**Beta Testers**
+	Ainaryu
+	Nikov
+	Lopeta
+	Manel
+
+	Hezus for some of his prefabs
+	Dracula9AntiChapel for his Metroid Escape remix
+	Mick Gordon for his Doom ost
+	Tripwire for the Volter boss theme
+
+	Valve
+	Gearbox
+
+	and last but not least, all of the
+	SC developers.
+
+-----------------------------------------------------------------------

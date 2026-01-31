@@ -1,0 +1,6 @@
+4
+weapon			640 cso_edit/640hud69	0	0	170	45
+weapon_s		640 cso_edit/640hud69	0	45	170	45
+ammo			640 cso_edit/640hud2_cso	73	231	24	24
+crosshair		640 crosshairs	48	24	24	24
+

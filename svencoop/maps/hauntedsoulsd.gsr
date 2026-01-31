@@ -1,0 +1,41 @@
+//Haunted Souls Sound Replacements by Blizz753
+
+//WEAPONS
+
+// SPAS-12
+
+"hlclassic/weapons/sbarrel1.wav" "st_mission/weapons/spas12/sbarrel1.ogg"
+"hlclassic/weapons/dbarrel1.wav" "st_mission/weapons/spas12/dbarrel1.ogg"
+"hlclassic/weapons/scock1.wav" "st_mission/weapons/spas12/scock1.ogg"
+
+//VOIDFOLD CANNON
+
+"weapons/displacer_teleport_player.wav" "hs/weapons/voidfold_cannon_playertp.ogg"
+"weapons/displacer_teleport.wav" "hs/weapons/voidfold_cannon_teleport.ogg"
+"weapons/displacer_start.wav" "hs/weapons/voidfold_cannon_start.ogg"
+"weapons/displacer_spin2.wav" "hs/weapons/voidfold_cannon_charge2.ogg"
+"weapons/displacer_spin.wav" "hs/weapons/voidfold_cannon_charge.ogg"
+"weapons/displacer_self.wav" "hs/weapons/voidfold_cannon_selftp.ogg"
+"weapons/displacer_impact.wav" "hs/weapons/voidfold_cannon_impact.ogg"
+"weapons/displacer_fire.wav" "hs/weapons/voidfold_cannon_fire.ogg"
+
+//BIO LAUNCHER
+
+"weapons/splauncher_altfire.wav" "weapons/glauncher2.wav"
+"weapons/splauncher_fire.wav" "weapons/glauncher.wav"
+"weapons/splauncher_bounce.wav" "weapons/grenade_hit1.wav"
+"weapons/spore_hit1.wav" "weapons/grenade_hit1.wav"
+"weapons/spore_hit2.wav" "weapons/grenade_hit2.wav"
+"weapons/spore_hit3.wav" "weapons/grenade_hit3.wav"
+"weapons/splauncher_impact.wav" "squeek/sqk_blast1.wav"
+"weapons/splauncher_pet.wav" "null.wav"
+"weapons/splauncher_reload.wav" "weapons/gren_cock1.wav"
+
+// GRAPPLING HOOK
+
+"weapons/bgrapple_cough.wav" "null.wav"
+"weapons/bgrapple_fire.wav" "tfc/weapons/dartgun.wav"
+"weapons/bgrapple_impact.wav" "weapons/xbow_hit2.wav"
+"weapons/bgrapple_pull.wav" "ambience/turretrot1.wav"
+"weapons/bgrapple_release.wav" "tfc/weapons/dartgun.wav"
+"weapons/bgrapple_wait.wav" "items/grab_rope.wav"

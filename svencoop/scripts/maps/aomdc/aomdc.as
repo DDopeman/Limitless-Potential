@@ -49,7 +49,7 @@ const array<string> AOMDC_LIST_E3 = {"aomdc_3hospital", "aomdc_3hospital2", "aom
 #include "ammo_dcshotgun"
 #include "item_aompills"
 #include "item_aombattery"
-#include "point_checkpoint"
+#include "../point_checkpoint"
 #include "monster_hellhound"
 #include "monster_ghost"
 #include "attachkeyspr"
@@ -314,13 +314,13 @@ void EquipPlayer(CBasePlayer@ pPlayer)
 	
 		// Give ammo if necessary (is ammo low enough and are we on a map that needs this ammo?)
 		if(m_iReserve9mm < 65 && bCanGiveMelee)
-			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("9mm"), 90); // Set the ammo amounts
+			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("9mm"), 150); // Set the ammo amounts
 		if(m_iReserveBuckshot < 12 && bCanGivePrimary)
-			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("buckshot"), 12);
+			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("buckshot"), 20);
 		if(m_iReserve556 < 30 && bCanGivePrimary)
-			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("556"), 75);
+			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("556"), 90);
 		if(m_iReserve357 < 7 && bCanGiveMagnum)
-			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("357"), 10);
+			pPlayer.m_rgAmmo(g_PlayerFuncs.GetAmmoIndex("357"), 15);
 	}
 }
 

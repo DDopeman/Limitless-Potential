@@ -1,0 +1,12 @@
+"tor/tor-alerted.wav" "custom_monsters/rodney/ro_alert1.ogg"
+"tor/tor-attack1.wav" "custom_monsters/rodney/ro_attack1.ogg"
+"tor/tor-attack2.wav" "custom_monsters/rodney/ro_attack2.ogg"
+
+"tor/tor-foot.wav" "player/pl_asf4xx.ogg"
+"tor/tor-idle.wav" "null.wav"
+"tor/tor-idle2.wav" "null.wav"
+"tor/tor-idle3.wav" "null.wav"
+"tor/tor-pain.wav" "custom_monsters/rodney/ro_pain.ogg"
+"tor/tor-summon.wav" "custom_monsters/rodney/ro_summon.ogg"
+"tor/tor-staff-discharge.wav" "st_mission/largebeamstart1.ogg"
+"tor/tor-test1.wav" "custom_monsters/rodney/ro_alert2.ogg"

@@ -92,6 +92,23 @@
         "script" "ForceSurvival"
     }
 	
+    "plugin"
+    {
+        "name" "Spectate"
+        "script" "Spectate"
+    }
+	
+    "plugin"
+    {
+        "name" "GhostEntity"
+        "script" "ghosts/GhostEntity"
+    }
+	
+    "plugin"
+    {
+    "name" "ChatColors"
+    "script" "ChatColors"
+    }
 	
 }
 

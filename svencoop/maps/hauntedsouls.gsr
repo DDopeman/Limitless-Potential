@@ -1,0 +1,9 @@
+//Haunted Souls Sound Replacements by Blizz753
+
+//WEAPONS
+
+"hlclassic/weapons/weapons/sbarrel1.wav" "hs/weapons/sbarrel1.ogg"
+"hlclassic/weapons/weapons/dbarrel1.wav" "hs/weapons/dbarrel1.ogg"
+"hlclassic/weapons/weapons/scock1.wav" "hs/weapons/scock1.ogg"
+
+
