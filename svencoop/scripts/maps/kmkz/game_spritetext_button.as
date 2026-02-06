@@ -2,9 +2,6 @@
 
 class CGameSpriteTextButton: ScriptBaseAnimating
 {
-	EHandle TargetEntity_EHandle;
-	EHandle CreatorEntity_EHandle;
-
 	void Precache()
 	{
 
@@ -29,39 +26,28 @@ class CGameSpriteTextButton: ScriptBaseAnimating
 
 	void Use(CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float value)
 	{
-		//string but_target = self.pev.target;
 		CBaseEntity@ TargetEntity = g_EntityFuncs.FindEntityByTargetname( @TargetEntity, self.pev.target);
-		TargetEntity_EHandle = TargetEntity;
-		
-		//GameSpritetext::game_spritetext.nothing();
-		
-		if (TargetEntity_EHandle)
+				
+		if (@TargetEntity != null)
 		{
-			g_EntityFuncs.FireTargets(self.pev.target, null, @self, USE_TOGGLE, 0.0f, 0.0f);
-			
-			string selfname = self.pev.targetname;
-			string creator = selfname.SubString(0, uint(selfname.Length())- 8);
-			CBaseEntity@ CreatorEntity = g_EntityFuncs.FindEntityByTargetname( @CreatorEntity, creator);
-			CreatorEntity_EHandle = CreatorEntity;
-			//g_Game.AlertMessage(at_console, "creator: " + creator, g_Engine.time);
-			if (CreatorEntity_EHandle) 
-			{
-				g_EntityFuncs.FireTargets(CreatorEntity.pev.targetname, null, @self, USE_TOGGLE, 0.0f, 0.0f);
-			}
-			
-			CreatorEntity.pev.iuser1 = 1;
-			CreatorEntity.pev.iuser2 = 1;
-			CreatorEntity.pev.iuser3 = 1;
-			CreatorEntity.pev.iuser4 = 1;
-			CBaseEntity@ Button1Entity = g_EntityFuncs.FindEntityByTargetname( @Button1Entity, creator + "_button1");
-			CBaseEntity@ Button2Entity = g_EntityFuncs.FindEntityByTargetname( @Button2Entity, creator + "_button2");
-			CBaseEntity@ Button3Entity = g_EntityFuncs.FindEntityByTargetname( @Button3Entity, creator + "_button3");
-			CBaseEntity@ Button4Entity = g_EntityFuncs.FindEntityByTargetname( @Button4Entity, creator + "_button4");
-			g_EntityFuncs.Remove( @Button1Entity );
-			g_EntityFuncs.Remove( @Button2Entity );
-			g_EntityFuncs.Remove( @Button3Entity );
-			g_EntityFuncs.Remove( @Button4Entity );
+			g_EntityFuncs.FireTargets(self.pev.target, @pActivator, @self, USE_TOGGLE, 0.0f, 0.0f);
 		}
+		
+		CBaseEntity@ CreatorEntity = g_EntityFuncs.Instance(self.pev.owner);
+				
+		if (@CreatorEntity != null)
+		{
+			g_EntityFuncs.FireTargets(CreatorEntity.pev.targetname, null, @self, USE_TOGGLE, 0.0f, 0.0f);
+			CustomKeyvalues@ pKeyValues = CreatorEntity.GetCustomKeyvalues();
+			for ( uint I = 1; I < 17; I++ ) {pKeyValues.SetKeyvalue( "$i_button" + string(I), 1 );}
+		}	
+		else
+		{
+			g_EntityFuncs.Remove(self);
+			return;
+		}
+		
+		g_EntityFuncs.FireTargets(self.pev.owner.vars.targetname, null, @self, USE_SET, 5.0f, 0.0f);
 	}
 }
 

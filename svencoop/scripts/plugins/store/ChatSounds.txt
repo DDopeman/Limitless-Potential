@@ -448,7 +448,7 @@ ufo oghs/cs07/ufo.wav
 ugly oghs/cs07/ugly.wav
 uhoh oghs/cs07/uhoh.wav
 ultrakill oghs/cs07/ultrakill.wav
-unshockb oghs/cs07/unshockb.wav
+unshock oghs/cs07/unshock.wav
 unstoppable oghs/cs07/unstoppable.wav
 ustedes oghs/cs07/ustedes.wav
 uuuhhh oghs/cs07/uuuhhh.wav
@@ -479,3 +479,6 @@ why oghs/cs07/why.wav
 win oghs/cs07/win.wav
 bitch oghs/cs07/bitch.wav
 raahh oghs/cs07/raahh.wav
+armon oghs/cs07/armon.wav
+quitate2 oghs/cs07/quitate2.wav
+vajugar oghs/cs07/vajugar.wav

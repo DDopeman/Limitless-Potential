@@ -42,6 +42,12 @@
 
     "plugin"
     {
+    "name" "ChatColors"
+    "script" "ChatColors"
+    }
+	
+    "plugin"
+    {
         "name" "RockTheVote"
         "script" "RockTheVote"
         "concommandns" "rtv"
@@ -104,11 +110,6 @@
         "script" "ghosts/GhostEntity"
     }
 	
-    "plugin"
-    {
-    "name" "ChatColors"
-    "script" "ChatColors"
-    }
 	
 }
 

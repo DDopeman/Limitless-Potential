@@ -4,13 +4,10 @@ game_sprite_text.
 This entity creates a sprite message
 */
 
-#include "extra_languages"
 #include "game_spritetext_button"
 #include "string_escape_sequences"
 #include "utils"
 
-namespace GameSpritetext
-{
 	enum GS_EXTRA_MODE
 	{
 		EXTRA_NONE					= 0,
@@ -42,49 +39,59 @@ namespace GameSpritetext
 		OP_OPTION2						,
 		OP_OPTION3						,
 		OP_OPTION4						,
+		OP_OPTION5						,
+		OP_OPTION6						,
+		OP_OPTION7						,
+		OP_OPTION8						,
+		OP_OPTION9						,
+		OP_OPTION10						,
+		OP_OPTION11						,
+		OP_OPTION12						,
+		OP_OPTION13						,
+		OP_OPTION14						,
+		OP_OPTION15						,
+		OP_OPTION16						,
 	}
 	
-	class game_spritetext : ScriptBaseEntity, ScriptBaseLanguagesKm
+	enum GS_TEXT_ALIGMENT
 	{
+		ALIG_CENTER				  		= 0,
+		ALIG_TOP_LEFT					,
+		ALIG_BOTTOM_LEFT				,
+		ALIG_TOP_RIGHT					,
+		ALIG_BOTTOM_RIGHT				,
+	}
+	
+	class game_spritetext : ScriptBaseEntity
+	{
+		string_t message_spanish;
 		string spritemodel = "sprites/gst/spritefont1.spr";;
 		string extramodel = "sprites/gst/extra.spr";
 		string buttonmodel = "sprites/dot.spr";
 		array<CSprite@> sprite_array(128);
-		array<CSprite@> sprite_array_option1(128);
-		array<CSprite@> sprite_array_option2(128);
-		array<CSprite@> sprite_array_option3(128);
-		array<CSprite@> sprite_array_option4(128);
+		array<array<CSprite@>> sprite_array_option(17, array<CSprite@>(128));
 		CSprite@ extra_sprite;
-		CSprite@ button_sprite1;
-		CSprite@ button_sprite2;
-		CSprite@ button_sprite3;
-		CSprite@ button_sprite4;
-				
+		array<CSprite@> button_sprite(17);
 		float sprScale;
 		float holdtime;
 		int LDistance;
-		string optiontarget1 = "";
-		string optiontarget2 = "";
-		string optiontarget3 = "";
-		string optiontarget4 = "";
-		string optionmessage1 = "";
-		string optionmessage2 = "";
-		string optionmessage3 = "";
-		string optionmessage4 = "";
+		array<string> optiontarget(17);
+		array<string> optionmessage(17);
+		array<Vector> optionpositionoffset(17);
+		string afterholdtarget;
 		string stext;
 		string m_iszMaster;
 		bool IsHolding = false;
-		uint stext_length = 0;
-		uint om1_length;
-		uint om2_length;
-		uint om3_length;
-		uint om4_length;
+		Vector align_offset;
+		array<int> ibut(17);
+		array<EHandle> ButtonEHandlearray(17);
 	
 		void Precache() 
 		{
 			g_Game.PrecacheModel( spritemodel );
 			g_Game.PrecacheModel( extramodel );
 			g_Game.PrecacheModel( buttonmodel);
+			g_Game.PrecacheModel("sprites/null.spr");
 			BaseClass.Precache();
 		}
 		
@@ -105,21 +112,15 @@ namespace GameSpritetext
 			LDistance = int(self.pev.frags);
 			if (smodel.Length() != 0) {spritemodel = self.pev.model;}
 			if (emodel.Length() != 0) {extramodel = self.pev.netname;}
+			for ( uint I = 1; I < 17; I++ ) {ibut[I] = 1;}
+			for ( uint I = 1; I < 17; I++ ) {self.GetCustomKeyvalues().SetKeyvalue( "$i_button" + string(I), 1 );}
 			self.pev.iuser1 = 1;
-			self.pev.iuser2 = 1;
-			self.pev.iuser3 = 1;
-			self.pev.iuser4 = 1;
-			
-			if (iLanguage == LANGUAGE_SPANISH) {stext_length = string(message_spanish).Length();}else{stext_length = string(self.pev.message).Length();}
 					
-			om1_length = optionmessage1.Length();
-			om2_length = optionmessage2.Length();
-			om3_length = optionmessage3.Length();
-			om4_length = optionmessage4.Length();
-			
 			self.Precache();
 			
 			self.pev.nextthink = g_Engine.time + self.pev.dmg;
+			
+			//self.pev.euser1 = self.edict();
 		}
 		
 		bool KeyValue( const string& in szKey, const string& in szValue )
@@ -129,65 +130,54 @@ namespace GameSpritetext
 				holdtime = atof(szValue);
 				return true;
 			}
-			else if(szKey == "optiontarget1")
+			else for ( uint I = 1; I < 17; I++ )
 			{
-				optiontarget1 = szValue;
-				return true;
+				if(szKey == "optiontarget" + string(I))
+				{
+					optiontarget[I] = szValue;
+					return true;
+				}
 			}
-			else if(szKey == "optiontarget2")
+			for ( uint I = 1; I < 17; I++ )
 			{
-				optiontarget2 = szValue;
-				return true;
+				if(szKey == "optionpositionoffset" + string(I))
+				{
+					string delimiter = " ";
+					array<string> splitAr = {"","",""};
+					splitAr = szValue.Split(delimiter);
+					array<int>result = {0,0,0};
+					result[0] = atoi(splitAr[0]);
+					result[1] = atoi(splitAr[1]);
+					result[2] = atoi(splitAr[2]);
+					optionpositionoffset[I] = Vector(result[0],result[1],result[2]);
+					return true;
+				}
 			}
-			else if(szKey == "optiontarget3")
+			if( szKey == "message_spanish" )
 			{
-				optiontarget3 = szValue;
-				return true;
+				message_spanish = szValue;
 			}
-			else if(szKey == "optiontarget4")
+			else if (iLanguage == LANGUAGE_SPANISH)
 			{
-				optiontarget4 = szValue;
-				return true;
-			}
-			else if(szKey == "optionmessage1_spanish")
+				for ( uint I = 1; I < 17; I++ )
+				{
+					if(szKey == "optionmessage" + string(I) + "_spanish")
+					{
+						optionmessage[I] = szValue;
+						return true;
+					}
+				}
+			} 
+			else if (iLanguage == LANGUAGE_ENGLISH)			
 			{
-				if (iLanguage == LANGUAGE_SPANISH) {optionmessage1 = szValue;}
-				return true;
-			}
-			else if(szKey == "optionmessage1_english")
-			{
-				if (iLanguage == LANGUAGE_ENGLISH) {optionmessage1 = szValue;}
-				return true;
-			}
-			else if(szKey == "optionmessage2_spanish")
-			{
-				if (iLanguage == LANGUAGE_SPANISH) {optionmessage2 = szValue;}
-				return true;
-			}
-			else if(szKey == "optionmessage2_english")
-			{
-				if (iLanguage == LANGUAGE_ENGLISH) {optionmessage2 = szValue;}
-				return true;
-			}
-			else if(szKey == "optionmessage3_spanish")
-			{
-				if (iLanguage == LANGUAGE_SPANISH) {optionmessage3 = szValue;}
-				return true;
-			}
-			else if(szKey == "optionmessage3_english")
-			{
-				if (iLanguage == LANGUAGE_ENGLISH) {optionmessage3 = szValue;}
-				return true;
-			}
-			else if(szKey == "optionmessage4_spanish")
-			{
-				if (iLanguage == LANGUAGE_SPANISH) {optionmessage4 = szValue;}
-				return true;
-			}
-			else if(szKey == "optionmessage4_english")
-			{
-				if (iLanguage == LANGUAGE_ENGLISH) {optionmessage4 = szValue;}
-				return true;
+				for ( uint I = 1; I < 17; I++ ) 
+				{
+					if(szKey == "optionmessage" + string(I) + "_english")
+					{
+						optionmessage[I] = szValue;
+						return true;
+					}
+				}
 			}
 			else if(szKey == "offset")
 			{
@@ -204,10 +194,12 @@ namespace GameSpritetext
 				m_iszMaster = szValue;
 				return true;
 			}
-			Languages( szKey, szValue );
+			else
 			{
-				return BaseClass.KeyValue( szKey, szValue );
+			return BaseClass.KeyValue( szKey, szValue );
 			}
+
+			return true;
 		}
 		
 		void ThinkCopypointer() //handles entity position refresh
@@ -256,15 +248,77 @@ namespace GameSpritetext
 			{
 				return;
 			}
-		
+			
+			if (useType == USE_SET && flValue == 5.0)
+			{
+				CBaseEntity@ ButtonEnt;
+				for( uint I = 1; I < 17; I++ )
+				{
+					@ButtonEnt = ButtonEHandlearray[I].GetEntity();
+					g_EntityFuncs.Remove(@ButtonEnt);
+					IsHolding == false;
+				}
+				return;
+			}
+			
+			if (useType == USE_SET && flValue == 10.0 && IsHolding == false)
+			{
+				return;
+			}
+			
 			sprScale = self.pev.scale;
 			if (iLanguage == LANGUAGE_SPANISH) {stext = message_spanish;} else {stext = self.pev.message;}	
 			if (sprScale == 0) {sprScale = 1;}
 			
-			//if (stext_length > 128) { stext = stext.SubString(0,127);}
-			DisplayText(stext, @pActivator, @pCaller);
+			if (holdtime > 0.0)
+			{
+				g_Scheduler.SetTimeout( "ResetGS", holdtime, @self );
+			}
+			else
+			{
+				//ResetGS(@self );
+			}
 			
-			//SetThink(ThinkFunction(this.ThinkCopypointer));
+			SetUse(UseFunction(this.TriggerUseStop));			
+			IsHolding = true;
+			
+			DisplayText(stext, @pActivator, @pCaller);
+		}
+		
+		void TriggerUseStop(CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue)
+		{
+			int i = 0;
+			
+			while ( i < 128 )
+			{
+				if (@sprite_array[i] != null)	{KillSprite (@sprite_array[i]);}
+			i++;
+			}
+			
+			i = 0;
+			if (int(self.pev.armorvalue) == INT_OPTIONS )
+			{
+				while ( i < 128 )
+				{
+					for ( uint I = 1; I < 17; I++ ) {if (@sprite_array_option[I][i] != null){KillSprite (sprite_array_option[I][i]);}}
+				i++;
+				}
+				for ( uint I = 1; I < 17; I++ )
+				{
+					if (@button_sprite[I] != null) {KillSprite (@button_sprite[I]);}
+				}				
+			}
+			
+			InitializeAllGSSprites();
+			
+			CBaseEntity@ AfterHoldEntity = g_EntityFuncs.FindEntityByTargetname( @AfterHoldEntity, string(self.pev.noise) );
+			if (@AfterHoldEntity != null) 
+			{
+			g_EntityFuncs.FireTargets(AfterHoldEntity.pev.targetname, @pActivator, @self, USE_TOGGLE, 0.0f, 0.0f);
+			}
+			
+			IsHolding = false;
+			SetUse(UseFunction(this.TriggerUse));
 		}
 		
 		// this is the main fuction that manages the sprite text
@@ -278,6 +332,8 @@ namespace GameSpritetext
 			int y = 0;
 			
 			stext = ProcessTextT(stext, @pActivator, @pCaller);
+			for ( uint I = 1; I < 17; I++ ){optionmessage[I] = ProcessTextT(optionmessage[I],@pActivator,@pCaller);}
+			for ( uint I = 1; I < 17; I++ ){optiontarget[I] = ProcessTextT(optiontarget[I],@pActivator,@pCaller);}
 			
 			ar_xy = GetDimentions(stext);
 			x_width = ar_xy[0];
@@ -293,7 +349,13 @@ namespace GameSpritetext
 			int iRepeats = int(renderamt_end/ 5.0f);
 			LDistance = int(self.pev.frags);			
 			
-			while (i < stext_length )
+			if (self.pev.weapons == ALIG_CENTER) 		{ align_offset.x = 0; align_offset.y = 0; align_offset.z = 0;} else
+			if (self.pev.weapons == ALIG_TOP_LEFT)		{ align_offset.x = (x_width * sprScale) * 8; align_offset.y = 0; align_offset.z = (y_height * sprScale) * -8;} else
+			if (self.pev.weapons == ALIG_BOTTOM_LEFT) 	{ align_offset.x = (y_height * sprScale) * 8; align_offset.y = 0; align_offset.z = (y_height * sprScale) *  8;} else
+			if (self.pev.weapons == ALIG_TOP_RIGHT)		{ align_offset.x = (x_width * sprScale) * -8; align_offset.y = 0; align_offset.z = (y_height * sprScale) * -8;} else
+			if (self.pev.weapons == ALIG_BOTTOM_RIGHT) 	{ align_offset.x = (x_width * sprScale) * -8; align_offset.y = 0; align_offset.z = (y_height * sprScale) * 8;} 
+			
+			while (i < stext.Length() )
 			{
 				if ( (stext[i] != "/" || stext[i+1] != "n") && (stext[i-1] != "/" || stext[i] != "n"))
 				{
@@ -318,87 +380,62 @@ namespace GameSpritetext
 				
 				i++;
 			}
-				
-			//g_EngineFuncs.ServerPrint("length: " + string(stext_length) + "\n"); 
 			
+			for ( uint I = 1; I < 17; I++ ) {optionmessage[I] = ProcessTextT(optionmessage[I],@pActivator,@pCaller);}
 			ProcessINT(x_width,y_height);
+	
 		}
 		
-		// applies the interation mode related settings 
+		// applies the interaction mode related settings 
 		void ProcessINT(float x_width, float y_height)
 		{
 			uint k = 0;
 			
 			if (int(self.pev.armorvalue) == INT_OPTIONS)
 			{
-				//CreateOptionSprites(string optionmessage1, om1_length ,x_width, y_height, OP_OPTION1)
-				
-				if (optionmessage1.Length() > 0)
+			
+				for ( uint I = 1; I < 17; I++ )
 				{
-					CreateSpr(sprite_array,buttonmodel, k, -1, int(y_height+3), x_width+2, y_height+2, SPRITEMODE_OPTION_BUTTON, OP_OPTION1);
-					while ( k < om1_length)
+								
+					if (optionmessage[I].Length() > 0 && I % 2 == 1)
 					{
-						char chara = optionmessage1[k];
-						if ( k >= optionmessage1.Length()) chara = " ";
+						CreateSpr(sprite_array,buttonmodel, k, -1, int(y_height+2+I+optionpositionoffset[I].x), x_width+2+optionpositionoffset[I].y, y_height+2, SPRITEMODE_OPTION_BUTTON, I);
+						while ( k < optionmessage[I].Length())
+						{
+							char chara = optionmessage[I][k];
+							if ( k >= optionmessage[I].Length()) chara = " ";
 						
-						CreateSpr(sprite_array,chara, k, k, int(y_height+3), x_width+2, y_height+2, SPRITEMODE_CHARACTER, OP_OPTION1);
+							CreateSpr(sprite_array,chara, k, k, int(y_height+2+I+optionpositionoffset[I].x), x_width+2+optionpositionoffset[I].y, y_height+2, SPRITEMODE_CHARACTER, I);
 						
-						k++;
+							k++;
+						}						
+						k = 0;
 					}
-						
-					k = 0;
 				}
 				
-				if (optionmessage2.Length() > 0)
-				{
-					CreateSpr(sprite_array,buttonmodel, k, optionmessage2.Length(), int(y_height+4), x_width+2, y_height+2, SPRITEMODE_OPTION_BUTTON, OP_OPTION2);
-					while ( k < om2_length)
+				for ( uint I = 1; I < 17; I++ )
+				{				
+					if (optionmessage[I].Length() > 0 && I % 2 == 0)
 					{
-						char chara = optionmessage2[k];
-						if ( k >= optionmessage2.Length()) chara = " ";
-						
-						CreateSpr(sprite_array,chara, k, k, int(y_height+4), x_width+2, y_height+2, SPRITEMODE_CHARACTER, OP_OPTION2);
-						k++;
+						CreateSpr(sprite_array,buttonmodel, k, optionmessage[I].Length(), int(y_height+2+I+optionpositionoffset[I].x), x_width+2+optionpositionoffset[I].y, y_height+2, SPRITEMODE_OPTION_BUTTON, I);
+						while ( k < optionmessage[I].Length())
+						{
+							char chara = optionmessage[I][k];
+							if ( k >= optionmessage[I].Length()) chara = " ";
+							
+							CreateSpr(sprite_array,chara, k, k, int(y_height+2+I+optionpositionoffset[I].x), x_width+2+optionpositionoffset[I].y, y_height+2, SPRITEMODE_CHARACTER, I);
+							k++;
+						}					
+						k = 0;
 					}
-					
-					k = 0;
 				}
-				
-				if (optionmessage3.Length() > 0)
-				{
-					CreateSpr(sprite_array,buttonmodel, k, -1, int(y_height+5), x_width+2, y_height+2, SPRITEMODE_OPTION_BUTTON, OP_OPTION3);
-					while ( k < om3_length)
-					{
-						char chara = optionmessage3[k];
-						if ( k >= optionmessage3.Length()) chara = " ";
-						
-						CreateSpr(sprite_array,chara, k, k, int(y_height+5), x_width+2, y_height+2, SPRITEMODE_CHARACTER, OP_OPTION3);
-						k++;
-					}
-					
-					k = 0;
-				}
-				
-				if (optionmessage4.Length() > 0)
-				{
-					CreateSpr(sprite_array,buttonmodel, k, optionmessage4.Length(), int(y_height+6), x_width+2, y_height+2, SPRITEMODE_OPTION_BUTTON, OP_OPTION4);
-					while ( k < om4_length)
-					{
-						char chara = optionmessage4[k];
-						if ( k >= optionmessage4.Length()) chara = " ";
-						
-						CreateSpr(sprite_array,chara, k, k, int(y_height+6), x_width+2, y_height+2, SPRITEMODE_CHARACTER, OP_OPTION4);
-						k++;
-					}
-					
-					k = 0;
-				}
-				return;
+			
+			return;
 			}
 			
 			if (int(self.pev.armorvalue) == INT_TRIGGER_BUTTON)
 			{
-				CreateSpr(sprite_array,"", k, 0, 0, 0, 0, SPRITEMODE_TRIGGER_BUTTON, OP_NONE);
+				CreateSpr(sprite_array,"", k, 0, 0, 0, 0, SPRITEMODE_OPTION_BUTTON, OP_OPTION1);
 			}
 		}
 		
@@ -423,18 +460,10 @@ namespace GameSpritetext
 				i++;
 			}
 			
-			/*if (self.pev.armorvalue == INT_OPTIONS)
-			{
-				if( int(optionmessage1.Length()) > x_width)	{x_width = int(optionmessage1.Length());}
-				if( int(optionmessage2.Length()) > x_width)	{x_width = int(optionmessage2.Length());}
-				if( int(optionmessage3.Length()) > x_width)	{x_width = int(optionmessage3.Length());}
-				if( int(optionmessage4.Length()) > x_width)	{x_width = int(optionmessage4.Length());}
-			}*/
-			
 			array<int> ar_xy(2);
 			ar_xy[0] = x_width;
 			ar_xy[1] = y_height; 
-			
+					
 			return ar_xy;
 		}
 		
@@ -469,6 +498,8 @@ namespace GameSpritetext
 		// this manages the creation of every individual letter.
 		void CreateSpr( array<CSprite@> text_array, string character, uint letter_position, int x, int y, float x_width, float y_height,int spritemode, int optionc )
 		{
+			if (x > 127)	{return;}
+		
 			Vector base_origin = 		self.pev.origin;
 			Vector base_origin_offset = self.pev.vuser1;
 			Vector sprAngles = 			self.pev.angles; 
@@ -482,7 +513,7 @@ namespace GameSpritetext
 			
 			pCopypointerEHandle = pCopypointerEntity;
 			
-			base_origin = pCopypointerEntity.pev.origin + base_origin_offset;
+			base_origin = pCopypointerEntity.pev.origin + base_origin_offset + align_offset;
 			sprAngles = pCopypointerEntity.pev.angles + sprAngles_offset;
 									
 			float anglesCosX = float(cos(sprAngles.x/180 * Q_PI));
@@ -604,24 +635,39 @@ namespace GameSpritetext
 				if (character == "|") {	 @text_array[letter_position] = g_EntityFuncs.CreateSprite( spritemodel, chara_origin , false ); SetSprite( @text_array[letter_position], 91, x, y, x_width, y_height);} else
 				if (character == "}") {	 @text_array[letter_position] = g_EntityFuncs.CreateSprite( spritemodel, chara_origin , false ); SetSprite( @text_array[letter_position], 92, x, y, x_width, y_height);} else
 				if (character == "~") {	 @text_array[letter_position] = g_EntityFuncs.CreateSprite( spritemodel, chara_origin , false ); SetSprite( @text_array[letter_position], 93, x, y, x_width, y_height);} else
-									  {	@text_array[letter_position] = null; }
-									  
+									  {	@text_array[letter_position] = null; }									  
 			}
+			
+			uint I;
 			
 			if (spritemode == SPRITEMODE_OPTION_BUTTON) 
 			{
 				sprite_array[letter_position].SetScale( self.pev.scale/4 );
 				SetSprite( @sprite_array[letter_position], 0, x, y, x_width, y_height);
+				
+				for ( I = 1; I < 17; I++ ) {ibut[I] = self.GetCustomKeyvalues().GetKeyvalue( "$i_button" + string(I) ).GetInteger();}
+				
+				//g_Game.AlertMessage(at_console, "ibut: " + string(ibut1), g_Engine.time);
 								
-				if ((self.pev.iuser1 == 1)|| (self.pev.iuser2 == 1) || (self.pev.iuser3 == 1) || (self.pev.iuser4 == 1))
+				if ((ibut[1] == 1)|| (ibut[2] == 1) || (ibut[3] == 1) || (ibut[4] == 1) || (ibut[5] == 1)|| (ibut[6] == 1) || (ibut[7] == 1) || (ibut[8] == 1) || (ibut[9] == 1)|| (ibut[10]== 1) || (ibut[11] == 1) || (ibut[12] == 1) || (ibut[13] == 1)|| (ibut[14] == 1) || (ibut[15] == 1) || (ibut[16] == 1) )
 				{
+					ButtonEHandlearray[0] = @self;
 					CBaseEntity@ spritebutton = g_EntityFuncs.CreateEntity( "game_spritetext_button", null,  false);
 					spritebutton.pev.origin = chara_origin;
 					string selfname = self.pev.targetname;
-					if (optionc == 1) {spritebutton.pev.target = optiontarget1;spritebutton.pev.targetname = selfname + "_button1"; self.pev.iuser1 = 0; @button_sprite1 = g_EntityFuncs.CreateSprite( buttonmodel, chara_origin , false );SetSprite( @button_sprite1, 0, x, y, x_width, y_height);}
-					if (optionc == 2) {spritebutton.pev.target = optiontarget2;spritebutton.pev.targetname = selfname + "_button2"; self.pev.iuser1 = 0; @button_sprite2 = g_EntityFuncs.CreateSprite( buttonmodel, chara_origin , false );SetSprite( @button_sprite2, 0, x, y, x_width, y_height);}
-					if (optionc == 3) {spritebutton.pev.target = optiontarget3;spritebutton.pev.targetname = selfname + "_button3"; self.pev.iuser1 = 0; @button_sprite3 = g_EntityFuncs.CreateSprite( buttonmodel, chara_origin , false );SetSprite( @button_sprite3, 0, x, y, x_width, y_height);}
-					if (optionc == 4) {spritebutton.pev.target = optiontarget4;spritebutton.pev.targetname = selfname + "_button4"; self.pev.iuser1 = 0; @button_sprite4 = g_EntityFuncs.CreateSprite( buttonmodel, chara_origin , false );SetSprite( @button_sprite4, 0, x, y, x_width, y_height);}
+					if (self.pev.armorvalue == INT_TRIGGER_BUTTON){buttonmodel = "sprites/null.spr";}
+					for ( I = 1; I < 17; I++ )
+					{
+						if (optionc == I) 
+						{
+							spritebutton.pev.target = optiontarget[I];spritebutton.pev.targetname = selfname + "_button" + string(I); ibut[I] = 0; 
+							self.GetCustomKeyvalues().SetKeyvalue( "$i_button" + string(I), 0 ); @button_sprite[I] = g_EntityFuncs.CreateSprite( buttonmodel, chara_origin , false );
+							SetSprite( @button_sprite[I], 0, x, y, x_width, y_height);
+							ButtonEHandlearray[I] = @spritebutton;
+							@spritebutton.pev.owner = self.edict();
+							spritebutton.pev.targetname = string(self.pev.targetname) + "_button" + string(I);
+						}
+					}
 					g_EntityFuncs.DispatchSpawn( spritebutton.edict() );
 				}
 			}
@@ -629,47 +675,7 @@ namespace GameSpritetext
 			if (spritemode == SPRITEMODE_CHARACTER) 
 			{
 				if (optionc == OP_NONE)		{ @sprite_array[letter_position]			= @text_array[letter_position];}
-				if (optionc == OP_OPTION1)	{ @sprite_array_option1[letter_position] 	= @text_array[letter_position];}
-				if (optionc == OP_OPTION2)	{ @sprite_array_option2[letter_position]	= @text_array[letter_position];}
-				if (optionc == OP_OPTION3)	{ @sprite_array_option3[letter_position]	= @text_array[letter_position];}
-				if (optionc == OP_OPTION4)	{ @sprite_array_option4[letter_position]	= @text_array[letter_position];}
-			
-				if ((self.pev.iuser1 == 1) && (self.pev.armorvalue == INT_TRIGGER_BUTTON))
-				{
-					CBaseEntity@ spritebutton = g_EntityFuncs.CreateEntity( "game_spritetext_button", null,  false);
-					spritebutton.pev.origin = base_origin;
-					string selfname = self.pev.targetname;
-					spritebutton.pev.target = optiontarget1;
-					spritebutton.pev.targetname = selfname + "_button1"; 
-					self.pev.iuser1 = 0;
-					g_EntityFuncs.DispatchSpawn( spritebutton.edict() );
-				}
-			}
-			
-			/*if (spritemode == SPRITEMODE_EXTRA) needs to be reworked
-			{
-				if (character == "uppertalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 0, x, y, x_width, y_height);} else
-				if (character == "lowertalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 1, x, y, x_width, y_height);} else
-				if (character == "lefttalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 2, x, y, x_width, y_height);} else
-				if (character == "righttalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 3, x, y, x_width, y_height);} else
-				if (character == "leftuppertalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 4, x, y, x_width, y_height);} else
-				if (character == "rightuppertalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 5, x, y, x_width, y_height);} else
-				if (character == "leftlowertalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 6, x, y, x_width, y_height);} else
-				if (character == "rightlowertalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 7, x, y, x_width, y_height);} else
-				if (character == "lowerspacetalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 8, x, y, x_width, y_height);} else
-				if (character == "signtalkbubble" ) { @extra_sprite = g_EntityFuncs.CreateSprite( extramodel, chara_origin , false ); SetSprite( @extra_sprite, 9, x, y, x_width, y_height);}
-			}*/
-			
-			if (holdtime == -1.0 || int(self.pev.armorvalue) == INT_OPTIONS || int(self.pev.armorvalue) == INT_TRIGGER_BUTTON)
-			{
-				SetUse(UseFunction(this.TriggerUseStop));
-				self.pev.nextthink = g_Engine.time + 99999.0; //  
-				//g_Scheduler.SetTimeout( "KillSprite", 0.5, @sprite_array[letter_position]);
-				IsHolding = true;
-			}	
-			else
-			{
-				g_Scheduler.SetTimeout( "KillSprite", holdtime, @sprite_array[letter_position]);
+				for ( uint I = 1; I < 17; I++ ) {if (optionc == I)	{ @sprite_array_option[I][letter_position] 	= @text_array[letter_position];}}
 			}
 		}
 				
@@ -685,41 +691,6 @@ namespace GameSpritetext
 			}
 		}
 		
-		void TriggerUseStop(CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue)
-		{
-			int i = 0;
-			
-			//KillSprite (@extra_sprite);
-						
-			while ( i < 128 )
-			{
-				if (@sprite_array[i] != null)	{KillSprite (@sprite_array[i]);}
-			i++;
-			}
-			
-			i = 0;
-			if (int(self.pev.armorvalue) == INT_OPTIONS )
-			{
-				while ( i < 128 )
-				{
-					if (@sprite_array_option1[i] != null){KillSprite (sprite_array_option1[i]);}
-					if (@sprite_array_option2[i] != null){KillSprite (sprite_array_option2[i]);}
-					if (@sprite_array_option3[i] != null){KillSprite (sprite_array_option3[i]);}					
-					if (@sprite_array_option4[i] != null){KillSprite (sprite_array_option4[i]);}
-					
-				i++;
-				}
-				if (@button_sprite1 != null) {KillSprite (@button_sprite1);}
-				if (@button_sprite2 != null) {KillSprite (@button_sprite2);}
-				if (@button_sprite3 != null) {KillSprite (@button_sprite3);}
-				if (@button_sprite4 != null) {KillSprite (@button_sprite4);}
-			}
-			
-			InitializeAllGSSprites();
-			
-			SetUse(UseFunction(this.TriggerUse));
-		}
-			
 		void ThinkOn()
 		{
 			
@@ -733,16 +704,18 @@ namespace GameSpritetext
 		void InitializeAllGSSprites()
 		{
 			InitializeGSSprite(sprite_array);
-			InitializeGSSprite(sprite_array_option1);
-			InitializeGSSprite(sprite_array_option2);
-			InitializeGSSprite(sprite_array_option3);
-			InitializeGSSprite(sprite_array_option4);
+			for ( uint I = 1; I < 17; I++ ) {InitializeGSSprite(sprite_array_option[I]);}
 		}
 	}
 	
-	void FadeSprite ( CSprite@ sprite)
+	void FadeSprite ( CSprite@ sprite )
 	{
 		sprite.SUB_StartFadeOut();
+	}
+	
+	void ResetGS ( CBaseEntity@ GSEntity )
+	{
+		GSEntity.Use(null, null, USE_TOGGLE ,10.0);
 	}
 	
 	void InitializeGSSprite ( array<CSprite@> CSarray )
@@ -750,13 +723,14 @@ namespace GameSpritetext
 		for ( uint I = 0; I < 128; I++ ){@CSarray[I] = null;}
 	}
 	
-	void KillSprite ( CSprite@ sprite)
+	void KillSprite ( CSprite@ sprite )
 	{
 		if (@sprite != null){sprite.SUB_Remove();}
 	}
 	
-	void Register()
+	void RegisterGameSpriteText()
 	{
-		g_CustomEntityFuncs.RegisterCustomEntity( "GameSpritetext::game_spritetext", "game_spritetext" );
+		g_CustomEntityFuncs.RegisterCustomEntity( "game_spritetext", "game_spritetext" );
 	}
-}
+
+

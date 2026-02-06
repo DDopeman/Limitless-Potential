@@ -9,6 +9,8 @@ seeks the target entity keyvalue by targetname and replaces the /t struture for 
 */
 
 // transforms /t escape sequences into common text
+// used some code from AFB (Zode) 
+
 string ProcessTextT(string ptext, CBaseEntity@ pActivator, CBaseEntity@ pCaller)
 {
 	uint i = 0;
@@ -19,70 +21,143 @@ string ProcessTextT(string ptext, CBaseEntity@ pActivator, CBaseEntity@ pCaller)
 	bool ptargetok = false;
 	bool pkeyvalueok = false;
 	
-	while ( i < ptext.Length() )
+	for ( uint I = 1; I < 17; I++ )
 	{
-		if (ptext[i] == "/" && ptext[i+1] == "t")
+		bool KeepRecursiveLoop = true;
+		while ( i < ptext.Length() )
 		{
-			g_EngineFuncs.ServerPrint("/t detected"+"\n");
-			k = i+2;
-			pkeyvalueok = false;
-			ptargetok = false;
-			while ( k < ptext.Length() && pkeyvalueok == false)
+			if (ptext[i] == "/") 
 			{
-				if (ptext[k] != "/" && ptargetok == false)
+				if (ptext[i+1] == "t")
 				{
-					ptarget = ptarget + ptext[k]; 
-				}
-				else
-				{
-					if (ptext[k] == "/" && ptargetok == false)
+					k = i+2;
+					pkeyvalueok = false;
+					ptargetok = false;
+					while ( k < ptext.Length() && pkeyvalueok == false)
 					{
+						if (ptext[k] != "/" && ptargetok == false)
+						{
+							ptarget = ptarget + ptext[k]; 
+						}
+						else
+						{
+							if (ptext[k] == "/" && ptargetok == false)
+							{
+								k++;
+							}
+							ptargetok = true;
+													
+							if (ptext[k] != "/" && ptargetok == true && pkeyvalueok == false)
+							{
+								pkeyvalue = pkeyvalue + ptext[k];
+							}
+							else
+							{
+								if (ptext[k] == "/")
+								{
+									pkeyvalueok = true;
+								}
+							}
+						}
+						
 						k++;
 					}
-					ptargetok = true;
-											
-					if (ptext[k] != "/" && ptargetok == true && pkeyvalueok == false)
+					
+					if (pkeyvalueok)
 					{
-						pkeyvalue = pkeyvalue + ptext[k];
-						g_EngineFuncs.ServerPrint(string(pkeyvalue)+"\n");
+						CBaseEntity@ pEntity;
+						if (ptarget == "!activator")	{@pEntity = @pActivator;} else
+						if (ptarget == "!caller")		{@pEntity = @pCaller;} else
+														{@pEntity = g_EntityFuncs.FindEntityByTargetname( @pEntity, ptarget );}
+						
+						if (I > 1 && ptarget == "!activator" ) {KeepRecursiveLoop = false;}
+						
+						if (@pEntity != null)
+						{
+							if (I > 1 && pEntity.pev.classname == "player") {KeepRecursiveLoop = false;}
+							string pretext = ptext.SubString(0, i);
+							string ntext = getKeyValue( @pEntity, pkeyvalue);
+							string postext;
+							if (i+ uint(pkeyvalue.Length() + 4)+ uint(ptarget.Length())<uint(ptext.Length()))
+							{
+								postext = ptext.SubString(i+ uint(pkeyvalue.Length() + 4)+ uint(ptarget.Length()), uint(ptext.Length()));
+							}
+							else
+							{
+								postext = "";
+							}
+							
+							if (ntext.Length() > 128) { ntext = ntext.SubString(0,128);}
+							
+							ptext = pretext+ ntext + postext;
+							i = i + uint(ntext.Length()) - 1;
+						}
 					}
 					else
 					{
-						if (ptext[k] == "/")
-						{
-							pkeyvalueok = true;
-						}
+						KeepRecursiveLoop = false;
 					}
 				}
-				
-				k++;
-			}
+			}			
+			if (!KeepRecursiveLoop) {break;}
+			i++;
+		}
+		if (!KeepRecursiveLoop) {break;}
+	}
+	return ptext;
+}
+
+void FireTargetMultipleTargets (string mtext, char Cdelimiter, CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue, float flDelay, bool bFireMultipleTargets )
+{
+	array<string> splitVector = {"","","","","","","","","","","","","","","","",""};
+	uint i = 0;
+	CBaseEntity@ mEntity = null;
+	
+	mtext = ProcessTextT(mtext,@pActivator,@pCaller);
+	splitVector = mtext.Split(Cdelimiter);
+	
+	if (Cdelimiter == "")
+	{
+		if (mtext == "!activator")	{@mEntity = @pActivator;} else
+		if (mtext == "!caller")		{@mEntity = @pCaller;} else
+		@mEntity = g_EntityFuncs.FindEntityByTargetname( @mEntity, mtext);
 			
-			if (pkeyvalueok)
+			if (@mEntity != null)
 			{
-				CBaseEntity@ pEntity;
-				if (ptarget == "!activator")	{@pEntity = @pActivator;} else
-				if (ptarget == "!caller")		{@pEntity = @pCaller;} else
-												{@pEntity = g_EntityFuncs.FindEntityByTargetname( @pEntity, ptarget );}
-				
-				if (@pEntity != null)
+				if (bFireMultipleTargets)
 				{
-					string ntext = getKeyValue( @pEntity, pkeyvalue);
-					if (ntext.Length() > 64) { ntext = ntext.SubString(0,64);}
-					
-					ptext = ptext.SubString(0, i)+ ntext +ptext.SubString(i+ uint(pkeyvalue.Length() + 4)+ uint(ptarget.Length()), uint(ptext.Length()));
-					i = i + uint(ntext.Length()) - 1;
+					g_EntityFuncs.FireTargets(mEntity.pev.targetname, @pActivator, @pCaller, useType, flValue, flDelay);
 				}
 				else
 				{
-					g_EngineFuncs.ServerPrint("[game_sprite_text]: entity failed to find target in /t"+"\n");
+					CBaseEntity@ targeterEntity;
+					targeterEntity.pev.target = mEntity.pev.targetname;
+					targeterEntity.SUB_UseTargets( @pActivator , useType, flValue );
 				}
 			}
-		}
-	i++;
 	}
-
-	return ptext;
+	else while ( i < 16 )
+	{
+		if (splitVector[i] == "!activator")	{@mEntity = @pActivator;} else
+		if (splitVector[i] == "!caller")		{@mEntity = @pCaller;} else
+		@mEntity = g_EntityFuncs.FindEntityByTargetname( @mEntity, splitVector[i]);
+		
+		if (@mEntity != null) 
+		{	
+			if (bFireMultipleTargets)
+			{
+				g_EntityFuncs.FireTargets(mEntity.pev.targetname, @pActivator, @pCaller, useType, flValue, flDelay);
+			}
+			else
+			{
+				CBaseEntity@ targeterEntity;
+				targeterEntity.pev.target = mEntity.pev.targetname;
+				targeterEntity.SUB_UseTargets( @pActivator , useType, flValue );
+			}
+		}
+		@mEntity = null;
+		i++;
+	}
 }
 
 string sstring(string vin)
@@ -133,6 +208,26 @@ string getKeyValue(CBasePlayer@ pPlayer, string sKey)
 
 string getKeyValue(CBaseEntity@ pEntity, string sKey)
 {
+	if (sKey.SubString(0,3) == "$i_")
+	{
+		int intk = pEntity.GetCustomKeyvalues().GetKeyvalue( sKey ).GetInteger() ;
+		return string (intk);
+	}else
+	if (sKey.SubString(0,3) == "$f_")
+	{
+		float flok = pEntity.GetCustomKeyvalues().GetKeyvalue( sKey ).GetFloat() ;
+		return string (flok);
+	}else
+	if (sKey.SubString(0,3) == "$v_")
+	{
+		Vector veck = pEntity.GetCustomKeyvalues().GetKeyvalue( sKey ).GetVector() ;
+		return veck.ToString();
+	}else
+	if (sKey.SubString(0,3) == "$s_")
+	{
+		string strk = pEntity.GetCustomKeyvalues().GetKeyvalue( sKey ).GetString() ;
+		return strk;
+	}else
 	if(sKey == "classname")
 	{
 		return string(pEntity.pev.classname);
