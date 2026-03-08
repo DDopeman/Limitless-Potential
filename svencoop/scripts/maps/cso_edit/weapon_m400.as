@@ -5,12 +5,12 @@ const string CSOW_NAME					= "weapon_m400";
 
 const bool USE_PENETRATION				= true;
 
-const int CSOW_DEFAULT_GIVE			= 5;
-const int CSOW_MAX_CLIP 				= 5;
-const int CSOW_MAX_AMMO				= 50;
+const int CSOW_DEFAULT_GIVE			= 10;
+const int CSOW_MAX_CLIP 				= 10;
+const int CSOW_MAX_AMMO				= 90;
 const int CSOW_TRACERFREQ				= 0;
-const float CSOW_DAMAGE					= 150;
-const float CSOW_TIME_DELAY1			= 1.0;
+const float CSOW_DAMAGE					= 200;
+const float CSOW_TIME_DELAY1			= 1.25;
 const float CSOW_TIME_DELAY2			= 0.3;
 const float CSOW_TIME_DRAW			= 0.9;
 const float CSOW_TIME_IDLE				= 60.0;
@@ -55,6 +55,7 @@ const array<string> pCSOWSounds =
 
 class weapon_m400 : CBaseCSOWeapon
 {
+	bool focus_mode = false;
 	private bool m_bResumeZoom;
 	private int m_iLastZoom;
 	private float m_flEjectBrass;
@@ -158,7 +159,10 @@ class weapon_m400 : CBaseCSOWeapon
 			return;
 		}
 
-		if( !m_pPlayer.pev.FlagBitSet(FL_ONGROUND) )
+
+		if( focus_mode == true )
+			M400Fire( 0, CSOW_TIME_DELAY1 );
+		else if( !m_pPlayer.pev.FlagBitSet(FL_ONGROUND) )
 			M400Fire( 0.85, CSOW_TIME_DELAY1 );
 		else if( m_pPlayer.pev.velocity.Length2D() > 140 )
 			M400Fire( 0.25, CSOW_TIME_DELAY1 );
@@ -196,7 +200,7 @@ class weapon_m400 : CBaseCSOWeapon
 
 		Vector vecSrc = m_pPlayer.GetGunPosition();
 		int iPenetration = USE_PENETRATION ? 3 : 1;
-		FireBullets3( vecSrc, g_Engine.v_forward, flSpread, iPenetration, BULLET_PLAYER_338MAG, CSOW_TRACERFREQ, flDamage, 0.99, CSOF_ALWAYSDECAL );
+		FireBullets3( vecSrc, g_Engine.v_forward, flSpread * 0.15, iPenetration, BULLET_PLAYER_338MAG, CSOW_TRACERFREQ, flDamage, 0.99, CSOF_ALWAYSDECAL );
 
 		self.SendWeaponAnim( Math.RandomLong(ANIM_SHOOT1, ANIM_SHOOT3), 0, (m_bSwitchHands ? g_iCSOWHands : 0) );
 
@@ -214,9 +218,9 @@ class weapon_m400 : CBaseCSOWeapon
 	{
 		switch( m_pPlayer.m_iFOV )
 		{
-			case 0: m_pPlayer.pev.fov = m_pPlayer.m_iFOV = 40; m_pPlayer.m_szAnimExtension = "sniperscope"; break;
-			case 40: m_pPlayer.pev.fov = m_pPlayer.m_iFOV = 10; break;
-			default: ResetZoom(); break;
+			case 0: m_pPlayer.pev.fov = m_pPlayer.m_iFOV = 40; m_pPlayer.m_szAnimExtension = "sniperscope"; focus_mode = true; break;
+			case 40: m_pPlayer.pev.fov = m_pPlayer.m_iFOV = 10; focus_mode = true; break;
+			default: ResetZoom(); focus_mode = false; break;
 		}
 
 		g_SoundSystem.EmitSound( m_pPlayer.edict(), CHAN_ITEM, pCSOWSounds[SND_ZOOM], 0.2, 2.4 );
@@ -309,7 +313,7 @@ class ammo_cso_sniper : ScriptBasePlayerAmmoEntity
 
 		iGive = CSOW_MAX_CLIP;
 
-		if( pOther.GiveAmmo( iGive, "cso_sniper", CSOW_MAX_AMMO ) != -1)
+		if( pOther.GiveAmmo( iGive, "cso_sniper2", CSOW_MAX_AMMO ) != -1)
 		{
 			g_SoundSystem.EmitSound( self.edict(), CHAN_ITEM, "items/9mmclip1.wav", 1, ATTN_NORM );
 			return true;
@@ -321,9 +325,9 @@ class ammo_cso_sniper : ScriptBasePlayerAmmoEntity
 
 void Register()
 {
-	g_CustomEntityFuncs.RegisterCustomEntity( "cso_m400::ammo_cso_sniper", "ammo_cso_sniper" );
+	g_CustomEntityFuncs.RegisterCustomEntity( "cso_m400::ammo_cso_sniperb", "ammo_cso_sniper2" );
 	g_CustomEntityFuncs.RegisterCustomEntity( "cso_m400::weapon_m400", CSOW_NAME );
-	g_ItemRegistry.RegisterWeapon( CSOW_NAME, "cso_edit", "cso_sniper", "", "ammo_cso_sniper" ); //338Magnum
+	g_ItemRegistry.RegisterWeapon( CSOW_NAME, "cso_edit", "cso_sniper2", "", "ammo_cso_sniper2" ); //338Magnum
 
 	if( cso::bUseDroppedItemEffect )
 	{

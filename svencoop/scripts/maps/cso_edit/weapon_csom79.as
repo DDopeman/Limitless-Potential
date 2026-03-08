@@ -51,10 +51,10 @@ const int M79SW_WEIGHT				= 20;
 const int M79SW_FLAGS               = 0;
 const int CSOW_DEFAULT_GIVE         = 1;
 const int CSOW_MAX_CLIP             = WEAPON_NOCLIP;
-const int CSOW_MAX_AMMO             = 12;
+const int CSOW_MAX_AMMO             = 20;
 // Weapon's Physics
 const float CSOW_TIME_DELAY1        = 2.8;
-const float CSOW_GRENADE_DAMAGE     = 185.0;
+const float CSOW_GRENADE_DAMAGE     = 200.0;
 const float CSOW_GRENADE_RADIUS     = 200.0;
 const float CSOW_GRENADE_VELOCITY	= 1000.0;
 const Vector CSOW_SHELL_ORIGIN		= Vector( 20.0, 10.0, -4.0 ); //forward, right, up

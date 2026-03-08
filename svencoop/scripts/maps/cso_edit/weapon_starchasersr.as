@@ -17,15 +17,15 @@ namespace cso_starchasersr
 	const int STARCHASERSR_POSITION = 19;
 	const int STARCHASERSR_WEIGHT = 30;
 
-	const int CSOW_DEFAULT_GIVE = 60;
-	const int CSOW_DEFAULT_AMMO = 30;
-	const int CSOW_MAX_CLIP = 15;
-	const int CSOW_MAX_AMMO = 600;
+	const int CSOW_DEFAULT_GIVE = 20;
+	const int CSOW_DEFAULT_AMMO = 20;
+	const int CSOW_MAX_CLIP = 20;
+	const int CSOW_MAX_AMMO = 200;
 	const int CSOW_TRACERFREQ = 2;
 	const float CSOW_DAMAGE = 150.0;
-	const float CSOW_RADIUS = 200.0;
-	const float CSOW_TIME_DELAY1 = 1.0;
-	const float CSOW_TIME_DELAY2 = 1.0;
+	const float CSOW_RADIUS = 100.0;
+	const float CSOW_TIME_DELAY1 = 0.25;
+	const float CSOW_TIME_DELAY2 = 0.25;
 	const float CSOW_TIME_DRAW = 1.3;
 	const float CSOW_TIME_IDLE = 60.0;
 	const float CSOW_TIME_RELOAD = 3.5;
@@ -34,16 +34,16 @@ namespace cso_starchasersr
 	const float CSOW_SPREAD_WALKING = 0.01;
 	const float CSOW_SPREAD_STANDING = 0.001;
 	const float CSOW_SPREAD_DUCKING = 0.0;
-	const float CSOW_RECOIL_X = 2.0;
-	const float CSOW_RECOIL_Y = 2.25;
+	const float CSOW_RECOIL_X = 1.0;
+	const float CSOW_RECOIL_Y = 1.25;
 	const Vector CSOW_SHELL_ORIGIN = Vector(20.0, 12.0, -4.0); // forward, right, up
 	const string CSOW_ANIMEXT = "m16";						   // rifle
 
 	const string MODEL_VIEW = "models/cso_edit/v_starchasersr.mdl";
 	const string MODEL_PLAYER = "models/cso_edit/p_starchasersr.mdl";
 	const string MODEL_WORLD = "models/cso_edit/w_starchasersr.mdl";
-	// const string MODEL_SHELL					= "models/cso_edit/pshell.mdl";
-	const string MODEL_AMMO = "models/w_9mmarclip.mdl";
+	// const string MODEL_SHELL = "models/cso_edit/pshell.mdl";
+	const string MODEL_AMMO = "models/cso_edit/v_starc-ammo.mdl";
 	// const string MODEL_NULL = "models/cso_edit/null.mdl";
 	// const string MODEL_VIEW_SCOPE = "models/cso_edit/scope.mdl";
 
@@ -71,10 +71,9 @@ namespace cso_starchasersr
 
 	const array<string> pCSOWSounds =
 		{
-			"custom_weapons/cs16/dryfire_rifle.wav",
+			"cso_edit/dryfire_rifle.wav",
 			"cso_edit/zoom.wav",
 			"cso_edit/starchasersr-1.wav",
-			"cso_edit/starchasersr_draw.wav",
 			"cso_edit/starchasersr_clipin.wav",
 			"cso_edit/starchasersr_clipout.wav"};
 
@@ -107,6 +106,7 @@ namespace cso_starchasersr
 			g_Game.PrecacheModel(MODEL_VIEW);
 			g_Game.PrecacheModel(MODEL_PLAYER);
 			g_Game.PrecacheModel(MODEL_WORLD);
+			g_Game.PrecacheModel(MODEL_AMMO);
 			// g_Game.PrecacheModel(MODEL_VIEW_SCOPE);
 
 			// m_iShell = g_Game.PrecacheModel(MODEL_SHELL);
@@ -231,13 +231,6 @@ namespace cso_starchasersr
 
 			Math.MakeVectors(m_pPlayer.pev.v_angle + m_pPlayer.pev.punchangle);
 
-			if (self.m_fInZoom)
-			{
-				StarExplode();
-				return;
-			}
-			else
-			{
 				Vector vecSrc = m_pPlayer.GetGunPosition();
 				Vector vecDir = g_Engine.v_forward;
 
@@ -250,7 +243,6 @@ namespace cso_starchasersr
 				pTrail.pev.avelocity.z = 10;
 
 				StarExplode();
-			}
 
 			self.m_flTimeWeaponIdle = g_Engine.time + 2.0;
 		}
@@ -269,23 +261,13 @@ namespace cso_starchasersr
 			// g_Utility.TraceLine(vecSrc, vecSrc + vecDir * 8192, dont_ignore_monsters, m_pPlayer.edict(), tr);
 			g_Utility.TraceLine(vecSrc, vecSrc + vecDir * 8192, dont_ignore_monsters, dont_ignore_glass, m_pPlayer.edict(), tr);
 
-			CBaseEntity @hit = g_EntityFuncs.Instance(tr.pHit);
-			if (hit.pev.takedamage > 0)
-			{
-				g_WeaponFuncs.ClearMultiDamage();
-				CBaseEntity @entity = g_EntityFuncs.Instance(tr.pHit);
-				entity.TraceAttack(m_pPlayer.pev, CSOW_DAMAGE, vecDir, tr, DMG_MORTAR | DMG_NEVERGIB);
-				g_WeaponFuncs.ApplyMultiDamage(self.pev, m_pPlayer.pev);
-			}
-			else
-			{
 				// Silly stuff to play a sound at the other side, if it hit the world instead of a player/monster
 
 				CBaseEntity @ef_star = g_EntityFuncs.Create("info_target", tr.vecEndPos, g_vecZero, false, null);
 				g_EntityFuncs.SetModel(ef_star, SPRITE_STARCHASER_STAR);
 
 				g_EntityFuncs.Remove(ef_star);
-			}
+			
 
 			tr = g_Utility.GetGlobalTrace();
 
@@ -306,7 +288,7 @@ namespace cso_starchasersr
 			m3.WriteByte(TE_EXPLFLAG_NODLIGHTS | TE_EXPLFLAG_NONE | TE_EXPLFLAG_NOSOUND | TE_EXPLFLAG_NOPARTICLES);
 			m3.End();
 
-			float flDamage = CSOW_DAMAGE / 2;
+			float flDamage = CSOW_DAMAGE;
 			float flRadius = CSOW_RADIUS;
 
 			g_WeaponFuncs.RadiusDamage(pev.origin, self.pev, pev.owner.vars, flDamage, flRadius, CLASS_NONE, DMG_SHOCK | DMG_NEVERGIB);
@@ -314,7 +296,7 @@ namespace cso_starchasersr
 			self.m_flNextPrimaryAttack = g_Engine.time + CSOW_TIME_DELAY1;
 			self.m_flNextSecondaryAttack = g_Engine.time + CSOW_TIME_DELAY1 / 2;
 
-			m_pPlayer.pev.punchangle.x -= 15.0f; // CSOW_RECOIL_X;
+			m_pPlayer.pev.punchangle.x -= 2.0f; // CSOW_RECOIL_X;
 												 // m_pPlayer.pev.punchangle.y -= CSOW_RECOIL_Y;
 
 			SetTouch(null);
@@ -419,8 +401,8 @@ namespace cso_starchasersr
 			m1.WriteCoord(vecOrigin.y);
 			m1.WriteCoord(vecOrigin.z - 10);
 			m1.WriteShort(g_EngineFuncs.ModelIndex(SPRITE_STARCHASER_STAR));
-			m1.WriteByte(2);	  // scale
-			m1.WriteByte(15 * 5); // framerate //15
+			m1.WriteByte(0.6);	  // scale
+			m1.WriteByte(90); // framerate //15
 			m1.WriteByte(TE_EXPLFLAG_NODLIGHTS | TE_EXPLFLAG_NOSOUND | TE_EXPLFLAG_NOPARTICLES);
 			m1.End();
 
@@ -432,7 +414,7 @@ namespace cso_starchasersr
 			m2.WriteCoord(pev.origin.z - 10);
 			m2.WriteShort(g_EngineFuncs.ModelIndex(SPRITE_STARCHASER_LINE));
 			m2.WriteByte(2);	  // scale
-			m2.WriteByte(16 * 4); // framerate //16
+			m2.WriteByte(90); // framerate //16
 			m2.WriteByte(TE_EXPLFLAG_NODLIGHTS | TE_EXPLFLAG_NOSOUND | TE_EXPLFLAG_NOPARTICLES);
 			m2.End();
 
@@ -443,8 +425,8 @@ namespace cso_starchasersr
 			m3.WriteCoord(pev.origin.y);
 			m3.WriteCoord(pev.origin.z - 10);
 			m3.WriteShort(g_EngineFuncs.ModelIndex(SPRITE_STARCHASER_SR));
-			m3.WriteByte(2);	  // scale
-			m3.WriteByte(45 * 4); // framerate //45
+			m3.WriteByte(1.25);	  // scale
+			m3.WriteByte(90); // framerate //45
 			m3.WriteByte(TE_EXPLFLAG_NODLIGHTS | TE_EXPLFLAG_NOSOUND | TE_EXPLFLAG_NOPARTICLES);
 			m3.End();
 

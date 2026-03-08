@@ -95,6 +95,7 @@ models/singularity/kz_npcs/islave_damned.mdl
 models/singularity/kz_npcs/mfh.mdl
 models/singularity/kz_npcs/pitcrab2.mdl
 models/singularity/kz_npcs/robo_blck.mdl
+models/singularity/kz_npcs/robo_red.mdl
 models/singularity/kz_npcs/strooper_vio.mdl
 models/singularity/misc/kz_mxa_box.mdl
 sound/oghs/cs07/ahhhh.wav

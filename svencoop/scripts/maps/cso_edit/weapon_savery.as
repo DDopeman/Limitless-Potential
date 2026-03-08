@@ -2,9 +2,9 @@ namespace cso_savery
 {
 
 const int SAVERY_DEFAULT_GIVE			= 7;
-const int SAVERY_MAX_AMMO				= 90;
+const int SAVERY_MAX_AMMO				= 70;
 const int SAVERY_MAX_CLIP 				= 7;
-const float SAVERY_DAMAGE				= 50;
+const float SAVERY_DAMAGE				= 90;
 const float SAVERY_DELAY				= 0.1f;
 const float SAVERY_TIME_RELOAD			= 3.0f;
 const float SAVERY_TIME_IDLE			= 2.7f;
@@ -18,7 +18,7 @@ const string MODEL_PLAYER				= "models/cso_edit/p_savery.mdl";
 const string MODEL_WORLD				= "models/cso_edit/w_savery.mdl";
 const string MODEL_SHELL				= "models/cso_edit/shell_savery.mdl";
 const string MODEL_CLIP					= "models/cso_edit/clip_savery.mdl";
-const string MODEL_AMMO					= "models/cso_edit/mag_ak47.mdl";
+const string MODEL_AMMO					= "models/hlclassic/w_357ammobox.mdl";
 const string CSOW_ANIMEXT				= "sniper";
 
 enum csow_e
@@ -345,13 +345,13 @@ class weapon_savery : CBaseCSOWeapon
     }
 }
 
-class ammo_cso_sniper2 : ScriptBasePlayerAmmoEntity
+class ammo_csdeagleb : ScriptBasePlayerAmmoEntity
 {
 	void Spawn()
 	{ 
 		g_EntityFuncs.SetModel( self, MODEL_AMMO );
 
-		pev.scale = 2.0;
+		pev.scale = 1.0;
 
 		BaseClass.Spawn();
 	}
@@ -362,7 +362,7 @@ class ammo_cso_sniper2 : ScriptBasePlayerAmmoEntity
 
 		iGive = SAVERY_MAX_CLIP;
 
-		if( pOther.GiveAmmo( iGive, "cso_sniper2", SAVERY_MAX_AMMO ) != -1)
+		if( pOther.GiveAmmo( iGive, "cs16_.338lapua", SAVERY_MAX_AMMO ) != -1)
 		{
 			g_SoundSystem.EmitSound( self.edict(), CHAN_ITEM, "items/9mmclip1.wav", 1, ATTN_NORM );
 			return true;
@@ -374,9 +374,9 @@ class ammo_cso_sniper2 : ScriptBasePlayerAmmoEntity
 
 void Register()
 {
-	g_CustomEntityFuncs.RegisterCustomEntity( "cso_savery::ammo_cso_sniper2", "ammo_cso_sniper2" );
+	g_CustomEntityFuncs.RegisterCustomEntity( "cso_savery::ammo_csdeagleb", "ammo_csdeagleb" );
 	g_CustomEntityFuncs.RegisterCustomEntity( "cso_savery::weapon_savery", "weapon_savery" );
-	g_ItemRegistry.RegisterWeapon( "weapon_savery", "cso_edit", "cso_sniper2", "" , "ammo_cso_sniper2" );
+	g_ItemRegistry.RegisterWeapon( "weapon_savery", "cso_edit", "cs16_.338lapua", "" , "ammo_csdeagleb" );
 	
 	if( cso::bUseDroppedItemEffect )
 	{

@@ -102,7 +102,7 @@ const int CROW3_WEIGHT					= 10;
 
 //Assault Rifles
 const int AK47_SLOT							= 4;
-const int AK47_POSITION					= 9;
+const int AK47_POSITION					= 20;
 const int ETHEREAL_SLOT					= 4;
 const int ETHEREAL_POSITION			= 13;
 const int CSOCROSSBOW_SLOT			= 5;

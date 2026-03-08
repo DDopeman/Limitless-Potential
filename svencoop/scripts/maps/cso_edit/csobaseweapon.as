@@ -753,7 +753,7 @@ class CBaseCSOWeapon : ScriptBasePlayerWeaponEntity
 
 		hudParams.channel = 1;
 		hudParams.flags = HUD_ELEM_ABSOLUTE_Y | HUD_ELEM_SCR_CENTER_Y | HUD_ELEM_SCR_CENTER_X | HUD_ELEM_DEFAULT_ALPHA;
-		hudParams.spritename = "cso_edit/buffhit.spr";
+		hudParams.spritename = "sprites/cso_edit/buffhit.spr";
 		hudParams.x = 0;
 		hudParams.y = 0;
 		hudParams.color1 = RGBA_WHITE;

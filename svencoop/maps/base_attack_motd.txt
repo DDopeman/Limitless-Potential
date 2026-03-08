@@ -1,0 +1,16 @@
+BASE ATTACK
+==========
+by DAVLevels
+
+ Mission:-
+You are a Black Ops agent tasked with infiltrating a top secret military research facility located somewhere in Area 69.
+The base is under 24h surveillance and is heavily enforced with armed guards, automated turrets and HECU military forces.
+
+Your assignment is to breach the defenses then sabotage the main generator coolant reservoir and await extraction. 
+All HECU forces must be terminated. Leave no witnesses alive.
+SHOOT TO KILL.
+
+
+ -Credits
+  Map author- David "DAVLevels" Cintrao
+  Sven Co-op conversion- Outerbeast

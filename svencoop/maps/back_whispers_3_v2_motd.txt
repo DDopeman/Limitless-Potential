@@ -1,0 +1,63 @@
+<--------------------------------->
+ (---->-BACK WHISPERS-<----)
+<--------------------------------->
+
+
+Objectives:
+-Stop the communication satellite
+-Return to the extraction point
+
+Completed:
+-Destroyed all enemy artillery
+
+Good luck soldier
+
+---------------------------------------------------
+
+Map created by HitoshiiAFK
+
+Special thanks to:
+Leon S. Kennedy (Porter of some models)
+Gonz_46 (Sergeant voice)
+Sare (Beta tester)
+Veluchi(Beta tester)
+
+Additional thanks to:
+Cadaver
+---------------------------------------------------
+
+For any bug you can find me here:
+Discord: hitoshii_7305
+Gamebanana: https://gamebanana.com/members/1693245
+
+---------------------------------------------------
+
+Version: 2.2:
+
+Fixed/added
+General:
+	-Some minor changes.
+	-Reduced file size(converted .wav files to .ogg).
+	-Fixed names of files(it should be easier to add the map to servers now). :D
+	-Survival mode now avaible.
+	-Design cues improved.
+
+back_whispers_1:
+	-Fixed a male_assassin that was not an enemy.
+	-Better performace.
+	-Fixed black light models bug.
+	-Curtains less buggy.
+	-Added a new sequence.
+	-Fixed a sequence error.
+
+back_whispers_2:
+	-Removed 1 spawn(out of place).
+	-Fixed black light models bug.
+
+back_whispers_3:
+	-Ambush door fixed.
+	-Added glow sprites to some light.
+	-Ambush light fixed.
+	-Deadly water is now gone forever.
+	-Replaced annoying func_push at the end of the map for something not annoying. :)
+	-Bomb beeping sound and timer has been added.

@@ -6,11 +6,11 @@ namespace cso_m82
 	const int M82_SLOT = 4;
 	const int M82_POSITION = 15;
 	const int M82_WEIGHT = 30;
-	const int CSOW_DEFAULT_GIVE = 7;
-	const int CSOW_MAX_CLIP = 7;
+	const int CSOW_DEFAULT_GIVE = 10;
+	const int CSOW_MAX_CLIP = 10;
 	const int CSOW_MAX_AMMO = 90; // 90
 	const int CSOW_TRACERFREQ = 0;
-	const float CSOW_DAMAGE = 75;
+	const float CSOW_DAMAGE = 120;
 	const float CSOW_TIME_DELAY1 = 1.05;
 	const float CSOW_TIME_DELAY2 = 0.3;
 	const float CSOW_TIME_DRAW = 0.7;

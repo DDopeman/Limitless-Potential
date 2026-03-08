@@ -3,22 +3,22 @@
 namespace cso_dualsword
 {
 
-const float CSOW_DAMAGE_STAB1			= 50.0;
-const float CSOW_DAMAGE_STAB2			= 50.0;
-const float CSOW_RANGE_STAB1			= 150.0;
-const float CSOW_RANGE_STAB2			= 150.0;
+const float CSOW_DAMAGE_STAB1			= 125.0;
+const float CSOW_DAMAGE_STAB2			= 125.0;
+const float CSOW_RANGE_STAB1			= 200.0;
+const float CSOW_RANGE_STAB2			= 200.0;
 const float CSOW_RADIUS_STAB				= 250.0;
 
-const float CSOW_DAMAGE_SLASH1		= 35.0;
-const float CSOW_DAMAGE_SLASH2		= 35.0;
-const float CSOW_DAMAGE_SLASH3		= 35.0;
-const float CSOW_DAMAGE_SLASH4		= 35.0;
+const float CSOW_DAMAGE_SLASH1		= 125.0;
+const float CSOW_DAMAGE_SLASH2		= 125.0;
+const float CSOW_DAMAGE_SLASH3		= 125.0;
+const float CSOW_DAMAGE_SLASH4		= 125.0;
 const float CSOW_RANGE_SLASH			= 100.0;
 const float CSOW_RADIUS_SLASH			= 800.0;
 
-const float CSOW_SKILL_DAMAGE			= 20.0; //419 in CSO, WAY too high :ayaya:
-const float CSOW_SKILL_DMG_FREQ		= 0.25;
-const float CSOW_SKILL_RADIUS			= cso::MetersToUnits(4);
+const float CSOW_SKILL_DAMAGE			= 125.0; //419 in CSO, WAY too high :ayaya:
+const float CSOW_SKILL_DMG_FREQ		= 0.20;
+const float CSOW_SKILL_RADIUS			= cso::MetersToUnits(5);
 const float CSOW_SKILL_SOUND_FREQ	= 0.088;
 
 const float CSOW_TIME_DRAW				= 0.2;
@@ -432,7 +432,7 @@ class weapon_dualsword : CBaseCSOWeapon
 				if( pFirstTarget.pev.takedamage != DAMAGE_NO )
 				{
 					g_WeaponFuncs.ClearMultiDamage();
-					pFirstTarget.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_SLASH | DMG_NEVERGIB );
+					pFirstTarget.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_SLASH | DMG_ALWAYSGIB );
 					g_WeaponFuncs.ApplyMultiDamage( m_pPlayer.pev, m_pPlayer.pev );
 				}
 
@@ -469,12 +469,12 @@ class weapon_dualsword : CBaseCSOWeapon
 
 			iHitSomething = HIT_ENEMY;
 
-			//pTarget.TakeDamage( m_pPlayer.pev, m_pPlayer.pev, flDamage, DMG_SLASH | DMG_NEVERGIB );
+			//pTarget.TakeDamage( m_pPlayer.pev, m_pPlayer.pev, flDamage, DMG_SLASH | DMG_ALWAYSGIB );
 
 			g_Utility.TraceLine( pTarget.Center(), pTarget.Center(), ignore_monsters, m_pPlayer.edict(), tr );
 
 			g_WeaponFuncs.ClearMultiDamage();
-			pTarget.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_SLASH | DMG_NEVERGIB );
+			pTarget.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_SLASH | DMG_ALWAYSGIB );
 			g_WeaponFuncs.ApplyMultiDamage( m_pPlayer.pev, m_pPlayer.pev );
 
 			for( int i = 0; i < 5; ++i )
@@ -662,13 +662,13 @@ class weapon_dualsword : CBaseCSOWeapon
 
 				if( is_wall_between_points(vecMyOrigin, vecTargetOrigin, m_pPlayer.edict()) ) continue;
 
-				//pTarget.TakeDamage( m_pPlayer.pev, m_pPlayer.pev, CSOW_SKILL_DAMAGE, DMG_SLASH | DMG_NEVERGIB );
+				//pTarget.TakeDamage( m_pPlayer.pev, m_pPlayer.pev, CSOW_SKILL_DAMAGE, DMG_SLASH | DMG_ALWAYSGIB );
 
 				TraceResult tr;
 				g_Utility.TraceLine( pTarget.Center(), pTarget.Center(), ignore_monsters, m_pPlayer.edict(), tr );
 
 				g_WeaponFuncs.ClearMultiDamage();
-				pTarget.TraceAttack( m_pPlayer.pev, CSOW_SKILL_DAMAGE, g_Engine.v_forward, tr, DMG_SLASH | DMG_NEVERGIB );
+				pTarget.TraceAttack( m_pPlayer.pev, CSOW_SKILL_DAMAGE, g_Engine.v_forward, tr, DMG_SLASH | DMG_ALWAYSGIB );
 				g_WeaponFuncs.ApplyMultiDamage( m_pPlayer.pev, m_pPlayer.pev );
 
 				NetworkMessage m1( MSG_BROADCAST, NetworkMessages::SVC_TEMPENTITY );

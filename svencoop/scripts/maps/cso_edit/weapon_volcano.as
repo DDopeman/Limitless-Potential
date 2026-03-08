@@ -1,18 +1,18 @@
 namespace cso_volcano
 {
 
-const Vector CSOW_VECTOR_SPREAD( 0.07f, 0.07f, 0.0f );
+const Vector CSOW_VECTOR_SPREAD( 0.026, 0.026, 0.0 );
 const Vector CSOW_SHELL_ORIGIN( 22.0f, 11.0f, -9.0f );
 const Vector2D CSOW_VEC2D_RECOIL( 3.0f, 5.0f );
 
-const int CSOW_DEFAULT_GIVE			= 30;
-const int CSOW_MAX_CLIP 			= 30;
+const int CSOW_DEFAULT_GIVE			= 20;
+const int CSOW_MAX_CLIP 			= 20;
 const int CSOW_MAX_AMMO 			= 90; //doesn't actually do anything since it uses the maxammo set by the buymenu plugin ¯\_(ツ)_/¯
-const int CSOW_PELLETCOUNT			= 5;
-const float CSOW_DAMAGE				= 15.0f; //total 27
+const int CSOW_PELLETCOUNT			= 7;
+const float CSOW_DAMAGE				= 20.0f; //total 27
 
 const float CSOW_DELAY				= 0.25f;
-const float CSOW_TIME_RELOAD		= 4.5f;
+const float CSOW_TIME_RELOAD		= 4.9f;
 const float CSOW_TIME_RLD_TO_IDLE	= 5.0f;
 const float CSOW_TIME_IDLE			= 9.4375f;
 const float CSOW_TIME_DRAW			= 1.0f;
@@ -164,7 +164,7 @@ class weapon_volcano : CBaseCSOWeapon
 			flDamage = self.m_flCustomDmg;
 
 		m_pPlayer.FireBullets( CSOW_PELLETCOUNT, vecSrc, vecAiming, CSOW_VECTOR_SPREAD, 8192.0, BULLET_PLAYER_CUSTOMDAMAGE, 0, 0 );
-		cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, CSOW_VECTOR_SPREAD, CSOW_PELLETCOUNT, flDamage, (DMG_BULLET | DMG_NEVERGIB) );
+		cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, CSOW_VECTOR_SPREAD, CSOW_PELLETCOUNT, flDamage, (DMG_CRUSH | DMG_LAUNCH | DMG_ALWAYSGIB) );
 
 		if( self.m_iClip <= 0 and m_pPlayer.m_rgAmmo(self.m_iPrimaryAmmoType) <= 0 )
 			m_pPlayer.SetSuitUpdate( "!HEV_AMO0", false, 0 );
@@ -205,7 +205,7 @@ class weapon_volcano : CBaseCSOWeapon
 	}
 }
 
-class ammo_buckshot2 : ScriptBasePlayerAmmoEntity
+class ammo_buckshot2b : ScriptBasePlayerAmmoEntity
 {
 	void Spawn()
 	{ 
@@ -234,9 +234,9 @@ class ammo_buckshot2 : ScriptBasePlayerAmmoEntity
 
 void Register()
 {
-	g_CustomEntityFuncs.RegisterCustomEntity( "cso_volcano::ammo_buckshot2", "ammo_buckshot2" );
+	g_CustomEntityFuncs.RegisterCustomEntity( "cso_volcano::ammo_buckshot2b", "ammo_buckshot2b" );
 	g_CustomEntityFuncs.RegisterCustomEntity( "cso_volcano::weapon_volcano", "weapon_volcano" );
-	g_ItemRegistry.RegisterWeapon( "weapon_volcano", "cso_edit", "buckshot2", "", "ammo_buckshot2" );
+	g_ItemRegistry.RegisterWeapon( "weapon_volcano", "cso_edit", "buckshot2", "", "ammo_buckshot2b" );
 
 	if( cso::bUseDroppedItemEffect )
 	{

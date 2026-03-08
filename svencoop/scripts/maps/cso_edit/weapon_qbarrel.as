@@ -1,13 +1,13 @@
 namespace cso_qbarrel
 {
 
-const Vector VECTOR_CONE_QBARREL( 0.15, 0.07, 0.00 );		// 10 degrees by 5 degrees
+const Vector VECTOR_CONE_QBARREL( 0.10, 0.05, 0.00 );		// 10 degrees by 5 degrees
 const int CSOW_DEFAULT_GIVE	= 4;
 const int CSOW_MAX_AMMO		= 64;
 const int CSOW_MAX_CLIP 		= 4;
 const int CSOW_WEIGHT 			= 20;
-const int CSOW_DAMAGE			= 8;
-const uint CSOW_PELLETCOUNT	= 16;
+const int CSOW_DAMAGE			= 15;
+const uint CSOW_PELLETCOUNT	= 15;
 const float CSOW_TIME_DELAY1	= 0.1;
 const float CSOW_TIME_DELAY2	= 1;
 const float CSOW_TIME_DRAW	= 1.1;
@@ -187,7 +187,7 @@ class weapon_qbarrel : CBaseCSOWeapon
 			--self.m_iClip;
 			self.SendWeaponAnim( ANIM_SHOOT1, 0, (m_bSwitchHands ? g_iCSOWHands : 0) );
 			m_pPlayer.FireBullets( CSOW_PELLETCOUNT, vecSrc, vecAiming, VECTOR_CONE_QBARREL, 2048, BULLET_PLAYER_CUSTOMDAMAGE, 0, 0 );
-			cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, VECTOR_CONE_QBARREL, CSOW_PELLETCOUNT, flDamage, (DMG_BULLET) );
+			cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, VECTOR_CONE_QBARREL, CSOW_PELLETCOUNT, flDamage, (DMG_BULLET | DMG_LAUNCH) );
 			m_pPlayer.pev.punchangle.x = -5.0;
 		}
 		else
@@ -200,7 +200,7 @@ class weapon_qbarrel : CBaseCSOWeapon
 			{
 				self.m_iClip--;
 				m_pPlayer.FireBullets( CSOW_PELLETCOUNT, vecSrc, vecAiming, VECTOR_CONE_QBARREL, 2048, BULLET_PLAYER_CUSTOMDAMAGE, 0, 0 );
-				cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, VECTOR_CONE_QBARREL, CSOW_PELLETCOUNT, flDamage, (DMG_BULLET) );
+				cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, VECTOR_CONE_QBARREL, CSOW_PELLETCOUNT, flDamage, (DMG_CRUSH | DMG_LAUNCH | DMG_ALWAYSGIB) );
 			}
 
 			m_pPlayer.pev.punchangle.x = -5.0 * m_iRemainingClip;
@@ -251,7 +251,7 @@ class weapon_qbarrel : CBaseCSOWeapon
 	}
 }
 
-class ammo_buckshotb : ScriptBasePlayerAmmoEntity
+class ammo_buckshotb2 : ScriptBasePlayerAmmoEntity
 {
 	void Spawn()
 	{ 
@@ -286,9 +286,9 @@ void Register()
 			cso::RegisterGunDrop();
 	}
 
-	g_CustomEntityFuncs.RegisterCustomEntity( "cso_qbarrel::ammo_buckshotb", "ammo_buckshotb" );
+	g_CustomEntityFuncs.RegisterCustomEntity( "cso_qbarrel::ammo_buckshotb2", "ammo_buckshotb2" );
 	g_CustomEntityFuncs.RegisterCustomEntity( "cso_qbarrel::weapon_qbarrel", "weapon_qbarrel" );
-	g_ItemRegistry.RegisterWeapon( "weapon_qbarrel", "cso_edit", "ammo_buckshotb", "", "ammo_buckshotb" ); //"buckshot", "", "ammo_buckshot"
+	g_ItemRegistry.RegisterWeapon( "weapon_qbarrel", "cso_edit", "ammo_buckshotb", "", "ammo_buckshotb2" ); //"buckshot", "", "ammo_buckshot"
 }
 
 } //namespace cso_qbarrel END

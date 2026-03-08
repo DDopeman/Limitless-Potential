@@ -1,9 +1,9 @@
 namespace cso_balrog9
 {
 
-const int BALROG9_DAMAGE_PRIMARY		= 30;
-const float BALROG9_DAMAGE_SEC_MIN		= 60;
-const float BALROG9_DAMAGE_SEC_MAX		= 120;
+const int BALROG9_DAMAGE_PRIMARY		= 60;
+const float BALROG9_DAMAGE_SEC_MIN		= 100;
+const float BALROG9_DAMAGE_SEC_MAX		= 300;
 
 const float BALROG9_DELAY_PRIMARY		= 0.35f;
 const float BALROG9_DELAY_PRIMARY_MISS	= 0.5f;
@@ -273,12 +273,12 @@ class weapon_balrog9 : CBaseCSOWeapon
 			if( self.m_flNextPrimaryAttack + 1 < g_Engine.time )
 			{
 				// first swing does full damage
-				pEntity.TraceAttack( m_pPlayer.pev, BALROG9_DAMAGE_PRIMARY, g_Engine.v_forward, tr, DMG_CLUB ); 
+				pEntity.TraceAttack( m_pPlayer.pev, BALROG9_DAMAGE_PRIMARY, g_Engine.v_forward, tr, DMG_CLUB | DMG_ALWAYSGIB ); 
 			}
 			else
 			{
 				// subsequent swings do half
-				pEntity.TraceAttack( m_pPlayer.pev, BALROG9_DAMAGE_PRIMARY * 0.5f, g_Engine.v_forward, tr, DMG_CLUB ); 
+				pEntity.TraceAttack( m_pPlayer.pev, BALROG9_DAMAGE_PRIMARY * 0.5f, g_Engine.v_forward, tr, DMG_CLUB | DMG_ALWAYSGIB ); 
 			}
 
 			g_WeaponFuncs.ApplyMultiDamage( m_pPlayer.pev, m_pPlayer.pev );
@@ -347,7 +347,7 @@ class weapon_balrog9 : CBaseCSOWeapon
 		{
 			DoBalrogEffect( vecSrc + g_Engine.v_forward * 32 );
 			g_SoundSystem.EmitSound( m_pPlayer.edict(), CHAN_WEAPON, pB9Sounds[BALROG9_SND_CHARGE_ATTACK], 1, ATTN_NORM );
-			g_WeaponFuncs.RadiusDamage(	tr.vecEndPos, self.pev, m_pPlayer.pev, 500, 200, m_pPlayer.Classify(), DMG_BURN | DMG_NEVERGIB );
+			g_WeaponFuncs.RadiusDamage(	tr.vecEndPos, self.pev, m_pPlayer.pev, 500, 200, m_pPlayer.Classify(), DMG_BURN | DMG_ALWAYSGIB );
 			
 			Math.MakeVectors(m_pPlayer.pev.v_angle + m_pPlayer.pev.punchangle);
 
@@ -405,7 +405,7 @@ class weapon_balrog9 : CBaseCSOWeapon
 
 			g_WeaponFuncs.ClearMultiDamage();
 
-			pEntity.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_CLUB | DMG_LAUNCH ); 
+			pEntity.TraceAttack( m_pPlayer.pev, flDamage, g_Engine.v_forward, tr, DMG_CLUB | DMG_LAUNCH | DMG_ALWAYSGIB ); 
 
 			g_WeaponFuncs.ApplyMultiDamage( m_pPlayer.pev, m_pPlayer.pev );
 

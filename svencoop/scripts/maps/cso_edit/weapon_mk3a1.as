@@ -1,15 +1,15 @@
 namespace cso_mk3a1
 {
 
-const Vector CSOW_VECTOR_SPREAD( 0.032, 0.032, 0.0 );
+const Vector CSOW_VECTOR_SPREAD( 0.06f, 0.06f, 0.0f );
 const Vector CSOW_SHELL_ORIGIN( 22.0f, 11.0f, -9.0f );
 const Vector2D CSOW_VEC2D_RECOIL( 6.0, 10.0 );
 
 const int CSOW_DEFAULT_GIVE			= 10;
 const int CSOW_MAX_CLIP 			= 10;
 const int CSOW_MAX_AMMO 			= 90; //doesn't actually do anything since it uses the maxammo set by the buymenu plugin ¯\_(ツ)_/¯
-const int CSOW_PELLETCOUNT			= 8;
-const float CSOW_DAMAGE				= 10; //total 60
+const int CSOW_PELLETCOUNT			= 15;
+const float CSOW_DAMAGE				= 15; //total 60
 
 const float CSOW_DELAY1				= 0.35;
 const float CSOW_TIME_RELOAD		= 2.5;
@@ -160,7 +160,7 @@ class weapon_mk3a1 : CBaseCSOWeapon
 			flDamage = self.m_flCustomDmg;
 
 		m_pPlayer.FireBullets( CSOW_PELLETCOUNT, vecSrc, vecAiming, CSOW_VECTOR_SPREAD, 8192.0, BULLET_PLAYER_CUSTOMDAMAGE, 0, 0 );
-		cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, CSOW_VECTOR_SPREAD, CSOW_PELLETCOUNT, flDamage, (DMG_BULLET | DMG_LAUNCH | DMG_NEVERGIB) );
+		cso::CreateShotgunPelletDecals( m_pPlayer, vecSrc, vecAiming, CSOW_VECTOR_SPREAD, CSOW_PELLETCOUNT, flDamage, (DMG_CRUSH | DMG_LAUNCH | DMG_ALWAYSGIB) );
 
 		HandleAmmoReduction( 1 );
 
@@ -231,7 +231,7 @@ void Register()
 {
 	g_CustomEntityFuncs.RegisterCustomEntity( "cso_mk3a1::ammo_buckshot2", "ammo_buckshot2" );
 	g_CustomEntityFuncs.RegisterCustomEntity( "cso_mk3a1::weapon_mk3a1", "weapon_mk3a1" );
-	g_ItemRegistry.RegisterWeapon( "weapon_mk3a1", "cso_edit", "buckshot", "", "ammo_buckshot2" );
+	g_ItemRegistry.RegisterWeapon( "weapon_mk3a1", "cso_edit", "buckshot2", "", "ammo_buckshot2" );
 
 	if( cso::bUseDroppedItemEffect )
 	{

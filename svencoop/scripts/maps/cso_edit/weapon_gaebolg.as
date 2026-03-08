@@ -4,18 +4,18 @@ namespace cso_gaebolg
 	const string CSOW_NAME = "weapon_gaebolg";
 
 	// Weapon info
-	const int CSOW_DEFAULT_GIVE = 10;
-	const int CSOW_MAX_CLIP = 5;
-	const int CSOW_MAX_AMMO = 100;
-	const float CSOW_DAMAGE = 100.0;	// 42 ??
+	const int CSOW_DEFAULT_GIVE = 3;
+	const int CSOW_MAX_CLIP = 1;
+	const int CSOW_MAX_AMMO = 25;
+	const float CSOW_DAMAGE = 300.0;	// 42 ??
 	const float CSOW_GRENADE_DAMAGE = 200.0;
-	const float CSOW_GRENADE_RADIUS = 150.0;
+	const float CSOW_GRENADE_RADIUS = 200.0;
 	const float CSOW_TIME_DELAY1 = 0.8; // 430 RPM ??
 	const float CSOW_TIME_DELAY2 = 0.1;
 	const float CSOW_TIME_DRAW = 1.0;
-	const float CSOW_TIME_IDLE = 1.9;
-	const float CSOW_TIME_FIRE_TO_IDLE = 2.0;
-	const float CSOW_TIME_RELOAD = 2.2;
+	const float CSOW_TIME_IDLE = 1.6;
+	const float CSOW_TIME_FIRE_TO_IDLE = 1.6;
+	const float CSOW_TIME_RELOAD = 1.6;
 
 	// Recoil
 	const Vector2D CSOW_RECOIL_STANDING_X = Vector2D(-0.5, -1.0);
@@ -40,7 +40,7 @@ namespace cso_gaebolg
 	const string MODEL_PLAYER = "models/cso_edit/p_speargun.mdl";
 	const string MODEL_WORLD = "models/cso_edit/w_speargun.mdl";
 	const string MODEL_SPEAR = "models/cso_edit/spear.mdl";
-	const string A_MODEL = "models/w_crossbow_clip.mdl";
+	const string A_MODEL = "models/cso_edit/spear_ammo.mdl";
 
 	// Sprites
 	const string SPRITE_BEAM = "sprites/laserbeam.spr";
@@ -67,10 +67,10 @@ namespace cso_gaebolg
 
 	const array<string> pCSOWSounds =
 		{
-			"custom_weapons/cs16/dryfire_rifle.wav",
+			"cso_edit/dryfire_rifle.wav",
 			"cso_edit/speargun-1.wav",
-			"cso_edit/speargun_hit1.wav",
-			"cso_edit/speargun_hit1.wav",
+			"cso_edit/speargun_hit.wav",
+			"cso_edit/speargun_hit.wav",
 			"cso_edit/speargun_draw.wav",
 			"cso_edit/speargun_clipin.wav"};
 
@@ -249,7 +249,7 @@ namespace cso_gaebolg
 
 			self.SendWeaponAnim(ANIM_RELOAD, 0, (m_bSwitchHands ? g_iCSOWHands : 0));
 
-			self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = self.m_flNextTertiaryAttack = g_Engine.time + 2.5f;
+			self.m_flNextPrimaryAttack = self.m_flNextSecondaryAttack = self.m_flNextTertiaryAttack = g_Engine.time + 1.6f;
 			self.m_flTimeWeaponIdle = g_Engine.time + CSOW_TIME_RELOAD;
 		}
 
@@ -335,7 +335,7 @@ namespace cso_gaebolg
 					pev.velocity = Vector(0, 0, 0);
 					pev.avelocity.z = 0;
 					pev.angles.z = Math.RandomLong(0, 360);
-					pev.nextthink = g_Engine.time + 10.0;
+					pev.nextthink = g_Engine.time + 20.0;
 				}
 
 				if (g_EngineFuncs.PointContents(pev.origin) != CONTENTS_WATER)
@@ -438,6 +438,7 @@ namespace cso_gaebolg
 
 		void SUB_Remove()
 		{
+		 Explode();
 			self.SUB_Remove();
 		}
 	}

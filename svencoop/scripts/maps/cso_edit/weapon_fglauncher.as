@@ -17,8 +17,8 @@ const string W_MODEL = "models/cso_edit/w_fglauncher.mdl"; // World
 const string V_MODEL = "models/cso_edit/v_fglauncher.mdl"; // View
 const string P_MODEL = "models/cso_edit/p_fglauncher.mdl"; // Player
 const string G_MODEL = "models/cso_edit/shell_svdex.mdl"; // Grenade
-const string A_MODEL = "models/cso_edit/shell_svdex.mdl"; // Ammo
-string AMMO_TYPE 	 = "cso_40mm";
+const string A_MODEL = "models/cso_edit/w_fgammo.mdl"; // Ammo
+string AMMO_TYPE 	 = "ammo_fglauncher";
 // Sounds
 const string GRENADE_SHOOT_SND   = "cso_edit/fglauncher-1.wav";
 const string GRENADE_EXPLODE_SND = "cso_edit/firecracker_explode.wav";
@@ -31,14 +31,14 @@ const string SPRITE_EXPLOSION3      = "sprites/cso_edit/fg_spark3.spr";
 const string SPRITE_SMOKE			= "sprites/steam1.spr";
 const string SPRITE_MUZZLE_GRENADE	= "sprites/cso_edit/muzzleflash12.spr";
 // Weapon's Information
-const int FGLAUNCHER_SLOT           = 4;
+const int FGLAUNCHER_SLOT           = 5;
 const int FGLAUNCHER_POSITION       = 20;
 const int FGLAUNCHER_WEIGHT			= 20;
 const int DEFAULT_GIVE 	            = 20;
 const int MAX_CLIP  	            = 10;
-const int MAX_CARRY 	            = 30;
+const int MAX_CARRY 	            = 60;
 // Weapon's Physics
-const float CSOW_TIME_DELAY1 		= 0.7;
+const float CSOW_TIME_DELAY1 		= 0.6;
 const float CSOW_GRENADE_DAMAGE     = 150.0;
 const float CSOW_GRENADE_RADIUS     = 150.0;
 //float CSOW_GRENADE_RADIUS           = Math.RandomFloat( 270.0, 350.0 );
@@ -388,7 +388,7 @@ class FGLauncherAmmo : ScriptBasePlayerAmmoEntity
 	{ 
 		g_EntityFuncs.SetModel( self, A_MODEL );
 
-		pev.scale = 2.0;
+		pev.scale = 1.5;
 
 		BaseClass.Spawn();
 	}

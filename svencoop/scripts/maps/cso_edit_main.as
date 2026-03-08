@@ -1,5 +1,6 @@
 #include "HLSPClassicMode"
 #include "point_checkpoint"
+#include "singularity/autohop_playeruse"
 
 #include "cso_edit/csobaseweapon"
 #include "cso_edit/csocommon"
@@ -25,6 +26,12 @@
 #include "cso_edit/weapon_desperado"
 #include "cso_edit/weapon_gunkata"
 
+#include "cso_edit/weapon_buffaug"
+#include "cso_edit/weapon_gaebolg"
+#include "cso_edit/weapon_fglauncher"
+#include "cso_edit/weapon_cannonex"
+#include "cso_edit/weapon_starchasersr"
+
 
 #include "cso_edit/cs_weapons"
 
@@ -33,8 +40,13 @@ void MapInit()
 	ClassicModeMapInit();
 	RegisterPointCheckPointEntity();
 	g_EngineFuncs.CVarSetFloat( "mp_classicmode", 1 );
+	RegisterAutoBhopping();
 	
-	
+	cso_fglauncher::Register();
+	cso_buffaug::Register();
+	cso_cannonex::Register();
+	cso_gaebolg::Register();
+	cso_starchasersr::Register();
 	
 	cso_balrog9::Register();
 	cso_dualsword::Register();
@@ -58,14 +70,13 @@ void MapInit()
 	cso_m82::Register();
 	
 	
-	CS16_57::MAX_CARRY = 420;
-	CS16_57::MAX_CLIP = 15;
-	CS16_57::DAMAGE = 20;
-	CS16_57::RPM = 0.09f;
+	CS16_57::MAX_CARRY = 400;
+	CS16_57::MAX_CLIP = 28;
+	CS16_57::DAMAGE = 30;
+	CS16_57::RPM = 0.08f;
 	CS16_57::DEFAULT_GIVE = 30;
-	CS16_57::AMMO_TYPE = "cs16_9mm";
 	
-	CS16_C4::TIMER = 15;
+	CS16_C4::TIMER = 10;
 	CS16_C4::MAX_CARRY = 2;
 	
 	CS16_HEGRENADE::MAX_CARRY = 8;
@@ -73,33 +84,26 @@ void MapInit()
 	CS16_HEGRENADE::TIMER = 3;
 	CS16_HEGRENADE::DEFAULT_GIVE = 2;
 	//
-	CS16_DEAGLE::MAX_CARRY = 49;
+	CS16_DEAGLE::MAX_CARRY = 105;
 	CS16_DEAGLE::MAX_CLIP = 7;
 	CS16_DEAGLE::RPM = 0.215f;
-	CS16_DEAGLE::DAMAGE = 90;
+	CS16_DEAGLE::DAMAGE = 120;
 	CS16_DEAGLE::DEFAULT_GIVE = 7;
 	CS16_DEAGLE::AMMO_TYPE = "cs16_.338lapua";
 	
-	CS16_MP5::MAX_CARRY = 420;
-	CS16_MP5::MAX_CLIP = 60;
-	CS16_MP5::DAMAGE = 18;
-	CS16_MP5::RPM = 0.075f;
-	CS16_MP5::DEFAULT_GIVE = 60;
-	CS16_MP5::AMMO_TYPE = "cs16_9mm";
-	
-	CS16_AK47::MAX_CARRY = 180;
+	CS16_AK47::MAX_CARRY = 300;
 	CS16_AK47::MAX_CLIP = 30;
-	CS16_AK47::DAMAGE = 35;
+	CS16_AK47::DAMAGE = 45;
 	CS16_AK47::RPM = 0.092f;
 	CS16_AK47::DEFAULT_GIVE = 60;
 	CS16_AK47::AMMO_TYPE = "cs16_7.62nato";
 	
-	CS16_M4A1::MAX_CARRY = 300;
-	CS16_M4A1::MAX_CLIP = 30;
+	CS16_M4A1::MAX_CARRY = 500;
+	CS16_M4A1::MAX_CLIP = 50;
 	CS16_M4A1::DAMAGE2 = 30;
 	CS16_M4A1::DAMAGE = 24;
 	CS16_M4A1::RPM = 0.074f;
-	CS16_M4A1::DEFAULT_GIVE = 60;
+	CS16_M4A1::DEFAULT_GIVE = 150;
 	CS16_M4A1::AMMO_TYPE = "cs16_5.56nato";
 	
 	

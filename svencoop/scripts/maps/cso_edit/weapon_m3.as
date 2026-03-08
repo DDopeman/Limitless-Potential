@@ -7,14 +7,14 @@ const bool USE_PENETRATION							= true;
 const string CSOW_NAME								= "weapon_m3";
 
 const int CSOW_DEFAULT_GIVE						= 8;
-const int CSOW_MAX_CLIP 								= 8;
+const int CSOW_MAX_CLIP 						= 8;
 const int CSOW_MAX_AMMO							= 64;
-const int CSOW_TRACERFREQ							= 0;
-const int CSOW_PELLETCOUNT						= 12;
-const float CSOW_DAMAGE								= (12/CSOW_PELLETCOUNT);
+const int CSOW_TRACERFREQ						= 0;
+const int CSOW_PELLETCOUNT						= 15;
+const float CSOW_DAMAGE							= 15;
 const float CSOW_TIME_DELAY						= 1.0;
 const float CSOW_TIME_DRAW						= 1.0;
-const float CSOW_TIME_IDLE							= 1.0;
+const float CSOW_TIME_IDLE						= 1.0;
 const Vector CSOW_OFFSETS_SHELL				= Vector( 11.405645, 5.216532, -2.891270 ); //forward, right, up
 const Vector CSOW_VECTOR_SPREAD				= Vector( 0.05, 0.05, 0 );
 

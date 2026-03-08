@@ -5,7 +5,7 @@ const int CSOW_DEFAULT_GIVE					= 45;
 const int CSOW_MAX_CLIP 						= 45;
 const int CSOW_MAX_AMMO						= 200;
 const int CSOW_ZOOMFOV						= 40;
-const float CSOW_DAMAGE						= 70; //28?
+const float CSOW_DAMAGE						= 85; //28?
 const float CSOW_DAMAGE_RADIUS			= 100;
 const float CSOW_TIME_DELAY					= 0.15;
 const float CSOW_TIME_DELAY2					= 0.22;
@@ -13,7 +13,8 @@ const float CSOW_TIME_DRAW					= 0.89; //1.0
 const float CSOW_TIME_IDLE						= 6.7;
 const float CSOW_TIME_FIRE_TO_IDLE		= 1.0;
 const float CSOW_TIME_RELOAD				= 2.89; //3.0
-const float CSOW_PLASMA_SPEED				= 1300;
+const float CSOW_PLASMA_SPEED				= 1600;
+const float CSOW_PLASMA_SPEED2				= 4000;
 const Vector2D CSOW_RECOIL_STANDING_X	= Vector2D(-0.35, 0.35);
 const Vector2D CSOW_RECOIL_STANDING_Y	= Vector2D(0, 0);
 const Vector2D CSOW_RECOIL_DUCKING_X	= Vector2D(-0.05, 0.05);
@@ -220,7 +221,7 @@ class weapon_plasmagun : CBaseCSOWeapon
 		Vector vecOrigin = m_pPlayer.GetGunPosition() + g_Engine.v_forward * 48 + g_Engine.v_right * 10 + g_Engine.v_up * -5;
 
 		Math.MakeVectors( m_pPlayer.pev.v_angle );
-		Vector vecVelocity = g_Engine.v_forward * CSOW_PLASMA_SPEED * 3 + g_Engine.v_right * -11.0 + g_Engine.v_up * 6.5;
+		Vector vecVelocity = g_Engine.v_forward * CSOW_PLASMA_SPEED2 + g_Engine.v_right * -11.0 + g_Engine.v_up * 6.5;
 
 		dictionary keys;
 		keys[ "origin" ] = vecOrigin.ToString();
@@ -356,7 +357,7 @@ class plasmaball : ScriptBaseEntity
 		m2.End();
 
 		g_SoundSystem.EmitSound( self.edict(), CHAN_BODY, pCSOWSounds[SND_EXPLODE], VOL_NORM, ATTN_NORM );
-		g_WeaponFuncs.RadiusDamage( vecOrigin, self.pev, pev.owner.vars, pev.dmg, CSOW_DAMAGE_RADIUS, CLASS_PLAYER_ALLY, DMG_ENERGYBEAM | DMG_NEVERGIB );
+		g_WeaponFuncs.RadiusDamage( vecOrigin, self.pev, pev.owner.vars, pev.dmg, CSOW_DAMAGE_RADIUS, CLASS_PLAYER_ALLY, DMG_ENERGYBEAM | DMG_ALWAYSGIB );
 
 		g_EntityFuncs.Remove( self );
 	}
@@ -368,7 +369,7 @@ class ammo_plasmashell : ScriptBasePlayerAmmoEntity
 	{ 
 		g_EntityFuncs.SetModel( self, MODEL_AMMO );
 
-		pev.scale = 2.0;
+		pev.scale = 1.75;
 
 		BaseClass.Spawn();
 	}

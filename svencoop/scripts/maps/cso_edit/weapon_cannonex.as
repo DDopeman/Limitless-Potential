@@ -45,12 +45,12 @@ namespace cso_cannonex
 		RDC_W_MODELB
 	}
 
-	const string MODEL_V = gold ? "models/cso_edit/v_cannonexgold.mdl" : "models/cso_edit/v_cannonex.mdl";
+	const string MODEL_V = gold ? "models/cso_edit/v_cannonex.mdl" : "models/cso_edit/v_cannonex.mdl";
 	const string MODEL_P = "models/cso_edit/p_cannonex.mdl";
 	const string MODEL_PB = "models/cso_edit/p_cannonexb.mdl";
 	const string MODEL_W = "models/cso_edit/w_cannonex.mdl";
 	const string MODEL_WB = "models/cso_edit/w_cannonexb.mdl";
-	const string MODEL_AMMO = "models/w_argrenade.mdl";
+	const string MODEL_AMMO = "models/cso_edit/w_cannonammo.mdl";
 	const int MAG_BDYGRP = 1;
 
 	array<string> RDC_Models =
@@ -59,7 +59,8 @@ namespace cso_cannonex
 			MODEL_PB,
 			MODEL_W,
 			MODEL_WB,
-			MODEL_V};
+			MODEL_V,
+			MODEL_AMMO};
 
 	const string SOUND_SHOOTA = "cso_edit/cannonex_shoota.wav";
 	const string SOUND_RELOAD1 = "cso_edit/cannonex_d_reload1.wav";
@@ -101,15 +102,15 @@ namespace cso_cannonex
 
 	namespace weapon_info
 	{
-		const int cvar_rdc_ammo = gold ? 120 : 60;
-		const int cvar_rdc_ammo_give = 5;
-		const float cvar_rdc_dmg = gold ? 700 : 500.0f;
-		const float cvar_rdc_duration = gold ? 30 : 20.0f;
+		const int cvar_rdc_ammo = gold ? 30 : 25;
+		const int cvar_rdc_ammo_give = 1;
+		const float cvar_rdc_dmg = gold ? 100 : 100.0f;
+		const float cvar_rdc_duration = gold ? 10 : 10.0f;
 		const float cvar_rdc_cooldown = gold ? 15 : 20.0f;
-		const int cvar_rdc_refill = gold ? 30 : 20;
+		const int cvar_rdc_refill = gold ? 30 : 5;
 		const float cvar_one_round = gold ? 0.0f : 0.0f;
 
-		const int cvar_rdc_slot = 4;
+		const int cvar_rdc_slot = 6;
 		const int cvar_rdc_position = 22;
 		const int cvar_rdc_weight = 20;
 	}
@@ -164,7 +165,7 @@ namespace cso_cannonex
 
 			m_iBlood[0] = g_Game.PrecacheModel("sprites/blood.spr");
 			m_iBlood[1] = g_Game.PrecacheModel("sprites/bloodspray.spr");
-			g_explo_spr = g_Game.PrecacheModel("sprites/ef_cannonex.spr");
+			g_explo_spr = g_Game.PrecacheModel("sprites/cso_edit/ef_cannonex.spr");
 
 			g_Game.PrecacheOther("rdc_fire");
 		}
@@ -287,33 +288,33 @@ namespace cso_cannonex
 
 			// -- Left
 			get_position(100.0, Math.RandomFloat(-10.0, -30.0), WEAPON_ATTACH_U, vecTargetOrigin[0]);
-			Speed[0] = 150.0;
+			Speed[0] = 280.0;
 			get_position(100.0, Math.RandomFloat(-10.0, -30.0), WEAPON_ATTACH_U, vecTargetOrigin[1]);
-			Speed[1] = 180.0;
+			Speed[1] = 330.0;
 			get_position(100.0, Math.RandomFloat(-10.0, -30.0), WEAPON_ATTACH_U, vecTargetOrigin[2]);
-			Speed[2] = 210.0;
+			Speed[2] = 380.0;
 			get_position(100.0, Math.RandomFloat(-10.0, -30.0), WEAPON_ATTACH_U, vecTargetOrigin[3]);
-			Speed[3] = 240.0;
+			Speed[3] = 440.0;
 			get_position(100.0, Math.RandomFloat(-10.0, -30.0), WEAPON_ATTACH_U, vecTargetOrigin[4]);
-			Speed[4] = 300.0;
+			Speed[4] = 550.0;
 
 			// -- Center
 			get_position(100.0, 0.0, WEAPON_ATTACH_U, vecTargetOrigin[5]);
-			Speed[5] = 150.0;
+			Speed[5] = 300.0;
 			get_position(100.0, 0.0, WEAPON_ATTACH_U, vecTargetOrigin[6]);
-			Speed[6] = 300.0;
+			Speed[6] = 400.0;
 
 			// -- Right
 			get_position(100.0, Math.RandomFloat(10.0, 30.0), WEAPON_ATTACH_U, vecTargetOrigin[7]);
-			Speed[7] = 150.0;
+			Speed[7] = 280.0;
 			get_position(100.0, Math.RandomFloat(10.0, 30.0), WEAPON_ATTACH_U, vecTargetOrigin[8]);
-			Speed[8] = 180.0;
+			Speed[8] = 330.0;
 			get_position(100.0, Math.RandomFloat(10.0, 30.0), WEAPON_ATTACH_U, vecTargetOrigin[9]);
-			Speed[9] = 210.0;
+			Speed[9] = 380.0;
 			get_position(100.0, Math.RandomFloat(10.0, 30.0), WEAPON_ATTACH_U, vecTargetOrigin[10]);
-			Speed[10] = 240.0;
+			Speed[10] = 440.0;
 			get_position(100.0, Math.RandomFloat(10.0, 30.0), WEAPON_ATTACH_U, vecTargetOrigin[11]);
-			Speed[11] = 300.0;
+			Speed[11] = 550.0;
 
 			for (uint i = 0; i < MAX_FIRE; i++)
 			{
@@ -369,9 +370,11 @@ namespace cso_cannonex
 		void SecondaryAttack()
 		{
 			int ammo3 = m_pPlayer.m_rgAmmo(self.m_iPrimaryAmmoType);
-			if (ammo3 <= 0)
+			if (ammo3 <= 2)
 				return;
 
+			--ammo3;
+			--ammo3;
 			--ammo3;
 			m_pPlayer.m_rgAmmo(self.m_iPrimaryAmmoType, ammo3);
 
@@ -479,7 +482,7 @@ namespace cso_cannonex
 
 			if (pev.fuser1 - g_Engine.time >= 0.0 && pev.fuser2 - g_Engine.time <= 0.0)
 			{
-				CreateFire(vecOrigin, vecTargetOrigin, 300.0, true);
+				CreateFire(vecOrigin, vecTargetOrigin, 350.0, true);
 				pev.fuser2 = g_Engine.time + flRate;
 			}
 
@@ -664,7 +667,7 @@ namespace cso_cannonex
 
 			if (stayFire && pev.fuser4 < g_Engine.time)
 			{
-				g_WeaponFuncs.RadiusDamage(pev.origin, self.pev, pev.owner.vars, pev.dmg / 2, pev.dmg * 2.5f, CLASS_NONE, DMG_BURN);
+				g_WeaponFuncs.RadiusDamage(pev.origin, self.pev, pev.owner.vars, pev.dmg / 2, pev.dmg * 2.5f, CLASS_NONE, DMG_BURN | DMG_ALWAYSGIB);
 				pev.fuser4 = g_Engine.time + 0.25f;
 			}
 
@@ -732,7 +735,7 @@ namespace cso_cannonex
 
 			if (!stayFire)
 			{
-				pOther.TakeDamage(self.pev, pev.owner.vars, pev.dmg, DMG_BURN);
+				pOther.TakeDamage(self.pev, pev.owner.vars, pev.dmg, DMG_BURN | DMG_ALWAYSGIB);
 			}
 
 			pev.movetype = MOVETYPE_NONE;
@@ -749,7 +752,7 @@ namespace cso_cannonex
 			pev.solid = SOLID_NOT;
 			// make_victim_effects(iTouchedEnt, DMG_BURN, 226, 88, 34)
 			// fm_create_velocity_vector(iTouchedEnt, id, 50.0)
-			pOther.TakeDamage(pev.owner.vars, pev.owner.vars, pev.dmg, DMG_NEVERGIB | DMG_BURN);
+			pOther.TakeDamage(pev.owner.vars, pev.owner.vars, pev.dmg, DMG_BURN | DMG_ALWAYSGIB);
 		}
 	}
 
@@ -759,7 +762,7 @@ namespace cso_cannonex
 		{
 			g_EntityFuncs.SetModel(self, MODEL_AMMO);
 
-			pev.scale = 1.25;
+			pev.scale = 2.0;
 
 			BaseClass.Spawn();
 		}
