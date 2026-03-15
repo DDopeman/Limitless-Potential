@@ -107,7 +107,7 @@ class weapon_balrog9 : CBaseCSOWeapon
 
 		g_Game.PrecacheGeneric( "sprites/cso_edit/weapon_balrog9.txt" );
 		g_Game.PrecacheGeneric( "sprites/cso_edit/640hud75.spr" );
-		g_Game.PrecacheGeneric( "sprites/cso/mzbalrog9.spr" );
+		g_Game.PrecacheGeneric( "sprites/cso_edit/mzbalrog9.spr" );
 		
 		g_Game.PrecacheGeneric( "events/muzzle_balrog9.txt" );
 	}

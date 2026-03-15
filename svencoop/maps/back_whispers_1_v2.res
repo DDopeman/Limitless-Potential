@@ -477,8 +477,6 @@ sprites/adamr/pointers/pointer-blast.spr
 sprites/cs16/csflashx.spr
 sprites/cs16/mzcs1.spr
 sprites/cs16/mzcs2.spr
-sprites/cso/muzzleflash27.spr
-sprites/cso/mzbalrog9.spr
 sprites/cso_edit/640hud1.spr
 sprites/cso_edit/640hud101.spr
 sprites/cso_edit/640hud103_2.spr

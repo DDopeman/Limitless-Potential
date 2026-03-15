@@ -98,7 +98,7 @@ class weapon_plasmagun : CBaseCSOWeapon
 		g_Game.PrecacheGeneric( "sprites/cso_edit/weapon_plasmagun.txt" );
 		g_Game.PrecacheGeneric( "sprites/cso_edit/640hud91.spr" );
 		g_Game.PrecacheGeneric( "sprites/cso_edit/640hud3.spr" );
-		g_Game.PrecacheGeneric( "sprites/cso/muzzleflash27.spr" );
+		g_Game.PrecacheGeneric( "sprites/cso_edit/muzzleflash27.spr" );
 		g_Game.PrecacheGeneric( "events/muzzle_plasmagun.txt" );
 	}
 
